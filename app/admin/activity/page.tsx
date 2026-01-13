@@ -179,13 +179,31 @@ function AdminActivityPageContent() {
         query
       ]);
 
-      if (countResult.error) throw countResult.error;
-      if (dataResult.error) throw dataResult.error;
+      if (countResult.error) {
+        console.error('Error loading activity count:', countResult.error);
+        // If it's a permission error, show helpful message
+        if (countResult.error.code === 'PGRST301' || countResult.error.message?.includes('permission')) {
+          throw new Error('You do not have permission to view activity logs. Please ensure you are logged in as an admin.');
+        }
+        throw countResult.error;
+      }
+      if (dataResult.error) {
+        console.error('Error loading activities:', dataResult.error);
+        // If it's a permission error, show helpful message
+        if (dataResult.error.code === 'PGRST301' || dataResult.error.message?.includes('permission')) {
+          throw new Error('You do not have permission to view activity logs. Please ensure you are logged in as an admin.');
+        }
+        throw dataResult.error;
+      }
 
       setTotalCount(countResult.count || 0);
       setActivities((dataResult.data as ActivityLog[]) || []);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error loading activities:', error);
+      // Show user-friendly error message
+      if (error.message) {
+        // Error message will be displayed in the UI
+      }
     } finally {
       setLoading(false);
     }
@@ -377,9 +395,14 @@ function AdminActivityPageContent() {
             <div className="text-center py-12">
               <p className="text-muted-foreground">Loading activities...</p>
             </div>
-          ) : activities.length === 0 ? (
+          ) : activities.length === 0 && totalCount === 0 ? (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">No activities found matching your filters.</p>
+              <p className="text-muted-foreground mb-2">No activities found matching your filters.</p>
+              <p className="text-sm text-muted-foreground">
+                {filters.userId !== 'all' || filters.actionType !== 'all' || filters.timeRange !== 'all' || filters.search
+                  ? 'Try adjusting your filters or check back later.'
+                  : 'Activity logs will appear here as users interact with the platform.'}
+              </p>
             </div>
           ) : (
             <>

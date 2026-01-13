@@ -13,6 +13,7 @@ export default function Header() {
   const sessionIdRef = useRef<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     fetch('/api/auth/login-track', { method: 'POST' })
@@ -28,6 +29,25 @@ export default function Header() {
       })
       .catch(console.error);
 
+    // Check if user is admin
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user) {
+        supabase
+          .from('users')
+          .select('role')
+          .eq('id', user.id)
+          .single()
+          .then(({ data }) => {
+            if (data?.role === 'admin') {
+              setIsAdmin(true);
+            }
+          })
+          .catch(() => {
+            // User might not exist in users table yet, ignore
+          });
+      }
+    });
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
@@ -37,7 +57,7 @@ export default function Header() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [supabase]);
 
   const handleLogout = async () => {
     const sessionId = sessionIdRef.current || 
@@ -144,6 +164,32 @@ export default function Header() {
 
           {/* Right side actions */}
           <div className="flex items-center gap-3">
+            {/* Admin Link */}
+            {isAdmin && (
+              <Link
+                href="/admin"
+                className="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150"
+                style={{ 
+                  color: isActive('/admin') ? '#1e3a5f' : '#6b7280',
+                  backgroundColor: isActive('/admin') ? '#f0f4ff' : 'transparent',
+                }}
+                onMouseOver={(e) => {
+                  if (!isActive('/admin')) {
+                    e.currentTarget.style.backgroundColor = '#f5f5f5';
+                    e.currentTarget.style.color = '#1a1a2e';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (!isActive('/admin')) {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#6b7280';
+                  }
+                }}
+              >
+                Admin
+              </Link>
+            )}
+
             {/* Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
