@@ -20,6 +20,10 @@ export default function Header() {
       .then((data) => {
         if (data.sessionId) {
           sessionIdRef.current = data.sessionId;
+          // Store in localStorage for InactivityTimeout to access
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('psr_session_id', data.sessionId);
+          }
         }
       })
       .catch(console.error);
@@ -36,13 +40,25 @@ export default function Header() {
   }, []);
 
   const handleLogout = async () => {
-    if (sessionIdRef.current) {
-      await fetch('/api/auth/logout-track', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current }),
-      });
+    const sessionId = sessionIdRef.current || 
+      (typeof window !== 'undefined' ? localStorage.getItem('psr_session_id') : null);
+    
+    if (sessionId) {
+      try {
+        await fetch('/api/auth/logout-track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId }),
+        });
+      } catch (error) {
+        console.warn('Error tracking logout:', error);
+      }
     }
+    
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('psr_session_id');
+    }
+    
     await supabase.auth.signOut();
     router.push('/login');
     router.refresh();

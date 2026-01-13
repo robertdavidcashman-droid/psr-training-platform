@@ -186,6 +186,25 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
+    // Log activity if flashcard was reviewed (quality provided)
+    if (quality !== undefined && flashcard) {
+      try {
+        const { logActivity } = await import('@/lib/activity-logger');
+        await logActivity(user.id, {
+          action_type: 'flashcard_reviewed',
+          action_details: {
+            flashcard_id: flashcard.id,
+            quality: quality,
+            interval_days: intervalDays,
+            ease_factor: easeFactor,
+          },
+          page_url: request.nextUrl.pathname,
+        });
+      } catch (error) {
+        console.warn('Error logging flashcard activity:', error);
+      }
+    }
+
     return NextResponse.json({ flashcard });
   } catch (error: any) {
     console.error('Flashcards API error:', error);

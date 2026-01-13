@@ -20,9 +20,29 @@ export function InactivityTimeout() {
   const logout = useCallback(async () => {
     console.log('🔒 Auto-logout due to inactivity');
     
+    // Get session ID from localStorage (stored by Header component)
+    const sessionId = typeof window !== 'undefined' 
+      ? localStorage.getItem('psr_session_id') 
+      : null;
+
+    // Track logout time before signing out
+    if (sessionId) {
+      try {
+        await fetch('/api/auth/logout-track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId }),
+        });
+      } catch (error) {
+        console.warn('Error tracking logout:', error);
+        // Don't block logout if tracking fails
+      }
+    }
+    
     // Clear stored activity time
     if (typeof window !== 'undefined') {
       localStorage.removeItem(LAST_ACTIVITY_KEY);
+      localStorage.removeItem('psr_session_id');
     }
 
     if (isSupabaseConfigured()) {

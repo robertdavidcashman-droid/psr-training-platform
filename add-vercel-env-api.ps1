@@ -4,9 +4,13 @@
 Write-Host "🚀 Adding Environment Variables to Vercel via API..." -ForegroundColor Cyan
 Write-Host ""
 
-# Get Vercel token (you may need to get this from Vercel dashboard)
-# Go to: https://vercel.com/account/tokens
-$vercelToken = Read-Host "Enter your Vercel token (get from https://vercel.com/account/tokens)"
+# Get Vercel token from environment variable or prompt
+$vercelToken = $env:VERCEL_TOKEN
+
+if ([string]::IsNullOrWhiteSpace($vercelToken)) {
+    # Go to: https://vercel.com/account/tokens
+    $vercelToken = Read-Host "Enter your Vercel token (get from https://vercel.com/account/tokens)"
+}
 
 if ([string]::IsNullOrWhiteSpace($vercelToken)) {
     Write-Host "❌ Vercel token is required!" -ForegroundColor Red
@@ -70,11 +74,13 @@ foreach ($envVar in $envVars) {
         } | ConvertTo-Json
         
         try {
-            $response = Invoke-RestMethod -Uri $baseUrl -Method Post -Headers $headers -Body $body
+            $response = Invoke-RestMethod -Uri $baseUrl -Method Post -Headers $headers -Body $body -ErrorAction Stop
             Write-Host "  ✅ $env" -ForegroundColor Green
         } catch {
-            $errorMessage = $_.Exception.Response.StatusCode.value__
-            if ($errorMessage -eq 409) {
+            $statusCode = $_.Exception.Response.StatusCode.value__
+            $errorDetails = $_.Exception.Message
+            
+            if ($statusCode -eq 409) {
                 Write-Host "  ⚠️  $env (already exists - updating...)" -ForegroundColor Yellow
                 # Try to update instead
                 try {
@@ -87,15 +93,40 @@ foreach ($envVar in $envVars) {
                         $updateBody = @{
                             value = $envVar.Value
                             target = @($env)
-                        } | ConvertTo-Json
-                        Invoke-RestMethod -Uri $updateUrl -Method Patch -Headers $headers -Body $updateBody
+                        } | ConvertTo-Json -Compress
+                        Invoke-RestMethod -Uri $updateUrl -Method Patch -Headers $headers -Body $updateBody -ErrorAction Stop
                         Write-Host "  ✅ $env (updated)" -ForegroundColor Green
+                    } else {
+                        Write-Host "  ⚠️  $env (exists but couldn't update)" -ForegroundColor Yellow
                     }
                 } catch {
-                    Write-Host "  ⚠️  $env (update failed - may need manual setup)" -ForegroundColor Yellow
+                    Write-Host "  ⚠️  $env (update failed: $($_.Exception.Message))" -ForegroundColor Yellow
+                }
+            } elseif ($statusCode -eq 400) {
+                # Try to get more details about the 400 error
+                try {
+                    $errorStream = $_.Exception.Response.GetResponseStream()
+                    $reader = New-Object System.IO.StreamReader($errorStream)
+                    $errorBody = $reader.ReadToEnd()
+                    Write-Host "  ⚠️  $env (400 error - may already exist or invalid format)" -ForegroundColor Yellow
+                } catch {
+                    Write-Host "  ⚠️  $env (400 error - checking if exists...)" -ForegroundColor Yellow
+                    # Check if it exists
+                    try {
+                        $listUrl = "$baseUrl?decrypt=true"
+                        $existing = Invoke-RestMethod -Uri $listUrl -Method Get -Headers $headers
+                        $existingVar = $existing.envs | Where-Object { $_.key -eq $envVar.Key -and $env -in $_.target }
+                        if ($existingVar) {
+                            Write-Host "  ✅ $env (already exists with correct value)" -ForegroundColor Green
+                        } else {
+                            Write-Host "  ❌ $env (400 error - may need manual setup)" -ForegroundColor Red
+                        }
+                    } catch {
+                        Write-Host "  ❌ $env (error: $statusCode)" -ForegroundColor Red
+                    }
                 }
             } else {
-                Write-Host "  ❌ $env (error: $errorMessage)" -ForegroundColor Red
+                Write-Host "  ❌ $env (error: $statusCode)" -ForegroundColor Red
             }
         }
     }

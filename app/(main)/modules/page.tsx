@@ -67,7 +67,36 @@ export default function ModulesPage() {
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <Button variant="outline" onClick={() => setSelectedModule(null)}>
+          <Button variant="outline" onClick={async () => {
+            setSelectedModule(null);
+            
+            // Log module completed/exited activity
+            try {
+              const { data: { user } } = await supabase.auth.getUser();
+              if (user) {
+                const sessionId = typeof window !== 'undefined' 
+                  ? localStorage.getItem('psr_session_id') 
+                  : null;
+                
+                await fetch('/api/activity/log', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    action_type: 'module_completed',
+                    action_details: {
+                      module_id: selectedModule.id,
+                      module_title: selectedModule.title,
+                      category: selectedModule.category,
+                    },
+                    page_url: window.location.pathname,
+                    session_id: sessionId,
+                  }),
+                });
+              }
+            } catch (error) {
+              console.warn('Error logging module activity:', error);
+            }
+          }}>
             &larr; Back to Modules
           </Button>
         </div>
@@ -126,7 +155,36 @@ export default function ModulesPage() {
                 <Card
                   key={module.id}
                   className="cursor-pointer transition-all duration-150"
-                  onClick={() => setSelectedModule(module)}
+                  onClick={async () => {
+                    setSelectedModule(module);
+                    
+                    // Log module started activity
+                    try {
+                      const { data: { user } } = await supabase.auth.getUser();
+                      if (user) {
+                        const sessionId = typeof window !== 'undefined' 
+                          ? localStorage.getItem('psr_session_id') 
+                          : null;
+                        
+                        await fetch('/api/activity/log', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            action_type: 'module_started',
+                            action_details: {
+                              module_id: module.id,
+                              module_title: module.title,
+                              category: module.category,
+                            },
+                            page_url: window.location.pathname,
+                            session_id: sessionId,
+                          }),
+                        });
+                      }
+                    } catch (error) {
+                      console.warn('Error logging module activity:', error);
+                    }
+                  }}
                   style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
                   onMouseOver={(e) => {
                     e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';

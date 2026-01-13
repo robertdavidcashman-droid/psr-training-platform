@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
+import { logActivity } from '@/lib/activity-logger';
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -11,6 +12,19 @@ export async function GET(request: Request) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     
     if (!error) {
+      // Get user ID after successful authentication
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      
+      // Log login activity
+      if (user) {
+        await logActivity(user.id, {
+          action_type: 'login',
+          page_url: `${origin}${next}`,
+        });
+      }
+      
       return NextResponse.redirect(`${origin}${next}`);
     }
   }

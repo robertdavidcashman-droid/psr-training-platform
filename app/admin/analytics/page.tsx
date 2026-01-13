@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Select } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
+import Link from 'next/link';
 
 interface UserSession {
   id: string;
@@ -35,6 +36,7 @@ interface UserProgress {
 export default function AdminAnalyticsPage() {
   const [sessions, setSessions] = useState<UserSession[]>([]);
   const [userStats, setUserStats] = useState<UserProgress[]>([]);
+  const [activityCount, setActivityCount] = useState<number>(0);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState({ user: 'all', timeRange: '30' });
   const supabase = createClient();
@@ -95,6 +97,21 @@ export default function AdminAnalyticsPage() {
 
     setSessions(sessionsData as UserSession[] || []);
     setUserStats(statsArray);
+
+    // Load activity count
+    let activityQuery = supabase
+      .from('user_activity_log')
+      .select('id', { count: 'exact', head: true });
+
+    if (filter.timeRange !== 'all') {
+      const daysAgo = new Date();
+      daysAgo.setDate(daysAgo.getDate() - parseInt(filter.timeRange));
+      activityQuery = activityQuery.gte('created_at', daysAgo.toISOString());
+    }
+
+    const { count } = await activityQuery;
+    setActivityCount(count || 0);
+
     setLoading(false);
   };
 
@@ -141,7 +158,7 @@ export default function AdminAnalyticsPage() {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <Card>
           <CardHeader>
             <CardTitle className="text-lg font-semibold">Total Sessions</CardTitle>
@@ -171,6 +188,19 @@ export default function AdminAnalyticsPage() {
           </CardHeader>
           <CardContent>
             <div className="text-4xl font-bold text-foreground">{userStats.length}</div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg font-semibold">Total Activities Logged</CardTitle>
+            <CardDescription className="text-base">All user actions recorded</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-4xl font-bold text-foreground">{activityCount}</div>
+            <Link href="/admin/activity" className="text-sm text-primary hover:underline mt-2 block">
+              View All Activity &rarr;
+            </Link>
           </CardContent>
         </Card>
       </div>
