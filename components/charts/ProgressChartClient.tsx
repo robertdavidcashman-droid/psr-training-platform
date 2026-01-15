@@ -15,7 +15,10 @@ export function ProgressChartClient() {
   useEffect(() => {
     // Fetch progress data
     fetch('/api/progress/chart')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) return { data: [] }; // Return empty on 401 or other errors
+        return res.json();
+      })
       .then(result => {
         if (result.data) {
           setData(result.data);

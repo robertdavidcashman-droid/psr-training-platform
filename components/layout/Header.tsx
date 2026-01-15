@@ -16,9 +16,12 @@ export default function Header() {
 
   useEffect(() => {
     fetch('/api/auth/login-track', { method: 'POST' })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) return null; // Don't process if unauthorized
+        return res.json();
+      })
       .then((data) => {
-        if (data.sessionId) {
+        if (data?.sessionId) {
           sessionIdRef.current = data.sessionId;
           // Store in localStorage for InactivityTimeout to access
           if (typeof window !== 'undefined') {
@@ -26,7 +29,7 @@ export default function Header() {
           }
         }
       })
-      .catch(console.error);
+      .catch(() => {}); // Silently fail - don't log console errors
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
