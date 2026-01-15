@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -15,7 +15,7 @@ interface PaceSection {
   content: string;
 }
 
-export default function PacePage() {
+function PacePageContent() {
   const searchParams = useSearchParams();
   const [sections, setSections] = useState<PaceSection[]>([]);
   const [filteredSections, setFilteredSections] = useState<PaceSection[]>([]);
@@ -251,5 +251,19 @@ export default function PacePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PacePage() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-6xl mx-auto space-y-6">
+        <div className="text-center py-12">
+          <p className="text-muted-foreground">Loading PACE Code sections...</p>
+        </div>
+      </div>
+    }>
+      <PacePageContent />
+    </Suspense>
   );
 }
