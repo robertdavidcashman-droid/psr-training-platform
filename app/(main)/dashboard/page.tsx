@@ -107,13 +107,27 @@ export default async function DashboardPage() {
     return accA - accB;
   })[0]?.[0] || null;
 
+  // Get user's full name from users table
+  let userName = user?.email?.split('@')[0] || 'there';
+  if (user?.id) {
+    const { data: userData } = await supabase
+      .from('users')
+      .select('full_name')
+      .eq('id', user.id)
+      .single();
+    
+    if (userData?.full_name) {
+      userName = userData.full_name.split(' ')[0];
+    }
+  }
+
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Welcome Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-foreground">
-            Welcome back, {user?.profile?.full_name?.split(' ')[0] || user?.email?.split('@')[0] || 'there'}
+            Welcome back, {userName}
           </h1>
           <p className="text-muted-foreground mt-1">Ready to continue your accreditation journey?</p>
         </div>

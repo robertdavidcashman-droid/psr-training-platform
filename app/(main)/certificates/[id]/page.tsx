@@ -26,6 +26,20 @@ export default async function CertificateDetailPage({ params }: CertificatePageP
     redirect('/certificates');
   }
 
+  // Get user's full name from users table
+  let userName = user?.email?.split('@')[0] || 'User';
+  if (user?.id) {
+    const { data: userData } = await supabase
+      .from('users')
+      .select('full_name')
+      .eq('id', user.id)
+      .single();
+    
+    if (userData?.full_name) {
+      userName = userData.full_name;
+    }
+  }
+
   const moduleTitle = (certificate.content_modules as any)?.title || 'Training Certificate';
 
   return (
@@ -45,7 +59,7 @@ export default async function CertificateDetailPage({ params }: CertificatePageP
               <div className="text-4xl font-bold text-navy-800 mb-2">Certificate of Completion</div>
               <div className="text-xl text-muted-foreground mb-6">This certifies that</div>
               <div className="text-3xl font-bold text-primary mb-6">
-                {user?.profile?.full_name || user?.email?.split('@')[0] || 'User'}
+                {userName}
               </div>
               <div className="text-lg text-muted-foreground mb-6">
                 has successfully completed
