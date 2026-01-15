@@ -1,0 +1,44 @@
+{
+  "name": "pstrain-rebuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "vercel-build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.0.0",
+    "lucide-react": "^0.400.0",
+    "next": "^16.1.1",
+    "openai": "^4.28.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "recharts": "^2.10.3",
+    "tailwind-merge": "^2.2.0",
+    "typescript": "^5.9.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.89.0",
+    "@types/uuid": "^9.0.7",
+    "autoprefixer": "^10.4.23",
+    "dotenv": "^17.2.3",
+    "node-fetch": "^2.7.0",
+    "pg": "^8.16.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  }
+}
