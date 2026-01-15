@@ -139,61 +139,57 @@ export default async function DashboardPage() {
         </Link>
       </div>
 
-      {/* Stats Cards - Full Width Stacked */}
-      <div className="space-y-4">
+      {/* Stats Cards - Horizontal Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="icon-box-yellow">
-                <Award className="w-7 h-7" />
+          <CardContent className="p-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                <Award className="w-5 h-5 text-amber-600" />
               </div>
-              <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Current Level</p>
-                <p className="text-3xl font-bold text-foreground">Level {userLevel}</p>
-                <p className="text-sm text-muted-foreground">{userXP} XP / {xpForNextLevel} XP</p>
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Level</p>
+                <p className="text-2xl font-bold text-foreground">{userLevel}</p>
               </div>
             </div>
-            <div className="mt-4 w-full bg-muted rounded-full h-2">
+            <div className="mt-3 w-full bg-muted rounded-full h-1.5">
               <div
-                className="bg-accent h-2 rounded-full transition-all duration-500"
+                className="bg-amber-500 h-1.5 rounded-full transition-all duration-500"
                 style={{ width: `${xpProgressPercent}%` }}
               />
             </div>
+            <p className="text-xs text-muted-foreground mt-1">{userXP} / {xpForNextLevel} XP</p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="icon-box-pink">
-                <Flame className="w-7 h-7" />
+          <CardContent className="p-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center">
+                <Flame className="w-5 h-5 text-rose-500" />
               </div>
-              <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Day Streak</p>
-                <p className="text-3xl font-bold text-foreground">{currentStreak} {currentStreak === 1 ? 'Day' : 'Days'}</p>
-                <p className="text-sm text-muted-foreground">
-                  {currentStreak === 0 ? 'Start your streak today!' : 'Keep it up!'}
-                </p>
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Streak</p>
+                <p className="text-2xl font-bold text-foreground">{currentStreak} <span className="text-sm font-normal text-muted-foreground">{currentStreak === 1 ? 'day' : 'days'}</span></p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="icon-box-blue">
-                <Zap className="w-7 h-7" />
+          <CardContent className="p-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
+                <Zap className="w-5 h-5 text-sky-600" />
               </div>
-              <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Modules Done</p>
-                <p className="text-3xl font-bold text-foreground">{modulesCompleted} / {totalModules}</p>
-                <p className="text-sm text-muted-foreground">Accreditation Progress</p>
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Modules</p>
+                <p className="text-2xl font-bold text-foreground">{modulesCompleted}<span className="text-sm font-normal text-muted-foreground">/{totalModules}</span></p>
               </div>
             </div>
-            <div className="mt-4 w-full bg-muted rounded-full h-2">
+            <div className="mt-3 w-full bg-muted rounded-full h-1.5">
               <div
-                className="bg-primary h-2 rounded-full transition-all duration-500"
+                className="bg-sky-500 h-1.5 rounded-full transition-all duration-500"
                 style={{ width: `${(modulesCompleted / totalModules) * 100}%` }}
               />
             </div>

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 import { SearchDialog } from '@/components/search/SearchDialog';
+import { Home, Brain, BookOpen, ClipboardCheck, Scale, GraduationCap, Bookmark, MoreHorizontal } from 'lucide-react';
 
 export default function Header() {
   const router = useRouter();
@@ -13,6 +14,7 @@ export default function Header() {
   const sessionIdRef = useRef<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
 
   useEffect(() => {
     fetch('/api/auth/login-track', { method: 'POST' })
@@ -42,6 +44,15 @@ export default function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Close more menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => setMoreMenuOpen(false);
+    if (moreMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [moreMenuOpen]);
+
   const handleLogout = async () => {
     const sessionId = sessionIdRef.current || 
       (typeof window !== 'undefined' ? localStorage.getItem('psr_session_id') : null);
@@ -69,21 +80,29 @@ export default function Header() {
     router.refresh();
   };
 
-  const navLinks = [
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/practice', label: 'Practice' },
-    { href: '/questions', label: 'Questions' },
-    { href: '/scenarios', label: 'Scenarios' },
-    { href: '/modules', label: 'Modules' },
+  // Main nav links (simplified)
+  const mainNavLinks = [
+    { href: '/dashboard', label: 'Dashboard', icon: Home },
+    { href: '/practice', label: 'Practice', icon: Brain },
+    { href: '/modules', label: 'Modules', icon: BookOpen },
+    { href: '/mock-exam', label: 'Mock Exam', icon: ClipboardCheck },
+    { href: '/pace', label: 'PACE', icon: Scale },
+  ];
+
+  // Secondary nav links (in More menu)
+  const moreNavLinks = [
     { href: '/flashcards', label: 'Flashcards' },
-    { href: '/mock-exam', label: 'Mock Exam' },
-    { href: '/pace', label: 'PACE' },
+    { href: '/scenarios', label: 'Scenarios' },
+    { href: '/questions', label: 'Question Bank' },
     { href: '/study-plan', label: 'Study Plan' },
     { href: '/bookmarks', label: 'Bookmarks' },
     { href: '/certificates', label: 'Certificates' },
   ];
 
-  const isActive = (href: string) => pathname === href;
+  // All links for mobile
+  const allNavLinks = [...mainNavLinks, ...moreNavLinks.map(l => ({ ...l, icon: Bookmark }))];
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
 
   return (
     <header 
@@ -120,31 +139,95 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150"
+            {mainNavLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-1.5"
+                  style={{ 
+                    color: isActive(link.href) ? '#1e3a5f' : '#6b7280',
+                    backgroundColor: isActive(link.href) ? '#f0f4ff' : 'transparent',
+                  }}
+                  onMouseOver={(e) => {
+                    if (!isActive(link.href)) {
+                      e.currentTarget.style.backgroundColor = '#f5f5f5';
+                      e.currentTarget.style.color = '#1a1a2e';
+                    }
+                  }}
+                  onMouseOut={(e) => {
+                    if (!isActive(link.href)) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = '#6b7280';
+                    }
+                  }}
+                >
+                  <Icon className="w-4 h-4" />
+                  {link.label}
+                </Link>
+              );
+            })}
+            
+            {/* More dropdown */}
+            <div className="relative">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setMoreMenuOpen(!moreMenuOpen);
+                }}
+                className="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-1.5"
                 style={{ 
-                  color: isActive(link.href) ? '#1e3a5f' : '#6b7280',
-                  backgroundColor: isActive(link.href) ? '#f0f4ff' : 'transparent',
+                  color: moreNavLinks.some(l => isActive(l.href)) ? '#1e3a5f' : '#6b7280',
+                  backgroundColor: moreNavLinks.some(l => isActive(l.href)) ? '#f0f4ff' : 'transparent',
                 }}
                 onMouseOver={(e) => {
-                  if (!isActive(link.href)) {
-                    e.currentTarget.style.backgroundColor = '#f5f5f5';
-                    e.currentTarget.style.color = '#1a1a2e';
-                  }
+                  e.currentTarget.style.backgroundColor = '#f5f5f5';
+                  e.currentTarget.style.color = '#1a1a2e';
                 }}
                 onMouseOut={(e) => {
-                  if (!isActive(link.href)) {
+                  if (!moreNavLinks.some(l => isActive(l.href))) {
                     e.currentTarget.style.backgroundColor = 'transparent';
                     e.currentTarget.style.color = '#6b7280';
                   }
                 }}
               >
-                {link.label}
-              </Link>
-            ))}
+                <MoreHorizontal className="w-4 h-4" />
+                More
+              </button>
+              
+              {moreMenuOpen && (
+                <div 
+                  className="absolute top-full right-0 mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {moreNavLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2 text-sm transition-colors"
+                      style={{ 
+                        color: isActive(link.href) ? '#1e3a5f' : '#6b7280',
+                        backgroundColor: isActive(link.href) ? '#f0f4ff' : 'transparent',
+                      }}
+                      onClick={() => setMoreMenuOpen(false)}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = '#f5f5f5';
+                        e.currentTarget.style.color = '#1a1a2e';
+                      }}
+                      onMouseOut={(e) => {
+                        if (!isActive(link.href)) {
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                          e.currentTarget.style.color = '#6b7280';
+                        }
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Right side actions */}
@@ -209,11 +292,35 @@ export default function Header() {
             style={{ borderColor: '#e5e7eb' }}
           >
             <nav className="flex flex-col gap-1">
-              {navLinks.map((link) => (
+              {/* Main links */}
+              {mainNavLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-3 text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-3"
+                    style={{ 
+                      color: isActive(link.href) ? '#1e3a5f' : '#6b7280',
+                      backgroundColor: isActive(link.href) ? '#f0f4ff' : 'transparent',
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Icon className="w-5 h-5" />
+                    {link.label}
+                  </Link>
+                );
+              })}
+              
+              {/* Divider */}
+              <div className="my-2 border-t" style={{ borderColor: '#e5e7eb' }} />
+              
+              {/* More links */}
+              {moreNavLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-3 text-sm font-medium rounded-lg transition-all duration-150"
+                  className="px-4 py-3 text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-3"
                   style={{ 
                     color: isActive(link.href) ? '#1e3a5f' : '#6b7280',
                     backgroundColor: isActive(link.href) ? '#f0f4ff' : 'transparent',
