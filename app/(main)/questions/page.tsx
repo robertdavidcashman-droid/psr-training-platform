@@ -96,6 +96,9 @@ export default function QuestionsPage() {
 
   // Sort and normalize options for consistent A, B, C, D display
   const getSortedOptions = (options: Record<string, any>): Array<[string, string, any]> => {
+    if (!options || typeof options !== 'object') {
+      return [];
+    }
     return Object.entries(options)
       .map(([key, value]) => {
         const normalizedKey = normalizeOptionKey(key);
@@ -230,48 +233,54 @@ export default function QuestionsPage() {
                     </div>
 
                     {/* Answer Options - Now Visible in List View */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-navy-800 mb-2">Answer Options:</h4>
-                      <div className="space-y-2">
-                        {getSortedOptions(question.options).map(([originalKey, normalizedKey, value]) => {
-                          // Check if original key or normalized key is in correct_answer
-                          const isCorrect = question.correct_answer.includes(originalKey) || 
-                                           question.correct_answer.includes(normalizedKey) ||
-                                           question.correct_answer.includes(originalKey.toLowerCase()) ||
-                                           question.correct_answer.includes(normalizedKey.toLowerCase());
-                          const optionText = getOptionText(value);
-                          return (
-                            <div 
-                              key={originalKey} 
-                              className={`p-3 rounded-lg border-2 flex items-start gap-3 ${
-                                isCorrect 
-                                  ? 'bg-emerald-50 border-emerald-300' 
-                                  : 'bg-gray-50 border-gray-200'
-                              }`}
-                            >
-                              <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
-                                isCorrect ? 'bg-emerald-500 text-white' : 'bg-gray-300 text-gray-700'
-                              }`}>
-                                {normalizedKey}
-                              </span>
-                              <span className="flex-1 font-medium text-navy-800 whitespace-normal break-words">{optionText}</span>
-                              {isCorrect && (
-                                <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                              )}
-                            </div>
-                          );
-                        })}
+                    {question.options && Object.keys(question.options).length > 0 ? (
+                      <div>
+                        <h4 className="text-sm font-semibold text-navy-800 mb-2">Answer Options:</h4>
+                        <div className="space-y-2">
+                          {getSortedOptions(question.options).map(([originalKey, normalizedKey, value]) => {
+                            // Check if original key or normalized key is in correct_answer
+                            const isCorrect = question.correct_answer.includes(originalKey) || 
+                                             question.correct_answer.includes(normalizedKey) ||
+                                             question.correct_answer.includes(originalKey.toLowerCase()) ||
+                                             question.correct_answer.includes(normalizedKey.toLowerCase());
+                            const optionText = getOptionText(value);
+                            return (
+                              <div 
+                                key={originalKey} 
+                                className={`p-3 rounded-lg border-2 flex items-start gap-3 ${
+                                  isCorrect 
+                                    ? 'bg-emerald-50 border-emerald-300' 
+                                    : 'bg-gray-50 border-gray-200'
+                                }`}
+                              >
+                                <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
+                                  isCorrect ? 'bg-emerald-500 text-white' : 'bg-gray-300 text-gray-700'
+                                }`}>
+                                  {normalizedKey}
+                                </span>
+                                <span className="flex-1 font-medium text-navy-800 whitespace-normal break-words">{optionText}</span>
+                                {isCorrect && (
+                                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p className="text-sm text-amber-800">Answer options not available for this question.</p>
+                      </div>
+                    )}
 
                     {/* Explanation */}
                     {question.explanation && (
                       <div className="p-4 bg-primary/5 rounded-xl border border-primary/20">
                         <div className="flex items-start gap-3">
                           <BookOpen className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <div className="flex-1 min-w-0">
+                          <div className="flex-1 min-w-0 w-full">
                             <h4 className="font-bold text-navy-800 mb-1">Explanation</h4>
-                            <p className="text-navy-700 leading-relaxed text-sm whitespace-normal break-words">{question.explanation}</p>
+                            <p className="text-navy-700 leading-relaxed text-sm whitespace-normal break-words overflow-visible">{question.explanation}</p>
                           </div>
                         </div>
                       </div>
