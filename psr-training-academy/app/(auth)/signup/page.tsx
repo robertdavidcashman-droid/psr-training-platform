@@ -42,11 +42,53 @@ export default function SignupPage() {
       return;
     }
     
-    const parsed = schema.safeParse({ email, password, name });
+    // Read values directly from DOM inputs (works for both React state and E2E tests)
+    // This ensures we get the actual values even if React state hasn't updated
+    const form = e.currentTarget as HTMLFormElement;
+    const nameInput = form.querySelector('input#name') as HTMLInputElement;
+    const emailInput = form.querySelector('input#email') as HTMLInputElement;
+    const passwordInput = form.querySelector('input#password') as HTMLInputElement;
+    
+    // Always prefer DOM values over React state (more reliable for E2E)
+    const finalName = nameInput?.value?.trim() || '';
+    const finalEmail = emailInput?.value?.trim() || '';
+    const finalPassword = passwordInput?.value || '';
+    
+    // If DOM values are empty, fall back to React state
+    const useName = finalName || name;
+    const useEmail = finalEmail || email;
+    const usePassword = finalPassword || password;
+    
+    // Debug logging
+    console.log('Signup form submission:', { 
+      domName: finalName, domEmail: finalEmail, domPassword: finalPassword ? '***' : '',
+      stateName: name, stateEmail: email, statePassword: password ? '***' : '',
+      useName, useEmail, usePassword: usePassword ? '***' : ''
+    });
+    
+    // Validate with detailed error logging
+    const parsed = schema.safeParse({ email: useEmail, password: usePassword, name: useName });
     if (!parsed.success) {
-      setError(parsed.error.issues[0]?.message ?? 'Invalid input');
+      const firstIssue = parsed.error.issues[0];
+      const errorMsg = firstIssue?.message ?? 'Invalid input';
+      console.error('Signup validation failed:', {
+        issue: firstIssue,
+        allIssues: parsed.error.issues,
+        values: { 
+          email: useEmail, 
+          emailLength: useEmail.length,
+          emailType: typeof useEmail,
+          name: useName, 
+          password: usePassword ? '***' : '',
+          passwordLength: usePassword.length
+        },
+        zodError: parsed.error.format()
+      });
+      setError(errorMsg);
       return;
     }
+    
+    console.log('Signup validation passed, submitting to server...');
 
     setLoading(true);
     
@@ -99,12 +141,13 @@ export default function SignupPage() {
         <form onSubmit={onSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
-            <Input id="name" value={name} onChange={(e) => setName(e.target.value)} />
+            <Input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
+              name="email"
               type="email"
               autoComplete="email"
               value={email}
@@ -115,6 +158,7 @@ export default function SignupPage() {
             <Label htmlFor="password">Password</Label>
             <Input
               id="password"
+              name="password"
               type="password"
               autoComplete="new-password"
               value={password}
