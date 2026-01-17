@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
-import type { User } from '@supabase/supabase-js';
+import type { User, Session } from '@supabase/supabase-js';
 
 /**
  * SessionBanner - Development-only debug component
@@ -10,6 +10,7 @@ import type { User } from '@supabase/supabase-js';
  */
 export function SessionBanner() {
   const [user, setUser] = useState<User | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const [serverSession, setServerSession] = useState<{ id: string; role: string } | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,8 +22,9 @@ export function SessionBanner() {
     const supabase = createClient();
 
     // Get client-side session
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setUser(user);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
     });
 
     // Get server-side session info (via API)
@@ -42,6 +44,7 @@ export function SessionBanner() {
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setSession(session);
       setUser(session?.user ?? null);
     });
 
@@ -99,9 +102,9 @@ export function SessionBanner() {
             )}
           </div>
           <div>
-            {user?.exp ? (
+            {session?.expires_at ? (
               <>
-                Expires: {new Date(user.exp * 1000).toLocaleTimeString()}
+                Expires: {new Date(session.expires_at * 1000).toLocaleTimeString()}
               </>
             ) : null}
           </div>
