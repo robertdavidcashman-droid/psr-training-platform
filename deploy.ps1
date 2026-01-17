@@ -1,5 +1,11 @@
-# PSR Training Platform - Automated Deployment Script
-Write-Host "🚀 Starting deployment to Vercel..." -ForegroundColor Cyan
+# PSR Training Academy - Automated Deployment Script (deploys `psr-training-academy/`)
+Write-Host "🚀 Starting deployment to Vercel (psr-training-academy/)..." -ForegroundColor Cyan
+
+$subdir = "psr-training-academy"
+if (-not (Test-Path $subdir)) {
+    Write-Host "❌ Subproject folder not found: $subdir" -ForegroundColor Red
+    exit 1
+}
 
 # Check if Vercel CLI is installed
 $vercelInstalled = Get-Command vercel -ErrorAction SilentlyContinue
@@ -19,12 +25,15 @@ Write-Host "✅ Logged in as: $whoami" -ForegroundColor Green
 
 # Build the project first
 Write-Host "`n🔨 Building project..." -ForegroundColor Cyan
+Push-Location $subdir
 npm run build
 if ($LASTEXITCODE -ne 0) {
     Write-Host "❌ Build failed. Please fix errors and try again." -ForegroundColor Red
+    Pop-Location
     exit 1
 }
 Write-Host "✅ Build successful!" -ForegroundColor Green
+Pop-Location
 
 # Deploy
 Write-Host "`n🚀 Deploying to Vercel..." -ForegroundColor Cyan
@@ -32,7 +41,9 @@ Write-Host "Note: You may need to answer prompts interactively." -ForegroundColo
 Write-Host "`nRunning: vercel --prod" -ForegroundColor Cyan
 Write-Host "`n---" -ForegroundColor Gray
 
-vercel --prod
+Push-Location $subdir
+vercel --prod --yes
+Pop-Location
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n✅ Deployment initiated!" -ForegroundColor Green
