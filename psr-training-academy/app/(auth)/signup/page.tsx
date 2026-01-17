@@ -49,27 +49,34 @@ export default function SignupPage() {
     }
 
     setLoading(true);
+    
     try {
-      const { error: signUpError } = await supabase.auth.signUp({
-        email: parsed.data.email,
-        password: parsed.data.password,
-        options: {
-          data: { name: parsed.data.name },
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
+      // Use server-side signup route to avoid CORS issues
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify(parsed.data),
       });
 
-      if (signUpError) {
-        // Provide more helpful error messages
-        if (signUpError.message.includes('fetch') || signUpError.message.includes('Failed to fetch')) {
-          setError('Unable to connect to the authentication service. This may be a configuration issue. Please try again later or contact support.');
-        } else {
-          setError(signUpError.message);
-        }
+      const data = await response.json();
+
+      if (!data.ok) {
+        setError(data.error || 'Signup failed');
+        setLoading(false);
         return;
       }
 
-      setMessage('Check your email to confirm your account, then log in.');
+      // If session was created, user is logged in - redirect to dashboard
+      if (data.session) {
+        // Session is set via cookies, refresh to get new session
+        window.location.href = '/dashboard';
+        return;
+      }
+
+      // Email confirmation required
+      setMessage(data.message || 'Check your email to confirm your account, then log in.');
     } catch (err: any) {
       // Catch network errors
       if (err?.message?.includes('fetch') || err?.message?.includes('Failed to fetch') || err?.name === 'TypeError') {

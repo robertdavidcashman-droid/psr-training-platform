@@ -31,43 +31,65 @@ test.describe('Authentication', () => {
     // Submit signup
     await page.getByRole('button', { name: /Create account|Creating/ }).click();
     
-    // Wait for success message or redirect
-    // Note: If email confirmation is enabled, user will see a message
-    // If disabled, user should be redirected to dashboard
-    try {
-      // Check for success message first
-      const successMessage = page.getByText(/Check your email|account created/i);
-      await successMessage.waitFor({ timeout: 5000 }).catch(() => null);
-      
-      // If we see success message, email confirmation is required
-      // In that case, we can't complete the full flow without email
-      // But we can verify the signup worked
-      if (await successMessage.isVisible().catch(() => false)) {
-        // Signup succeeded, but needs email confirmation
-        // This is expected behavior
-        return;
-      }
-    } catch {
-      // No success message, might have redirected
+    // Wait for either redirect to dashboard OR success message (email confirmation)
+    // Local Supabase has email confirmations disabled, so should redirect
+    // Hosted Supabase may require email confirmation
+    await page.waitForURL((url) => 
+      url.pathname === '/dashboard' || 
+      url.pathname === '/signup' || 
+      url.pathname === '/login'
+    , { timeout: 15000 });
+    
+    const currentUrl = page.url();
+    
+    // Check for success message (email confirmation required)
+    const bodyText = await page.textContent('body').catch(() => '');
+    if (bodyText?.includes('Check your email') || bodyText?.includes('confirm your account')) {
+      // Email confirmation required - this is OK for hosted Supabase
+      // Signup succeeded, but needs email confirmation
+      return;
     }
     
-    // If redirected to dashboard, signup worked without email confirmation
-    // If still on signup, check for error
-    const currentUrl = page.url();
     if (currentUrl.includes('/dashboard')) {
       // Success! User was auto-logged in
-      await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible();
+      await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible({ timeout: 5000 });
       
       // Verify session persists on refresh
       await page.reload();
-      await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible();
+      await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible({ timeout: 5000 });
+      
+      // Verify /api/health returns ok
+      const healthResponse = await page.request.get('/api/health');
+      expect(healthResponse.ok()).toBeTruthy();
+      const healthData = await healthResponse.json();
+      expect(healthData.status).toBe('ok');
+      
+      // Verify authenticated DB read works (via health check)
+      expect(healthData.checks.db.reachable).toBe(true);
+      
+      // Test /debug page (dev only)
+      if (process.env.NODE_ENV !== 'production') {
+        await page.goto('/debug');
+        await expect(page.getByText(/Client-Side Session/i)).toBeVisible({ timeout: 5000 });
+      }
     } else if (currentUrl.includes('/signup')) {
       // Check if there's an error
       const errorText = await page.textContent('body').catch(() => '');
-      if (errorText?.includes('Failed to fetch') || errorText?.includes('network')) {
-        // This is the issue we're trying to fix
-        throw new Error('Signup failed with network error - Supabase connection issue');
+      if (errorText?.includes('Failed to fetch') || errorText?.includes('network') || errorText?.includes('Unable to connect')) {
+        // Take screenshot for debugging
+        await page.screenshot({ path: 'test-results/signup-failed.png', fullPage: true });
+        throw new Error('Signup failed with network error - Supabase connection issue. Screenshot saved.');
       }
+      // If no error but still on signup, might be email confirmation required
+      const bodyText = await page.textContent('body');
+      if (bodyText?.includes('Check your email') || bodyText?.includes('confirmation')) {
+        // Email confirmation required - this is OK for hosted Supabase
+        // Test can't complete without email, but signup worked
+        return;
+      }
+      throw new Error('Signup did not redirect to dashboard and no clear error message');
+    } else {
+      throw new Error(`Unexpected redirect to: ${currentUrl}`);
     }
   });
 });

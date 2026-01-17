@@ -310,6 +310,100 @@ async function fix7_LocalSupabase() {
   return false;
 }
 
+// Fix 8: Category-based fixes from /api/diagnose
+async function fix8_CategoryBasedFixes() {
+  log('\n[Fix 8] Running category-based diagnosis and fixes...', 'cyan');
+  
+  try {
+    const response = await fetch('http://localhost:3000/api/diagnose', {
+      signal: AbortSignal.timeout(10000),
+    });
+    
+    if (!response.ok) {
+      log('  ⚠ Could not reach /api/diagnose endpoint', 'yellow');
+      return false;
+    }
+    
+    const diagnosis = await response.json();
+    
+    if (!diagnosis.category) {
+      log('  ✓ No specific category identified', 'green');
+      return true;
+    }
+    
+    log(`  Category: ${diagnosis.category}`, 'yellow');
+    
+    // Apply fixes based on category
+    switch (diagnosis.category) {
+      case 'ENV':
+        log('  Applying ENV fixes...', 'cyan');
+        // Already handled by fix7_LocalSupabase, but ensure it runs
+        return await fix7_LocalSupabase();
+        
+      case 'NETWORK':
+        log('  Applying NETWORK fixes...', 'cyan');
+        // Ensure local Supabase is used if hosted is unreachable
+        const env = loadEnv();
+        if (env.NEXT_PUBLIC_SUPABASE_URL?.includes('.supabase.co')) {
+          log('  Switching to local Supabase...', 'yellow');
+          return await fix7_LocalSupabase();
+        }
+        return false;
+        
+      case 'CORS':
+        log('  CORS issue detected - using server-side routes', 'yellow');
+        log('  ✓ Login form already uses /api/auth/login', 'green');
+        return true;
+        
+      case 'AUTH':
+        log('  AUTH issue - checking API keys...', 'yellow');
+        // Verify keys are correct format
+        const env2 = loadEnv();
+        if (!env2.NEXT_PUBLIC_SUPABASE_ANON_KEY || env2.NEXT_PUBLIC_SUPABASE_ANON_KEY.length < 20) {
+          log('  ✗ Anon key appears invalid', 'red');
+          return false;
+        }
+        log('  ⚠ Key format looks OK - may need to verify in Supabase dashboard', 'yellow');
+        return true;
+        
+      case 'COOKIE/SESSION':
+        log('  COOKIE/SESSION issue - checking middleware...', 'yellow');
+        // Verify middleware doesn't strip cookies
+        return fix3_MiddlewareAuthRoutes();
+        
+      case 'RLS':
+        log('  RLS issue - ensuring migrations are run...', 'yellow');
+        // Check if using local Supabase
+        const env3 = loadEnv();
+        if (env3.NEXT_PUBLIC_SUPABASE_URL?.includes('127.0.0.1') || env3.NEXT_PUBLIC_SUPABASE_URL?.includes('localhost')) {
+          log('  Running migrations on local Supabase...', 'cyan');
+          try {
+            execSync('supabase db reset', { cwd: projectRoot, stdio: 'pipe' });
+            log('  ✓ Migrations applied', 'green');
+            return true;
+          } catch (err) {
+            log(`  ✗ Failed to run migrations: ${err.message}`, 'red');
+            return false;
+          }
+        } else {
+          log('  ⚠ Using hosted Supabase - migrations must be run manually', 'yellow');
+          return false;
+        }
+        
+      case 'ROUTING/MIDDLEWARE':
+        log('  ROUTING/MIDDLEWARE issue - checking middleware config...', 'yellow');
+        return fix3_MiddlewareAuthRoutes();
+        
+      default:
+        log(`  Unknown category: ${diagnosis.category}`, 'yellow');
+        return false;
+    }
+  } catch (err) {
+    log(`  ⚠ Could not run diagnosis: ${err.message}`, 'yellow');
+    return false;
+  }
+}
+
 async function main() {
   log('\n🔧 Starting AutoFix...\n', 'cyan');
   
@@ -320,7 +414,8 @@ async function main() {
     { name: 'Auth callback', fn: fix4_AuthCallback },
     { name: 'Safe fetch patterns', fn: fix5_SafeFetchPatterns },
     { name: 'RLS healthcheck', fn: fix6_RLSHealthcheck },
-    { name: 'Local Supabase', fn: fix7_LocalSupabase },
+    { name: 'Local Supabase (default)', fn: fix7_LocalSupabase },
+    { name: 'Category-based fixes', fn: fix8_CategoryBasedFixes },
   ];
   
   const results = [];

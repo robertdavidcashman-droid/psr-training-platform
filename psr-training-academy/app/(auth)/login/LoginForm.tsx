@@ -31,15 +31,32 @@ export function LoginForm({ nextPath }: { nextPath?: string }) {
     }
 
     setLoading(true);
-    const { error: signInError } = await supabase.auth.signInWithPassword(parsed.data);
-    setLoading(false);
-    if (signInError) {
-      setError(signInError.message);
-      return;
-    }
+    
+    try {
+      // Use server-side login route to avoid CORS issues
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(parsed.data),
+      });
 
-    const target = nextPath && nextPath.startsWith('/') ? nextPath : '/dashboard';
-    window.location.assign(target);
+      const data = await response.json();
+
+      if (!data.ok) {
+        setError(data.error || 'Login failed');
+        setLoading(false);
+        return;
+      }
+
+      // Session is set via cookies, refresh to get new session
+      const target = nextPath && nextPath.startsWith('/') ? nextPath : '/dashboard';
+      window.location.assign(target);
+    } catch (err: any) {
+      setError(err.message || 'Failed to connect to server');
+      setLoading(false);
+    }
   }
 
   return (

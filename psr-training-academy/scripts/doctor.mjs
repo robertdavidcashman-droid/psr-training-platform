@@ -114,25 +114,48 @@ async function runMigrations() {
   
   if (existsSync(envPath)) {
     const content = readFileSync(envPath, 'utf-8');
-    if (content.includes('127.0.0.1') || content.includes('localhost')) {
+    if (content.includes('127.0.0.1') || content.includes('localhost') || content.includes('54321')) {
       useLocal = true;
     }
+  }
+  
+  // Also check if Supabase CLI is available
+  try {
+    const { execSync } = await import('child_process');
+    execSync('supabase --version', { stdio: 'ignore' });
+    // CLI exists, prefer local
+    useLocal = true;
+  } catch {
+    // CLI not available
   }
   
   if (useLocal) {
     try {
       log('  Using local Supabase, applying migrations...', 'yellow');
+      // Check if Supabase is running
+      try {
+        const { execSync } = await import('child_process');
+        execSync('supabase status', { stdio: 'pipe', cwd: projectRoot });
+      } catch {
+        log('  Starting local Supabase...', 'yellow');
+        await runCommand('supabase', ['start'], { stdio: 'pipe' });
+        // Wait for services to be ready
+        await new Promise(resolve => setTimeout(resolve, 5000));
+      }
+      
+      log('  Running: supabase db reset (applies all migrations + seed)', 'cyan');
       await runCommand('supabase', ['db', 'reset'], { stdio: 'pipe' });
       log('✓ Migrations applied', 'green');
       return true;
     } catch (err) {
       log('  ⚠ Could not apply migrations automatically', 'yellow');
+      log(`  Error: ${err.message}`, 'yellow');
       log('  Run manually: supabase db reset', 'yellow');
       return false;
     }
   } else {
     log('  Using hosted Supabase - migrations should be applied manually', 'yellow');
-    log('  Or use: supabase db push', 'yellow');
+    log('  See: scripts/apply-all-migrations.ps1 or run in Supabase SQL Editor', 'yellow');
     return true; // Not a failure, just informational
   }
 }

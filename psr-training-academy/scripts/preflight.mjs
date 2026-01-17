@@ -204,49 +204,60 @@ async function main() {
     log('  ✓ SUPABASE_SERVICE_ROLE_KEY set', 'green');
   }
   
-  // Check if we should try local Supabase
-  if (issues.length > 0) {
-    log('\nChecking for local Supabase fallback...', 'cyan');
-    const hasCli = checkSupabaseCli();
+  // ALWAYS prefer local Supabase if CLI is available (default behavior)
+  log('\nChecking for local Supabase (preferred)...', 'cyan');
+  const hasCli = checkSupabaseCli();
+  
+  if (hasCli) {
+    log('  ✓ Supabase CLI installed', 'green');
+    const isLocalRunning = checkLocalSupabase();
     
-    if (hasCli) {
-      log('  ✓ Supabase CLI installed', 'green');
-      const isLocalRunning = checkLocalSupabase();
-      
-      if (isLocalRunning) {
-        log('  ✓ Local Supabase is running', 'green');
-        // Try to get local URLs
-        try {
-          const { execSync } = require('child_process');
-          const statusOutput = execSync('supabase status', { encoding: 'utf-8', cwd: projectRoot });
-          const apiUrlMatch = statusOutput.match(/API URL:\s*(https?:\/\/[^\s]+)/);
-          const anonKeyMatch = statusOutput.match(/anon key:\s*([^\s]+)/);
-          
-          if (apiUrlMatch && anonKeyMatch) {
-            log('  ✓ Found local Supabase URLs', 'green');
-            // Update env for this run
-            env.NEXT_PUBLIC_SUPABASE_URL = apiUrlMatch[1];
-            env.NEXT_PUBLIC_SUPABASE_ANON_KEY = anonKeyMatch[1];
-            issues.length = 0; // Clear issues since we have local fallback
-          }
-        } catch (err) {
-          log(`  ✗ Could not get local Supabase status: ${err.message}`, 'red');
+    if (isLocalRunning) {
+      log('  ✓ Local Supabase is running', 'green');
+      // Get local URLs and use them (override hosted if present)
+      try {
+        const { execSync } = require('child_process');
+        const statusOutput = execSync('supabase status', { encoding: 'utf-8', cwd: projectRoot });
+        const apiUrlMatch = statusOutput.match(/API URL:\s*(https?:\/\/[^\s]+)/);
+        const anonKeyMatch = statusOutput.match(/anon key:\s*([^\s]+)/);
+        
+        if (apiUrlMatch && anonKeyMatch) {
+          log('  ✓ Using local Supabase (overriding hosted config)', 'green');
+          // Update env for this run
+          env.NEXT_PUBLIC_SUPABASE_URL = apiUrlMatch[1];
+          env.NEXT_PUBLIC_SUPABASE_ANON_KEY = anonKeyMatch[1];
+          // Clear any issues since we have local Supabase
+          issues = issues.filter(i => !i.includes('NEXT_PUBLIC_SUPABASE'));
         }
-      } else {
-        log('  ⚠ Local Supabase not running', 'yellow');
-        log('  Attempting to start local Supabase...', 'cyan');
-        const localConfig = await bootstrapLocalSupabase();
-        if (localConfig) {
-          env.NEXT_PUBLIC_SUPABASE_URL = localConfig.apiUrl;
-          env.NEXT_PUBLIC_SUPABASE_ANON_KEY = localConfig.anonKey;
-          issues.length = 0;
-        } else {
-          issues.push('Could not bootstrap local Supabase');
-        }
+      } catch (err) {
+        log(`  ✗ Could not get local Supabase status: ${err.message}`, 'red');
       }
     } else {
+      // Try to start local Supabase automatically
+      log('  ⚠ Local Supabase not running', 'yellow');
+      log('  Attempting to start local Supabase automatically...', 'cyan');
+      const localConfig = await bootstrapLocalSupabase();
+      if (localConfig) {
+        env.NEXT_PUBLIC_SUPABASE_URL = localConfig.apiUrl;
+        env.NEXT_PUBLIC_SUPABASE_ANON_KEY = localConfig.anonKey;
+        // Clear issues
+        issues = issues.filter(i => !i.includes('NEXT_PUBLIC_SUPABASE'));
+        log('  ✓ Local Supabase started and configured', 'green');
+      } else {
+        if (issues.length > 0) {
+          issues.push('Could not bootstrap local Supabase - check Supabase CLI installation');
+        }
+      }
+    }
+  } else {
+    // No CLI - check if we have hosted config
+    if (issues.length > 0) {
       log('  ✗ Supabase CLI not installed', 'red');
-      warnings.push('Install Supabase CLI for local development: npm install -g supabase');
+      log('  Install instructions:', 'yellow');
+      log('    Windows: scoop install supabase  OR  choco install supabase', 'yellow');
+      log('    Mac: brew install supabase/tap/supabase', 'yellow');
+      log('    Linux: See https://supabase.com/docs/guides/cli', 'yellow');
+      warnings.push('Install Supabase CLI for automatic local setup: see instructions above');
     }
   }
   

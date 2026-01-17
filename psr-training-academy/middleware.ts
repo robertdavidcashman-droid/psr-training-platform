@@ -14,6 +14,9 @@ const PUBLIC_PATHS = new Set([
 ]);
 
 function isPublicPath(pathname: string) {
+  // NEVER intercept API routes
+  if (pathname.startsWith('/api/')) return true;
+  
   if (PUBLIC_PATHS.has(pathname)) return true;
   // Allow reset-password flows (e.g. /reset-password/update)
   if (pathname.startsWith('/reset-password')) return true;
