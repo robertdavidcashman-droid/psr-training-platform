@@ -31,25 +31,40 @@ test.describe('Authentication', () => {
     // Submit signup
     await page.getByRole('button', { name: /Create account|Creating/ }).click();
     
-    // Wait for either redirect to dashboard OR success message (email confirmation)
-    // Local Supabase has email confirmations disabled, so should redirect
+    // Wait for either redirect to dashboard OR success/error message
+    // Local Supabase has email confirmations disabled, so should redirect immediately
     // Hosted Supabase may require email confirmation
-    await page.waitForURL((url) => 
-      url.pathname === '/dashboard' || 
-      url.pathname === '/signup' || 
-      url.pathname === '/login'
-    , { timeout: 15000 });
+    try {
+      await page.waitForURL((url) => 
+        url.pathname === '/dashboard' || 
+        url.pathname === '/signup' || 
+        url.pathname === '/login'
+      , { timeout: 15000 });
+    } catch {
+      // URL didn't change, check for messages on the page
+    }
+    
+    // Wait a moment for any messages to appear
+    await page.waitForTimeout(2000);
     
     const currentUrl = page.url();
+    const bodyText = await page.textContent('body').catch(() => '');
+    
+    // Check for error messages first
+    if (bodyText?.includes('Failed to fetch') || bodyText?.includes('Unable to connect') || bodyText?.includes('network error')) {
+      await page.screenshot({ path: 'test-results/signup-failed.png', fullPage: true });
+      throw new Error('Signup failed with network error - Supabase connection issue. Screenshot saved.');
+    }
     
     // Check for success message (email confirmation required)
-    const bodyText = await page.textContent('body').catch(() => '');
-    if (bodyText?.includes('Check your email') || bodyText?.includes('confirm your account')) {
+    if (bodyText?.includes('Check your email') || bodyText?.includes('confirm your account') || bodyText?.includes('email to confirm')) {
       // Email confirmation required - this is OK for hosted Supabase
       // Signup succeeded, but needs email confirmation
+      // This is a valid outcome, test passes
       return;
     }
     
+    // Check if redirected to dashboard (auto-login successful)
     if (currentUrl.includes('/dashboard')) {
       // Success! User was auto-logged in
       await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible({ timeout: 5000 });
@@ -73,21 +88,20 @@ test.describe('Authentication', () => {
         await expect(page.getByText(/Client-Side Session/i)).toBeVisible({ timeout: 5000 });
       }
     } else if (currentUrl.includes('/signup')) {
-      // Check if there's an error
-      const errorText = await page.textContent('body').catch(() => '');
-      if (errorText?.includes('Failed to fetch') || errorText?.includes('network') || errorText?.includes('Unable to connect')) {
-        // Take screenshot for debugging
-        await page.screenshot({ path: 'test-results/signup-failed.png', fullPage: true });
-        throw new Error('Signup failed with network error - Supabase connection issue. Screenshot saved.');
+      // Still on signup page - check what happened
+      // If there's no error and no success message, something went wrong
+      if (!bodyText?.includes('error') && !bodyText?.includes('Error')) {
+        // No clear error, but also no redirect - might be a timing issue
+        // Wait a bit more and check again
+        await page.waitForTimeout(3000);
+        const finalUrl = page.url();
+        if (finalUrl.includes('/dashboard')) {
+          // Redirect happened after delay
+          await expect(page.getByRole('heading', { name: /Dashboard/i })).toBeVisible({ timeout: 5000 });
+          return;
+        }
       }
-      // If no error but still on signup, might be email confirmation required
-      const bodyText = await page.textContent('body');
-      if (bodyText?.includes('Check your email') || bodyText?.includes('confirmation')) {
-        // Email confirmation required - this is OK for hosted Supabase
-        // Test can't complete without email, but signup worked
-        return;
-      }
-      throw new Error('Signup did not redirect to dashboard and no clear error message');
+      throw new Error(`Signup did not complete. Still on signup page. Body text: ${bodyText.substring(0, 200)}`);
     } else {
       throw new Error(`Unexpected redirect to: ${currentUrl}`);
     }
