@@ -13,7 +13,7 @@ function checkRateLimit(identifier: string): { allowed: boolean; retryAfter?: nu
   const record = loginAttempts.get(identifier);
 
   if (!record || now > record.resetAt) {
-    loginAttempts.set(identifier, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+    // No existing record or window expired - allowed
     return { allowed: true };
   }
 
@@ -22,13 +22,19 @@ function checkRateLimit(identifier: string): { allowed: boolean; retryAfter?: nu
     return { allowed: false, retryAfter };
   }
 
-  record.count++;
+  // Under limit - allowed (don't increment here, only when attempt fails)
   return { allowed: true };
 }
 
 function recordFailedAttempt(identifier: string) {
+  const now = Date.now();
   const record = loginAttempts.get(identifier);
-  if (record) {
+
+  if (!record || now > record.resetAt) {
+    // Create new record or reset expired one
+    loginAttempts.set(identifier, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+  } else {
+    // Increment existing record
     record.count++;
   }
 }
@@ -69,7 +75,7 @@ export async function POST(request: NextRequest) {
     const parsed = loginSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
-        { ok: false, error: parsed.error.errors[0]?.message || 'Invalid input' },
+        { ok: false, error: parsed.error.issues[0]?.message || 'Invalid input' },
         { status: 400 }
       );
     }
@@ -143,7 +149,7 @@ export async function POST(request: NextRequest) {
         email: authData.user.email,
       },
     });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Login route exception:', err);
     
     // Never expose internal errors

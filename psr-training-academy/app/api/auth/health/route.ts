@@ -25,11 +25,12 @@ export async function GET() {
       userId: user?.id || null,
       error: error?.message || null,
     });
-  } catch (err: any) {
+  } catch (err) {
+    const error = err as Error;
     return NextResponse.json({
       ok: false,
       hasSession: false,
-      error: err.message || 'Unknown error',
+      error: error.message || 'Unknown error',
     });
   }
 }

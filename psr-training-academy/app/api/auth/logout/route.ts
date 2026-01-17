@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 
 /**
  * POST /api/auth/logout
  * Server-side logout route that clears session cookies
  */
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
     const supabase = await createClient();
     
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     await supabase.auth.signOut();
 
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Logout route exception:', err);
     // Even if logout fails, return success to avoid blocking user
     return NextResponse.json({ ok: true });

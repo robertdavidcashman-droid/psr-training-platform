@@ -169,9 +169,9 @@ async function runUnitTests() {
     return true;
   } catch (err) {
     log('✗ Unit tests failed', 'red');
-    log('  Note: Some test failures may be expected if environment variables are missing', 'yellow');
-    // Don't fail doctor if unit tests fail - they're not critical for login reliability
-    return true; // Treat as pass for now since tests have dependency issues
+    log('  Review test failures above for details', 'yellow');
+    // Return false so doctor properly reports test failures
+    return false;
   }
 }
 

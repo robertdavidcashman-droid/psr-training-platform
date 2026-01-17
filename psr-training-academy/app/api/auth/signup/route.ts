@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     const parsed = signupSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
-        { ok: false, error: parsed.error.errors[0]?.message || 'Invalid input' },
+        { ok: false, error: parsed.error.issues[0]?.message || 'Invalid input' },
         { status: 400 }
       );
     }
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
         message: 'Please check your email to confirm your account, then log in.',
       });
     }
-  } catch (err: any) {
+  } catch (err) {
     console.error('Signup route exception:', err);
     return NextResponse.json(
       { ok: false, error: 'Service unavailable. Please try again shortly.' },

@@ -29,7 +29,7 @@ export default function SignupPage() {
     
     const parsed = schema.safeParse({ email, password, name });
     if (!parsed.success) {
-      setError(parsed.error.errors[0]?.message || 'Invalid input');
+      setError(parsed.error.issues[0]?.message || 'Invalid input');
       return;
     }
 
@@ -60,9 +60,10 @@ export default function SignupPage() {
 
       // Email confirmation required
       setMessage(data.message || 'Check your email to confirm your account, then log in.');
-    } catch (err: any) {
+    } catch (err) {
       // Network errors - never show "Failed to fetch"
-      if (err.name === 'TypeError' || err.message?.includes('fetch')) {
+      const error = err as Error;
+      if (error.name === 'TypeError' || error.message?.includes('fetch')) {
         setError('Network issue. Please check your connection and try again.');
       } else {
         setError('Service unavailable. Please try again shortly.');

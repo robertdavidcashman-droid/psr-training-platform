@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const parsed = resetPasswordSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
-        { ok: false, error: parsed.error.errors[0]?.message || 'Invalid email address' },
+        { ok: false, error: parsed.error.issues[0]?.message || 'Invalid email address' },
         { status: 400 }
       );
     }
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       ok: true,
       message: 'If an account exists with this email, you will receive a password reset link.',
     });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Reset password route exception:', err);
     return NextResponse.json(
       { ok: false, error: 'Service unavailable. Please try again shortly.' },
