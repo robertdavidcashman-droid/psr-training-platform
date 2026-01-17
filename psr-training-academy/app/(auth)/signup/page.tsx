@@ -3,20 +3,18 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { z } from 'zod';
-import { createClient } from '@/lib/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 
 const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-  name: z.string().min(2).max(80),
+  email: z.string().email('Invalid email address'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
+  name: z.string().min(2, 'Name must be at least 2 characters').max(80, 'Name is too long'),
 });
 
 export default function SignupPage() {
-  const supabase = React.useMemo(() => createClient(), []);
   const [loading, setLoading] = React.useState(false);
   const [message, setMessage] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
@@ -28,29 +26,50 @@ export default function SignupPage() {
     e.preventDefault();
     setError(null);
     setMessage(null);
+    
     const parsed = schema.safeParse({ email, password, name });
     if (!parsed.success) {
-      setError(parsed.error.issues[0]?.message ?? 'Invalid input');
+      setError(parsed.error.errors[0]?.message || 'Invalid input');
       return;
     }
 
     setLoading(true);
-    const { error: signUpError } = await supabase.auth.signUp({
-      email: parsed.data.email,
-      password: parsed.data.password,
-      options: {
-        data: { name: parsed.data.name },
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-      },
-    });
-    setLoading(false);
+    
+    try {
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(parsed.data),
+      });
 
-    if (signUpError) {
-      setError(signUpError.message);
-      return;
+      const data = await response.json();
+
+      if (!data.ok) {
+        setError(data.error || 'Signup failed');
+        setLoading(false);
+        return;
+      }
+
+      // If session was created, user is logged in - redirect to dashboard
+      if (data.session) {
+        window.location.href = '/dashboard';
+        return;
+      }
+
+      // Email confirmation required
+      setMessage(data.message || 'Check your email to confirm your account, then log in.');
+    } catch (err: any) {
+      // Network errors - never show "Failed to fetch"
+      if (err.name === 'TypeError' || err.message?.includes('fetch')) {
+        setError('Network issue. Please check your connection and try again.');
+      } else {
+        setError('Service unavailable. Please try again shortly.');
+      }
+    } finally {
+      setLoading(false);
     }
-
-    setMessage('Check your email to confirm your account, then log in.');
   }
 
   return (
@@ -63,7 +82,13 @@ export default function SignupPage() {
         <form onSubmit={onSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
-            <Input id="name" value={name} onChange={(e) => setName(e.target.value)} />
+            <Input 
+              id="name" 
+              value={name} 
+              onChange={(e) => setName(e.target.value)}
+              disabled={loading}
+              required
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
@@ -73,6 +98,8 @@ export default function SignupPage() {
               autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+              required
             />
           </div>
           <div className="space-y-2">
@@ -83,16 +110,26 @@ export default function SignupPage() {
               autoComplete="new-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              disabled={loading}
+              required
             />
             <p className="text-muted-foreground text-xs">Minimum 8 characters.</p>
           </div>
-          {error ? <p className="text-destructive text-sm">{error}</p> : null}
-          {message ? <p className="text-foreground text-sm">{message}</p> : null}
+          {error && (
+            <p className="text-destructive text-sm" role="alert">
+              {error}
+            </p>
+          )}
+          {message && (
+            <p className="text-foreground text-sm" role="status">
+              {message}
+            </p>
+          )}
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? 'Creating…' : 'Create account'}
           </Button>
           <div className="text-sm">
-            <Link className="underline underline-offset-4" href="/login">
+            <Link className="underline underline-offset-4 hover:text-primary" href="/login">
               Already have an account? Log in
             </Link>
           </div>
