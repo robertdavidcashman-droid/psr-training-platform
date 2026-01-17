@@ -185,7 +185,7 @@ export async function GET(request: NextRequest) {
     const supabase = await createClient();
     const { data: { user }, error: sessionError } = await supabase.auth.getUser();
 
-    if (sessionError && sessionError.message.includes('cookie') || sessionError.message.includes('session')) {
+    if (sessionError && (sessionError.message.includes('cookie') || sessionError.message.includes('session'))) {
       result.category = 'COOKIE/SESSION';
       result.confidence = 'medium';
       result.evidence.errorMessages = [sessionError.message];

@@ -12,18 +12,19 @@
         - textbox "Name" [ref=e12]: Test User
       - generic [ref=e13]:
         - generic [ref=e14]: Email
-        - textbox "Email" [ref=e15]: test-1768678251816@example.com
+        - textbox "Email" [ref=e15]: psr.test.user.1768680581526@gmail.com
       - generic [ref=e16]:
         - generic [ref=e17]: Password
         - textbox "Password" [ref=e18]: TestPassword123!
         - paragraph [ref=e19]: Minimum 8 characters.
-      - button "Creating…" [disabled]
-      - link "Already have an account? Log in" [ref=e21] [cursor=pointer]:
+      - paragraph [ref=e20]: Check your email to confirm your account, then log in.
+      - button "Create account" [ref=e21]
+      - link "Already have an account? Log in" [ref=e23] [cursor=pointer]:
         - /url: /login
-  - generic [ref=e25]:
-    - strong [ref=e26]: "DEV: Session Debug"
+  - generic [ref=e27]:
+    - strong [ref=e28]: "DEV: Session Debug"
     - text: "| Not authenticated"
-  - button "Open Next.js Dev Tools" [ref=e32] [cursor=pointer]:
-    - img [ref=e33]
-  - alert [ref=e36]
+  - button "Open Next.js Dev Tools" [ref=e34] [cursor=pointer]:
+    - img [ref=e35]
+  - alert [ref=e38]
 ```
