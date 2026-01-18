@@ -1,5 +1,11 @@
+export const metadata = {
+  title: 'Dashboard',
+  description: 'Your learning dashboard with progress, stats, and quick actions.',
+};
+
 import { getCurrentUser } from '@/lib/auth';
 import { createClient } from '@/lib/supabase/server';
+import { redirect } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -7,6 +13,7 @@ import { ProgressChartClient } from '@/components/charts/ProgressChartClient';
 import { Award, Flame, Zap, Target, Briefcase, BookOpen, FileText, Brain, GraduationCap, ClipboardList, Bookmark, ArrowRight, Download } from 'lucide-react';
 
 export default async function DashboardPage() {
+  // Optional: get user if available, but don't require it
   const user = await getCurrentUser();
   const supabase = await createClient();
 

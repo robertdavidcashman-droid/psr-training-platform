@@ -2,152 +2,30 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer 
-      className="mt-auto w-full"
-      style={{ 
-        backgroundColor: '#1a1a2e',
-        borderTop: '1px solid #2d2d44',
-        position: 'relative',
-        zIndex: 10,
-        paddingBottom: '2rem'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div 
-                className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs"
-                style={{ backgroundColor: '#3b82f6' }}
-              >
-                PSR
-              </div>
-              <span 
-                className="font-bold text-white text-lg"
-                style={{ 
-                  fontFamily: 'Georgia, "Times New Roman", serif'
-                }}
-              >
-                PSR Train
-              </span>
-            </div>
-            <p className="text-sm mb-4 text-gray-300">
-              Professional Police Station Representative training platform.
-            </p>
-            <p className="text-xs text-gray-400">
-              © {new Date().getFullYear()} PSR Train. All rights reserved.
-            </p>
-          </div>
-
-          {/* Resources */}
+    <footer className="mt-auto w-full bg-slate-900 text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm">
+        <div>
+          <span className="font-bold text-lg" style={{ fontFamily: 'Georgia, serif' }}>PSR Train</span>
+          <p className="text-slate-300 mt-2">Practice, learn, and prepare for PSRAS accreditation.</p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-8">
           <div>
-            <h3 
-              className="font-semibold mb-4 text-sm text-white"
-            >
-              Resources
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a 
-                  href="https://policestationagent.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  PoliceStationAgent.com
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://policestationrepuk.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  PoliceStationRepUK.com
-                </a>
-              </li>
-            </ul>
+            <h3 className="font-semibold mb-2">Explore</h3>
+            <Link href="/modules" className="block text-slate-400 hover:text-white">Modules</Link>
+            <Link href="/portfolio" className="block text-slate-400 hover:text-white">Portfolio Guide</Link>
+            <Link href="/critical-incidents" className="block text-slate-400 hover:text-white">Critical Incidents</Link>
           </div>
-
-          {/* Legal */}
           <div>
-            <h3 
-              className="font-semibold mb-4 text-sm text-white"
-            >
-              Legal
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link 
-                  href="/legal-advice" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white font-medium"
-                >
-                  Legal Advice Hub
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/legal/privacy" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/legal/terms" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  Terms of Use
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/legal/disclaimer" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  Legal Disclaimer
-                </Link>
-              </li>
-            </ul>
+            <h3 className="font-semibold mb-2">Legal</h3>
+            <Link href="/legal/privacy" className="block text-slate-400 hover:text-white">Privacy</Link>
+            <Link href="/legal/terms" className="block text-slate-400 hover:text-white">Terms</Link>
+            <Link href="/legal/contact" className="block text-slate-400 hover:text-white">Contact</Link>
           </div>
-
-          {/* Support */}
-          <div>
-            <h3 
-              className="font-semibold mb-4 text-sm text-white"
-            >
-              Support
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link 
-                  href="/legal/faq" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/legal/contact" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/legal/about" 
-                  className="transition-colors hover:underline text-gray-300 hover:text-white"
-                >
-                  About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
+        </div>
+      </div>
+      <div className="border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-slate-500 text-center">
+          © {new Date().getFullYear()} PSR Train. All rights reserved.
         </div>
       </div>
     </footer>

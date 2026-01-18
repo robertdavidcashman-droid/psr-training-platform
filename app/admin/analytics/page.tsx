@@ -43,10 +43,6 @@ export default function AdminAnalyticsPage() {
   const [filter, setFilter] = useState({ user: 'all', timeRange: '30' });
   const supabase = createClient();
 
-  useEffect(() => {
-    loadData();
-  }, [filter]);
-
   const loadData = async () => {
     setLoading(true);
 
@@ -116,6 +112,10 @@ export default function AdminAnalyticsPage() {
 
     setLoading(false);
   };
+
+  useEffect(() => {
+    loadData();
+  }, [filter]);
 
   const getSessionDuration = (login: string, logout: string | null) => {
     if (!logout) return 'Active';

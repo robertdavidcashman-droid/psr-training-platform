@@ -1,9 +1,7 @@
-import { getCurrentUser } from '@/lib/auth';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 
 export default async function CriticalIncidentsPage() {
-  await getCurrentUser();
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">

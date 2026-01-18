@@ -1,6 +1,3 @@
-import { getCurrentUser } from '@/lib/auth';
-import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
@@ -11,89 +8,62 @@ interface CertificatePageProps {
   };
 }
 
-export default async function CertificateDetailPage({ params }: CertificatePageProps) {
-  const user = await getCurrentUser();
-  const supabase = await createClient();
+const certificateNotes = [
+  'Official PDF available for download and printing.',
+  'Includes grid of completion dates and covered modules.',
+  'Designed for employers and examiners to verify readiness.',
+];
 
-  const { data: certificate, error } = await supabase
-    .from('certificates')
-    .select('*, content_modules(title)')
-    .eq('id', params.id)
-    .eq('user_id', user?.id || '')
-    .single();
-
-  if (error || !certificate) {
-    redirect('/certificates');
-  }
-
-  // Get user's full name from users table
-  let userName = user?.email?.split('@')[0] || 'User';
-  if (user?.id) {
-    const { data: userData } = await supabase
-      .from('users')
-      .select('full_name')
-      .eq('id', user.id)
-      .single();
-    
-    if (userData?.full_name) {
-      userName = userData.full_name;
-    }
-  }
-
-  const moduleTitle = (certificate.content_modules as any)?.title || 'Training Certificate';
-
+export default function CertificateDetailPage({ params }: CertificatePageProps) {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-navy-800 mb-2">Certificate</h1>
-        <p className="text-muted-foreground">View and download your certificate</p>
+        <h1 className="text-3xl font-bold text-navy-800 mb-2">Certificate {params.id}</h1>
+        <p className="text-muted-foreground">Static preview of the certificate details.</p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>{moduleTitle}</CardTitle>
+          <CardTitle>Training Certificate</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border-2 border-primary/20">
             <div className="text-center space-y-4">
               <div className="text-4xl font-bold text-navy-800 mb-2">Certificate of Completion</div>
               <div className="text-xl text-muted-foreground mb-6">This certifies that</div>
-              <div className="text-3xl font-bold text-primary mb-6">
-                {userName}
-              </div>
+              <div className="text-3xl font-bold text-primary mb-6">PSR Trainee</div>
               <div className="text-lg text-muted-foreground mb-6">
-                has successfully completed
+                has successfully completed the Police Station Representative training journey.
               </div>
-              <div className="text-2xl font-semibold text-navy-800 mb-8">
-                {moduleTitle}
-              </div>
+              <div className="text-2xl font-semibold text-navy-800 mb-8">PSR Accreditation Programme</div>
               <div className="text-sm text-muted-foreground">
-                Issued: {new Date(certificate.issued_at).toLocaleDateString('en-GB', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+                Issued: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
               </div>
             </div>
           </div>
 
+          <ul className="space-y-3 text-sm text-slate-600">
+            {certificateNotes.map((note) => (
+              <li key={note} className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                <span>{note}</span>
+              </li>
+            ))}
+          </ul>
+
           <div className="flex gap-4">
-            <Button 
-              variant="navy" 
+            <Button
+              variant="navy"
               className="flex-1 gap-2"
-              onClick={() => {
-                window.print();
-              }}
+              onClick={() => window.print()}
             >
               <Download className="w-4 h-4" />
               Download PDF
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="flex-1"
-              onClick={() => {
-                window.history.back();
-              }}
+              onClick={() => window.history.back()}
             >
               Back to Certificates
             </Button>

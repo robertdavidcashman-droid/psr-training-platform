@@ -1,69 +1,77 @@
-import { getCurrentUser } from '@/lib/auth';
-import { createClient } from '@/lib/supabase/server';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FileText } from 'lucide-react';
 
-interface Certificate {
-  id: string;
-  module_id: string | null;
-  issued_at: string;
-  content_modules?: {
-    title: string;
-  } | null;
-}
+const certificateHighlights = [
+  'Earn recognition for each completed module',
+  'Download official PSR Train certificates in PDF',
+  'Track completion dates and module coverage',
+];
 
-export default async function CertificatesPage() {
-  const user = await getCurrentUser();
-  const supabase = await createClient();
+const certificateExamples = [
+  { title: 'Module 1 - Legal Fundamentals', issued: 'November 2024' },
+  { title: 'Module 3 - Interview Simulations', issued: 'December 2024' },
+  { title: 'Module 5 - Scenario Writing', issued: 'January 2025' },
+];
 
-  const { data: certificates } = await supabase
-    .from('certificates')
-    .select('*, content_modules(title)')
-    .eq('user_id', user?.id || '')
-    .order('issued_at', { ascending: false });
-
+export default function CertificatesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">My Certificates</h1>
-        <p className="text-gray-600 mt-2">View and download your completion certificates</p>
+        <h1 className="text-3xl font-bold">Certificates & Achievement Badges</h1>
+        <p className="text-gray-600 mt-2">
+          Every milestone you reach is recorded so you can showcase your PSR readiness.
+        </p>
       </div>
 
-      {!certificates || certificates.length === 0 ? (
-        <Card>
-          <CardContent className="py-8 text-center">
-            <p className="text-gray-600 mb-4">You don't have any certificates yet.</p>
-            <p className="text-gray-600 mb-4">Complete training modules to earn certificates.</p>
-            <Link href="/modules">
-              <Button>Browse Modules</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {certificates.map((cert) => (
-            <Card key={cert.id}>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {certificateHighlights.map((item) => (
+          <Card key={item} className="border-0 shadow-sm">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-3 mb-3">
+                <FileText className="w-5 h-5 text-primary" />
+                <h3 className="font-semibold text-lg">{item}</h3>
+              </div>
+              <p className="text-sm text-slate-600">Reusable proof of your PSR skills.</p>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-4">Completed Certificates</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {certificateExamples.map((cert) => (
+            <Card key={cert.title} className="border-0 shadow-sm">
               <CardHeader>
-                <CardTitle>
-                  {(cert.content_modules as any)?.title || 'Training Certificate'}
-                </CardTitle>
-                <CardDescription>
-                  Issued: {new Date(cert.issued_at).toLocaleDateString()}
-                </CardDescription>
+                <CardTitle>{cert.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <Link href={`/certificates/${cert.id}`}>
-                  <Button className="w-full">View Certificate</Button>
-                </Link>
-                <Link href={`/certificates/${cert.id}`}>
-                  <Button variant="outline" className="w-full">Download PDF</Button>
-                </Link>
+              <CardContent className="space-y-3">
+                <p className="text-sm text-slate-600">Issued {cert.issued}</p>
+                <div className="flex gap-2">
+                  <Link href="/certificates/example">
+                    <Button className="flex-1">View Certificate</Button>
+                  </Link>
+                  <Link href="/certificates/example">
+                    <Button variant="outline" className="flex-1">
+                      Download PDF
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
-      )}
+      </div>
+
+      <div className="text-center">
+        <Link href="/modules">
+          <Button variant="navy" size="lg">
+            Continue training to earn more
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

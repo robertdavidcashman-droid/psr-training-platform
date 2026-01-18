@@ -19,10 +19,6 @@ export default function ModulesPage() {
   const [selectedModule, setSelectedModule] = useState<Module | null>(null);
   const supabase = createClient();
 
-  useEffect(() => {
-    loadModules();
-  }, []);
-
   const loadModules = async () => {
     const { data } = await supabase
       .from('content_modules')
@@ -46,6 +42,10 @@ export default function ModulesPage() {
     setModules(uniqueModules);
     setLoading(false);
   };
+
+  useEffect(() => {
+    loadModules();
+  }, []);
 
   const categories = Array.from(new Set(modules.map(m => m.category)));
 

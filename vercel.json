@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd psr-training-academy && npm ci && npm run build",
-  "outputDirectory": "psr-training-academy/.next",
-  "installCommand": "cd psr-training-academy && npm ci",
-  "devCommand": "cd psr-training-academy && npm run dev"
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install"
 }

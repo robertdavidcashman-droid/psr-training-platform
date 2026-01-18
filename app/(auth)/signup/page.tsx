@@ -2,24 +2,23 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import { createClient } from '@/lib/supabase/client';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
-import { getErrorMessage, formatErrorForUser } from '@/lib/utils/error-handler';
+import { formatErrorForUser } from '@/lib/utils/error-handler';
 import { isSupabaseConfigured } from '@/lib/supabase/config';
-import { Mail, AlertCircle, Check, User } from 'lucide-react';
+import { Mail, AlertCircle, User, Lock } from 'lucide-react';
 
 function SignupForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const supabase = createClient();
 
   useEffect(() => {
     // Check if Supabase is configured
@@ -34,7 +33,7 @@ function SignupForm() {
       let errorMessage = 'Authentication failed. Please try again.';
       
       if (errorParam === 'auth_callback_error') {
-        errorMessage = 'The authentication link expired or is invalid. Please request a new magic link.';
+        errorMessage = 'Authentication failed. Please sign up again with email and password.';
       } else if (errorParam === 'connection_error') {
         errorMessage = 'Unable to connect to the authentication service. Please check your internet connection and try again.';
       }
@@ -54,63 +53,39 @@ function SignupForm() {
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
-          data: {
-            full_name: fullName,
-          },
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ email, password, fullName }),
       });
 
-      if (error) throw error;
+      const data = await response.json();
 
-      setSuccess(true);
+      if (!response.ok) {
+        if (data.issues) {
+          // Validation errors
+          const firstIssue = data.issues[0];
+          setError(firstIssue.message || 'Invalid input');
+        } else {
+          // Auth errors
+          const errorMessage = data.error || 'Signup failed';
+          setError(formatErrorForUser(new Error(errorMessage)));
+        }
+        return;
+      }
+
+      // Success - redirect to dashboard
+      router.push('/dashboard');
+      router.refresh();
     } catch (error: any) {
       const errorMessage = formatErrorForUser(error);
-      
-      if (errorMessage.toLowerCase().includes('fetch') || 
-          errorMessage.toLowerCase().includes('network') ||
-          errorMessage.toLowerCase().includes('connection')) {
-        setError('Unable to connect to the server. Please check your internet connection and try again. If the problem persists, the service may be temporarily unavailable.');
-      } else if (errorMessage.toLowerCase().includes('email')) {
-        setError('There was an issue sending the magic link. Please check your email address and try again.');
-      } else {
-        setError(errorMessage);
-      }
+      setError(errorMessage || 'An unexpected error occurred. Please try again.');
     } finally {
       setLoading(false);
     }
   };
-
-  if (success) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-4">
-        <div className="w-full max-w-md">
-          <Card className="shadow-xl border-0">
-            <CardContent className="pt-8 pb-8 px-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
-                <Check className="w-8 h-8 text-emerald-600" />
-              </div>
-              <h2 className="text-2xl font-bold text-navy-800 mb-3">Check Your Email</h2>
-              <p className="text-muted-foreground mb-6">
-                We&apos;ve sent a magic link to <strong className="text-navy-800">{email}</strong>. Click the link to complete your signup and sign in.
-              </p>
-              <Button 
-                variant="navy" 
-                size="lg" 
-                className="w-full"
-                onClick={() => setSuccess(false)}
-              >
-                Send Another Link
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-4">
@@ -127,7 +102,7 @@ function SignupForm() {
             {/* Title */}
             <div className="text-center mb-8">
               <h1 className="text-2xl font-bold text-navy-800 mb-2">Create Your Account</h1>
-              <p className="text-muted-foreground">We&apos;ll send you a magic link to get started</p>
+              <p className="text-muted-foreground">Sign up to get started</p>
             </div>
 
             {/* Error Message */}
@@ -167,12 +142,30 @@ function SignupForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="pl-11 h-12"
+                    disabled={loading}
                   />
                 </div>
-                <p className="text-xs text-muted-foreground">We&apos;ll send a magic link to this email</p>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password" className="text-sm font-semibold text-navy-800">Password</Label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    minLength={6}
+                    className="pl-11 h-12"
+                    disabled={loading}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground">Must be at least 6 characters</p>
               </div>
               <Button type="submit" variant="navy" size="lg" className="w-full h-12" disabled={loading}>
-                {loading ? 'Sending magic link...' : 'Create Account'}
+                {loading ? 'Creating account...' : 'Create Account'}
               </Button>
             </form>
 
