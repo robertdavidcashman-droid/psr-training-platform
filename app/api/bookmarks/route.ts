@@ -5,12 +5,10 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = await createClient();
     
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    if (authError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
+    // Return empty for anonymous users
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      return NextResponse.json({ bookmarks: [] });
     }
 
     const { data: bookmarks, error } = await supabase

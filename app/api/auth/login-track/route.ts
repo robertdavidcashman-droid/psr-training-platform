@@ -9,8 +9,9 @@ export async function POST(request: NextRequest) {
       data: { user },
     } = await supabase.auth.getUser();
 
+    // Return null for anonymous users - don't throw error
     if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ sessionId: null });
     }
 
     const sessionId = await startSession(user.id);

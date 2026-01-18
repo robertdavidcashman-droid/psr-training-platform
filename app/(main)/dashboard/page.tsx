@@ -3,9 +3,7 @@ export const metadata = {
   description: 'Your learning dashboard with progress, stats, and quick actions.',
 };
 
-import { getCurrentUser } from '@/lib/auth';
 import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -13,17 +11,9 @@ import { ProgressChartClient } from '@/components/charts/ProgressChartClient';
 import { Award, Flame, Zap, Target, Briefcase, BookOpen, FileText, Brain, GraduationCap, ClipboardList, Bookmark, ArrowRight, Download } from 'lucide-react';
 
 export default async function DashboardPage() {
-  // Optional: get user if available, but don't require it
-  const user = await getCurrentUser();
   const supabase = await createClient();
 
-  // Get user progress stats
-  const { data: progress } = await supabase
-    .from('user_progress')
-    .select('answered_correctly, question_id, timestamp')
-    .eq('user_id', user?.id || '');
-
-  // Get questions for category breakdown
+  // Get questions for category breakdown (available to all)
   const { data: questions } = await supabase
     .from('questions')
     .select('id, category')
@@ -31,47 +21,25 @@ export default async function DashboardPage() {
 
   const questionMap = new Map(questions?.map(q => [q.id, q.category]) || []);
   
-  // Calculate stats by category
+  // Calculate stats by category - empty for anonymous users
   const categoryStats: Record<string, { total: number; correct: number }> = {};
-  
-  progress?.forEach(p => {
-    const category = questionMap.get(p.question_id) || 'Unknown';
-    if (!categoryStats[category]) {
-      categoryStats[category] = { total: 0, correct: 0 };
-    }
-    categoryStats[category].total++;
-    if (p.answered_correctly) {
-      categoryStats[category].correct++;
-    }
-  });
 
-  const totalAnswered = progress?.length || 0;
-  const correctAnswers = progress?.filter((p) => p.answered_correctly).length || 0;
-
-  // Get recent activity
-  const recentProgress = progress?.slice(-5).reverse() || [];
-
-  // Get user gamification data
-  let userLevel = 1;
-  let userXP = 0;
-  let currentStreak = 0;
+  // Default values for anonymous/guest users
+  const userLevel: number = 1;
+  const userXP: number = 0;
+  const currentStreak: number = 0;
+  const modulesCompleted: number = 0;
+  let totalModules: number = 4;
   
   try {
-    const { data: userData, error } = await supabase
-      .from('users')
-      .select('level, xp, current_streak, longest_streak')
-      .eq('id', user?.id || '')
-      .single();
-
-    if (!error && userData) {
-      userLevel = userData.level ?? 1;
-      userXP = userData.xp ?? 0;
-      currentStreak = userData.current_streak ?? 0;
-    }
+    const { data: allModules } = await supabase
+      .from('content_modules')
+      .select('id');
+    totalModules = allModules?.length || 4;
   } catch (error) {
-    console.log('Gamification columns not found, using defaults');
+    console.log('Module table not found, using defaults');
   }
-  
+
   // Calculate XP needed for next level
   const getXPForLevel = (level: number) => {
     if (level === 1) return 1000;
@@ -87,46 +55,12 @@ export default async function DashboardPage() {
     ? Math.min(100, (xpProgress / xpNeeded) * 100)
     : 0;
 
-  // Get module progress
-  let modulesCompleted = 0;
-  let totalModules = 4;
-  
-  try {
-    const { data: moduleProgress } = await supabase
-      .from('module_progress')
-      .select('module_id, completed')
-      .eq('user_id', user?.id || '');
+  // No weakest category for guest users (typed as string | null to allow conditional rendering)
+  const weakestCategory = null as string | null;
+  const recentProgress: { timestamp: string; answered_correctly: boolean }[] = [];
 
-    const { data: allModules } = await supabase
-      .from('content_modules')
-      .select('id');
-
-    modulesCompleted = moduleProgress?.filter(m => m.completed).length || 0;
-    totalModules = allModules?.length || 4;
-  } catch (error) {
-    console.log('Module progress table not found, using defaults');
-  }
-
-  // Get recommended content (weakest category)
-  const weakestCategory = Object.entries(categoryStats).sort((a, b) => {
-    const accA = a[1].total > 0 ? (a[1].correct / a[1].total) : 1;
-    const accB = b[1].total > 0 ? (b[1].correct / b[1].total) : 1;
-    return accA - accB;
-  })[0]?.[0] || null;
-
-  // Get user's full name from users table
-  let userName = user?.email?.split('@')[0] || 'there';
-  if (user?.id) {
-    const { data: userData } = await supabase
-      .from('users')
-      .select('full_name')
-      .eq('id', user.id)
-      .single();
-    
-    if (userData?.full_name) {
-      userName = userData.full_name.split(' ')[0];
-    }
-  }
+  // Guest user name
+  const userName = 'Trainee';
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">

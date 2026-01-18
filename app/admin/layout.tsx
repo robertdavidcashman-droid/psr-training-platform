@@ -1,6 +1,4 @@
-import { requireAdmin } from '@/lib/auth';
 import Header from '@/components/layout/Header';
-import { InactivityTimeout } from '@/components/auth/InactivityTimeout';
 import Link from 'next/link';
 
 export default async function AdminLayout({
@@ -8,11 +6,8 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  await requireAdmin();
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <InactivityTimeout />
       <Header />
       <div className="flex flex-1">
         {/* Sidebar Navigation */}

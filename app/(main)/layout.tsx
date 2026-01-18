@@ -1,13 +1,12 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import FloatingChatButton from '@/components/layout/FloatingChatButton';
 
 export default async function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // Authentication removed - layout works without login
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
@@ -15,6 +14,7 @@ export default async function MainLayout({
         {children}
       </main>
       <Footer />
+      <FloatingChatButton />
     </div>
   );
 }
