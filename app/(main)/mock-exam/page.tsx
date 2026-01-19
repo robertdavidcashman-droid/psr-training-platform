@@ -64,15 +64,6 @@ export default function MockExamPage() {
       setAnswers({});
 
       // Exam session tracking is disabled - no longer saving exam sessions
-            status: 'in_progress',
-          })
-          .select()
-          .single();
-
-        if (session) {
-          setExamSessionId(session.id);
-        }
-      }
     }
   };
 
