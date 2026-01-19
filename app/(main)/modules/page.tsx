@@ -129,32 +129,7 @@ export default function ModulesPage() {
                   onClick={async () => {
                     setSelectedModule(module);
                     
-                    // Log module started activity
-                    try {
-                      const { data: { user } } = await supabase.auth.getUser();
-                      if (user) {
-                        const sessionId = typeof window !== 'undefined' 
-                          ? localStorage.getItem('psr_session_id') 
-                          : null;
-                        
-                        await fetch('/api/activity/log', {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({
-                            action_type: 'module_started',
-                            action_details: {
-                              module_id: module.id,
-                              module_title: module.title,
-                              category: module.category,
-                            },
-                            page_url: window.location.pathname,
-                            session_id: sessionId,
-                          }),
-                        });
-                      }
-                    } catch (error) {
-                      console.warn('Error logging module activity:', error);
-                    }
+                    // Activity logging is disabled - no longer tracking
                   }}
                   style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
                   onMouseOver={(e) => {

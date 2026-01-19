@@ -168,69 +168,7 @@ function PracticePageContent() {
 
     setShowFeedback(true);
 
-    try {
-      const { data: { user }, error: userError } = await supabase.auth.getUser();
-      if (userError) throw userError;
-      
-      if (user) {
-        const { error: progressError } = await supabase.from('user_progress').insert({
-          user_id: user.id,
-          question_id: currentQuestion.id,
-          answered_correctly: isCorrect,
-          selected_answer: selectedAnswers,
-        });
-        
-        if (progressError && !isConnectionError(progressError)) {
-          console.warn('Error saving progress:', progressError);
-        }
-
-        try {
-          const xpAmount = isCorrect ? 10 : 2;
-          await supabase.rpc('update_user_xp', {
-            user_uuid: user.id,
-            xp_gained: xpAmount
-          });
-          
-          await supabase.rpc('update_daily_streak', {
-            user_uuid: user.id
-          });
-        } catch (error) {
-          console.log('XP/Streak functions not available yet');
-        }
-
-        // Log activity
-        try {
-          const sessionId = typeof window !== 'undefined' 
-            ? localStorage.getItem('psr_session_id') 
-            : null;
-          
-          await fetch('/api/activity/log', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              action_type: 'question_answered',
-              action_details: {
-                question_id: currentQuestion.id,
-                category: currentQuestion.category,
-                difficulty: currentQuestion.difficulty,
-                answered_correctly: isCorrect,
-                selected_answers: selectedAnswers,
-              },
-              page_url: window.location.pathname,
-              session_id: sessionId,
-            }),
-          });
-        } catch (error) {
-          console.warn('Error logging activity:', error);
-        }
-      }
-    } catch (err: any) {
-      if (isConnectionError(err)) {
-        console.warn('Connection error saving progress:', err);
-      } else {
-        console.error('Error saving progress:', err);
-      }
-    }
+    // Progress tracking, XP/streak updates, and activity logging are disabled - no longer saving user progress
 
     setStats(prev => ({
       correct: prev.correct + (isCorrect ? 1 : 0),

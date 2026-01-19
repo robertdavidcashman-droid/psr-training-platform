@@ -11,10 +11,8 @@ export default function DebugPage() {
 
   useEffect(() => {
     async function checkSessions() {
-      // Check client session
-      const supabase = createClient();
-      const { data: { session } } = await supabase.auth.getSession();
-      setClientSession(session);
+      // Authentication is disabled - no session to check
+      setClientSession(null);
 
       // Check server health
       try {
@@ -50,7 +48,7 @@ export default function DebugPage() {
           <CardContent className="p-6">
             <h2 className="text-xl font-semibold mb-4">Client Session (Browser)</h2>
             <pre className="bg-gray-100 p-4 rounded overflow-auto text-sm">
-              {clientSession ? JSON.stringify(clientSession, null, 2) : 'No session'}
+              Authentication disabled - no session required
             </pre>
           </CardContent>
         </Card>

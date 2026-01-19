@@ -19,7 +19,7 @@ interface HealthCheckResult {
       detail?: string;
     };
     auth: {
-      serverSession: boolean;
+      enabled: boolean;
     };
   };
   category?: 'ENV' | 'NETWORK' | 'CORS' | 'AUTH' | 'COOKIE' | 'RLS' | 'ROUTING' | 'BUILD';
@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
         healthcheckRead: 'fail',
       },
       auth: {
-        serverSession: false,
+        enabled: false,
       },
     },
   };
@@ -121,14 +121,8 @@ export async function GET(request: NextRequest) {
     result.checks.db.detail = error.message || 'Database connection failed';
   }
 
-  // Check auth - server session
-  try {
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-    result.checks.auth.serverSession = !!user;
-  } catch (error: any) {
-    result.checks.auth.serverSession = false;
-  }
+  // Auth is disabled - no session checks needed
+  result.checks.auth.enabled = false;
 
   // Determine overall status and category
   if (

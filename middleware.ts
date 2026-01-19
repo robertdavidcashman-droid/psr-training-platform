@@ -1,16 +1,9 @@
-import { type NextRequest } from 'next/server';
-import { updateSession } from '@/lib/supabase/middleware';
+import { type NextRequest, NextResponse } from 'next/server';
 
 export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Never block API routes
-  if (pathname.startsWith('/api/')) {
-    return;
-  }
-
-  // Refresh session but don't block any routes
-  return await updateSession(request);
+  // Middleware is now empty - authentication removed
+  // Kept for potential future middleware needs
+  return NextResponse.next();
 }
 
 export const config = {

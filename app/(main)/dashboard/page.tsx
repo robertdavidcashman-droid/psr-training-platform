@@ -68,9 +68,9 @@ export default async function DashboardPage() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-foreground">
-            Welcome back, {userName}
+            Welcome to PSR Train
           </h1>
-          <p className="text-muted-foreground mt-1">Ready to continue your accreditation journey?</p>
+          <p className="text-muted-foreground mt-1">Start your accreditation journey today</p>
         </div>
         <Link href="/practice">
           <Button variant="navy" size="lg" className="group">

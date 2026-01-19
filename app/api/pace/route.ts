@@ -5,15 +5,6 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = await createClient();
     
-    // Check authentication
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    if (authError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
-    
     const searchParams = request.nextUrl.searchParams;
     const code = searchParams.get('code'); // Filter by code letter (A-H)
     const search = searchParams.get('search'); // Search query

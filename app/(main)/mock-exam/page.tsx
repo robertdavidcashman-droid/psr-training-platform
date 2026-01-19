@@ -63,15 +63,7 @@ export default function MockExamPage() {
       setStarted(true);
       setAnswers({});
 
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data: session } = await supabase
-          .from('mock_exam_sessions')
-          .insert({
-            user_id: user.id,
-            exam_name: 'Practice Mock Exam',
-            total_questions: QUESTION_COUNT,
-            time_limit_minutes: EXAM_DURATION,
+      // Exam session tracking is disabled - no longer saving exam sessions
             status: 'in_progress',
           })
           .select()
