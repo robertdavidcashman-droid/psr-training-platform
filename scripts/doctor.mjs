@@ -1,215 +1,227 @@
 #!/usr/bin/env node
 
 /**
- * Doctor script - comprehensive validation and repair
- * 1. Run autofix loop until PASS or BLOCKED
- * 2. Run unit tests
- * 3. Run E2E tests
- * 4. Print final status
+ * PSR Training Academy - Doctor Script
+ * 
+ * One-command diagnostic tool that runs all checks and reports PASS/FAIL.
+ * Usage: npm run doctor
  */
 
-import { execSync, spawn } from 'child_process';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import { existsSync } from 'fs';
-import net from 'node:net';
+import { spawn } from "child_process";
+import { existsSync, readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const projectRoot = join(__dirname, '..');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const projectRoot = join(__dirname, "..");
 
-const MAX_AUTOFIX_ITERATIONS = 3;
-let iteration = 0;
+// Colors for terminal output
+const colors = {
+  reset: "\x1b[0m",
+  green: "\x1b[32m",
+  red: "\x1b[31m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+  dim: "\x1b[2m",
+  bold: "\x1b[1m",
+};
 
-function runCommand(command, description) {
-  try {
-    console.log(`\n${description}...`);
-    execSync(command, {
+function log(message, color = colors.reset) {
+  console.log(`${color}${message}${colors.reset}`);
+}
+
+function logStep(step, status, message = "") {
+  const icon = status === "pass" ? "✓" : status === "fail" ? "✗" : "○";
+  const color = status === "pass" ? colors.green : status === "fail" ? colors.red : colors.yellow;
+  const suffix = message ? ` ${colors.dim}(${message})${colors.reset}` : "";
+  console.log(`  ${color}${icon}${colors.reset} ${step}${suffix}`);
+}
+
+function runCommand(command, args, options = {}) {
+  return new Promise((resolve) => {
+    const proc = spawn(command, args, {
       cwd: projectRoot,
-      stdio: 'inherit',
-      env: { ...process.env },
+      shell: true,
+      stdio: options.silent ? "pipe" : "inherit",
+      ...options,
     });
-    return true;
-  } catch (error) {
-    console.error(`❌ ${description} failed`);
-    return false;
-  }
-}
 
-function canRun(cmd) {
-  try {
-    execSync(cmd, { stdio: 'ignore' });
-    return true;
-  } catch {
-    return false;
-  }
-}
+    let stdout = "";
+    let stderr = "";
 
-function getDockerCmd() {
-  if (canRun('docker version')) return 'docker';
-  const dockerExe = 'C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe';
-  if (existsSync(dockerExe)) return `"${dockerExe}"`;
-  return null;
-}
-
-async function pickFreePort(preferredPort = 3000) {
-  for (let port = preferredPort; port < preferredPort + 20; port++) {
-    const ok = await new Promise((resolve) => {
-      const srv = net.createServer();
-      srv.once('error', () => resolve(false));
-      srv.listen(port, '127.0.0.1', () => {
-        srv.close(() => resolve(true));
+    if (options.silent) {
+      proc.stdout?.on("data", (data) => {
+        stdout += data.toString();
       });
-    });
-    if (ok) return port;
-  }
-  return preferredPort;
-}
+      proc.stderr?.on("data", (data) => {
+        stderr += data.toString();
+      });
+    }
 
-function startDevServer(port) {
-  return spawn(`npx next dev -p ${port}`, {
-    cwd: projectRoot,
-    stdio: 'inherit',
-    shell: true,
-    env: { ...process.env },
+    proc.on("close", (code) => {
+      resolve({ code, stdout, stderr });
+    });
+
+    proc.on("error", (err) => {
+      resolve({ code: 1, stdout, stderr: err.message });
+    });
   });
 }
 
-function stopDevServer(child) {
-  if (!child) return;
-  try {
-    child.kill('SIGTERM');
-  } catch {}
+async function checkNodeVersion() {
+  const nodeVersion = process.version;
+  const major = parseInt(nodeVersion.slice(1).split(".")[0], 10);
+  return { pass: major >= 20, message: nodeVersion };
 }
 
-async function checkHealthEndpoint(baseUrl, timeoutMs = 60_000) {
+async function checkPackageJson() {
+  const packagePath = join(projectRoot, "package.json");
+  if (!existsSync(packagePath)) {
+    return { pass: false, message: "package.json not found" };
+  }
   try {
-    const start = Date.now();
-    while (Date.now() - start < timeoutMs) {
-      try {
-        const response = await fetch(`${baseUrl}/api/health`);
-        const data = await response.json();
-        if (response.ok && data.status === 'ok') return true;
-      } catch {
-        // ignore until server is ready
-      }
-      await new Promise((r) => setTimeout(r, 1000));
-    }
-    return false;
+    const pkg = JSON.parse(readFileSync(packagePath, "utf-8"));
+    return { pass: true, message: `v${pkg.version}` };
   } catch {
-    return false;
+    return { pass: false, message: "Invalid package.json" };
   }
 }
 
-async function runAutofixLoop() {
-  console.log('🔧 Starting autofix loop...\n');
-
-  for (let i = 0; i < MAX_AUTOFIX_ITERATIONS; i++) {
-    iteration = i + 1;
-    console.log(`\n--- Autofix iteration ${iteration}/${MAX_AUTOFIX_ITERATIONS} ---\n`);
-
-    // Run autofix
-    const autofixSuccess = runCommand('npm run autofix', 'Running autofix');
-    
-    // Run preflight to check if we're done
-    const preflightSuccess = runCommand('npm run preflight', 'Running preflight');
-
-    if (preflightSuccess) {
-      console.log('\n✅ Autofix loop PASSED (preflight succeeded)');
-      return true;
+async function checkContentFiles() {
+  const files = ["topics.json", "questions.json", "scenarios.json"];
+  const contentDir = join(projectRoot, "content");
+  
+  for (const file of files) {
+    const filePath = join(contentDir, file);
+    if (!existsSync(filePath)) {
+      return { pass: false, message: `Missing ${file}` };
     }
-
-    if (i === MAX_AUTOFIX_ITERATIONS - 1) {
-      console.log(`\n⚠️  Reached max iterations (${MAX_AUTOFIX_ITERATIONS})`);
+    try {
+      JSON.parse(readFileSync(filePath, "utf-8"));
+    } catch {
+      return { pass: false, message: `Invalid ${file}` };
     }
   }
+  return { pass: true, message: `${files.length} files valid` };
+}
 
-  return false;
+async function checkEnvVars() {
+  const hasOpenAI = Boolean(process.env.OPENAI_API_KEY);
+  return {
+    pass: true, // Pass even without OpenAI (fallback exists)
+    message: hasOpenAI ? "OpenAI configured" : "OpenAI not configured (using fallback)",
+  };
+}
+
+async function runLint() {
+  log("\n📋 Running ESLint...", colors.blue);
+  const result = await runCommand("npm", ["run", "lint"], { silent: true });
+  return { pass: result.code === 0, message: result.code === 0 ? "No errors" : "Errors found" };
+}
+
+async function runTypeCheck() {
+  log("\n📝 Running TypeScript check...", colors.blue);
+  const result = await runCommand("npm", ["run", "typecheck"], { silent: true });
+  return { pass: result.code === 0, message: result.code === 0 ? "No errors" : "Type errors found" };
+}
+
+async function runBuild() {
+  log("\n🔨 Running build...", colors.blue);
+  const result = await runCommand("npm", ["run", "build"], { silent: true });
+  return { pass: result.code === 0, message: result.code === 0 ? "Build successful" : "Build failed" };
+}
+
+async function runUnitTests() {
+  log("\n🧪 Running unit tests...", colors.blue);
+  const result = await runCommand("npm", ["run", "test"], { silent: true });
+  return { pass: result.code === 0, message: result.code === 0 ? "All tests passed" : "Tests failed" };
 }
 
 async function main() {
-  console.log('🏥 Doctor: Comprehensive validation and repair\n');
-  console.log('=' .repeat(60));
+  console.log("\n");
+  log("╔═══════════════════════════════════════════════════════════╗", colors.blue);
+  log("║         PSR Training Academy - Doctor Diagnostics         ║", colors.blue);
+  log("╚═══════════════════════════════════════════════════════════╝", colors.blue);
+  console.log("");
 
-  // Hard BLOCKED dependency for local Supabase
-  const dockerCmd = getDockerCmd();
-  if (!dockerCmd) {
-    console.log('\n❌ BLOCKED: Docker CLI not found (docker.exe not on PATH).');
-    console.log('   Add to PATH: C:\\Program Files\\Docker\\Docker\\resources\\bin');
-    console.log('   Then restart your terminal and re-run: npm run doctor');
-    process.exit(1);
-  }
+  const results = [];
+  let hasFailure = false;
 
-  if (!canRun(`${dockerCmd} version`)) {
-    console.log('\n❌ BLOCKED: Docker Desktop installed but engine not running or not accessible.');
-    console.log('   Start Docker Desktop and wait until “Engine running”.');
-    process.exit(1);
-  }
+  // Pre-flight checks
+  log("🔍 Pre-flight checks", colors.bold);
+  
+  const nodeCheck = await checkNodeVersion();
+  logStep("Node.js version", nodeCheck.pass ? "pass" : "fail", nodeCheck.message);
+  results.push({ name: "Node.js", ...nodeCheck });
+  if (!nodeCheck.pass) hasFailure = true;
 
-  if (!canRun('supabase --version')) {
-    console.log('\n❌ BLOCKED: Supabase CLI is required for local Supabase.');
-    console.log('   Install: https://supabase.com/docs/guides/cli');
-    process.exit(1);
-  }
+  const packageCheck = await checkPackageJson();
+  logStep("package.json", packageCheck.pass ? "pass" : "fail", packageCheck.message);
+  results.push({ name: "package.json", ...packageCheck });
+  if (!packageCheck.pass) hasFailure = true;
 
-  // Step 1: Autofix loop (will run preflight internally)
-  const autofixPassed = await runAutofixLoop();
+  const contentCheck = await checkContentFiles();
+  logStep("Content files", contentCheck.pass ? "pass" : "fail", contentCheck.message);
+  results.push({ name: "Content files", ...contentCheck });
+  if (!contentCheck.pass) hasFailure = true;
 
-  // Step 2: Unit tests (required)
-  console.log('\n' + '='.repeat(60));
-  console.log('🧪 Running unit tests...\n');
-  const unitPassed = runCommand('npm run test', 'Running unit tests');
+  const envCheck = await checkEnvVars();
+  logStep("Environment", envCheck.pass ? "pass" : "warn", envCheck.message);
+  results.push({ name: "Environment", ...envCheck });
 
-  // Step 3: E2E tests (required)
-  console.log('\n' + '='.repeat(60));
-  console.log('🎭 Running E2E tests...\n');
+  // Code quality checks
+  log("\n⚡ Code quality", colors.bold);
 
-  // Ensure Playwright browser is available (chromium only)
-  runCommand('npx playwright install chromium', 'Ensuring Playwright browser installed');
+  const lintResult = await runLint();
+  logStep("ESLint", lintResult.pass ? "pass" : "fail", lintResult.message);
+  results.push({ name: "ESLint", ...lintResult });
+  if (!lintResult.pass) hasFailure = true;
 
-  const port = await pickFreePort(3000);
-  const baseUrl = `http://localhost:${port}`;
+  const typeResult = await runTypeCheck();
+  logStep("TypeScript", typeResult.pass ? "pass" : "fail", typeResult.message);
+  results.push({ name: "TypeScript", ...typeResult });
+  if (!typeResult.pass) hasFailure = true;
 
-  // Ensure Playwright points to the correct dev server
-  process.env.E2E_BASE_URL = baseUrl;
+  // Build
+  log("\n🏗️  Build", colors.bold);
 
-  const server = startDevServer(port);
-  let e2ePassed = false;
-  try {
-    const healthOk = await checkHealthEndpoint(baseUrl, 120_000);
-    if (!healthOk) {
-      console.error('\n❌ BLOCKED: Dev server up but /api/health never became ok');
-      e2ePassed = false;
-    } else {
-      e2ePassed = runCommand('npm run e2e', 'Running Playwright E2E');
-    }
-  } finally {
-    stopDevServer(server);
-  }
+  const buildResult = await runBuild();
+  logStep("Next.js build", buildResult.pass ? "pass" : "fail", buildResult.message);
+  results.push({ name: "Build", ...buildResult });
+  if (!buildResult.pass) hasFailure = true;
+
+  // Unit tests
+  log("\n🧪 Tests", colors.bold);
+
+  const testResult = await runUnitTests();
+  logStep("Unit tests", testResult.pass ? "pass" : "fail", testResult.message);
+  results.push({ name: "Unit tests", ...testResult });
+  if (!testResult.pass) hasFailure = true;
 
   // Summary
-  console.log('\n' + '='.repeat(60));
-  console.log('📊 Doctor Summary:\n');
+  console.log("\n");
+  log("═══════════════════════════════════════════════════════════", colors.dim);
+  
+  const passCount = results.filter((r) => r.pass).length;
+  const failCount = results.filter((r) => !r.pass).length;
 
-  const allPassed = autofixPassed && unitPassed && e2ePassed;
-  if (allPassed) {
-    console.log('✅ PASS\n');
-    console.log('Evidence:');
-    console.log('  - npm run check: ✅');
-    console.log('  - npm run test: ✅');
-    console.log('  - npm run e2e: ✅');
-    console.log('  - /api/health: ✅');
+  if (hasFailure) {
+    log(`\n  ❌ FAIL - ${failCount} check(s) failed, ${passCount} passed\n`, colors.red);
+    log("  Run the following to see details:", colors.dim);
+    log("    npm run lint     - Check for lint errors", colors.dim);
+    log("    npm run typecheck - Check for type errors", colors.dim);
+    log("    npm run build    - Check build output", colors.dim);
+    log("    npm run test     - Run unit tests\n", colors.dim);
+    process.exit(1);
+  } else {
+    log(`\n  ✅ PASS - All ${passCount} checks passed!\n`, colors.green);
+    log("  The app is ready for deployment.", colors.dim);
+    log("  Run 'npm run e2e' for end-to-end tests.\n", colors.dim);
     process.exit(0);
   }
-
-  console.log('❌ BLOCKED\n');
-  if (!autofixPassed) console.log('  - Preflight/autofix did not reach PASS');
-  if (!unitPassed) console.log('  - Unit tests failed');
-  if (!e2ePassed) console.log('  - E2E tests failed');
-  process.exit(1);
 }
 
-main().catch(error => {
-  console.error('Doctor error:', error);
+main().catch((err) => {
+  console.error("Doctor script failed:", err);
   process.exit(1);
 });

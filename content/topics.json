@@ -1,0 +1,192 @@
+{
+  "categories": [
+    {
+      "id": "pace-custody",
+      "name": "PACE & Custody Process",
+      "description": "Police and Criminal Evidence Act 1984 and custody procedures"
+    },
+    {
+      "id": "client-care",
+      "name": "Client Care & Professional Conduct",
+      "description": "Ethics, professional standards, and client relationship management"
+    },
+    {
+      "id": "vulnerability",
+      "name": "Vulnerability & Safeguards",
+      "description": "Appropriate adults, mental health, youth clients, and protective measures"
+    },
+    {
+      "id": "disclosure",
+      "name": "Disclosure & Strategy",
+      "description": "Advance disclosure, case strategy, and preparation"
+    },
+    {
+      "id": "interview",
+      "name": "Interview Skills",
+      "description": "Preparation, attendance, and interventions during police interviews"
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence & Procedure",
+      "description": "Types of evidence, procedures, and legal frameworks"
+    },
+    {
+      "id": "bail",
+      "name": "Bail & Post-Interview",
+      "description": "Bail applications, RUI, and outcome management"
+    },
+    {
+      "id": "portfolio",
+      "name": "Record Keeping & Reflection",
+      "description": "Note taking, portfolio requirements, and reflective practice"
+    }
+  ],
+  "topics": [
+    {
+      "id": "pace-s24-arrest",
+      "name": "Powers of Arrest (s.24 PACE)",
+      "description": "Understanding lawful arrest under PACE section 24, necessity criteria, and challenging unlawful arrests",
+      "category": "pace-custody",
+      "subtopics": ["Necessity criteria", "Reasonable grounds", "Challenging arrests"],
+      "officialResources": [
+        {"title": "PACE Code G", "url": "https://www.gov.uk/government/publications/pace-code-g-2012"}
+      ]
+    },
+    {
+      "id": "pace-detention-time",
+      "name": "Detention Time Limits",
+      "description": "Maximum detention periods, review requirements, and extensions",
+      "category": "pace-custody",
+      "subtopics": ["24-hour limit", "36-hour extension", "Warrant of further detention"],
+      "officialResources": [
+        {"title": "PACE Code C", "url": "https://www.gov.uk/government/publications/pace-code-c-2019"}
+      ]
+    },
+    {
+      "id": "pace-custody-record",
+      "name": "Custody Record Requirements",
+      "description": "Rights documentation, review entries, and accessing custody records",
+      "category": "pace-custody",
+      "subtopics": ["Rights notification", "Detention reviews", "Record access"]
+    },
+    {
+      "id": "client-confidentiality",
+      "name": "Client Confidentiality",
+      "description": "Legal professional privilege, confidentiality duties, and exceptions",
+      "category": "client-care",
+      "subtopics": ["Legal privilege", "Duty of confidence", "Disclosure exceptions"]
+    },
+    {
+      "id": "client-instructions",
+      "name": "Taking Instructions",
+      "description": "Obtaining clear instructions, managing expectations, and documenting decisions",
+      "category": "client-care",
+      "subtopics": ["Initial consultation", "Recording instructions", "Conflicts"]
+    },
+    {
+      "id": "professional-conduct",
+      "name": "Professional Standards",
+      "description": "SRA standards, duty to court, and professional boundaries",
+      "category": "client-care",
+      "subtopics": ["SRA principles", "Integrity", "Professional boundaries"]
+    },
+    {
+      "id": "vuln-appropriate-adult",
+      "name": "Appropriate Adults",
+      "description": "When required, role and responsibilities, and safeguards for vulnerable suspects",
+      "category": "vulnerability",
+      "subtopics": ["AA requirements", "Role during interview", "Challenging absence"]
+    },
+    {
+      "id": "vuln-mental-health",
+      "name": "Mental Health Considerations",
+      "description": "Fitness for interview, mental health assessments, and protective measures",
+      "category": "vulnerability",
+      "subtopics": ["Fitness assessment", "Healthcare professional role", "Interview adjustments"]
+    },
+    {
+      "id": "vuln-youth",
+      "name": "Youth Clients",
+      "description": "Special provisions for young people, LASPO requirements, and safeguards",
+      "category": "vulnerability",
+      "subtopics": ["Age-appropriate treatment", "Parental involvement", "Diversion options"]
+    },
+    {
+      "id": "disclosure-advance",
+      "name": "Advance Disclosure",
+      "description": "Right to disclosure, what to request, and strategic use of information",
+      "category": "disclosure",
+      "subtopics": ["Disclosure rights", "Pre-interview disclosure", "Strategy development"]
+    },
+    {
+      "id": "disclosure-strategy",
+      "name": "Case Strategy Development",
+      "description": "Analyzing disclosure, advising on responses, and interview preparation",
+      "category": "disclosure",
+      "subtopics": ["Evidence analysis", "Response options", "Client advice"]
+    },
+    {
+      "id": "interview-preparation",
+      "name": "Interview Preparation",
+      "description": "Pre-interview consultations, strategy briefing, and client preparation",
+      "category": "interview",
+      "subtopics": ["Private consultation", "Strategy briefing", "Managing expectations"]
+    },
+    {
+      "id": "interview-attendance",
+      "name": "Interview Attendance",
+      "description": "Role during interview, note-taking, and professional conduct",
+      "category": "interview",
+      "subtopics": ["Observer role", "Note-taking", "Professional presence"]
+    },
+    {
+      "id": "interview-intervention",
+      "name": "Interview Interventions",
+      "description": "When and how to intervene, challenging questions, and protecting client rights",
+      "category": "interview",
+      "subtopics": ["Grounds for intervention", "Proper technique", "Documenting issues"]
+    },
+    {
+      "id": "evidence-types",
+      "name": "Types of Evidence",
+      "description": "Understanding different evidence types and their implications",
+      "category": "evidence",
+      "subtopics": ["Physical evidence", "Witness statements", "Digital evidence"]
+    },
+    {
+      "id": "evidence-admissibility",
+      "name": "Admissibility Considerations",
+      "description": "Challenging evidence, exclusionary rules, and procedural requirements",
+      "category": "evidence",
+      "subtopics": ["s.76 confessions", "s.78 exclusion", "Procedural breaches"]
+    },
+    {
+      "id": "bail-applications",
+      "name": "Bail Applications",
+      "description": "Making bail representations, challenging conditions, and documentation",
+      "category": "bail",
+      "subtopics": ["Bail presumption", "Conditions", "Representations"]
+    },
+    {
+      "id": "bail-rui",
+      "name": "Released Under Investigation",
+      "description": "Understanding RUI, client advice, and managing ongoing investigations",
+      "category": "bail",
+      "subtopics": ["RUI implications", "Client guidance", "Follow-up actions"]
+    },
+    {
+      "id": "portfolio-notes",
+      "name": "Attendance Note Taking",
+      "description": "Contemporaneous notes, interview records, and documentation standards",
+      "category": "portfolio",
+      "subtopics": ["Note structure", "Timing records", "Key events"]
+    },
+    {
+      "id": "portfolio-reflection",
+      "name": "Reflective Practice",
+      "description": "Learning from cases, identifying development needs, and portfolio evidence",
+      "category": "portfolio",
+      "subtopics": ["Case reflection", "Learning points", "Development planning"]
+    }
+  ]
+}

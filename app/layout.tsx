@@ -1,37 +1,21 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: {
-    default: "PSR Train - Police Station Representative Training",
-    template: "%s | PSR Train"
-  },
-  description: "Professional training platform for Police Station Representatives. Practice questions, mock exams, PACE codes, flashcards, and comprehensive study materials for PSR accreditation.",
-  keywords: ["PSR", "Police Station Representative", "PACE", "Training", "Legal Training", "Police Station", "Accreditation", "Mock Exam"],
-  authors: [{ name: "PSR Train" }],
-  creator: "PSR Train",
-  publisher: "PSR Train",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: "PSR Train - Police Station Representative Training",
-    description: "Professional training platform for Police Station Representatives",
-    url: '/',
-    siteName: "PSR Train",
-    locale: "en_GB",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  title: "PSR Training Academy",
+  description:
+    "Police Station Representative Accreditation Training Platform - Master the skills and knowledge for PSR accreditation",
+  keywords: [
+    "PSR",
+    "Police Station Representative",
+    "Accreditation",
+    "Training",
+    "PACE",
+    "Criminal Law",
+  ],
 };
 
 export default function RootLayout({
@@ -41,10 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        {children}
       </body>
     </html>
   );
 }
-

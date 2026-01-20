@@ -1,29 +1,35 @@
-import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
+import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
-const config = [
-  // Next 16 ships `eslint-config-next` as a flat config (ESLint v9+).
-  ...nextCoreWebVitals,
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     ignores: [
-      'node_modules/**',
-      '.next/**',
-      'backup-Main-PC-files/**',
-      'psr-training-academy/**',
-      'coverage/**',
-      'test-results/**',
+      "node_modules/**",
+      ".next/**",
+      "coverage/**",
+      "test-results/**",
+      "playwright-report/**",
+      "next-env.d.ts",
     ],
   },
   {
-    // This repo contains lots of static copy pages and common UI patterns.
-    // Keep lint signal high by disabling noisy rules that would otherwise
-    // fail builds for content and benign effect usage.
     rules: {
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'off',
-      'react-hooks/set-state-in-effect': 'off',
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
     },
   },
 ];
 
-export default config;
-
+export default eslintConfig;

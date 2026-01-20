@@ -1,0 +1,184 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario-001",
+      "topicId": "interview-intervention",
+      "title": "The Oppressive Interview",
+      "briefing": "You are representing a client, Alex, at a police station. Alex has been arrested on suspicion of theft. During the interview, the interviewing officer becomes increasingly aggressive in their questioning style, raising their voice and making accusations. Alex appears distressed and looks to you for help.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The officer says loudly: 'We know you did it. Everyone saw you. Just admit it and this will all be over. Stop wasting our time!' Your client looks visibly upset and anxious.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Remain silent and let the interview continue",
+              "feedback": "Remaining silent when questioning becomes oppressive fails to protect your client. Oppressive interviews may render evidence inadmissible under s.76 PACE, but only if properly challenged.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Calmly intervene: 'I must object. The manner of questioning is oppressive. Please ask questions without raised voices or accusations.'",
+              "feedback": "Excellent. A calm, professional intervention addresses the conduct while maintaining a respectful tone. This creates a record and may cause the officer to moderate their approach.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Demand the interview stops immediately and threaten to report the officer",
+              "feedback": "While intervention is appropriate, an aggressive or threatening response may escalate the situation and damage your working relationship. Measured, professional objections are more effective.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "The questioning continues in the same aggressive manner. Your client, overwhelmed, says 'Fine, I did it, just stop shouting.' The officer notes this as an admission.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Accept the admission was made and continue",
+              "feedback": "An admission obtained through oppressive questioning may be challengeable. You should still note the circumstances for any future challenge, even if you didn't intervene earlier.",
+              "isOptimal": false
+            },
+            {
+              "id": "b",
+              "text": "Request a break to consult with your client and document the circumstances of the admission for potential challenge",
+              "feedback": "Good recovery. While earlier intervention would have been better, documenting the circumstances now and consulting your client allows you to advise on potential challenges to the admission's admissibility.",
+              "isOptimal": true
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "The officer pauses, then continues in a calmer tone: 'Fine. Alex, we have witness statements saying someone matching your description was seen taking the items. What do you say to that?'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Allow your client to respond based on the agreed strategy",
+              "feedback": "Correct. The officer has moderated their approach. Your client can now respond according to the strategy you agreed in the private consultation.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Object again because the question refers to undisclosed witness statements",
+              "feedback": "While you might want more disclosure details, this question itself is properly phrased. Save interventions for genuinely improper questions to maintain credibility.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "The officer responds angrily: 'Are you threatening me? I'm conducting a lawful interview.' The situation is now tense and hostile.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Apologize and de-escalate while restating your concern about the questioning style",
+              "feedback": "Good recovery. Acknowledging the tension while professionally restating your concern about questioning manner can reset the dynamic. Maintaining professionalism protects your client and your standing.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Continue arguing with the officer",
+              "feedback": "Escalating the confrontation doesn't help your client. The focus should be on protecting their interests through professional conduct, not winning arguments with officers.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario illustrates the importance of timely, professional intervention when questioning becomes oppressive. Key learning points:\n\n1. **Early intervention is crucial** - Oppressive questioning can lead to unreliable admissions. Intervening early protects your client and creates a record.\n\n2. **Professional tone matters** - Calm, measured objections are more effective than aggressive responses. Maintain your credibility as a professional.\n\n3. **Document everything** - Whether you intervene or not, detailed notes about questioning style are essential for any later challenge under s.76 PACE.\n\n4. **Know when to escalate** - If oppressive conduct continues, you may need to request a break, speak to the custody sergeant, or in extreme cases, advise your client about their right not to answer questions.\n\n5. **Balance is key** - Intervene when necessary, but avoid over-intervention which can damage your working relationship and credibility."
+    },
+    {
+      "id": "scenario-002",
+      "topicId": "vuln-appropriate-adult",
+      "title": "The Missing Appropriate Adult",
+      "briefing": "You arrive at the police station to represent Jamie, a 17-year-old arrested for criminal damage. The custody officer tells you that Jamie's parent couldn't attend, so they want to proceed with the interview using a police volunteer as appropriate adult. You have concerns about this arrangement.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The custody officer says: 'The parent couldn't make it. We've got a police volunteer AA who's done the training. Can we crack on? Jamie's been here for hours already.'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Agree to proceed with the police volunteer AA without further inquiry",
+              "feedback": "While police volunteer AAs can be appropriate, you should make inquiries about why the parent couldn't attend and whether alternative family members or social services were considered. Simply accepting the first option may not be in Jamie's best interests.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Ask what efforts were made to contact family members and whether Youth Offending Service was considered",
+              "feedback": "Good approach. Understanding what alternatives were explored helps you assess whether the proposed AA arrangement is appropriate. Family members are generally preferable if available.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Refuse to allow the interview to proceed until a family member is present",
+              "feedback": "While family members are often preferable, you cannot unilaterally prevent an interview. Your role is to advise and advocate for appropriate safeguards, not to veto police decisions.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "During the interview, the volunteer AA seems passive and doesn't engage with Jamie. Jamie appears intimidated and gives short, unclear answers. The officer pushes for more detail.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Request a break to speak with both Jamie and the AA about their role",
+              "feedback": "Good response. A break allows you to check if Jamie understands the process, ensure the AA knows their role, and assess whether Jamie is fit to continue.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Continue without intervening as the AA is present",
+              "feedback": "An AA who isn't fulfilling their role effectively may not provide meaningful protection. The presence of an AA is not just a formality—they should actively support the young person.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "The custody officer explains that Jamie's parent is at work and said to 'just get it done.' No other family was contacted. YOS wasn't called because 'it's not that serious.'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Request that YOS is contacted before proceeding, as they may provide a more suitable AA",
+              "feedback": "Appropriate. Youth Offending Service can provide trained AAs who understand young people's needs. Given the parent's apparent disengagement, an independent AA may better protect Jamie's interests.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Accept the volunteer AA as the parent has given consent",
+              "feedback": "The parent saying 'just get it done' isn't informed consent to a particular AA arrangement. You should advocate for the most appropriate safeguards for your young client.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "The custody officer is frustrated: 'Look, we have a suitable AA. Your client's been here for ages. We're entitled to proceed.'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Explain your concerns calmly and ask for a brief delay to explore alternatives",
+              "feedback": "Better approach. Explaining your concerns professionally and asking for reasonable accommodation is more likely to succeed than outright refusal.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Maintain your refusal to allow the interview",
+              "feedback": "You cannot refuse to allow the interview. If you continue to obstruct, the interview may proceed anyway. Focus on documenting your concerns and protecting your client within the process.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario explores the complexities of appropriate adult arrangements for young people. Key learning points:\n\n1. **Question AA suitability** - Don't simply accept the first AA offered. Ask what alternatives were considered and whether the proposed AA is truly appropriate.\n\n2. **Family preference** - Where possible, family members or familiar adults are generally preferable, but must not have conflicts of interest.\n\n3. **Know the alternatives** - Youth Offending Service, social services, and trained volunteer schemes can all provide AAs. Understand what's available locally.\n\n4. **AA role understanding** - An AA must actively support the young person, not just be physically present. If an AA isn't fulfilling their role, raise this.\n\n5. **Document everything** - Record your concerns about AA arrangements in your notes. If issues arise later, this documentation is crucial.\n\n6. **Balance urgency with protection** - While detention should be minimized, this doesn't justify inadequate safeguards. Advocate for appropriate protection while being realistic about what can be achieved."
+    }
+  ]
+}
