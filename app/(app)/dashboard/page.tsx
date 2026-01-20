@@ -117,7 +117,7 @@ export default function DashboardPage() {
           <CardContent>
             <div className="space-y-3">
               <div>
-                <div className="flex justify-between text-sm mb-1">
+                <div className="flex justify-between text-[15px] mb-1">
                   <span>Overall Mastery</span>
                   <span className="font-medium">{mastery}%</span>
                 </div>
@@ -126,7 +126,7 @@ export default function DashboardPage() {
               <div className="pt-2">
                 <Link
                   href="/syllabus"
-                  className="text-sm text-primary hover:underline flex items-center gap-1"
+                  className="text-[15px] text-primary hover:underline flex items-center gap-1"
                 >
                   View all topics
                   <ChevronRight className="h-3 w-3" />
@@ -150,7 +150,7 @@ export default function DashboardPage() {
                 {weakestTopics.map((topic) => (
                   <div key={topic.topicId} className="flex items-center gap-4">
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium truncate">
+                      <p className="text-[15px] font-medium truncate">
                         {topicMap[topic.topicId]?.name || topic.topicId}
                       </p>
                       <Progress
@@ -197,10 +197,10 @@ export default function DashboardPage() {
                         <Clock className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium capitalize">
+                        <p className="text-[15px] font-medium capitalize">
                           {session.mode} Practice
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-[15px] text-muted-foreground">
                           {new Date(session.date).toLocaleDateString()}
                         </p>
                       </div>
@@ -231,7 +231,7 @@ export default function DashboardPage() {
               </div>
               <div>
                 <h3 className="font-semibold">Mock Exam</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-[15px] text-muted-foreground">
                   Timed exam simulation
                 </p>
               </div>
@@ -247,7 +247,7 @@ export default function DashboardPage() {
               </div>
               <div>
                 <h3 className="font-semibold">Critical Incidents</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-[15px] text-muted-foreground">
                   Scenario-based training
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function DashboardPage() {
               </div>
               <div>
                 <h3 className="font-semibold">Portfolio Workbook</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-[15px] text-muted-foreground">
                   Case reflection templates
                 </p>
               </div>

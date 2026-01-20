@@ -26,22 +26,22 @@ export function StatCard({
     <Card className={cn("", className)} data-testid="stat-card">
       <CardContent className="p-6">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium text-muted-foreground">{title}</p>
+          <p className="text-base font-medium text-muted-foreground">{title}</p>
           {Icon && (
-            <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
-              <Icon className="h-4 w-4 text-primary" />
+            <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Icon className="h-5 w-5 text-primary" />
             </div>
           )}
         </div>
         <div className="mt-2">
-          <p className="text-2xl font-bold" data-testid="stat-value">{value}</p>
+          <p className="text-3xl font-bold" data-testid="stat-value">{value}</p>
           {description && (
-            <p className="text-sm text-muted-foreground mt-1">{description}</p>
+            <p className="text-[15px] text-muted-foreground mt-1">{description}</p>
           )}
           {trend && (
             <p
               className={cn(
-                "text-sm mt-1",
+                "text-[15px] mt-1",
                 trend.value >= 0 ? "text-success" : "text-destructive"
               )}
             >

@@ -179,7 +179,7 @@ function PracticeContent() {
                   {MODE_COUNTS[m]}
                 </div>
                 <h3 className="font-semibold capitalize mb-1">{m}</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-[15px] text-muted-foreground">
                   {m === "quick" && "~5 minutes"}
                   {m === "standard" && "~15 minutes"}
                   {m === "long" && "~30 minutes"}
@@ -225,7 +225,7 @@ function PracticeContent() {
       <div data-testid="practice-active">
         {/* Progress */}
         <div className="mb-6">
-          <div className="flex justify-between text-sm mb-2">
+          <div className="flex justify-between text-[15px] mb-2">
             <span>Question {currentIndex + 1} of {questions.length}</span>
             <span>{correctCount} correct</span>
           </div>
@@ -337,8 +337,8 @@ function PracticeContent() {
                   <div className="flex items-start gap-2">
                     <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium text-sm mb-1">What to do in practice</p>
-                      <ul className="mt-2 space-y-1 text-sm text-muted-foreground" data-testid="practice-tips">
+                      <p className="font-medium text-[15px] mb-1">What to do in practice</p>
+                      <ul className="mt-2 space-y-1 text-[15px] text-muted-foreground" data-testid="practice-tips">
                         {(getPracticeTips(currentQuestion.topicId).length
                           ? getPracticeTips(currentQuestion.topicId)
                           : ["Record key decisions and reasons contemporaneously.", "Check and document any safeguarding issues early."]
@@ -425,17 +425,17 @@ function PracticeContent() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold">{score}%</div>
-                  <div className="text-sm text-muted-foreground">Score</div>
+                  <div className="text-[15px] text-muted-foreground">Score</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">{correctCount}</div>
-                  <div className="text-sm text-muted-foreground">Correct</div>
+                  <div className="text-[15px] text-muted-foreground">Correct</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">
                     {Math.round((Date.now() - startTime) / 60000)}m
                   </div>
-                  <div className="text-sm text-muted-foreground">Duration</div>
+                  <div className="text-[15px] text-muted-foreground">Duration</div>
                 </div>
               </div>
             </CardContent>

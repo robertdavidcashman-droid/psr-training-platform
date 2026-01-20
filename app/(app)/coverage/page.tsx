@@ -96,7 +96,7 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="flex-1 min-w-0">
           <p className="font-medium text-[15px]">{criterion.label}</p>
-          <p className="text-sm text-muted-foreground mt-1">{criterion.summary}</p>
+          <p className="text-[15px] text-muted-foreground mt-1">{criterion.summary}</p>
           {criterion.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {criterion.tags.slice(0, 5).map((tag) => (
@@ -115,10 +115,10 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
       
       {criterion.expectedAuthorities.length > 0 && (
         <details className="mt-3">
-          <summary className="text-sm text-muted-foreground cursor-pointer hover:text-foreground">
+          <summary className="text-[15px] text-muted-foreground cursor-pointer hover:text-foreground">
             Expected authorities ({criterion.expectedAuthorities.length})
           </summary>
-          <ul className="mt-2 space-y-1 text-sm">
+          <ul className="mt-2 space-y-1 text-[15px]">
             {criterion.expectedAuthorities.map((auth, idx) => (
               <li key={idx} className="flex items-center gap-2">
                 <Badge variant="secondary" className="text-xs">{auth.instrument}</Badge>
@@ -172,7 +172,7 @@ function UnitCard({ unit }: { unit: UnitCoverage }) {
         <div className="flex items-start justify-between gap-4">
           <div>
             <CardTitle className="text-lg">{unit.title}</CardTitle>
-            <p className="text-sm text-muted-foreground mt-1">
+            <p className="text-[15px] text-muted-foreground mt-1">
               {unit.totalQuestions} seeded questions · {unit.outcomes.length} outcomes · {unit.totalCriteria} criteria
             </p>
           </div>
@@ -202,14 +202,14 @@ function PartSection({ part }: { part: PartCoverage }) {
       <div className="flex items-center justify-between border-b pb-4">
         <div>
           <h2 className="text-xl font-semibold">{part.title}</h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-[15px] text-muted-foreground">
             {part.units.length} units · {part.totalCriteria} criteria · {part.totalQuestions} questions
           </p>
         </div>
         <div className="flex items-center gap-4">
           <div className="text-right">
             <div className="text-3xl font-bold">{coveragePercent}%</div>
-            <div className="text-sm text-muted-foreground">overall</div>
+            <div className="text-[15px] text-muted-foreground">overall</div>
           </div>
         </div>
       </div>
@@ -358,7 +358,7 @@ export default function CoverageMatrixPage() {
             </div>
             <div>
               <div className="text-2xl font-bold">{coverage.totalQuestions}</div>
-              <div className="text-sm text-muted-foreground">Seeded Questions</div>
+              <div className="text-[15px] text-muted-foreground">Seeded Questions</div>
             </div>
           </CardContent>
         </Card>
@@ -370,7 +370,7 @@ export default function CoverageMatrixPage() {
             </div>
             <div>
               <div className="text-2xl font-bold">{coverage.totalCriteria}</div>
-              <div className="text-sm text-muted-foreground">Assessment Criteria</div>
+              <div className="text-[15px] text-muted-foreground">Assessment Criteria</div>
             </div>
           </CardContent>
         </Card>
@@ -382,7 +382,7 @@ export default function CoverageMatrixPage() {
             </div>
             <div>
               <div className="text-2xl font-bold">{coverage.coveredCriteria}</div>
-              <div className="text-sm text-muted-foreground">Criteria Covered (2+)</div>
+              <div className="text-[15px] text-muted-foreground">Criteria Covered (2+)</div>
             </div>
           </CardContent>
         </Card>
@@ -400,7 +400,7 @@ export default function CoverageMatrixPage() {
             </div>
             <div>
               <div className="text-2xl font-bold">Overall</div>
-              <div className="text-sm text-muted-foreground">Coverage Rate</div>
+              <div className="text-[15px] text-muted-foreground">Coverage Rate</div>
             </div>
           </CardContent>
         </Card>
@@ -417,7 +417,7 @@ export default function CoverageMatrixPage() {
       <Card className="mt-8">
         <CardContent className="p-4">
           <h3 className="font-semibold mb-3">Coverage Status Legend</h3>
-          <div className="flex flex-wrap gap-4 text-sm">
+          <div className="flex flex-wrap gap-4 text-[15px]">
             <div className="flex items-center gap-2">
               <Badge variant="success" className="gap-1">
                 <CheckCircle className="h-3 w-3" />

@@ -19,7 +19,7 @@ export function PageHeader({ title, description, children, className }: PageHead
             {title}
           </h1>
           {description && (
-            <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground" data-testid="page-description">
+            <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground" data-testid="page-description">
               {description}
             </p>
           )}

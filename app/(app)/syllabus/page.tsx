@@ -98,7 +98,7 @@ export default function SyllabusPage() {
                     </div>
                     <div className="min-w-0">
                       <CardTitle className="text-lg truncate">{category.name}</CardTitle>
-                      <p className="text-sm text-muted-foreground mt-0.5 line-clamp-2">
+                      <p className="text-[15px] text-muted-foreground mt-0.5 line-clamp-2">
                         {category.description}
                       </p>
                     </div>
@@ -149,7 +149,7 @@ export default function SyllabusPage() {
                                 {mastery}%
                               </Badge>
                             </div>
-                            <p className="text-sm text-muted-foreground mb-2">
+                            <p className="text-[15px] text-muted-foreground mb-2">
                               {topic.description}
                             </p>
                             {topic.subtopics && (
