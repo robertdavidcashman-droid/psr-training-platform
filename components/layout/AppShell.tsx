@@ -20,7 +20,7 @@ export function AppShell({ children }: AppShellProps) {
           <Header onMenuClick={() => setSidebarOpen(true)} />
           
           <main className="flex-1" data-testid="main-content">
-            <div className="mx-auto w-full max-w-7xl p-4 md:p-6 lg:p-8 2xl:p-10 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+            <div className="w-full p-4 md:p-6 lg:px-8 lg:py-6 xl:px-10">
               {children}
             </div>
           </main>

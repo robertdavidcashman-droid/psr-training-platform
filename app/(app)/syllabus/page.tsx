@@ -91,30 +91,30 @@ export default function SyllabusPage() {
                   )
                 }
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="h-10 w-10 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                       <BookOpen className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <CardTitle className="text-lg">{category.name}</CardTitle>
-                      <p className="text-sm text-muted-foreground mt-0.5">
+                    <div className="min-w-0">
+                      <CardTitle className="text-lg truncate">{category.name}</CardTitle>
+                      <p className="text-sm text-muted-foreground mt-0.5 line-clamp-2">
                         {category.description}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="hidden sm:block w-32">
+                  <div className="flex items-center gap-3 shrink-0">
+                    <div className="hidden md:block w-28 lg:w-32">
                       <div className="flex justify-between text-[14px] mb-1 text-muted-foreground">
                         <span>{categoryMastery}% mastery</span>
                       </div>
                       <Progress value={categoryMastery} className="h-1.5" />
                     </div>
-                    <Badge variant="secondary">
+                    <Badge variant="secondary" className="shrink-0">
                       {category.topics.length} topics
                     </Badge>
                     <ChevronRight
-                      className={`h-5 w-5 text-muted-foreground transition-transform ${
+                      className={`h-5 w-5 text-muted-foreground transition-transform shrink-0 ${
                         isExpanded ? "rotate-90" : ""
                       }`}
                     />
