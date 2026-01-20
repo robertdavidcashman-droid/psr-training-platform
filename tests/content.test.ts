@@ -50,59 +50,69 @@ describe("Content Files", () => {
     });
   });
 
-  describe("questions.json", () => {
-    it("should exist and be valid JSON", () => {
-      const filePath = path.join(contentDir, "questions.json");
-      expect(fs.existsSync(filePath)).toBe(true);
+  describe("questions", () => {
+    const questionsDir = path.join(contentDir, "questions");
 
-      const content = fs.readFileSync(filePath, "utf-8");
-      expect(() => JSON.parse(content)).not.toThrow();
+    function loadAllQuestions(): unknown[] {
+      if (fs.existsSync(questionsDir) && fs.statSync(questionsDir).isDirectory()) {
+        const files = fs.readdirSync(questionsDir).filter((f) => f.endsWith(".json"));
+        const all: unknown[] = [];
+        for (const file of files) {
+          const data = JSON.parse(fs.readFileSync(path.join(questionsDir, file), "utf-8"));
+          if (Array.isArray(data.questions)) all.push(...data.questions);
+        }
+        return all;
+      }
+
+      // Legacy fallback (kept for safety)
+      const legacyPath = path.join(contentDir, "questions.json");
+      if (!fs.existsSync(legacyPath)) return [];
+      const legacy = JSON.parse(fs.readFileSync(legacyPath, "utf-8"));
+      return Array.isArray(legacy.questions) ? legacy.questions : [];
+    }
+
+    it("should load at least one questions file", () => {
+      // If folder exists, it must contain at least one JSON file.
+      if (fs.existsSync(questionsDir)) {
+        const files = fs.readdirSync(questionsDir).filter((f) => f.endsWith(".json"));
+        expect(files.length).toBeGreaterThan(0);
+      } else {
+        // Otherwise legacy file must exist.
+        expect(fs.existsSync(path.join(contentDir, "questions.json"))).toBe(true);
+      }
     });
 
     it("should have questions array with valid questions", () => {
-      const filePath = path.join(contentDir, "questions.json");
-      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
-      expect(data.questions).toBeDefined();
-      expect(Array.isArray(data.questions)).toBe(true);
-      expect(data.questions.length).toBeGreaterThan(0);
-
-      // Validate each question
-      data.questions.forEach((question: unknown) => {
+      const questions = loadAllQuestions();
+      expect(questions.length).toBeGreaterThan(0);
+      questions.forEach((question: unknown) => {
         expect(() => QuestionSchema.parse(question)).not.toThrow();
       });
     });
 
     it("should have questions with valid topic references", () => {
       const topicsPath = path.join(contentDir, "topics.json");
-      const questionsPath = path.join(contentDir, "questions.json");
-
       const topicsData = JSON.parse(fs.readFileSync(topicsPath, "utf-8"));
-      const questionsData = JSON.parse(fs.readFileSync(questionsPath, "utf-8"));
-
       const topicIds = topicsData.topics.map((t: { id: string }) => t.id);
 
-      questionsData.questions.forEach((question: { topicId: string }) => {
+      const questions = loadAllQuestions() as { topicId: string }[];
+      questions.forEach((question) => {
         expect(topicIds).toContain(question.topicId);
       });
     });
 
-    it("should have MCQ questions with correct option structure", () => {
-      const filePath = path.join(contentDir, "questions.json");
-      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
-      const mcqQuestions = data.questions.filter(
-        (q: { type: string }) => q.type === "mcq" || q.type === "best-answer"
+    it("should have MCQ questions with 4 options and a correct answer id", () => {
+      const questions = loadAllQuestions() as unknown[];
+      const mcqQuestions = questions.filter(
+        (q): q is { type: string; options?: unknown; correct?: unknown } =>
+          typeof q === "object" && q !== null && (q as { type?: unknown }).type === "mcq"
       );
 
-      mcqQuestions.forEach((question: { options?: { isCorrect: boolean }[] }) => {
+      mcqQuestions.forEach((question) => {
         expect(question.options).toBeDefined();
         expect(Array.isArray(question.options)).toBe(true);
-        expect(question.options!.length).toBeGreaterThanOrEqual(2);
-
-        // At least one correct answer
-        const correctCount = question.options!.filter((o) => o.isCorrect).length;
-        expect(correctCount).toBeGreaterThanOrEqual(1);
+        expect((question.options as unknown[]).length).toBe(4);
+        expect(["A", "B", "C", "D"]).toContain(question.correct);
       });
     });
   });

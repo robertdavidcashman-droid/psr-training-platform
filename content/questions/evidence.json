@@ -1,0 +1,155 @@
+{
+  "questions": [
+    {
+      "id": "evid-001",
+      "topicId": "evidence-admissibility",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which PACE provision is most directly focused on excluding unreliable or oppressively obtained confessions?",
+      "options": [
+        { "id": "A", "text": "PACE 1984 s.24" },
+        { "id": "B", "text": "PACE 1984 s.58" },
+        { "id": "C", "text": "PACE 1984 s.76" },
+        { "id": "D", "text": "PACE 1984 s.40" }
+      ],
+      "correct": "C",
+      "explanation": "Section 76 is the confession-specific exclusion provision, focused on oppression and unreliability. Section 78 is broader fairness discretion covering evidence generally.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76 (confessions)" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (general fairness discretion)" }
+      ],
+      "tags": ["confession", "admissibility"]
+    },
+    {
+      "id": "evid-002",
+      "topicId": "evidence-admissibility",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "When might you rely on PACE s.78 rather than s.76?",
+      "options": [
+        { "id": "A", "text": "When challenging a confession obtained by oppression" },
+        { "id": "B", "text": "When challenging evidence on broader fairness grounds (not limited to confessions)" },
+        { "id": "C", "text": "When challenging arrest necessity" },
+        { "id": "D", "text": "When requesting a custody review" }
+      ],
+      "correct": "B",
+      "explanation": "Section 78 is a general discretion to exclude evidence where admission would adversely affect fairness. It can apply beyond confessions (e.g., procedural breaches affecting fairness).",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (exclusion of unfair evidence)" }
+      ],
+      "tags": ["fairness", "admissibility"]
+    },
+    {
+      "id": "evid-003",
+      "topicId": "evidence-types",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which is an example of 'testimonial' evidence?",
+      "options": [
+        { "id": "A", "text": "A knife recovered from a bin" },
+        { "id": "B", "text": "A witness statement describing what they saw" },
+        { "id": "C", "text": "A fingerprint lifted from a surface" },
+        { "id": "D", "text": "A CCTV recording of an incident" }
+      ],
+      "correct": "B",
+      "explanation": "Testimonial evidence is a person’s account (written or oral). Physical objects, fingerprints, and CCTV are generally real/digital evidence rather than testimonial.",
+      "references": [],
+      "tags": ["evidence", "foundations"]
+    },
+    {
+      "id": "evid-004",
+      "topicId": "evidence-types",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Why is it risky for a client to speculate about evidence they have not seen in interview?",
+      "options": [
+        { "id": "A", "text": "Speculation is always a criminal offence" },
+        { "id": "B", "text": "Speculation can create inconsistencies that look like lies when evidence later emerges" },
+        { "id": "C", "text": "Speculation forces the police to disclose their evidence" },
+        { "id": "D", "text": "Speculation makes the interview inadmissible automatically" }
+      ],
+      "correct": "B",
+      "explanation": "Guessing details can trap the client into contradictions when objective evidence appears later. A safer approach is to avoid speculation and stick to what they genuinely know/remember.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Interview best practice: avoid speculation (Check: guidance)" }
+      ],
+      "tags": ["interview", "evidence"]
+    },
+    {
+      "id": "evid-005",
+      "topicId": "evidence-admissibility",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "If an interview safeguard breach occurs (e.g., required AA absent), what is the most accurate impact statement?",
+      "options": [
+        { "id": "A", "text": "The interview is automatically deleted and cannot be used" },
+        { "id": "B", "text": "The breach may support an admissibility/fairness challenge depending on facts and severity" },
+        { "id": "C", "text": "The breach has no relevance once the client is charged" },
+        { "id": "D", "text": "The police must release the client immediately" }
+      ],
+      "correct": "B",
+      "explanation": "Safeguard breaches do not always make evidence inadmissible automatically, but they can be highly significant and may support applications to exclude evidence on fairness grounds.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness discretion)" },
+        { "instrument": "Code C", "cite": "Code C — interview safeguards (Check: paragraph)" }
+      ],
+      "tags": ["admissibility", "safeguards"]
+    },
+    {
+      "id": "evid-006",
+      "topicId": "evidence-admissibility",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which phrase best describes 'oppression' in the context of confession challenges?",
+      "options": [
+        { "id": "A", "text": "Any questioning by police" },
+        { "id": "B", "text": "Improper pressure or conduct that may overwhelm the will of the suspect" },
+        { "id": "C", "text": "A suspect refusing to answer questions" },
+        { "id": "D", "text": "A routine caution being given" }
+      ],
+      "correct": "B",
+      "explanation": "Oppression refers to improper pressure or conduct. Whether something amounts to oppression depends on facts; document concerns contemporaneously and consider s.76/s.78 frameworks.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76 (confessions)" }
+      ],
+      "tags": ["confession", "oppression"]
+    },
+    {
+      "id": "evid-007",
+      "topicId": "evidence-types",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which is the best example of 'digital evidence'?",
+      "options": [
+        { "id": "A", "text": "A handwritten note found in a pocket" },
+        { "id": "B", "text": "CCTV footage from a shop camera" },
+        { "id": "C", "text": "A witness describing events" },
+        { "id": "D", "text": "A pair of gloves" }
+      ],
+      "correct": "B",
+      "explanation": "Digital evidence includes recordings and electronic data (e.g., CCTV, phone messages, location data), which often require careful handling and can strongly affect strategy.",
+      "references": [],
+      "tags": ["evidence", "digital"]
+    },
+    {
+      "id": "evid-008",
+      "topicId": "evidence-types",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "You receive disclosure that includes CCTV but you have not seen it. Which is the safest advice principle for interview?",
+      "options": [
+        { "id": "A", "text": "Assume CCTV proves guilt; advise full admissions" },
+        { "id": "B", "text": "Avoid speculating about what CCTV shows; ask for a description/summary and tailor strategy accordingly" },
+        { "id": "C", "text": "Tell the client to guess what CCTV might show to sound convincing" },
+        { "id": "D", "text": "Insist the police play the CCTV in the interview as a right in every case" }
+      ],
+      "correct": "B",
+      "explanation": "Without seeing the material, speculation is risky. Seek a clear summary of what it is said to show and consider whether a prepared statement or limited account is appropriate.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Interview strategy when evidence is asserted but not viewed (Check: guidance)" }
+      ],
+      "tags": ["evidence", "strategy"]
+    }
+  ]
+}
+

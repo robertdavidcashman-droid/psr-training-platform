@@ -24,9 +24,11 @@ import {
   generateId,
 } from "@/lib/storage";
 import { shuffleArray } from "@/lib/utils";
-import questionsData from "@/content/questions.json";
+import { questions as seededQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
+import { getPracticeTips, getReferenceSuggestions, isPaceCustodyTopic } from "@/lib/references";
+import { ReferencesPanel } from "@/components/ReferencesPanel";
 
 type PracticeMode = "quick" | "standard" | "long";
 type SessionState = "setup" | "active" | "review" | "complete";
@@ -41,8 +43,8 @@ function PracticeLoading() {
   return (
     <div className="space-y-4">
       <Skeleton className="h-8 w-48" />
-      <Skeleton className="h-4 w-96" />
-      <div className="grid gap-4 md:grid-cols-3 max-w-3xl mt-8">
+      <Skeleton className="h-4 w-full max-w-md" />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-8">
         <Skeleton className="h-48" />
         <Skeleton className="h-48" />
         <Skeleton className="h-48" />
@@ -76,7 +78,7 @@ function PracticeContent() {
   const currentQuestion = questions[currentIndex];
 
   const startSession = useCallback((selectedMode: PracticeMode) => {
-    let availableQuestions = questionsData.questions as Question[];
+    let availableQuestions = seededQuestions as Question[];
     
     if (topicFilter) {
       availableQuestions = availableQuestions.filter((q) => q.topicId === topicFilter);
@@ -103,9 +105,7 @@ function PracticeContent() {
   const submitAnswer = () => {
     if (!selectedAnswer || !currentQuestion) return;
     
-    const isCorrect = currentQuestion.options?.find(
-      (o) => o.id === selectedAnswer
-    )?.isCorrect || false;
+    const isCorrect = currentQuestion.correct === selectedAnswer;
 
     setAnswers((prev) => ({
       ...prev,
@@ -166,7 +166,7 @@ function PracticeContent() {
           }
         />
 
-        <div className="grid gap-4 md:grid-cols-3 max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(["quick", "standard", "long"] as PracticeMode[]).map((m) => (
             <Card
               key={m}
@@ -193,7 +193,7 @@ function PracticeContent() {
           ))}
         </div>
 
-        <Alert className="mt-6 max-w-3xl">
+        <Alert className="mt-6 max-w-4xl">
           <Info className="h-4 w-4" />
           <AlertTitle>Training Disclaimer</AlertTitle>
           <AlertDescription>
@@ -206,6 +206,21 @@ function PracticeContent() {
   }
 
   if (state === "active" && currentQuestion) {
+    const effectiveReferences =
+      currentQuestion.references?.length
+        ? currentQuestion.references
+        : isPaceCustodyTopic(currentQuestion.topicId)
+          ? getReferenceSuggestions(currentQuestion.topicId)
+          : [];
+
+    const usedFallbackReferences =
+      (!currentQuestion.references || currentQuestion.references.length === 0) &&
+      effectiveReferences.length > 0;
+
+    const correctOption = currentQuestion.options?.find(
+      (o) => o.id === currentQuestion.correct
+    );
+
     return (
       <div data-testid="practice-active">
         {/* Progress */}
@@ -227,7 +242,7 @@ function PracticeContent() {
               </Badge>
             </div>
             <CardTitle className="text-xl" data-testid="question-text">
-              {currentQuestion.question}
+              {currentQuestion.stem}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -235,7 +250,7 @@ function PracticeContent() {
               {currentQuestion.options?.map((option) => {
                 const isSelected = selectedAnswer === option.id;
                 const showResult = showFeedback;
-                const isCorrect = option.isCorrect;
+                const isCorrect = currentQuestion.correct === option.id;
 
                 return (
                   <button
@@ -272,7 +287,7 @@ function PracticeContent() {
                         {showResult && isCorrect && <CheckCircle className="h-4 w-4" />}
                         {showResult && isSelected && !isCorrect && <XCircle className="h-4 w-4" />}
                       </div>
-                      <span className="flex-1">{option.text}</span>
+                      <span className="min-w-0 flex-1 break-words">{option.text}</span>
                     </div>
                   </button>
                 );
@@ -306,19 +321,50 @@ function PracticeContent() {
                   <h3 className="font-semibold mb-1">
                     {answers[currentIndex]?.correct ? "Correct!" : "Incorrect"}
                   </h3>
+                  {!answers[currentIndex]?.correct && currentQuestion.correct ? (
+                    <div className="mb-2 text-[15px]" data-testid="correct-answer">
+                      <span className="font-semibold">Correct answer:</span>{" "}
+                      <span className="font-semibold">{currentQuestion.correct}</span>
+                      {correctOption ? <span className="text-muted-foreground"> — {correctOption.text}</span> : null}
+                    </div>
+                  ) : null}
                   <p className="text-muted-foreground">{currentQuestion.explanation}</p>
                 </div>
               </div>
 
-              <div className="bg-muted/50 rounded-lg p-4">
-                <div className="flex items-start gap-2">
-                  <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium text-sm mb-1">Why This Matters</p>
-                    <p className="text-sm text-muted-foreground">
-                      {currentQuestion.whyItMatters}
-                    </p>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-lg border bg-muted/20 p-4">
+                  <div className="flex items-start gap-2">
+                    <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium text-sm mb-1">What to do in practice</p>
+                      <ul className="mt-2 space-y-1 text-sm text-muted-foreground" data-testid="practice-tips">
+                        {(getPracticeTips(currentQuestion.topicId).length
+                          ? getPracticeTips(currentQuestion.topicId)
+                          : ["Record key decisions and reasons contemporaneously.", "Check and document any safeguarding issues early."]
+                        ).map((t) => (
+                          <li key={t} className="flex gap-2">
+                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary/70 flex-shrink-0" />
+                            <span className="min-w-0">{t}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
+                </div>
+
+                <div className="space-y-3">
+                  {usedFallbackReferences ? (
+                    <Alert variant="warning">
+                      <Info className="h-4 w-4" />
+                      <AlertTitle>References fallback used</AlertTitle>
+                      <AlertDescription>
+                        This question did not include references, so we showed curated topic references instead. Items marked “Check” should be verified against the current Code/Act.
+                      </AlertDescription>
+                    </Alert>
+                  ) : null}
+
+                  <ReferencesPanel references={effectiveReferences} />
                 </div>
               </div>
 

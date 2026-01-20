@@ -254,7 +254,7 @@ export default function PortfolioPage() {
 
         <div className="h-20 lg:hidden" />
         <div className="fixed inset-x-0 bottom-0 z-50 border-t bg-background/95 backdrop-blur lg:static lg:border-0">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 p-3 md:p-4 lg:mt-8 lg:p-0">
+          <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-3 p-3 md:p-4 lg:mt-8 lg:p-0 xl:max-w-[1440px] 2xl:max-w-[1600px]">
             <Button onClick={saveDraft} className="gap-2" data-testid="save-draft-btn">
               <Save className="h-4 w-4" />
               Save Draft
@@ -318,7 +318,7 @@ export default function PortfolioPage() {
       </Alert>
 
       {drafts.length > 0 ? (
-        <div className="grid gap-6 lg:grid-cols-[420px_1fr]">
+        <div className="grid gap-6 lg:grid-cols-[minmax(340px,420px)_minmax(0,1fr)]">
           {/* Left: list */}
           <SectionCard
             title="Your reflections"
@@ -390,7 +390,7 @@ export default function PortfolioPage() {
           </SectionCard>
 
           {/* Right: detail */}
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-6">
             {selectedDraft ? (
               <SectionCard
                 title="Reflection details"

@@ -1,0 +1,393 @@
+{
+  "questions": [
+    {
+      "id": "q001",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under section 24 PACE 1984, which of the following is a lawful 'necessity' ground that may justify an arrest?",
+      "options": [
+        { "id": "A", "text": "To allow the prompt and effective investigation of the offence" },
+        { "id": "B", "text": "Because the officer believes the person is guilty" },
+        { "id": "C", "text": "To teach the suspect a lesson" },
+        { "id": "D", "text": "Because it is more convenient than a voluntary interview" }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out lawful arrest powers and requires that arrest is necessary. One necessity ground is enabling the prompt and effective investigation of the offence. Mere suspicion of guilt, convenience, or punitive intent are not lawful necessity grounds.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.24 (powers of arrest)" },
+        { "instrument": "Code G", "cite": "Code G (arrest) — necessity criteria (Check: paragraph)" }
+      ],
+      "pitfalls": [
+        "Assuming arrest is lawful just because there is suspicion",
+        "Not asking what alternatives were considered (e.g., voluntary attendance)"
+      ],
+      "tags": ["arrest", "necessity", "code-g"]
+    },
+    {
+      "id": "q002",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the standard maximum detention period before charge for an indictable offence under PACE?",
+      "options": [
+        { "id": "A", "text": "12 hours" },
+        { "id": "B", "text": "24 hours" },
+        { "id": "C", "text": "36 hours" },
+        { "id": "D", "text": "48 hours" }
+      ],
+      "correct": "B",
+      "explanation": "The standard maximum detention period is 24 hours from the relevant time. In appropriate cases, detention may be extended (e.g., superintendent extension / warrant of further detention), subject to statutory tests and custody review requirements.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.41 (detention without charge — time limits)" },
+        { "instrument": "Code C", "cite": "Code C — detention time limits and reviews (Check: paragraph)" }
+      ],
+      "tags": ["detention", "time-limits", "custody"]
+    },
+    {
+      "id": "q003",
+      "topicId": "client-confidentiality",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Your client tells you in a private consultation that they plan to destroy evidence after release. What is the most appropriate response?",
+      "options": [
+        { "id": "A", "text": "Immediately inform the custody sergeant" },
+        { "id": "B", "text": "Advise you cannot assist/condone illegal conduct and may have to withdraw if they persist" },
+        { "id": "C", "text": "Ignore the comment and continue the consultation" },
+        { "id": "D", "text": "Help them plan how to do it discreetly" }
+      ],
+      "correct": "B",
+      "explanation": "You must not assist with ongoing or future criminal conduct. You should advise the client clearly that destroying evidence is unlawful and that you cannot help; if they insist on improper conduct, withdrawal may be necessary. Confidentiality remains the default position, subject to limited exceptions (which are context-dependent).",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Professional conduct: confidentiality / privilege and improper conduct (Check: guidance)" }
+      ],
+      "pitfalls": ["Breaching confidentiality without a lawful basis", "Being drawn into facilitating improper conduct"],
+      "tags": ["ethics", "confidentiality"]
+    },
+    {
+      "id": "q004",
+      "topicId": "vuln-appropriate-adult",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE Code C, when must an appropriate adult be present for interview safeguards to apply?",
+      "options": [
+        { "id": "A", "text": "Only when the suspect requests one" },
+        { "id": "B", "text": "When the suspect is under 18 or is a vulnerable adult (as defined/assessed)" },
+        { "id": "C", "text": "Only for serious offences" },
+        { "id": "D", "text": "Only when the custody officer personally deems it necessary" }
+      ],
+      "correct": "B",
+      "explanation": "Code C contains mandatory safeguards for juveniles and vulnerable suspects, including appropriate adult involvement for key procedures (including interview safeguards). These are protective measures and are not purely discretionary.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — appropriate adult safeguards (Check: paragraph)" }
+      ],
+      "tags": ["vulnerability", "appropriate-adult", "code-c"]
+    },
+    {
+      "id": "q005",
+      "topicId": "disclosure-advance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "The police provide minimal advance disclosure before interview. What is usually the most effective approach?",
+      "options": [
+        { "id": "A", "text": "Refuse to allow interview until full disclosure is provided in every case" },
+        { "id": "B", "text": "Proceed without question and accept whatever is provided" },
+        { "id": "C", "text": "Make specific, targeted requests for additional disclosure and ensure limitations are recorded" },
+        { "id": "D", "text": "Always advise a no-comment interview regardless of the disclosure" }
+      ],
+      "correct": "C",
+      "explanation": "There is not always a right to full advance disclosure. A practical approach is to make targeted requests (based on what you need to advise), clarify what is and isn’t being alleged, and ensure disclosure limitations are properly recorded to support later arguments if needed.",
+      "references": [
+        { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)" }
+      ],
+      "tags": ["disclosure", "strategy"]
+    },
+    {
+      "id": "q006",
+      "topicId": "interview-intervention",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "During interview, an officer asks a question that assumes facts not in evidence/disclosure. What is the appropriate intervention?",
+      "options": [
+        { "id": "A", "text": "Wait until the interview ends to raise the issue" },
+        { "id": "B", "text": "Object promptly and ask for clarification/disclosure on the record" },
+        { "id": "C", "text": "Answer the question on behalf of your client" },
+        { "id": "D", "text": "Coach the client by whispering suggested answers" }
+      ],
+      "correct": "B",
+      "explanation": "When a question is unfair/misleading (e.g., assumes undisclosed facts), you should intervene promptly and professionally so the issue is on the record. You should not answer for the client or coach them during interview.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — interview standards and fairness (Check: paragraph)" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (exclusion of evidence — fairness)" }
+      ],
+      "tags": ["interview", "intervention", "fairness"]
+    },
+    {
+      "id": "q007",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the general presumption regarding bail?",
+      "options": [
+        { "id": "A", "text": "Suspects should be detained until court appearance as a default" },
+        { "id": "B", "text": "There is a presumption in favour of bail (subject to exceptions/grounds to refuse)" },
+        { "id": "C", "text": "Bail is only for minor offences" },
+        { "id": "D", "text": "The suspect must prove they deserve bail" }
+      ],
+      "correct": "B",
+      "explanation": "There is a general presumption in favour of bail, but bail may be refused where statutory grounds apply (e.g., risk of failing to surrender, further offences, interference with witnesses/justice).",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (presumption in favour of bail) (Check: section)" }
+      ],
+      "tags": ["bail"]
+    },
+    {
+      "id": "q008",
+      "topicId": "evidence-admissibility",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client made admissions in interview, but you believe the interview was conducted oppressively. Which PACE provision would you primarily rely on to challenge admissibility of the confession?",
+      "options": [
+        { "id": "A", "text": "PACE 1984 s.76 (confessions)" },
+        { "id": "B", "text": "PACE 1984 s.78 (general discretion)" },
+        { "id": "C", "text": "PACE 1984 s.58 (legal advice)" },
+        { "id": "D", "text": "PACE 1984 s.24 (arrest)" }
+      ],
+      "correct": "A",
+      "explanation": "PACE s.76 is the primary route for challenging confession evidence obtained by oppression or in circumstances likely to make it unreliable. Section 78 provides a broader fairness discretion, but s.76 is the focused confession provision.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76 (confessions: oppression/unreliability)" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (general discretion to exclude unfair evidence)" }
+      ],
+      "tags": ["evidence", "admissibility", "confession"]
+    },
+    {
+      "id": "q009",
+      "topicId": "portfolio-notes",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is a key characteristic of effective attendance notes?",
+      "options": [
+        { "id": "A", "text": "Written several days later from memory" },
+        { "id": "B", "text": "Contemporaneous and factual" },
+        { "id": "C", "text": "Only recording positive outcomes" },
+        { "id": "D", "text": "Summarizing without specific times or details" }
+      ],
+      "correct": "B",
+      "explanation": "Effective attendance notes should be made contemporaneously (or as soon as practicable), be accurate and factual, and include key timings, decisions, and reasons where relevant. This supports professional practice and protects both client and representative.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Record keeping / attendance notes (Check: guidance)" }
+      ],
+      "tags": ["record-keeping", "portfolio"]
+    },
+    {
+      "id": "q010",
+      "topicId": "vuln-mental-health",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "You arrive and your client appears confused and possibly unwell. What is your priority before interview proceeds?",
+      "options": [
+        { "id": "A", "text": "Proceed with instructions as normal" },
+        { "id": "B", "text": "Request a healthcare professional assessment of fitness for interview" },
+        { "id": "C", "text": "Advise an immediate no-comment interview to get it over with" },
+        { "id": "D", "text": "Ask the police to interview quickly before the client deteriorates" }
+      ],
+      "correct": "B",
+      "explanation": "Where there are apparent mental health/communication issues, fitness for interview should be assessed and appropriate safeguards put in place (e.g., healthcare professional input, appropriate adult where required).",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — fitness for interview / vulnerable suspects (Check: paragraph)" }
+      ],
+      "tags": ["vulnerability", "mental-health", "fitness-for-interview"]
+    },
+    {
+      "id": "q011",
+      "topicId": "pace-custody-record",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "As a legal representative, what is your position regarding inspection of the custody record during detention?",
+      "options": [
+        { "id": "A", "text": "No right to see it until after charge" },
+        { "id": "B", "text": "You should be able to inspect it during detention (subject to lawful limitations)" },
+        { "id": "C", "text": "Only if the custody officer agrees" },
+        { "id": "D", "text": "Only entries relating to interview" }
+      ],
+      "correct": "B",
+      "explanation": "The custody record is central to detention legality and rights compliance. You should routinely request to inspect it during detention to identify issues (rights, reviews, delays, authorisations).",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — custody record requirements and access (Check: paragraph)" }
+      ],
+      "tags": ["custody-record", "pace", "code-c"]
+    },
+    {
+      "id": "q012",
+      "topicId": "client-instructions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Your client wants to give a full account in interview despite your advice that a prepared statement may be better given limited disclosure. What should you do?",
+      "options": [
+        { "id": "A", "text": "Refuse to attend the interview" },
+        { "id": "B", "text": "Follow instructions after ensuring the client understands risks and you document your advice" },
+        { "id": "C", "text": "Tell police your client will make no comment regardless" },
+        { "id": "D", "text": "Withdraw immediately in all cases" }
+      ],
+      "correct": "B",
+      "explanation": "The client makes the decision on how to respond. Your role is to advise, ensure they understand risks/benefits, and document the advice and the client’s informed decision (unless they ask you to act improperly).",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Client instructions and documenting advice (Check: guidance)" }
+      ],
+      "tags": ["client-care", "instructions", "interview-strategy"]
+    },
+    {
+      "id": "q013",
+      "topicId": "disclosure-strategy",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Which approach best helps manage adverse inference risk when disclosure is limited?",
+      "options": [
+        { "id": "A", "text": "Always advise no comment regardless of disclosure" },
+        { "id": "B", "text": "Always provide a full account regardless of disclosure" },
+        { "id": "C", "text": "Tailor the response to disclosure; consider a prepared statement where appropriate" },
+        { "id": "D", "text": "Let the client decide without professional input" }
+      ],
+      "correct": "C",
+      "explanation": "Good strategy is context-driven: what is alleged, what is disclosed, and what risks the client faces. A tailored approach (often including a prepared statement) can advance a defence while controlling risk. Blanket strategies can be sub-optimal.",
+      "references": [
+        { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)" }
+      ],
+      "tags": ["disclosure", "strategy", "prepared-statement"]
+    },
+    {
+      "id": "q014",
+      "topicId": "interview-preparation",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the primary purpose of the pre‑interview private consultation?",
+      "options": [
+        { "id": "A", "text": "To tell the client what to say word-for-word" },
+        { "id": "B", "text": "To take instructions, advise on the law/process, and agree an interview strategy" },
+        { "id": "C", "text": "To review the custody record only" },
+        { "id": "D", "text": "To negotiate with police about the sentence" }
+      ],
+      "correct": "B",
+      "explanation": "The private consultation is to understand the account, review disclosure, explain the process and key risks, and agree a strategy. You should not coach the client to give a rehearsed account. It is also an opportunity to identify vulnerability and request safeguards.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.58 (right to legal advice)" },
+        { "instrument": "Code C", "cite": "Code C — right to legal advice / consultations (Check: paragraph)" }
+      ],
+      "tags": ["interview", "legal-advice", "code-c"]
+    },
+    {
+      "id": "q015",
+      "topicId": "vuln-youth",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A 16-year-old’s parent wants to act as appropriate adult but has already provided a witness statement about the incident. Is that appropriate?",
+      "options": [
+        { "id": "A", "text": "Yes — parents always have priority as appropriate adult" },
+        { "id": "B", "text": "No — a potential witness conflict means an alternative appropriate adult should be sought" },
+        { "id": "C", "text": "Yes — if the young person wants their parent present, regardless of conflict" },
+        { "id": "D", "text": "It is entirely up to the custody officer and cannot be challenged" }
+      ],
+      "correct": "B",
+      "explanation": "An appropriate adult should be able to act independently in the young person’s interests. If the person is a potential witness, there is a conflict which may undermine safeguards and the integrity of procedures. An alternative appropriate adult should be arranged.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — juveniles and appropriate adults (Check: paragraph)" }
+      ],
+      "tags": ["youth", "appropriate-adult", "conflict"]
+    },
+    {
+      "id": "q016",
+      "topicId": "bail-rui",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What does RUI (Released Under Investigation) generally mean for a suspect?",
+      "options": [
+        { "id": "A", "text": "All investigations have concluded" },
+        { "id": "B", "text": "Released while investigation continues, typically without bail conditions" },
+        { "id": "C", "text": "Must report weekly to the police station as a requirement of RUI" },
+        { "id": "D", "text": "The case has been dropped and cannot be reopened" }
+      ],
+      "correct": "B",
+      "explanation": "RUI generally means the person is released while the investigation continues and, unlike bail, there are typically no bail conditions attached. However, investigations may continue and the person may be contacted, re-arrested, or charged later.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 / post‑arrest release frameworks (Check: provision)" }
+      ],
+      "tags": ["bail", "rui", "outcomes"]
+    },
+    {
+      "id": "q017",
+      "topicId": "evidence-types",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which of the following is best described as 'real' or 'physical' evidence?",
+      "options": [
+        { "id": "A", "text": "A witness statement" },
+        { "id": "B", "text": "A suspect’s interview answers" },
+        { "id": "C", "text": "A weapon recovered at the scene" },
+        { "id": "D", "text": "An expert’s opinion about blood patterns" }
+      ],
+      "correct": "C",
+      "explanation": "Real/physical evidence is a tangible object that can be inspected (e.g., clothing, tools, weapons, documents). Statements and interview answers are testimonial evidence; expert conclusions are opinion evidence based on analysis.",
+      "references": [],
+      "tags": ["evidence", "foundations"]
+    },
+    {
+      "id": "q018",
+      "topicId": "professional-conduct",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "You discover your client’s alibi (which you have already communicated) is false. What is the correct course of action?",
+      "options": [
+        { "id": "A", "text": "Continue as if nothing happened" },
+        { "id": "B", "text": "Inform police immediately about the false alibi" },
+        { "id": "C", "text": "Advise the client; you cannot continue to advance a defence you know is false; consider withdrawal if they insist" },
+        { "id": "D", "text": "Invent a new alibi to replace the first one" }
+      ],
+      "correct": "C",
+      "explanation": "You must not mislead, but you also owe duties of confidentiality. If the client insists that you continue to advance something you know is false, you should advise them of the implications and you may have to withdraw rather than participate in misleading conduct.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Professional conduct: integrity, confidentiality, and withdrawal (Check: guidance)" }
+      ],
+      "tags": ["ethics", "professional-conduct"]
+    },
+    {
+      "id": "q019",
+      "topicId": "portfolio-reflection",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the primary purpose of reflective practice in professional development?",
+      "options": [
+        { "id": "A", "text": "To criticise colleagues’ performance" },
+        { "id": "B", "text": "To identify learning from experience and improve future practice" },
+        { "id": "C", "text": "To document only successful outcomes" },
+        { "id": "D", "text": "To justify decisions to supervisors" }
+      ],
+      "correct": "B",
+      "explanation": "Reflective practice is structured learning from experience: identifying what went well, what didn’t, and what you would do differently next time. It supports continuous improvement and portfolio evidence.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Portfolio evidence and reflective practice (Check: guidance)" }
+      ],
+      "tags": ["portfolio", "reflection"]
+    },
+    {
+      "id": "q020",
+      "topicId": "interview-attendance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "During interview, your client looks at you for guidance before answering. What is the most appropriate response?",
+      "options": [
+        { "id": "A", "text": "Nod/shake your head to indicate what to say" },
+        { "id": "B", "text": "Answer the question for your client" },
+        { "id": "C", "text": "Maintain a neutral expression and allow the client to respond based on prior advice" },
+        { "id": "D", "text": "Request a break after every question regardless of need" }
+      ],
+      "correct": "C",
+      "explanation": "You should not coach the client during interview through gestures or answers. Your role is to observe, take notes, and intervene where necessary (e.g., improper questioning). Breaks should be used when needed for advice, not as a routine tactic.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — conduct of interviews / legal advice during interview (Check: paragraph)" }
+      ],
+      "tags": ["interview", "professionalism"]
+    }
+  ]
+}
+

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import {
   LayoutDashboard,
@@ -33,6 +34,25 @@ interface SidebarProps {
 
 export function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    // Focus the close button for keyboard users when opening on mobile/tablet.
+    const t = window.setTimeout(() => closeBtnRef.current?.focus(), 0);
+
+    // Escape to close.
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      window.clearTimeout(t);
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open, onClose]);
 
   return (
     <>
@@ -53,6 +73,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           open ? "fixed flex translate-x-0" : "hidden",
           "lg:static lg:z-auto lg:flex lg:translate-x-0"
         )}
+        aria-label="Primary navigation"
         data-testid="sidebar"
       >
         {/* Logo */}
@@ -69,6 +90,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             className="lg:hidden"
             onClick={onClose}
             data-testid="sidebar-close"
+            ref={closeBtnRef}
           >
             <X className="h-5 w-5" />
           </Button>

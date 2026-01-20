@@ -9,6 +9,36 @@ interface TestResult {
   message?: string;
 }
 
+function loadSeededQuestions(): unknown[] {
+  const contentDir = path.join(process.cwd(), "content");
+  const folderPath = path.join(contentDir, "questions");
+  const legacyPath = path.join(contentDir, "questions.json");
+
+  try {
+    if (fs.existsSync(folderPath) && fs.statSync(folderPath).isDirectory()) {
+      const files = fs
+        .readdirSync(folderPath)
+        .filter((f) => f.endsWith(".json"));
+
+      const all: unknown[] = [];
+      for (const f of files) {
+        const raw = JSON.parse(fs.readFileSync(path.join(folderPath, f), "utf-8"));
+        if (Array.isArray(raw?.questions)) all.push(...raw.questions);
+      }
+      return all;
+    }
+  } catch {
+    // fall through to legacy
+  }
+
+  try {
+    const legacy = JSON.parse(fs.readFileSync(legacyPath, "utf-8"));
+    return Array.isArray(legacy?.questions) ? legacy.questions : [];
+  } catch {
+    return [];
+  }
+}
+
 export async function GET() {
   const timestamp = new Date().toISOString();
   const tests: TestResult[] = [];
@@ -43,16 +73,15 @@ export async function GET() {
 
   // Test 2: Load questions JSON
   try {
-    const questionsPath = path.join(process.cwd(), "content", "questions.json");
-    const questionsData = JSON.parse(fs.readFileSync(questionsPath, "utf-8"));
+    const questions = loadSeededQuestions();
     
-    if (questionsData.questions && questionsData.questions.length > 0) {
+    if (questions.length > 0) {
       // Validate first question
-      QuestionSchema.parse(questionsData.questions[0]);
+      QuestionSchema.parse(questions[0]);
       tests.push({
         name: "Load questions JSON",
         passed: true,
-        message: `Loaded ${questionsData.questions.length} questions`,
+        message: `Loaded ${questions.length} questions`,
       });
     } else {
       tests.push({
@@ -71,15 +100,20 @@ export async function GET() {
 
   // Test 3: Generate seeded question (simulated)
   try {
-    const questionsPath = path.join(process.cwd(), "content", "questions.json");
-    const questionsData = JSON.parse(fs.readFileSync(questionsPath, "utf-8"));
+    const questions = loadSeededQuestions();
     
-    if (questionsData.questions && questionsData.questions.length > 0) {
-      const randomQuestion = questionsData.questions[
-        Math.floor(Math.random() * questionsData.questions.length)
+    if (questions.length > 0) {
+      const randomQuestion = questions[
+        Math.floor(Math.random() * questions.length)
       ];
       
-      if (randomQuestion.question && randomQuestion.options) {
+      // Basic smoke check (structure is validated separately by Zod above)
+      if (
+        typeof randomQuestion === "object" &&
+        randomQuestion !== null &&
+        typeof (randomQuestion as Record<string, unknown>).stem === "string" &&
+        Array.isArray((randomQuestion as Record<string, unknown>).options)
+      ) {
         tests.push({
           name: "Generate seeded question",
           passed: true,

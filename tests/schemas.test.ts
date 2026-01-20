@@ -49,15 +49,16 @@ describe("Schema Validation", () => {
         topicId: "test-topic",
         type: "mcq",
         difficulty: "intermediate",
-        question: "What is the answer?",
+        stem: "What is the answer?",
         options: [
-          { id: "a", text: "Option A", isCorrect: false },
-          { id: "b", text: "Option B", isCorrect: true },
-          { id: "c", text: "Option C", isCorrect: false },
-          { id: "d", text: "Option D", isCorrect: false },
+          { id: "A", text: "Option A" },
+          { id: "B", text: "Option B" },
+          { id: "C", text: "Option C" },
+          { id: "D", text: "Option D" }
         ],
+        correct: "B",
         explanation: "Option B is correct because...",
-        whyItMatters: "This is important because...",
+        references: [{ instrument: "PACE", cite: "PACE 1984 s.24" }],
       };
       expect(() => QuestionSchema.parse(question)).not.toThrow();
     });
@@ -68,9 +69,9 @@ describe("Schema Validation", () => {
         topicId: "test-topic",
         type: "invalid-type",
         difficulty: "intermediate",
-        question: "What is the answer?",
+        stem: "What is the answer?",
         explanation: "Explanation",
-        whyItMatters: "Important",
+        references: [],
       };
       expect(() => QuestionSchema.parse(question)).toThrow();
     });
@@ -81,9 +82,9 @@ describe("Schema Validation", () => {
         topicId: "test-topic",
         type: "mcq",
         difficulty: "super-hard",
-        question: "What is the answer?",
+        stem: "What is the answer?",
         explanation: "Explanation",
-        whyItMatters: "Important",
+        references: [],
       };
       expect(() => QuestionSchema.parse(question)).toThrow();
     });

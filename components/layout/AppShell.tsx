@@ -16,11 +16,11 @@ export function AppShell({ children }: AppShellProps) {
       <div className="flex min-h-screen">
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         
-        <div className="flex-1 flex flex-col min-h-screen lg:min-h-0">
+        <div className="flex min-w-0 flex-1 flex-col min-h-screen lg:min-h-0">
           <Header onMenuClick={() => setSidebarOpen(true)} />
           
           <main className="flex-1" data-testid="main-content">
-            <div className="mx-auto w-full max-w-7xl p-4 md:p-6 lg:p-8">
+            <div className="mx-auto w-full max-w-7xl p-4 md:p-6 lg:p-8 2xl:p-10 xl:max-w-[1440px] 2xl:max-w-[1600px]">
               {children}
             </div>
           </main>

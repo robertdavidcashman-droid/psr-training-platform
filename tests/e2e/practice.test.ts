@@ -19,7 +19,7 @@ test.describe("Practice Mode", () => {
       await expect(page.getByTestId("question-text")).toBeVisible();
 
       // Select first option
-      await page.getByTestId("option-a").click();
+      await page.getByTestId("option-A").click();
 
       // Submit answer
       await page.getByTestId("submit-answer-btn").click();
@@ -40,8 +40,8 @@ test.describe("Practice Mode", () => {
     await page.getByTestId("start-quick-btn").click();
 
     await expect(page.getByTestId("question-text")).toBeVisible();
-    await expect(page.getByTestId("option-a")).toBeVisible();
-    await expect(page.getByTestId("option-b")).toBeVisible();
+    await expect(page.getByTestId("option-A")).toBeVisible();
+    await expect(page.getByTestId("option-B")).toBeVisible();
   });
 
   test("should show feedback after answering", async ({ page }) => {
@@ -49,7 +49,7 @@ test.describe("Practice Mode", () => {
     await page.getByTestId("start-quick-btn").click();
 
     // Answer a question
-    await page.getByTestId("option-a").click();
+    await page.getByTestId("option-A").click();
     await page.getByTestId("submit-answer-btn").click();
 
     // Check feedback is shown

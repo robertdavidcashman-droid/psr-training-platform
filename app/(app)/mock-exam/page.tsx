@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { updateTopicProgress, savePracticeSession, generateId } from "@/lib/storage";
 import { shuffleArray } from "@/lib/utils";
-import questionsData from "@/content/questions.json";
+import { questions as seededQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
 
@@ -46,7 +46,7 @@ export default function MockExamPage() {
 
   const startExam = useCallback((selectedMode: ExamMode) => {
     const config = EXAM_CONFIG[selectedMode];
-    const shuffled = shuffleArray(questionsData.questions as Question[]);
+    const shuffled = shuffleArray(seededQuestions as Question[]);
     const selected = shuffled.slice(0, config.questions);
 
     setQuestions(selected);
@@ -64,7 +64,7 @@ export default function MockExamPage() {
     let correct = 0;
     questions.forEach((q, idx) => {
       const selectedId = answers[idx];
-      const isCorrect = q.options?.find((o) => o.id === selectedId)?.isCorrect;
+      const isCorrect = Boolean(selectedId && q.correct && selectedId === q.correct);
       if (isCorrect) {
         correct++;
         updateTopicProgress(q.topicId, true);
@@ -123,7 +123,7 @@ export default function MockExamPage() {
     let correct = 0;
     questions.forEach((q, idx) => {
       const selectedId = answers[idx];
-      if (q.options?.find((o) => o.id === selectedId)?.isCorrect) correct++;
+      if (selectedId && q.correct && selectedId === q.correct) correct++;
     });
     return { correct, total: questions.length, percent: Math.round((correct / questions.length) * 100) };
   };
@@ -134,7 +134,7 @@ export default function MockExamPage() {
       if (!breakdown[q.topicId]) breakdown[q.topicId] = { correct: 0, total: 0 };
       breakdown[q.topicId].total++;
       const selectedId = answers[idx];
-      if (q.options?.find((o) => o.id === selectedId)?.isCorrect) {
+      if (selectedId && q.correct && selectedId === q.correct) {
         breakdown[q.topicId].correct++;
       }
     });
@@ -257,7 +257,7 @@ export default function MockExamPage() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl" data-testid="exam-question-text">
-                  {currentQuestion.question}
+                  {currentQuestion.stem}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -281,7 +281,7 @@ export default function MockExamPage() {
                               : "border-border"
                           }`}
                         />
-                        <span>{option.text}</span>
+                        <span className="min-w-0 break-words">{option.text}</span>
                       </div>
                     </button>
                   ))}

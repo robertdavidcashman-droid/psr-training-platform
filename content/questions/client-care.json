@@ -1,0 +1,138 @@
+{
+  "questions": [
+    {
+      "id": "care-001",
+      "topicId": "client-instructions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When taking instructions in custody, which is the best first step before discussing interview strategy?",
+      "options": [
+        { "id": "A", "text": "Tell the client to answer all questions to look cooperative" },
+        { "id": "B", "text": "Get the client's account, clarify key facts, and confirm what the police allegation is (disclosure) as far as available" },
+        { "id": "C", "text": "Promise the client they will be released if they follow your advice" },
+        { "id": "D", "text": "Avoid asking questions in case the client says something unhelpful" }
+      ],
+      "correct": "B",
+      "explanation": "Effective advice depends on understanding the allegation and the client’s account. You should take clear instructions, identify key facts/risks, and only then advise on strategy. Avoid guarantees or coercive advice.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Client care: taking instructions and documenting advice (Check: guidance)" }
+      ],
+      "tags": ["client-care", "instructions"]
+    },
+    {
+      "id": "care-002",
+      "topicId": "client-instructions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which note is most useful to protect both you and the client if they reject your advice?",
+      "options": [
+        { "id": "A", "text": "A brief note: 'Client didn’t listen'" },
+        { "id": "B", "text": "A detailed note of the advice, key risks explained, the client’s decision, and confirmation they understood" },
+        { "id": "C", "text": "No note — it’s confidential anyway" },
+        { "id": "D", "text": "A note blaming the police for the client’s decision" }
+      ],
+      "correct": "B",
+      "explanation": "Contemporaneous notes of advice and informed instructions are critical. They support professional standards, reduce disputes, and help later case handling and portfolio evidence.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Record keeping: attendance notes and advice/instructions (Check: guidance)" }
+      ],
+      "tags": ["record-keeping", "instructions"]
+    },
+    {
+      "id": "care-003",
+      "topicId": "client-confidentiality",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which statement best reflects confidentiality in a private legal consultation at the police station?",
+      "options": [
+        { "id": "A", "text": "Everything said must always be disclosed to police" },
+        { "id": "B", "text": "Confidentiality applies; you should not disclose without lawful basis, subject to limited exceptions" },
+        { "id": "C", "text": "Confidentiality does not apply in custody" },
+        { "id": "D", "text": "Confidentiality only applies after charge" }
+      ],
+      "correct": "B",
+      "explanation": "Consultations are confidential as a core principle (often protected by privilege), but there are limited and context-dependent exceptions. As a rule, do not disclose without a clear lawful/ethical basis.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Confidentiality / privilege in police station advice (Check: guidance)" }
+      ],
+      "tags": ["confidentiality", "ethics"]
+    },
+    {
+      "id": "care-004",
+      "topicId": "professional-conduct",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A police officer asks you to 'have a quiet word' with the client to admit the offence to speed things up. What is the best response?",
+      "options": [
+        { "id": "A", "text": "Agree and pressure the client to admit, to keep a good relationship with police" },
+        { "id": "B", "text": "Explain you will take instructions and advise independently; you cannot pressure or mislead the client" },
+        { "id": "C", "text": "Tell the officer you will only help if they give full disclosure" },
+        { "id": "D", "text": "Withdraw immediately without explanation" }
+      ],
+      "correct": "B",
+      "explanation": "Your duty is to the client. You should remain professional and independent, take instructions, and advise on the basis of law/process and the client’s account—without pressure or improper influence.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Professional conduct: independence and client-focused advice (Check: guidance)" }
+      ],
+      "tags": ["ethics", "professionalism"]
+    },
+    {
+      "id": "care-005",
+      "topicId": "professional-conduct",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Which is the biggest professional risk of 'coaching' a client during interview (e.g., mouthing answers, signaling)?",
+      "options": [
+        { "id": "A", "text": "It makes the interview shorter" },
+        { "id": "B", "text": "It can undermine the integrity of the interview and expose you to misconduct allegations" },
+        { "id": "C", "text": "It guarantees the client will not be charged" },
+        { "id": "D", "text": "It is required to protect the client" }
+      ],
+      "correct": "B",
+      "explanation": "Coaching is improper and can damage both the client’s case and your professional position. The correct approach is to advise in consultation and intervene on procedural/fairness grounds, not to supply answers during interview.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Professional standards: conduct during interview attendance (Check: guidance)" }
+      ],
+      "tags": ["interview", "ethics"]
+    },
+    {
+      "id": "care-006",
+      "topicId": "client-confidentiality",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "If you believe a client may be vulnerable (e.g., learning disability), which approach best balances confidentiality and safeguarding?",
+      "options": [
+        { "id": "A", "text": "Ignore it — vulnerability is only for the police to assess" },
+        { "id": "B", "text": "Raise safeguarding needs through proper channels (e.g., request AA/healthcare assessment) while keeping the consultation content confidential" },
+        { "id": "C", "text": "Disclose everything the client said to police to protect them" },
+        { "id": "D", "text": "End the consultation immediately and leave" }
+      ],
+      "correct": "B",
+      "explanation": "You can and should request appropriate safeguards (AA, interpreter, healthcare) without disclosing confidential instructions. Use the custody process to secure protections while maintaining confidentiality.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C — vulnerable suspects and safeguards (Check: paragraph)" }
+      ],
+      "tags": ["vulnerability", "safeguards"]
+    },
+    {
+      "id": "care-007",
+      "topicId": "client-instructions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which is the best way to check a client understands your advice in custody?",
+      "options": [
+        { "id": "A", "text": "Ask them to repeat back the key points in their own words" },
+        { "id": "B", "text": "Assume they understand because they nodded" },
+        { "id": "C", "text": "Avoid checking understanding to save time" },
+        { "id": "D", "text": "Only ask if the police are present" }
+      ],
+      "correct": "A",
+      "explanation": "A simple teach-back check helps confirm informed instructions and reduces misunderstanding, especially under stress or where there may be vulnerability.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Client communication and informed instructions (Check: guidance)" }
+      ],
+      "tags": ["client-care", "communication"]
+    }
+  ]
+}
+

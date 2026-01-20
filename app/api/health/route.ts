@@ -13,8 +13,14 @@ export async function GET() {
   let contentLoaded = false;
   try {
     const topicsPath = path.join(process.cwd(), "content", "topics.json");
-    const questionsPath = path.join(process.cwd(), "content", "questions.json");
-    contentLoaded = fs.existsSync(topicsPath) && fs.existsSync(questionsPath);
+    const legacyQuestionsPath = path.join(process.cwd(), "content", "questions.json");
+    const questionsDir = path.join(process.cwd(), "content", "questions");
+
+    const hasQuestions =
+      fs.existsSync(legacyQuestionsPath) ||
+      (fs.existsSync(questionsDir) && fs.statSync(questionsDir).isDirectory());
+
+    contentLoaded = fs.existsSync(topicsPath) && hasQuestions;
   } catch {
     contentLoaded = false;
   }

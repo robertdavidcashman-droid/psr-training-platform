@@ -1,0 +1,157 @@
+{
+  "questions": [
+    {
+      "id": "bail-001",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which factor is most likely to be relied upon as a ground to refuse bail?",
+      "options": [
+        { "id": "A", "text": "The suspect has a fixed address and ties to the area" },
+        { "id": "B", "text": "A significant risk of failing to surrender to custody" },
+        { "id": "C", "text": "The suspect attended voluntarily before arrest" },
+        { "id": "D", "text": "The suspect requests bail" }
+      ],
+      "correct": "B",
+      "explanation": "Bail decisions consider risk factors (e.g., failure to surrender, further offences, interference). Your role is to identify and address risks with facts and proposals.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (grounds for refusing bail) (Check: schedule/section)" }
+      ],
+      "tags": ["bail", "risk"]
+    },
+    {
+      "id": "bail-002",
+      "topicId": "bail-applications",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "If police propose bail conditions, what is a professional first step?",
+      "options": [
+        { "id": "A", "text": "Accept all conditions without discussion" },
+        { "id": "B", "text": "Ask what risk each condition is meant to address and propose less restrictive alternatives where appropriate" },
+        { "id": "C", "text": "Refuse bail conditions in every case" },
+        { "id": "D", "text": "Tell the client to breach conditions if inconvenient" }
+      ],
+      "correct": "B",
+      "explanation": "Conditions should be risk-focused and proportionate. Clarifying the purpose allows you to make effective representations and propose workable alternatives.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (bail conditions/proportionality) (Check: provision)" }
+      ],
+      "tags": ["bail", "conditions"]
+    },
+    {
+      "id": "bail-003",
+      "topicId": "bail-rui",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Compared with bail, RUI most commonly involves which feature?",
+      "options": [
+        { "id": "A", "text": "A fixed return date and mandatory conditions" },
+        { "id": "B", "text": "Release while investigation continues, usually without bail conditions" },
+        { "id": "C", "text": "An immediate charge decision" },
+        { "id": "D", "text": "Automatic court listing within 24 hours" }
+      ],
+      "correct": "B",
+      "explanation": "RUI generally means release without bail conditions while investigations continue. Clients may still be contacted later; advise on practical steps (keep contact details updated, preserve evidence).",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 / release without charge frameworks (Check: provision)" }
+      ],
+      "tags": ["rui", "outcomes"]
+    },
+    {
+      "id": "bail-004",
+      "topicId": "bail-rui",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A client is RUI and asks what they should do next. Which is the best advice principle?",
+      "options": [
+        { "id": "A", "text": "Assume the case is over and ignore all police contact" },
+        { "id": "B", "text": "Keep contact details current, avoid discussing the case publicly, and preserve relevant material; follow up if delays become unreasonable" },
+        { "id": "C", "text": "Return to the police station daily for updates" },
+        { "id": "D", "text": "Destroy all personal devices to avoid evidence" }
+      ],
+      "correct": "B",
+      "explanation": "RUI is not an end. Practical management advice reduces risk and helps future handling. (Always keep advice within training scope; check current policy.)",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Post‑interview outcomes: client management (Check: guidance)" }
+      ],
+      "tags": ["rui", "client-care"]
+    },
+    {
+      "id": "bail-005",
+      "topicId": "bail-applications",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Which proposal most directly addresses a perceived risk of witness interference when seeking bail?",
+      "options": [
+        { "id": "A", "text": "No condition; trust the client" },
+        { "id": "B", "text": "A condition not to contact named witnesses and to avoid a specified location" },
+        { "id": "C", "text": "A condition to post on social media about innocence" },
+        { "id": "D", "text": "A condition to sell the client’s phone" }
+      ],
+      "correct": "B",
+      "explanation": "Risk-focused conditions should be proportionate and enforceable. Non-contact and exclusion zones are commonly used to manage interference risks.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (conditions to address risk) (Check: provision)" }
+      ],
+      "tags": ["bail", "conditions", "risk"]
+    },
+    {
+      "id": "bail-006",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "If bail is refused, what should you ensure is clearly recorded for later review/challenge?",
+      "options": [
+        { "id": "A", "text": "Only the officer’s opinion of the client" },
+        { "id": "B", "text": "The specific grounds for refusal and any representations made" },
+        { "id": "C", "text": "The client’s favourite food" },
+        { "id": "D", "text": "A prediction of sentence" }
+      ],
+      "correct": "B",
+      "explanation": "Clear reasons and a record of representations are essential for accountability and any later review. If reasons are vague, ask for clarity.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Attendance notes: recording bail representations/reasons (Check: guidance)" }
+      ],
+      "tags": ["bail", "record-keeping"]
+    },
+    {
+      "id": "bail-007",
+      "topicId": "bail-rui",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Which is a common pitfall when advising someone released under investigation (RUI)?",
+      "options": [
+        { "id": "A", "text": "Explaining that there may be future contact" },
+        { "id": "B", "text": "Allowing the client to assume 'no news means it's over' without a plan for follow‑up" },
+        { "id": "C", "text": "Advising them to keep contact details updated" },
+        { "id": "D", "text": "Suggesting they retain relevant documents" }
+      ],
+      "correct": "B",
+      "explanation": "RUI can drift. Clients need realistic expectations and a plan for contact, preserving material, and seeking updates when appropriate.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Client care: managing RUI expectations (Check: guidance)" }
+      ],
+      "tags": ["rui", "pitfalls"]
+    },
+    {
+      "id": "bail-008",
+      "topicId": "bail-applications",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which fact most strongly supports a representation that the client will surrender if bailed?",
+      "options": [
+        { "id": "A", "text": "They dislike court buildings" },
+        { "id": "B", "text": "They have stable accommodation, employment/education ties, and a history of complying with appointments" },
+        { "id": "C", "text": "They are angry about being arrested" },
+        { "id": "D", "text": "They have never heard of bail" }
+      ],
+      "correct": "B",
+      "explanation": "Stable ties and a history of compliance are practical indicators that reduce flight risk. Use concrete facts, not general assurances.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (failure to surrender risk factors) (Check: provision)" }
+      ],
+      "tags": ["bail", "representations"]
+    }
+  ]
+}
+

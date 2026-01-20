@@ -16,24 +16,76 @@ export const TopicSchema = z.object({
 export type Topic = z.infer<typeof TopicSchema>;
 
 // Question schemas
+export const QuestionDifficultySchema = z.enum([
+  "foundation",
+  "intermediate",
+  "advanced",
+]);
+
+export const QuestionTypeSchema = z.enum([
+  "mcq",
+  "best-answer",
+  "scenario",
+  "short-structured",
+]);
+
+export const QuestionOptionIdSchema = z.enum(["A", "B", "C", "D"]);
+
 export const QuestionOptionSchema = z.object({
-  id: z.string(),
-  text: z.string(),
-  isCorrect: z.boolean(),
+  id: QuestionOptionIdSchema,
+  text: z.string().min(1),
 });
 
-export const QuestionSchema = z.object({
-  id: z.string(),
-  topicId: z.string(),
-  type: z.enum(["mcq", "best-answer", "scenario", "short-response"]),
-  difficulty: z.enum(["foundation", "intermediate", "advanced"]),
-  question: z.string(),
-  options: z.array(QuestionOptionSchema).optional(),
-  correctAnswer: z.string().optional(),
-  explanation: z.string(),
-  whyItMatters: z.string(),
-  disclaimer: z.string().optional(),
+export const ReferenceInstrumentSchema = z.enum([
+  "PACE",
+  "Code C",
+  "Code G",
+  "Code D",
+  "CPIA",
+  "Bail Act",
+  "LASPO",
+  "LAA Guidance",
+]);
+
+export const QuestionReferenceSchema = z.object({
+  instrument: ReferenceInstrumentSchema,
+  cite: z.string().min(1),
+  note: z.string().optional(),
 });
+
+export const QuestionSchema = z
+  .object({
+    id: z.string(),
+    topicId: z.string(),
+    difficulty: QuestionDifficultySchema,
+    type: QuestionTypeSchema,
+    stem: z.string().min(1),
+    options: z.array(QuestionOptionSchema).optional(),
+    correct: QuestionOptionIdSchema.optional(),
+    expectedAnswerOutline: z.array(z.string().min(1)).optional(),
+    explanation: z.string().min(1),
+    references: z.array(QuestionReferenceSchema).default([]),
+    pitfalls: z.array(z.string().min(1)).optional(),
+    tags: z.array(z.string().min(1)).optional(),
+  })
+  .superRefine((q, ctx) => {
+    if (q.type === "mcq" || q.type === "best-answer") {
+      if (!q.options || q.options.length !== 4) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "MCQ questions must have exactly 4 options",
+          path: ["options"],
+        });
+      }
+      if (!q.correct) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "MCQ questions must specify a correct option id",
+          path: ["correct"],
+        });
+      }
+    }
+  });
 
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -64,8 +116,11 @@ export type Scenario = z.infer<typeof ScenarioSchema>;
 // API request/response schemas
 export const GenerateQuestionRequestSchema = z.object({
   topicId: z.string(),
-  difficulty: z.enum(["foundation", "intermediate", "advanced"]).optional(),
-  type: z.enum(["mcq", "best-answer", "scenario", "short-response"]).optional(),
+  difficulty: QuestionDifficultySchema.optional(),
+  type: z
+    .enum(["mcq", "best-answer", "scenario", "short-structured", "short-response"])
+    .optional()
+    .transform((t) => (t === "short-response" ? "short-structured" : t)),
 });
 
 export const GenerateScenarioRequestSchema = z.object({

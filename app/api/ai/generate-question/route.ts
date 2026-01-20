@@ -15,7 +15,22 @@ import path from "path";
 // Load seeded questions for fallback
 function getSeededQuestions(): Question[] {
   try {
-    const questionsPath = path.join(process.cwd(), "content", "questions.json");
+    const contentDir = path.join(process.cwd(), "content");
+    const folderPath = path.join(contentDir, "questions");
+
+    // Preferred: /content/questions/*.json
+    if (fs.existsSync(folderPath) && fs.statSync(folderPath).isDirectory()) {
+      const files = fs.readdirSync(folderPath).filter((f) => f.endsWith(".json"));
+      const all: Question[] = [];
+      for (const f of files) {
+        const data = JSON.parse(fs.readFileSync(path.join(folderPath, f), "utf-8"));
+        if (Array.isArray(data?.questions)) all.push(...data.questions);
+      }
+      return all;
+    }
+
+    // Legacy fallback: /content/questions.json
+    const questionsPath = path.join(contentDir, "questions.json");
     const data = JSON.parse(fs.readFileSync(questionsPath, "utf-8"));
     return data.questions || [];
   } catch {

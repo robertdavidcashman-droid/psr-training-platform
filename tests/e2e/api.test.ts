@@ -41,8 +41,9 @@ test.describe("API Endpoints", () => {
 
     const data = await response.json();
     expect(data.question).toBeDefined();
-    expect(data.question.question).toBeDefined();
+    expect(data.question.stem).toBeDefined();
     expect(data.question.options).toBeDefined();
+    expect(data.question.references).toBeDefined();
     expect(data.source).toBeDefined();
   });
 

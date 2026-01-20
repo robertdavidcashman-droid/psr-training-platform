@@ -19,7 +19,7 @@ test.describe("Mock Exam", () => {
       await expect(page.getByTestId("exam-question-text")).toBeVisible();
 
       // Select an option
-      await page.getByTestId("exam-option-a").click();
+      await page.getByTestId("exam-option-A").click();
 
       // Navigate to next or submit
       if (i < 4) {
