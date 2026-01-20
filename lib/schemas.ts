@@ -39,12 +39,17 @@ export const QuestionOptionSchema = z.object({
 export const ReferenceInstrumentSchema = z.enum([
   "PACE",
   "Code C",
-  "Code G",
   "Code D",
+  "Code E",
+  "Code F",
+  "Code G",
   "CPIA",
   "Bail Act",
   "LASPO",
   "LAA Guidance",
+  "LAA Arrangements",
+  "SRA Standard",
+  "CJPOA",
 ]);
 
 export const QuestionReferenceSchema = z.object({

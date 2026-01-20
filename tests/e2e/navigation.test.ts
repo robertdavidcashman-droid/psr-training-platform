@@ -28,6 +28,13 @@ test.describe("Navigation", () => {
     await expect(page).toHaveURL("/syllabus");
     await expect(page.getByTestId("syllabus-page")).toBeVisible();
 
+    // Navigate to Coverage Matrix
+    await openNavIfDrawer();
+    await page.getByTestId("nav-coverage-matrix").click();
+    await page.waitForURL("**/coverage");
+    await expect(page).toHaveURL("/coverage");
+    await expect(page.getByTestId("coverage-page")).toBeVisible();
+
     // Navigate to Practice
     await openNavIfDrawer();
     await page.getByTestId("nav-practice").click();

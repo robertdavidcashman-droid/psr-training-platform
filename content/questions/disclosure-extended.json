@@ -1,0 +1,232 @@
+{
+  "questions": [
+    {
+      "id": "disc-009",
+      "topicId": "disclosure-advance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Is there an absolute right to full pre-interview disclosure?",
+      "options": [
+        { "id": "A", "text": "Yes — police must disclose everything" },
+        { "id": "B", "text": "No — while disclosure should be sufficient to allow advice, there is no absolute right to full disclosure before interview" },
+        { "id": "C", "text": "Only for summary offences" },
+        { "id": "D", "text": "Only if the solicitor demands it" }
+      ],
+      "correct": "B",
+      "explanation": "Case law (notably R v Farrell) clarified that while disclosure should be sufficient for advice, there is no absolute right to full pre-interview disclosure.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 11.1A (pre-interview disclosure)" }
+      ],
+      "tags": ["disclosure", "rights"]
+    },
+    {
+      "id": "disc-010",
+      "topicId": "disclosure-strategy",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "When might a prepared statement be particularly useful?",
+      "options": [
+        { "id": "A", "text": "When the client wants to answer all questions freely" },
+        { "id": "B", "text": "When disclosure is limited and you want to put a defence on record while avoiding speculation under questioning" },
+        { "id": "C", "text": "When the client has nothing to say" },
+        { "id": "D", "text": "Never — prepared statements are inadmissible" }
+      ],
+      "correct": "B",
+      "explanation": "A prepared statement allows key points to be raised (reducing adverse inference risk) while avoiding the dangers of answering questions based on limited information.",
+      "references": [
+        { "instrument": "PACE", "cite": "CJPOA 1994 s.34 (inference from silence)" }
+      ],
+      "tags": ["prepared-statement", "strategy", "adverse-inference"]
+    },
+    {
+      "id": "disc-011",
+      "topicId": "disclosure-advance",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Police disclose a witness statement summary but not the full statement. What should you do?",
+      "options": [
+        { "id": "A", "text": "Assume the summary is complete" },
+        { "id": "B", "text": "Ask clarifying questions about what the witness actually said and note any limitations for the record" },
+        { "id": "C", "text": "Refuse to continue until you have the full statement" },
+        { "id": "D", "text": "Ignore the witness evidence entirely" }
+      ],
+      "correct": "B",
+      "explanation": "Summaries may omit important detail. Ask targeted questions to understand the allegation, note limitations, and advise accordingly.",
+      "references": [
+        { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework)" }
+      ],
+      "tags": ["disclosure", "clarification"]
+    },
+    {
+      "id": "disc-012",
+      "topicId": "disclosure-strategy",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the main risk of a blanket 'no comment' approach?",
+      "options": [
+        { "id": "A", "text": "It's illegal" },
+        { "id": "B", "text": "It may allow adverse inferences if facts later relied upon at trial could reasonably have been mentioned in interview" },
+        { "id": "C", "text": "It guarantees conviction" },
+        { "id": "D", "text": "There is no risk" }
+      ],
+      "correct": "B",
+      "explanation": "Under CJPOA s.34, adverse inferences may be drawn from silence if facts later relied upon could reasonably have been mentioned earlier. This makes blanket no comment risky.",
+      "references": [
+        { "instrument": "PACE", "cite": "CJPOA 1994 s.34 (adverse inference)" }
+      ],
+      "tags": ["no-comment", "adverse-inference", "risk"]
+    },
+    {
+      "id": "disc-013",
+      "topicId": "disclosure-advance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "How should you record disclosure limitations in your notes?",
+      "options": [
+        { "id": "A", "text": "Don't record them — it's oral only" },
+        { "id": "B", "text": "Note what was requested, what was provided, what was withheld/unclear, and the impact on advice" },
+        { "id": "C", "text": "Only record if police sign your notes" },
+        { "id": "D", "text": "Wait until after interview" }
+      ],
+      "correct": "B",
+      "explanation": "Clear notes on disclosure (or lack thereof) support your advice and provide a record for later fairness arguments if needed.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Record keeping: disclosure notes (Check: guidance)" }
+      ],
+      "tags": ["disclosure", "record-keeping"]
+    },
+    {
+      "id": "disc-014",
+      "topicId": "disclosure-strategy",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client wants to give a partial account — some questions answered, others no comment. What is the key advice?",
+      "options": [
+        { "id": "A", "text": "This is always inadvisable" },
+        { "id": "B", "text": "Ensure the approach is consistent and can be explained; document the strategy and reasons" },
+        { "id": "C", "text": "Randomly choose which to answer" },
+        { "id": "D", "text": "Let police decide which questions to skip" }
+      ],
+      "correct": "B",
+      "explanation": "A mixed approach can work but must be logical and defensible. Document the strategy so it's clear why certain topics were addressed and others weren't.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Mixed interview strategies (Check: guidance)" }
+      ],
+      "tags": ["strategy", "mixed-approach"]
+    },
+    {
+      "id": "disc-015",
+      "topicId": "disclosure-advance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What should you ask for at minimum before interview?",
+      "options": [
+        { "id": "A", "text": "The officer's personal opinion on the case" },
+        { "id": "B", "text": "The nature of the allegation, the key evidence relied upon, and what the interview will cover" },
+        { "id": "C", "text": "A full copy of the police file" },
+        { "id": "D", "text": "Nothing — just wait for the interview" }
+      ],
+      "correct": "B",
+      "explanation": "At minimum, you need to understand what is alleged and the evidence basis. This allows meaningful advice even if full disclosure isn't available.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 11.1A (sufficient disclosure)" }
+      ],
+      "tags": ["disclosure", "minimum", "preparation"]
+    },
+    {
+      "id": "disc-016",
+      "topicId": "disclosure-strategy",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "How does inadequate disclosure affect adverse inference risk?",
+      "options": [
+        { "id": "A", "text": "It has no effect" },
+        { "id": "B", "text": "It may provide a reasonable explanation for not mentioning facts — disclosure limitations can support fairness arguments" },
+        { "id": "C", "text": "It increases adverse inference risk" },
+        { "id": "D", "text": "It automatically prevents any inference" }
+      ],
+      "correct": "B",
+      "explanation": "Documented disclosure limitations can support an argument that it was reasonable not to mention certain facts. Recording is key.",
+      "references": [
+        { "instrument": "PACE", "cite": "CJPOA 1994 s.34 (reasonable explanation for silence)" }
+      ],
+      "tags": ["disclosure", "adverse-inference", "fairness"]
+    },
+    {
+      "id": "disc-017",
+      "topicId": "disclosure-advance",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Police say there is CCTV but won't describe what it shows. How should you proceed?",
+      "options": [
+        { "id": "A", "text": "Assume it proves the allegation" },
+        { "id": "B", "text": "Ask for a summary of what the CCTV is said to show; note the refusal if they won't provide one" },
+        { "id": "C", "text": "Tell the client to confess" },
+        { "id": "D", "text": "Ignore the CCTV" }
+      ],
+      "correct": "B",
+      "explanation": "Without knowing what evidence shows, advice is difficult. Ask for a summary and record the response. If refused, note this for strategy and potential fairness arguments.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 11.1A (disclosure)" }
+      ],
+      "tags": ["disclosure", "evidence", "cctv"]
+    },
+    {
+      "id": "disc-018",
+      "topicId": "disclosure-strategy",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the purpose of asking the police what offence is alleged?",
+      "options": [
+        { "id": "A", "text": "To show off your legal knowledge" },
+        { "id": "B", "text": "To understand what conduct is in issue so you can advise on elements, defences, and strategy" },
+        { "id": "C", "text": "To delay the interview" },
+        { "id": "D", "text": "It's not important" }
+      ],
+      "correct": "B",
+      "explanation": "Knowing the offence helps you understand what needs to be proved, what defences apply, and how to approach the interview.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Understanding the allegation (Check: guidance)" }
+      ],
+      "tags": ["disclosure", "allegation"]
+    },
+    {
+      "id": "disc-019",
+      "topicId": "disclosure-advance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "If police provide only verbal disclosure, what should you do?",
+      "options": [
+        { "id": "A", "text": "Rely entirely on memory" },
+        { "id": "B", "text": "Make detailed notes of what was said and clarify any unclear points" },
+        { "id": "C", "text": "Refuse to proceed without written disclosure" },
+        { "id": "D", "text": "Ask the client to remember for you" }
+      ],
+      "correct": "B",
+      "explanation": "Verbal disclosure is common. Take careful notes, ask clarifying questions, and ensure you have a clear record of what was and wasn't disclosed.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Recording verbal disclosure (Check: guidance)" }
+      ],
+      "tags": ["disclosure", "notes"]
+    },
+    {
+      "id": "disc-020",
+      "topicId": "disclosure-strategy",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client's account differs from what police have disclosed. What is the professional approach?",
+      "options": [
+        { "id": "A", "text": "Assume the client is lying" },
+        { "id": "B", "text": "Explore the discrepancy, consider the evidence quality, and advise on strategy including risks of each approach" },
+        { "id": "C", "text": "Tell the client to change their account to match police" },
+        { "id": "D", "text": "Disclose the discrepancy to police before interview" }
+      ],
+      "correct": "B",
+      "explanation": "Discrepancies are common. Explore the facts with the client, assess the strength of evidence, and advise on risks. Don't assume either version is correct.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Advising on conflicting accounts (Check: guidance)" }
+      ],
+      "tags": ["strategy", "discrepancy"]
+    }
+  ]
+}

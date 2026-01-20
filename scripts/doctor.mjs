@@ -88,7 +88,7 @@ async function checkPackageJson() {
 }
 
 async function checkContentFiles() {
-  const files = ["topics.json", "questions.json", "scenarios.json"];
+  const files = ["topics.json", "scenarios.json"];
   const contentDir = join(projectRoot, "content");
   
   for (const file of files) {
@@ -102,7 +102,20 @@ async function checkContentFiles() {
       return { pass: false, message: `Invalid ${file}` };
     }
   }
-  return { pass: true, message: `${files.length} files valid` };
+  
+  // Check questions folder exists and has JSON files
+  const questionsDir = join(contentDir, "questions");
+  if (!existsSync(questionsDir)) {
+    return { pass: false, message: "Missing questions folder" };
+  }
+  
+  // Check standards.json exists
+  const standardsPath = join(contentDir, "psras", "standards.json");
+  if (!existsSync(standardsPath)) {
+    return { pass: false, message: "Missing psras/standards.json" };
+  }
+  
+  return { pass: true, message: `Content files valid` };
 }
 
 async function checkEnvVars() {
@@ -145,6 +158,12 @@ async function runE2E() {
     silent: false,
   });
   return { pass: result.code === 0, message: result.code === 0 ? "All tests passed" : "E2E tests failed" };
+}
+
+async function runCoverageReport() {
+  log("\n📊 Running coverage report...", colors.blue);
+  const result = await runCommand("node", ["scripts/coverage-report.mjs"], { silent: true });
+  return { pass: result.code === 0, message: result.code === 0 ? "Coverage OK" : "Coverage thresholds not met" };
 }
 
 async function main() {
@@ -207,6 +226,11 @@ async function main() {
   logStep("Unit tests", testResult.pass ? "pass" : "fail", testResult.message);
   results.push({ name: "Unit tests", ...testResult });
   if (!testResult.pass) hasFailure = true;
+
+  const coverageResult = await runCoverageReport();
+  logStep("Coverage report", coverageResult.pass ? "pass" : "fail", coverageResult.message);
+  results.push({ name: "Coverage", ...coverageResult });
+  if (!coverageResult.pass) hasFailure = true;
 
   const e2eResult = await runE2E();
   logStep("E2E tests", e2eResult.pass ? "pass" : "fail", e2eResult.message);

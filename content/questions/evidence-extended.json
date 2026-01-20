@@ -1,0 +1,221 @@
+{
+  "questions": [
+    {
+      "id": "evid-009",
+      "topicId": "evidence-admissibility",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What does PACE s.78 give the court power to do?",
+      "options": [
+        { "id": "A", "text": "Automatically convict the defendant" },
+        { "id": "B", "text": "Exclude evidence if its admission would adversely affect the fairness of proceedings" },
+        { "id": "C", "text": "Exclude evidence only if police acted in bad faith" },
+        { "id": "D", "text": "Admit any evidence regardless of how obtained" }
+      ],
+      "correct": "B",
+      "explanation": "Section 78 provides discretion to exclude evidence where its admission would have such an adverse effect on the fairness of proceedings that it ought not to be admitted.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (exclusion of unfair evidence)" }
+      ],
+      "tags": ["s78", "fairness", "admissibility"]
+    },
+    {
+      "id": "evid-010",
+      "topicId": "evidence-types",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the difference between circumstantial and direct evidence?",
+      "options": [
+        { "id": "A", "text": "There is no difference" },
+        { "id": "B", "text": "Direct evidence proves a fact directly; circumstantial evidence requires inference" },
+        { "id": "C", "text": "Circumstantial evidence is always inadmissible" },
+        { "id": "D", "text": "Direct evidence is always unreliable" }
+      ],
+      "correct": "B",
+      "explanation": "Direct evidence (like an eyewitness account) proves a fact directly. Circumstantial evidence (like forensic links) requires inference to connect it to the issue.",
+      "references": [],
+      "tags": ["evidence", "types"]
+    },
+    {
+      "id": "evid-011",
+      "topicId": "evidence-admissibility",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Under s.76, what must the prosecution prove regarding a disputed confession?",
+      "options": [
+        { "id": "A", "text": "That the confession is true" },
+        { "id": "B", "text": "That the confession was not obtained by oppression and was not made in circumstances likely to render it unreliable" },
+        { "id": "C", "text": "That the defendant signed it" },
+        { "id": "D", "text": "That police followed all procedures" }
+      ],
+      "correct": "B",
+      "explanation": "Section 76 places the burden on the prosecution to prove beyond reasonable doubt that the confession was not obtained improperly when the issue is raised.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76(2) (burden of proof)" }
+      ],
+      "tags": ["confession", "s76", "burden"]
+    },
+    {
+      "id": "evid-012",
+      "topicId": "evidence-types",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which is an example of documentary evidence?",
+      "options": [
+        { "id": "A", "text": "A weapon recovered at the scene" },
+        { "id": "B", "text": "A written contract or letter" },
+        { "id": "C", "text": "Oral testimony from a witness" },
+        { "id": "D", "text": "A fingerprint" }
+      ],
+      "correct": "B",
+      "explanation": "Documentary evidence consists of documents containing information relevant to the case, such as contracts, letters, or records.",
+      "references": [],
+      "tags": ["evidence", "documentary"]
+    },
+    {
+      "id": "evid-013",
+      "topicId": "evidence-admissibility",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A significant Code C breach occurred during interview. What is the most likely impact?",
+      "options": [
+        { "id": "A", "text": "The interview is automatically excluded" },
+        { "id": "B", "text": "It may support a s.78 application to exclude the interview evidence" },
+        { "id": "C", "text": "The case is automatically dismissed" },
+        { "id": "D", "text": "The breach has no relevance" }
+      ],
+      "correct": "B",
+      "explanation": "Significant Code breaches don't automatically exclude evidence but can support s.78 applications based on the adverse effect on fairness.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness discretion)" },
+        { "instrument": "Code C", "cite": "Code C (interview safeguards)" }
+      ],
+      "tags": ["admissibility", "code-breach", "s78"]
+    },
+    {
+      "id": "evid-014",
+      "topicId": "evidence-types",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What is hearsay evidence?",
+      "options": [
+        { "id": "A", "text": "Any evidence given orally" },
+        { "id": "B", "text": "A statement made out of court, offered to prove the truth of its contents" },
+        { "id": "C", "text": "Evidence from an expert" },
+        { "id": "D", "text": "Evidence obtained illegally" }
+      ],
+      "correct": "B",
+      "explanation": "Hearsay is a statement made outside the proceedings offered to prove the matter stated. It has special admissibility rules.",
+      "references": [],
+      "tags": ["evidence", "hearsay"]
+    },
+    {
+      "id": "evid-015",
+      "topicId": "evidence-admissibility",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What does 'oppression' mean in the context of s.76?",
+      "options": [
+        { "id": "A", "text": "Any police questioning" },
+        { "id": "B", "text": "Conduct including torture, inhuman treatment, or use of threats/violence" },
+        { "id": "C", "text": "Asking difficult questions" },
+        { "id": "D", "text": "Recording the interview" }
+      ],
+      "correct": "B",
+      "explanation": "Oppression includes torture, inhuman or degrading treatment, and the use of violence or threats. It renders confessions inadmissible.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76(8) (definition of oppression)" }
+      ],
+      "tags": ["oppression", "confession", "s76"]
+    },
+    {
+      "id": "evid-016",
+      "topicId": "evidence-types",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is expert evidence?",
+      "options": [
+        { "id": "A", "text": "Evidence from any police officer" },
+        { "id": "B", "text": "Opinion evidence from someone with specialised knowledge in a relevant field" },
+        { "id": "C", "text": "Any written report" },
+        { "id": "D", "text": "Evidence from the defendant" }
+      ],
+      "correct": "B",
+      "explanation": "Expert evidence is opinion evidence from someone with specialised knowledge (scientific, technical, etc.) that can assist the court.",
+      "references": [],
+      "tags": ["evidence", "expert"]
+    },
+    {
+      "id": "evid-017",
+      "topicId": "evidence-admissibility",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What are 'circumstances likely to render a confession unreliable' under s.76(2)(b)?",
+      "options": [
+        { "id": "A", "text": "Any circumstances at all" },
+        { "id": "B", "text": "Circumstances (like withdrawal symptoms, mental vulnerability, or improper inducements) that might cause an untrue confession" },
+        { "id": "C", "text": "Only physical torture" },
+        { "id": "D", "text": "The confession being recorded" }
+      ],
+      "correct": "B",
+      "explanation": "Section 76(2)(b) covers circumstances that might cause an unreliable confession, such as vulnerability, inducements, or conditions affecting capacity.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.76(2)(b) (unreliability)" }
+      ],
+      "tags": ["confession", "unreliability", "s76"]
+    },
+    {
+      "id": "evid-018",
+      "topicId": "evidence-types",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is forensic evidence?",
+      "options": [
+        { "id": "A", "text": "Evidence from court documents only" },
+        { "id": "B", "text": "Scientific evidence like DNA, fingerprints, or ballistics analysis" },
+        { "id": "C", "text": "Evidence given by lawyers" },
+        { "id": "D", "text": "Any written evidence" }
+      ],
+      "correct": "B",
+      "explanation": "Forensic evidence involves scientific analysis of physical evidence such as DNA, fingerprints, fibres, or ballistics.",
+      "references": [],
+      "tags": ["evidence", "forensic"]
+    },
+    {
+      "id": "evid-019",
+      "topicId": "evidence-admissibility",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Does bad faith by police automatically lead to exclusion under s.78?",
+      "options": [
+        { "id": "A", "text": "Yes — bad faith always means exclusion" },
+        { "id": "B", "text": "No — bad faith is relevant but s.78 focuses on fairness of proceedings, not police conduct alone" },
+        { "id": "C", "text": "Bad faith is never relevant" },
+        { "id": "D", "text": "Only if the defendant proves bad faith" }
+      ],
+      "correct": "B",
+      "explanation": "While bad faith is relevant, s.78 focuses on the effect on fairness rather than punishing police. Good faith breaches can still lead to exclusion if unfair.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness focus)" }
+      ],
+      "tags": ["s78", "bad-faith", "fairness"]
+    },
+    {
+      "id": "evid-020",
+      "topicId": "evidence-types",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What is the 'best evidence' rule regarding documents?",
+      "options": [
+        { "id": "A", "text": "Any copy is acceptable" },
+        { "id": "B", "text": "Historically, the original document should be produced if available, though the rule has been relaxed" },
+        { "id": "C", "text": "Only handwritten documents are admissible" },
+        { "id": "D", "text": "Documents are never admissible" }
+      ],
+      "correct": "B",
+      "explanation": "The best evidence rule traditionally required original documents. Modern rules have relaxed this, but authenticity remains important.",
+      "references": [],
+      "tags": ["evidence", "documents", "best-evidence"]
+    }
+  ]
+}

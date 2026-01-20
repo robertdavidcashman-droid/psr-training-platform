@@ -1,0 +1,156 @@
+{
+  "questions": [
+    {
+      "id": "port-009",
+      "topicId": "portfolio-notes",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What should attendance notes include about the private consultation?",
+      "options": [
+        { "id": "A", "text": "Only the outcome of the interview" },
+        { "id": "B", "text": "Key times, instructions received, advice given, strategy agreed, and the client's decision" },
+        { "id": "C", "text": "Just the client's name and date" },
+        { "id": "D", "text": "Police opinions about the case" }
+      ],
+      "correct": "B",
+      "explanation": "Good consultation notes capture the essential elements: what was discussed, what was advised, and what the client decided.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Attendance notes: consultation records (Check: guidance)" }
+      ],
+      "tags": ["notes", "portfolio", "consultation"]
+    },
+    {
+      "id": "port-010",
+      "topicId": "portfolio-reflection",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What makes a reflection suitable for portfolio evidence?",
+      "options": [
+        { "id": "A", "text": "Length — the longer the better" },
+        { "id": "B", "text": "Demonstrating analysis, learning points, and specific actions for improvement" },
+        { "id": "C", "text": "Blaming others for problems" },
+        { "id": "D", "text": "Copying standard templates without personal analysis" }
+      ],
+      "correct": "B",
+      "explanation": "Quality reflections show genuine analysis and learning, not just description. They identify specific improvements.",
+      "references": [
+        { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — reflective practice" }
+      ],
+      "tags": ["reflection", "portfolio", "quality"]
+    },
+    {
+      "id": "port-011",
+      "topicId": "portfolio-notes",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When should attendance notes be written?",
+      "options": [
+        { "id": "A", "text": "Several days later when you have time" },
+        { "id": "B", "text": "Contemporaneously or as soon as practicable after the events" },
+        { "id": "C", "text": "Only if something goes wrong" },
+        { "id": "D", "text": "At the end of the week" }
+      ],
+      "correct": "B",
+      "explanation": "Contemporaneous notes are more reliable and valuable. Write notes during or immediately after events while details are fresh.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Contemporaneous record keeping (Check: guidance)" }
+      ],
+      "tags": ["notes", "contemporaneous"]
+    },
+    {
+      "id": "port-012",
+      "topicId": "portfolio-reflection",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the purpose of reflective practice in professional development?",
+      "options": [
+        { "id": "A", "text": "To prove you made no mistakes" },
+        { "id": "B", "text": "To learn from experience and continuously improve skills and practice" },
+        { "id": "C", "text": "To blame colleagues" },
+        { "id": "D", "text": "To avoid work" }
+      ],
+      "correct": "B",
+      "explanation": "Reflective practice is about learning and improvement. It helps identify what works, what doesn't, and how to do better next time.",
+      "references": [
+        { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — CPD and reflection" }
+      ],
+      "tags": ["reflection", "development"]
+    },
+    {
+      "id": "port-013",
+      "topicId": "portfolio-notes",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "How should you handle errors in attendance notes?",
+      "options": [
+        { "id": "A", "text": "Erase them completely" },
+        { "id": "B", "text": "Strike through with a single line so the original is still visible, then add the correction with date/initials" },
+        { "id": "C", "text": "Rewrite the entire document" },
+        { "id": "D", "text": "Delete the file and start again" }
+      ],
+      "correct": "B",
+      "explanation": "Corrections should be transparent. Strike through (don't obliterate), add the correction, and initial/date it to maintain record integrity.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Record keeping: corrections and amendments (Check: guidance)" }
+      ],
+      "tags": ["notes", "corrections"]
+    },
+    {
+      "id": "port-014",
+      "topicId": "portfolio-reflection",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which reflection structure is most effective?",
+      "options": [
+        { "id": "A", "text": "Random thoughts with no structure" },
+        { "id": "B", "text": "Description of what happened, analysis of what went well/poorly, and what you would do differently" },
+        { "id": "C", "text": "Just describing what police did" },
+        { "id": "D", "text": "Copying the custody record" }
+      ],
+      "correct": "B",
+      "explanation": "Structured reflection (What? So what? Now what?) ensures you move beyond description to analysis and actionable learning.",
+      "references": [
+        { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — structured reflection" }
+      ],
+      "tags": ["reflection", "structure"]
+    },
+    {
+      "id": "port-015",
+      "topicId": "portfolio-notes",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What level of detail is appropriate in attendance notes for police station work?",
+      "options": [
+        { "id": "A", "text": "Minimal — just the date and outcome" },
+        { "id": "B", "text": "Sufficient to reconstruct the key events, advice, instructions, and decisions later" },
+        { "id": "C", "text": "Every word spoken by everyone" },
+        { "id": "D", "text": "Only information requested by police" }
+      ],
+      "correct": "B",
+      "explanation": "Notes should be detailed enough to allow reconstruction of key elements but focused on what matters professionally and legally.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Attendance notes: appropriate detail (Check: guidance)" }
+      ],
+      "tags": ["notes", "detail"]
+    },
+    {
+      "id": "port-016",
+      "topicId": "portfolio-reflection",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "How does reflective practice support accreditation assessment?",
+      "options": [
+        { "id": "A", "text": "It doesn't — only the written exam matters" },
+        { "id": "B", "text": "It demonstrates developing competence, insight, and commitment to improvement" },
+        { "id": "C", "text": "It proves you never made mistakes" },
+        { "id": "D", "text": "It replaces practical experience" }
+      ],
+      "correct": "B",
+      "explanation": "Assessors look for evidence of developing competence. Reflection demonstrates insight, learning, and professional growth.",
+      "references": [
+        { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — portfolio evidence" }
+      ],
+      "tags": ["portfolio", "assessment"]
+    }
+  ]
+}

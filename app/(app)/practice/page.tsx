@@ -28,7 +28,7 @@ import { questions as seededQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
 import { getPracticeTips, getReferenceSuggestions, isPaceCustodyTopic } from "@/lib/references";
-import { ReferencesPanel } from "@/components/ReferencesPanel";
+import { AuthoritiesPanel } from "@/components/AuthoritiesPanel";
 
 type PracticeMode = "quick" | "standard" | "long";
 type SessionState = "setup" | "active" | "review" | "complete";
@@ -364,7 +364,16 @@ function PracticeContent() {
                     </Alert>
                   ) : null}
 
-                  <ReferencesPanel references={effectiveReferences} />
+                  <AuthoritiesPanel
+                    references={effectiveReferences}
+                    defaultOpen={true}
+                    commonPitfalls={currentQuestion.pitfalls}
+                    whyItMatters={
+                      isPaceCustodyTopic(currentQuestion.topicId)
+                        ? "These authorities define the legal framework and safeguards. Knowing them helps you identify breaches and protect client rights."
+                        : undefined
+                    }
+                  />
                 </div>
               </div>
 

@@ -1,0 +1,232 @@
+{
+  "questions": [
+    {
+      "id": "bail-009",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the presumption regarding bail under the Bail Act 1976?",
+      "options": [
+        { "id": "A", "text": "Suspects should be detained by default" },
+        { "id": "B", "text": "There is a presumption in favour of bail, subject to specified exceptions" },
+        { "id": "C", "text": "Bail is only for minor offences" },
+        { "id": "D", "text": "The suspect must prove they deserve bail" }
+      ],
+      "correct": "B",
+      "explanation": "The Bail Act creates a general presumption in favour of bail. Refusal requires specific grounds such as risk of absconding, further offences, or interference.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 s.4 (presumption of bail)" }
+      ],
+      "tags": ["bail", "presumption"]
+    },
+    {
+      "id": "bail-010",
+      "topicId": "bail-applications",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which is NOT a standard ground for refusing bail?",
+      "options": [
+        { "id": "A", "text": "Risk of failing to surrender" },
+        { "id": "B", "text": "Risk of committing further offences" },
+        { "id": "C", "text": "Risk of interfering with witnesses" },
+        { "id": "D", "text": "The suspect is annoying to police" }
+      ],
+      "correct": "D",
+      "explanation": "Bail refusal grounds are specific and risk-based. Personal annoyance is not a lawful ground for refusing bail.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 Schedule 1 (grounds for refusing bail)" }
+      ],
+      "tags": ["bail", "grounds"]
+    },
+    {
+      "id": "bail-011",
+      "topicId": "bail-rui",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "How does RUI differ from bail in terms of conditions?",
+      "options": [
+        { "id": "A", "text": "RUI always has stricter conditions" },
+        { "id": "B", "text": "RUI typically has no conditions attached, unlike bail which can have conditions" },
+        { "id": "C", "text": "There is no difference" },
+        { "id": "D", "text": "RUI conditions are set by the court" }
+      ],
+      "correct": "B",
+      "explanation": "RUI (Released Under Investigation) typically involves release without the formal conditions that can attach to bail. This is a key practical difference.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.37 (release without bail)" }
+      ],
+      "tags": ["rui", "bail", "conditions"]
+    },
+    {
+      "id": "bail-012",
+      "topicId": "bail-applications",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client is offered bail with a residence condition at an address they cannot stay at. What should you do?",
+      "options": [
+        { "id": "A", "text": "Accept the condition regardless" },
+        { "id": "B", "text": "Make representations for an alternative address or challenge the condition's proportionality" },
+        { "id": "C", "text": "Refuse all bail" },
+        { "id": "D", "text": "Tell the client to agree and then breach it" }
+      ],
+      "correct": "B",
+      "explanation": "Conditions must be workable. If an address is unsuitable, propose alternatives or argue the condition is disproportionate to the risk.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 s.3(6) (conditions)" }
+      ],
+      "tags": ["bail", "conditions", "representations"]
+    },
+    {
+      "id": "bail-013",
+      "topicId": "bail-rui",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What practical advice should you give a client released under investigation?",
+      "options": [
+        { "id": "A", "text": "Destroy all evidence and flee" },
+        { "id": "B", "text": "Keep contact details current, don't discuss the case publicly, preserve relevant material, and follow up if delays are unreasonable" },
+        { "id": "C", "text": "Contact the complainant to sort things out" },
+        { "id": "D", "text": "Ignore all police contact" }
+      ],
+      "correct": "B",
+      "explanation": "Practical guidance helps manage the ongoing investigation. Clients should be contactable, avoid prejudicing proceedings, and preserve relevant material.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Post-release client advice (Check: guidance)" }
+      ],
+      "tags": ["rui", "client-care", "practical"]
+    },
+    {
+      "id": "bail-014",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is a 'surrender to custody' condition?",
+      "options": [
+        { "id": "A", "text": "A condition to confess" },
+        { "id": "B", "text": "A requirement to return to the police station or court at a specified time" },
+        { "id": "C", "text": "A condition to stay in prison" },
+        { "id": "D", "text": "A condition to avoid all police contact" }
+      ],
+      "correct": "B",
+      "explanation": "Surrender conditions require the person to attend at a specified place and time. Failure to do so is an offence.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (surrender requirements)" }
+      ],
+      "tags": ["bail", "surrender"]
+    },
+    {
+      "id": "bail-015",
+      "topicId": "bail-applications",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What representations might address a risk of failing to surrender?",
+      "options": [
+        { "id": "A", "text": "The client is wealthy and can pay any fine" },
+        { "id": "B", "text": "The client has stable accommodation, employment, family ties, and a history of compliance with appointments" },
+        { "id": "C", "text": "The client promises they will attend" },
+        { "id": "D", "text": "The client doesn't like travelling" }
+      ],
+      "correct": "B",
+      "explanation": "Concrete factors showing roots and compliance history address flight risk more effectively than bare promises.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 Schedule 1 (factors)" }
+      ],
+      "tags": ["bail", "representations", "flight-risk"]
+    },
+    {
+      "id": "bail-016",
+      "topicId": "bail-rui",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Can police re-arrest someone who is RUI?",
+      "options": [
+        { "id": "A", "text": "Never — RUI prevents any future arrest" },
+        { "id": "B", "text": "Yes — if grounds arise or they need to be interviewed again" },
+        { "id": "C", "text": "Only with a court order" },
+        { "id": "D", "text": "Only for a different offence" }
+      ],
+      "correct": "B",
+      "explanation": "RUI does not prevent re-arrest if circumstances justify it. The investigation continues and the person may be contacted or re-arrested as needed.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 (re-arrest powers)" }
+      ],
+      "tags": ["rui", "arrest"]
+    },
+    {
+      "id": "bail-017",
+      "topicId": "bail-applications",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Bail is refused but you believe the grounds are inadequate. What is your next step?",
+      "options": [
+        { "id": "A", "text": "Accept the decision and leave" },
+        { "id": "B", "text": "Record the reasons, ensure they're on the custody record, and advise the client about challenging the decision" },
+        { "id": "C", "text": "Immediately appeal to the Supreme Court" },
+        { "id": "D", "text": "Threaten the custody officer" }
+      ],
+      "correct": "B",
+      "explanation": "Document the reasons and your representations. Advise on next steps including potential court bail applications.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (challenging bail refusal)" }
+      ],
+      "tags": ["bail", "challenge", "documentation"]
+    },
+    {
+      "id": "bail-018",
+      "topicId": "bail-applications",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is a curfew condition?",
+      "options": [
+        { "id": "A", "text": "A requirement to stay indoors during specified hours" },
+        { "id": "B", "text": "A requirement to report to police daily" },
+        { "id": "C", "text": "A requirement to surrender passport" },
+        { "id": "D", "text": "A requirement to attend court" }
+      ],
+      "correct": "A",
+      "explanation": "A curfew requires the person to remain at a specified address during certain hours, typically overnight. It addresses various risks including reoffending.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 s.3 (conditions)" }
+      ],
+      "tags": ["bail", "curfew", "conditions"]
+    },
+    {
+      "id": "bail-019",
+      "topicId": "bail-rui",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Your client has been RUI for 6 months with no update. What might you advise?",
+      "options": [
+        { "id": "A", "text": "Assume the case is closed" },
+        { "id": "B", "text": "Consider writing to police for an update and raising delay concerns" },
+        { "id": "C", "text": "Tell the client to confess to end the waiting" },
+        { "id": "D", "text": "Ignore the situation" }
+      ],
+      "correct": "B",
+      "explanation": "Prolonged RUI without update can be stressful and potentially unfair. Seeking an update and raising delay concerns is reasonable.",
+      "references": [
+        { "instrument": "LAA Guidance", "cite": "Managing prolonged RUI (Check: guidance)" }
+      ],
+      "tags": ["rui", "delay"]
+    },
+    {
+      "id": "bail-020",
+      "topicId": "bail-applications",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is a non-contact condition designed to address?",
+      "options": [
+        { "id": "A", "text": "Flight risk" },
+        { "id": "B", "text": "Risk of witness interference or harassment" },
+        { "id": "C", "text": "Risk of reoffending generally" },
+        { "id": "D", "text": "Risk of failing to surrender" }
+      ],
+      "correct": "B",
+      "explanation": "Non-contact conditions prevent the suspect contacting specific individuals, typically witnesses or alleged victims, to prevent interference or harassment.",
+      "references": [
+        { "instrument": "Bail Act", "cite": "Bail Act 1976 (conditions to prevent interference)" }
+      ],
+      "tags": ["bail", "conditions", "non-contact"]
+    }
+  ]
+}

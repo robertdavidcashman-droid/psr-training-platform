@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import { QuestionSchema, type Question } from "./schemas";
 import { hashString } from "./utils";
 import { getReferenceSuggestions, isPaceCustodyTopic } from "@/lib/references";
+import { getExpectedAuthoritiesForTags } from "@/lib/authorities";
 
 // Simple in-memory rate limiter
 const rateLimiter = {
@@ -226,7 +227,21 @@ IMPORTANT: Training content only. Do not provide legal advice. Encourage users t
       // Citation guard: if procedure topic, enforce at least one reference.
       // If the model omitted references, use curated topic references as an explicit fallback.
       if (requiresReferences && data.references.length === 0) {
-        const fallback = getReferenceSuggestions(topicId);
+        // Try topic-specific references first
+        let fallback = getReferenceSuggestions(topicId);
+        
+        // If no topic-specific refs, try to get from standards spine via tags
+        if (fallback.length === 0 && data.tags && data.tags.length > 0) {
+          const spineRefs = getExpectedAuthoritiesForTags(data.tags);
+          if (spineRefs.length > 0) {
+            fallback = spineRefs.map((r) => ({
+              instrument: r.instrument as Question["references"][number]["instrument"],
+              cite: r.cite,
+              note: r.note,
+            }));
+          }
+        }
+        
         if (fallback.length > 0) {
           data = {
             ...data,

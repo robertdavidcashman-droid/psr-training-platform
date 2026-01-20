@@ -1,0 +1,662 @@
+{
+  "version": "2026-01-20",
+  "sourceUrls": {
+    "sraStandards": "https://www.sra.org.uk/solicitors/resources/specific-areas-of-practice/standards/",
+    "sraAssessment": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/",
+    "cardiffOverview": "https://www.cardiff.ac.uk/professional-development/available-training/short-courses/psras/about-the-psras",
+    "laaArrangements": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf",
+    "paceCodeC": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible",
+    "paceCodeD": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible",
+    "paceCodeE": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible",
+    "paceCodeF": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-f-2018-accessible",
+    "paceCodeG": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+  },
+  "parts": [
+    {
+      "id": "part-1",
+      "title": "Underpinning knowledge",
+      "units": [
+        {
+          "id": "u1",
+          "title": "Role and authority to act",
+          "outcomes": [
+            {
+              "id": "u1-o1",
+              "title": "Understand the role of the police station representative",
+              "criteria": [
+                {
+                  "id": "u1-o1-a",
+                  "label": "Authority to act and DSCC notification",
+                  "summary": "Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — authority to act", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["authority-to-act", "dscc", "probationary"]
+                },
+                {
+                  "id": "u1-o1-b",
+                  "label": "Professional boundaries and duties",
+                  "summary": "Understand professional conduct duties: duty to the client, integrity, confidentiality, and not misleading.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA Principles and Codes of Conduct", "url": "https://www.sra.org.uk/solicitors/standards-regulations/" }
+                  ],
+                  "tags": ["ethics", "professional-conduct"]
+                },
+                {
+                  "id": "u1-o1-c",
+                  "label": "Probationary period requirements",
+                  "summary": "Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — probationary period", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["probationary", "supervision", "laa"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u2",
+          "title": "Legal advice access and delays",
+          "outcomes": [
+            {
+              "id": "u2-o1",
+              "title": "Understand rights to legal advice in custody",
+              "criteria": [
+                {
+                  "id": "u2-o1-a",
+                  "label": "Right to free legal advice (s.58 PACE)",
+                  "summary": "The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.58", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/58" },
+                    { "instrument": "Code C", "cite": "Code C para 6.1 (right to legal advice)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["legal-advice", "s58", "code-c"]
+                },
+                {
+                  "id": "u2-o1-b",
+                  "label": "Delay of legal advice (Annex B)",
+                  "summary": "Circumstances where access to legal advice may be delayed for indictable offences; authorisation requirements; time limits.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.58 (delay conditions)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/58" },
+                    { "instrument": "Code C", "cite": "Code C Annex B (delay of legal advice)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["delay", "annex-b", "indictable"]
+                },
+                {
+                  "id": "u2-o1-c",
+                  "label": "Telephone advice and duty solicitor scheme",
+                  "summary": "Telephone advice provision; when attendance is required; DSCC operation.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 6.5-6.8 (telephone advice)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" },
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — DSCC", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["telephone-advice", "dscc"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u3",
+          "title": "Custody process: detention, reviews, and time limits",
+          "outcomes": [
+            {
+              "id": "u3-o1",
+              "title": "Understand detention authorisation and time limits",
+              "criteria": [
+                {
+                  "id": "u3-o1-a",
+                  "label": "Authorisation of detention (s.37)",
+                  "summary": "Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.37 (duties before charge)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/37" },
+                    { "instrument": "Code C", "cite": "Code C para 3.4-3.5 (authorisation of detention)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["detention", "s37", "authorisation"]
+                },
+                {
+                  "id": "u3-o1-b",
+                  "label": "Detention time limits (s.41-44)",
+                  "summary": "24-hour standard limit; 36-hour superintendent extension; 96-hour warrant of further detention; relevant time.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.41 (limits on detention without charge)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/41" },
+                    { "instrument": "PACE", "cite": "PACE 1984 s.42 (authorisation of continued detention)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/42" },
+                    { "instrument": "Code C", "cite": "Code C para 15 (reviews and extensions)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["time-limits", "detention", "extensions"]
+                },
+                {
+                  "id": "u3-o1-c",
+                  "label": "Detention reviews (s.40)",
+                  "summary": "First review within 6 hours, then every 9 hours; inspector review; representations.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.40 (review of detention)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/40" },
+                    { "instrument": "Code C", "cite": "Code C para 15.1-15.3 (review of detention)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["reviews", "detention", "representations"]
+                }
+              ]
+            },
+            {
+              "id": "u3-o2",
+              "title": "Understand custody record and rights notification",
+              "criteria": [
+                {
+                  "id": "u3-o2-a",
+                  "label": "Custody record requirements",
+                  "summary": "Contents of custody record; access rights; recording decisions and reasons.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 2 (custody records)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["custody-record", "documentation"]
+                },
+                {
+                  "id": "u3-o2-b",
+                  "label": "Rights and entitlements in custody",
+                  "summary": "Right to have someone informed (s.56); right to legal advice (s.58); right to consult Codes; notification of rights.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.56 (right to have someone informed)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/56" },
+                    { "instrument": "PACE", "cite": "PACE 1984 s.58 (right to legal advice)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/58" },
+                    { "instrument": "Code C", "cite": "Code C para 3.1-3.2 (notification of rights)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["rights", "s56", "s58"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "title": "Vulnerability, appropriate adults, and fitness to interview",
+          "outcomes": [
+            {
+              "id": "u4-o1",
+              "title": "Identify and respond to vulnerability",
+              "criteria": [
+                {
+                  "id": "u4-o1-a",
+                  "label": "Vulnerable suspects definition and identification",
+                  "summary": "Definition of vulnerable adult; mental disorder/learning disability/mental vulnerability; observation and assessment.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["vulnerability", "definition", "identification"]
+                },
+                {
+                  "id": "u4-o1-b",
+                  "label": "Appropriate adult role and requirements",
+                  "summary": "When AA required; role of AA; who can be an AA; conflicts of interest.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 1.7 and 11.15-11.17 (appropriate adult)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["appropriate-adult", "safeguards"]
+                },
+                {
+                  "id": "u4-o1-c",
+                  "label": "Juveniles in custody",
+                  "summary": "Definition of juvenile (under 18); mandatory AA; parental notification; special treatment.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 1.5 and 3.15 (juveniles)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["juveniles", "youth", "safeguards"]
+                },
+                {
+                  "id": "u4-o1-d",
+                  "label": "Fitness for interview",
+                  "summary": "Assessment of fitness; healthcare professional involvement; conditions for postponement.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 12.3 and Annex G (fitness for interview)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["fitness-for-interview", "healthcare", "mental-health"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u5",
+          "title": "Interview strategy, interventions, and disclosure",
+          "outcomes": [
+            {
+              "id": "u5-o1",
+              "title": "Prepare for and attend interviews effectively",
+              "criteria": [
+                {
+                  "id": "u5-o1-a",
+                  "label": "Pre-interview disclosure and preparation",
+                  "summary": "Nature and extent of advance disclosure; strategic use; limitations and requests.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 11.1A (pre-interview disclosure)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" },
+                    { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework)", "url": "https://www.legislation.gov.uk/ukpga/1996/25/contents" }
+                  ],
+                  "tags": ["disclosure", "preparation", "strategy"]
+                },
+                {
+                  "id": "u5-o1-b",
+                  "label": "Private consultation before interview",
+                  "summary": "Right to private consultation; taking instructions; advising on strategy; managing expectations.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.58 (private consultation)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/58" },
+                    { "instrument": "Code C", "cite": "Code C para 6.1 (consultation before interview)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["consultation", "strategy", "instructions"]
+                },
+                {
+                  "id": "u5-o1-c",
+                  "label": "Interview attendance and conduct",
+                  "summary": "Role during interview; note-taking; when and how to intervene; breaks.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["interview", "attendance", "intervention"]
+                },
+                {
+                  "id": "u5-o1-d",
+                  "label": "Interventions and objections",
+                  "summary": "Grounds for intervention; improper questions; oppressive questioning; record on tape.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 6.9 (solicitor interventions)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" },
+                    { "instrument": "PACE", "cite": "PACE 1984 s.78 (exclusion of unfair evidence)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/78" }
+                  ],
+                  "tags": ["intervention", "objections", "fairness"]
+                },
+                {
+                  "id": "u5-o1-e",
+                  "label": "Adverse inference and prepared statements",
+                  "summary": "CJPOA s.34-37 inference provisions; when no comment appropriate; prepared statement strategy.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "Criminal Justice and Public Order Act 1994 s.34 (inference from silence)", "url": "https://www.legislation.gov.uk/ukpga/1994/33/section/34" },
+                    { "instrument": "Code C", "cite": "Code C para 10.11 and 11.4 (caution and inference)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["adverse-inference", "silence", "prepared-statement"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u6",
+          "title": "Arrest necessity and voluntary attendance (Code G)",
+          "outcomes": [
+            {
+              "id": "u6-o1",
+              "title": "Understand arrest powers and necessity",
+              "criteria": [
+                {
+                  "id": "u6-o1-a",
+                  "label": "Powers of arrest (s.24 PACE)",
+                  "summary": "Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.24 (arrest without warrant)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/24" },
+                    { "instrument": "Code G", "cite": "Code G para 2.1-2.4 (power of arrest)", "url": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible" }
+                  ],
+                  "tags": ["arrest", "s24", "powers"]
+                },
+                {
+                  "id": "u6-o1-b",
+                  "label": "Necessity criteria for arrest",
+                  "summary": "The necessity test; specific necessity grounds; alternatives to arrest.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.24(5) (necessity criteria)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/24" },
+                    { "instrument": "Code G", "cite": "Code G para 2.9 (necessity criteria)", "url": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible" }
+                  ],
+                  "tags": ["necessity", "arrest", "code-g"]
+                },
+                {
+                  "id": "u6-o1-c",
+                  "label": "Information on arrest (s.28)",
+                  "summary": "Duty to inform person of arrest and grounds; caution requirements.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.28 (information to be given on arrest)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/28" },
+                    { "instrument": "Code G", "cite": "Code G para 3.1-3.3 (information on arrest)", "url": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible" }
+                  ],
+                  "tags": ["arrest", "s28", "caution"]
+                },
+                {
+                  "id": "u6-o1-d",
+                  "label": "Voluntary attendance",
+                  "summary": "Alternative to arrest; rights of voluntary attendee; when arrest becomes necessary.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code G", "cite": "Code G para 2.9(a) (voluntary attendance)", "url": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible" },
+                    { "instrument": "Code C", "cite": "Code C para 3.21-3.22 (voluntary attendance)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["voluntary-attendance", "alternatives"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u7",
+          "title": "Identification procedures (Code D basics)",
+          "outcomes": [
+            {
+              "id": "u7-o1",
+              "title": "Understand identification procedure requirements",
+              "criteria": [
+                {
+                  "id": "u7-o1-a",
+                  "label": "Types of identification procedure",
+                  "summary": "Video identification; identification parade; group identification; confrontation; when each applies.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code D", "cite": "Code D para 3.1-3.21 (identification procedures)", "url": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible" }
+                  ],
+                  "tags": ["identification", "code-d", "procedure"]
+                },
+                {
+                  "id": "u7-o1-b",
+                  "label": "When identification required",
+                  "summary": "Known suspect; disputed identity; first description; triggering factors.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code D", "cite": "Code D para 3.12 (when identification procedure required)", "url": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible" }
+                  ],
+                  "tags": ["identification", "disputed", "witness"]
+                },
+                {
+                  "id": "u7-o1-c",
+                  "label": "Safeguards and legal representative role",
+                  "summary": "Right to have legal representative present; objections; recording; challenges.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code D", "cite": "Code D para 3.17-3.20 (legal representative at identification)", "url": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible" }
+                  ],
+                  "tags": ["identification", "safeguards", "legal-rep"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u8",
+          "title": "Interview recording (Codes E/F basics)",
+          "outcomes": [
+            {
+              "id": "u8-o1",
+              "title": "Understand interview recording requirements",
+              "criteria": [
+                {
+                  "id": "u8-o1-a",
+                  "label": "Audio recording of interviews (Code E)",
+                  "summary": "When audio recording required; equipment; sealing and signatures; copies.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code E", "cite": "Code E para 3 (recording of interviews)", "url": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible" }
+                  ],
+                  "tags": ["recording", "code-e", "audio"]
+                },
+                {
+                  "id": "u8-o1-b",
+                  "label": "Visual recording of interviews (Code F)",
+                  "summary": "When visual recording used; vulnerable suspects; review of recordings.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code F", "cite": "Code F para 3 (visual recording)", "url": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-f-2018-accessible" }
+                  ],
+                  "tags": ["recording", "code-f", "video"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u9",
+          "title": "Outcomes: bail, RUI, charging, and post-interview",
+          "outcomes": [
+            {
+              "id": "u9-o1",
+              "title": "Understand post-interview outcomes and processes",
+              "criteria": [
+                {
+                  "id": "u9-o1-a",
+                  "label": "Bail and conditions",
+                  "summary": "Police bail; conditions; objections and representations; failure to answer bail.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.47 (bail after arrest)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/47" },
+                    { "instrument": "Bail Act", "cite": "Bail Act 1976 s.3 (conditions of bail)", "url": "https://www.legislation.gov.uk/ukpga/1976/63/section/3" }
+                  ],
+                  "tags": ["bail", "conditions", "representations"]
+                },
+                {
+                  "id": "u9-o1-b",
+                  "label": "Released under investigation (RUI)",
+                  "summary": "No bail conditions; ongoing investigation; re-arrest risks; client advice.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.37(7) (release without bail)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/37" }
+                  ],
+                  "tags": ["rui", "release", "investigation"]
+                },
+                {
+                  "id": "u9-o1-c",
+                  "label": "Charging decisions",
+                  "summary": "CPS charging role; custody officer charging; threshold test; full code test.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.37B (consultation with CPS)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B" }
+                  ],
+                  "tags": ["charging", "cps", "threshold"]
+                },
+                {
+                  "id": "u9-o1-d",
+                  "label": "No further action and cautions",
+                  "summary": "NFA decisions; simple cautions; conditional cautions; youth cautions.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.37(7)(a) (release without charge)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/37" }
+                  ],
+                  "tags": ["nfa", "caution", "disposal"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10",
+          "title": "Evidence and admissibility",
+          "outcomes": [
+            {
+              "id": "u10-o1",
+              "title": "Understand evidence rules relevant to custody",
+              "criteria": [
+                {
+                  "id": "u10-o1-a",
+                  "label": "Confession evidence (s.76)",
+                  "summary": "Exclusion of oppression-obtained confessions; unreliability; burden on prosecution.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.76 (confessions)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/76" }
+                  ],
+                  "tags": ["confessions", "s76", "admissibility"]
+                },
+                {
+                  "id": "u10-o1-b",
+                  "label": "Exclusion for unfairness (s.78)",
+                  "summary": "Court discretion to exclude evidence; adverse effect on fairness; procedural breaches.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.78 (exclusion of unfair evidence)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/78" }
+                  ],
+                  "tags": ["s78", "fairness", "exclusion"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u11",
+          "title": "Ethics, professional conduct, and client care",
+          "outcomes": [
+            {
+              "id": "u11-o1",
+              "title": "Apply professional standards in police station work",
+              "criteria": [
+                {
+                  "id": "u11-o1-a",
+                  "label": "Confidentiality and privilege",
+                  "summary": "Legal professional privilege; confidentiality duty; exceptions and limitations.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — confidentiality", "url": "https://www.sra.org.uk/solicitors/standards-regulations/" }
+                  ],
+                  "tags": ["confidentiality", "privilege", "ethics"]
+                },
+                {
+                  "id": "u11-o1-b",
+                  "label": "Duty not to mislead",
+                  "summary": "Duty to court and third parties; not advancing known false cases; withdrawal.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — integrity and misleading", "url": "https://www.sra.org.uk/solicitors/standards-regulations/" }
+                  ],
+                  "tags": ["integrity", "misleading", "ethics"]
+                },
+                {
+                  "id": "u11-o1-c",
+                  "label": "Client instructions and autonomy",
+                  "summary": "Taking clear instructions; respecting client decisions; documenting advice.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — client care", "url": "https://www.sra.org.uk/solicitors/standards-regulations/" }
+                  ],
+                  "tags": ["instructions", "client-care", "autonomy"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u12",
+          "title": "Record keeping, notes, and portfolio evidence",
+          "outcomes": [
+            {
+              "id": "u12-o1",
+              "title": "Maintain professional records and build portfolio",
+              "criteria": [
+                {
+                  "id": "u12-o1-a",
+                  "label": "Attendance notes and contemporaneous records",
+                  "summary": "Structure of attendance notes; key information to record; timing requirements.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — record keeping", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["notes", "record-keeping", "documentation"]
+                },
+                {
+                  "id": "u12-o1-b",
+                  "label": "Portfolio building for accreditation",
+                  "summary": "Portfolio structure; case summaries; reflective accounts; supervisor sign-off.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — portfolio", "url": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/" }
+                  ],
+                  "tags": ["portfolio", "accreditation", "evidence"]
+                },
+                {
+                  "id": "u12-o1-c",
+                  "label": "Reflective practice",
+                  "summary": "Learning from experience; structured reflection; identifying development needs.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — reflective practice", "url": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/" }
+                  ],
+                  "tags": ["reflection", "learning", "development"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u13",
+          "title": "LAA probationary constraints and deadlines",
+          "outcomes": [
+            {
+              "id": "u13-o1",
+              "title": "Understand probationary period requirements",
+              "criteria": [
+                {
+                  "id": "u13-o1-a",
+                  "label": "Probationary period structure",
+                  "summary": "12-month probationary period; supervision requirements; restrictions on own-client work.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — probationary period", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["probationary", "laa", "requirements"]
+                },
+                {
+                  "id": "u13-o1-b",
+                  "label": "Assessment components and deadlines",
+                  "summary": "Written exam; portfolio submission; critical incident test (CIT); timing requirements.",
+                  "expectedAuthorities": [
+                    { "instrument": "SRA Standard", "cite": "SRA PSRAS Assessment Guidelines — assessment structure", "url": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/" },
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — assessment deadlines", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["assessment", "exam", "cit", "portfolio"]
+                },
+                {
+                  "id": "u13-o1-c",
+                  "label": "Register entry requirements",
+                  "summary": "Full accreditation requirements; duty scheme eligibility; maintaining registration.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — register entry", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["register", "accreditation", "eligibility"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": "Practical application (CIT / scenario-based)",
+      "units": [
+        {
+          "id": "u14",
+          "title": "Critical Incident Test (CIT) scenarios",
+          "outcomes": [
+            {
+              "id": "u14-o1",
+              "title": "Apply knowledge in realistic scenarios",
+              "criteria": [
+                {
+                  "id": "u14-o1-a",
+                  "label": "Initial call and triage",
+                  "summary": "DSCC call handling; initial information gathering; authority to act; identifying issues.",
+                  "expectedAuthorities": [
+                    { "instrument": "LAA Arrangements", "cite": "Police Station Register Arrangements 2025 — DSCC", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf" }
+                  ],
+                  "tags": ["cit", "triage", "dscc"]
+                },
+                {
+                  "id": "u14-o1-b",
+                  "label": "Arriving at custody and initial steps",
+                  "summary": "Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 2-3 (custody procedures)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["cit", "custody", "initial-steps"]
+                },
+                {
+                  "id": "u14-o1-c",
+                  "label": "Private consultation conduct",
+                  "summary": "Taking instructions; explaining process; advising on strategy; agreeing approach.",
+                  "expectedAuthorities": [
+                    { "instrument": "PACE", "cite": "PACE 1984 s.58 (private consultation)", "url": "https://www.legislation.gov.uk/ukpga/1984/60/section/58" }
+                  ],
+                  "tags": ["cit", "consultation", "instructions"]
+                },
+                {
+                  "id": "u14-o1-d",
+                  "label": "Interview attendance decisions",
+                  "summary": "When to intervene; handling difficult questions; requesting breaks; managing the interview.",
+                  "expectedAuthorities": [
+                    { "instrument": "Code C", "cite": "Code C para 6.8-6.10 (legal adviser in interview)", "url": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible" }
+                  ],
+                  "tags": ["cit", "interview", "decisions"]
+                },
+                {
+                  "id": "u14-o1-e",
+                  "label": "Post-interview and outcome",
+                  "summary": "Bail representations; advising on outcomes; follow-up steps; record completion.",
+                  "expectedAuthorities": [
+                    { "instrument": "Bail Act", "cite": "Bail Act 1976 (bail representations)", "url": "https://www.legislation.gov.uk/ukpga/1976/63" }
+                  ],
+                  "tags": ["cit", "post-interview", "outcome"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

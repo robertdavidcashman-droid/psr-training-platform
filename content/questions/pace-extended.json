@@ -1,0 +1,358 @@
+{
+  "questions": [
+    {
+      "id": "pace-008",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A client was arrested for theft but says the officer only mentioned 'routine procedure' without explaining the necessity for arrest. What is the most relevant provision?",
+      "options": [
+        { "id": "A", "text": "PACE s.24 requires necessity but not explanation" },
+        { "id": "B", "text": "Code G requires the arresting officer to consider necessity and alternatives; s.28 requires information on arrest" },
+        { "id": "C", "text": "Necessity is only relevant for terrorism offences" },
+        { "id": "D", "text": "The custody officer is responsible for explaining necessity" }
+      ],
+      "correct": "B",
+      "explanation": "Code G sets out the necessity criteria the officer must consider, and s.28 requires the person to be informed they are under arrest and the grounds. Both should be recorded; failures can affect lawfulness.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.24(5) (necessity criteria)", "note": "Check current wording" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.28 (information on arrest)" },
+        { "instrument": "Code G", "cite": "Code G para 2.9 (necessity criteria)" }
+      ],
+      "tags": ["arrest", "necessity", "code-g", "s28"]
+    },
+    {
+      "id": "pace-009",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "At what interval must detention reviews normally be conducted after the first review?",
+      "options": [
+        { "id": "A", "text": "Every 3 hours" },
+        { "id": "B", "text": "Every 9 hours" },
+        { "id": "C", "text": "Every 12 hours" },
+        { "id": "D", "text": "Once per day only" }
+      ],
+      "correct": "B",
+      "explanation": "The first review must be within 6 hours of authorisation, then every 9 hours thereafter. You should monitor the custody record to ensure reviews are timely and make representations.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.40 (review of detention)" },
+        { "instrument": "Code C", "cite": "Code C para 15.1 (review intervals)" }
+      ],
+      "tags": ["detention", "reviews", "time-limits"]
+    },
+    {
+      "id": "pace-010",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "Which scenario most clearly meets the necessity test for arrest?",
+      "options": [
+        { "id": "A", "text": "The person has a fixed address and agreed to attend voluntarily" },
+        { "id": "B", "text": "The person refused to give their name and is believed to have given a false address" },
+        { "id": "C", "text": "The offence is minor and non-imprisonable" },
+        { "id": "D", "text": "The officer wants to process paperwork quickly" }
+      ],
+      "correct": "B",
+      "explanation": "One necessity ground is to ascertain identity when it cannot be readily established. Refusal to give a name or a suspected false address can meet this ground, subject to the facts.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.24(5)(a) (ascertaining name)" },
+        { "instrument": "Code G", "cite": "Code G para 2.9(a) (ascertaining identity)" }
+      ],
+      "tags": ["arrest", "necessity", "identity"]
+    },
+    {
+      "id": "pace-011",
+      "topicId": "pace-custody-record",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What should you do if you notice a gap between the time your client requested legal advice and when it was first noted in the custody record?",
+      "options": [
+        { "id": "A", "text": "Ignore it — timing doesn't matter" },
+        { "id": "B", "text": "Ask the custody officer to clarify and correct the record; note the issue in your attendance notes" },
+        { "id": "C", "text": "Assume the client is wrong about when they asked" },
+        { "id": "D", "text": "Wait until after conviction to raise it" }
+      ],
+      "correct": "B",
+      "explanation": "Discrepancies in rights/legal advice timing can be significant for detention legality and fairness. Clarify, request correction, and record the issue contemporaneously.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 2 (custody record accuracy)" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.58 (right to legal advice)" }
+      ],
+      "tags": ["custody-record", "legal-advice", "rights"]
+    },
+    {
+      "id": "pace-012",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client has been detained for 22 hours. Police want a superintendent extension. What must be satisfied for the extension to be lawful?",
+      "options": [
+        { "id": "A", "text": "The superintendent just needs to sign a form" },
+        { "id": "B", "text": "Continued detention must be necessary for investigation of an indictable offence, the investigation must be being conducted diligently and expeditiously" },
+        { "id": "C", "text": "Extensions are automatic if the person has not been charged" },
+        { "id": "D", "text": "The client must consent to the extension" }
+      ],
+      "correct": "B",
+      "explanation": "Section 42 requires the superintendent to be satisfied that the criteria are met: indictable offence, diligent investigation, and necessity for continued detention. You can make representations.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.42 (authorisation of continued detention)" },
+        { "instrument": "Code C", "cite": "Code C para 15.4 (extension of detention)" }
+      ],
+      "tags": ["detention", "extensions", "s42"]
+    },
+    {
+      "id": "pace-013",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a necessity ground under s.24(5) PACE?",
+      "options": [
+        { "id": "A", "text": "To prevent the person causing physical injury" },
+        { "id": "B", "text": "To allow prompt and effective investigation" },
+        { "id": "C", "text": "Because the person looks suspicious" },
+        { "id": "D", "text": "To prevent the person making off before a summons can be served" }
+      ],
+      "correct": "C",
+      "explanation": "Looking suspicious is not a necessity ground. Necessity requires specific reasons such as preventing harm, allowing investigation, or where the person's name/address cannot be readily ascertained.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.24(5) (necessity criteria)" },
+        { "instrument": "Code G", "cite": "Code G para 2.9 (necessity criteria list)" }
+      ],
+      "tags": ["arrest", "necessity"]
+    },
+    {
+      "id": "pace-014",
+      "topicId": "pace-custody-record",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "The custody record shows your client was told of their rights at 10:00. They say it was actually 11:30 after repeated requests. What is your best approach?",
+      "options": [
+        { "id": "A", "text": "Accept the record as definitive" },
+        { "id": "B", "text": "Note the discrepancy, ask for clarification, and record the client's account in your notes" },
+        { "id": "C", "text": "Assume both are correct somehow" },
+        { "id": "D", "text": "Ignore it — rights timing is not important" }
+      ],
+      "correct": "B",
+      "explanation": "Rights should be given promptly. If there's a discrepancy, investigate, seek clarification, and ensure your notes reflect the client's account for later consideration.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 3.1 (prompt notification of rights)" }
+      ],
+      "tags": ["custody-record", "rights", "documentation"]
+    },
+    {
+      "id": "pace-015",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the 'relevant time' from which detention time limits are calculated?",
+      "options": [
+        { "id": "A", "text": "The time of the offence" },
+        { "id": "B", "text": "Generally, the time of arrival at the first police station after arrest" },
+        { "id": "C", "text": "The time of interview" },
+        { "id": "D", "text": "The time of charge" }
+      ],
+      "correct": "B",
+      "explanation": "The relevant time is generally when the person arrives at the first police station after arrest. This is the starting point for calculating detention limits and review timings.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.41(2) (relevant time)" },
+        { "instrument": "Code C", "cite": "Code C para 1.1 (relevant time definition)" }
+      ],
+      "tags": ["detention", "time-limits", "relevant-time"]
+    },
+    {
+      "id": "pace-016",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client was arrested but claims they had already agreed to attend voluntarily the next day. What challenge might this support?",
+      "options": [
+        { "id": "A", "text": "No challenge — arrest is always lawful if there's reasonable suspicion" },
+        { "id": "B", "text": "A challenge to necessity: if voluntary attendance was viable, arrest may not have been necessary" },
+        { "id": "C", "text": "A challenge to the offence itself" },
+        { "id": "D", "text": "A challenge to the interview questions" }
+      ],
+      "correct": "B",
+      "explanation": "The necessity test includes considering alternatives such as voluntary attendance. If VA was viable and agreed, arrest may not have been necessary, which can affect detention legality.",
+      "references": [
+        { "instrument": "Code G", "cite": "Code G para 2.9(a) (voluntary attendance as alternative)" },
+        { "instrument": "PACE", "cite": "PACE 1984 s.24(5) (necessity criteria)" }
+      ],
+      "tags": ["arrest", "necessity", "voluntary-attendance"]
+    },
+    {
+      "id": "pace-017",
+      "topicId": "pace-custody-record",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Why is it important to check the custody record for authorisation of detention?",
+      "options": [
+        { "id": "A", "text": "It shows the client's diet preferences" },
+        { "id": "B", "text": "It confirms whether detention was lawfully authorised and on what grounds" },
+        { "id": "C", "text": "It lists the officers' shift patterns" },
+        { "id": "D", "text": "It only matters after conviction" }
+      ],
+      "correct": "B",
+      "explanation": "Detention must be authorised by the custody officer on lawful grounds. Checking this ensures the detention itself is lawful and allows you to challenge if grounds are inadequate.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.37 (duties before charge)" },
+        { "instrument": "Code C", "cite": "Code C para 3.4 (authorisation of detention)" }
+      ],
+      "tags": ["custody-record", "detention", "authorisation"]
+    },
+    {
+      "id": "pace-018",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A warrant of further detention can extend detention up to what maximum period?",
+      "options": [
+        { "id": "A", "text": "48 hours" },
+        { "id": "B", "text": "72 hours" },
+        { "id": "C", "text": "96 hours (4 days)" },
+        { "id": "D", "text": "Indefinitely with court approval" }
+      ],
+      "correct": "C",
+      "explanation": "A warrant of further detention can extend detention up to 96 hours from the relevant time. This requires court authorisation and strict criteria must be met.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.43-44 (warrant of further detention)" }
+      ],
+      "tags": ["detention", "extensions", "warrant"]
+    },
+    {
+      "id": "pace-019",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What must exist before a constable can arrest without warrant under s.24?",
+      "options": [
+        { "id": "A", "text": "Reasonable grounds to suspect an offence has been or is about to be committed, and that arrest is necessary" },
+        { "id": "B", "text": "A court order" },
+        { "id": "C", "text": "The person's consent" },
+        { "id": "D", "text": "A confession" }
+      ],
+      "correct": "A",
+      "explanation": "Section 24 requires reasonable grounds to suspect an offence AND that arrest is necessary for one of the specified reasons. Both elements must be present.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.24 (arrest without warrant)" },
+        { "instrument": "Code G", "cite": "Code G para 2.1 (elements of lawful arrest)" }
+      ],
+      "tags": ["arrest", "reasonable-grounds", "necessity"]
+    },
+    {
+      "id": "pace-020",
+      "topicId": "pace-custody-record",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "If the custody record is unclear about whether an interpreter was offered, what should you do?",
+      "options": [
+        { "id": "A", "text": "Proceed without clarification" },
+        { "id": "B", "text": "Ask the custody officer to clarify and ensure any deficiency is remedied and recorded" },
+        { "id": "C", "text": "Assume the client doesn't need one" },
+        { "id": "D", "text": "Wait until the interview to raise it" }
+      ],
+      "correct": "B",
+      "explanation": "Access to interpretation is a safeguard for non-English speakers. If the record is unclear, clarify, ensure the safeguard is in place, and record the issue.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 3.12 (interpreters)" }
+      ],
+      "tags": ["custody-record", "interpreters", "safeguards"]
+    },
+    {
+      "id": "pace-021",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What rank of officer can authorise continued detention beyond 24 hours for an indictable offence?",
+      "options": [
+        { "id": "A", "text": "Constable" },
+        { "id": "B", "text": "Sergeant" },
+        { "id": "C", "text": "Inspector" },
+        { "id": "D", "text": "Superintendent (or above)" }
+      ],
+      "correct": "D",
+      "explanation": "A superintendent or above can authorise continued detention up to 36 hours under s.42. Further extension requires a magistrates' warrant.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.42 (superintendent authorisation)" }
+      ],
+      "tags": ["detention", "extensions", "superintendent"]
+    },
+    {
+      "id": "pace-022",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Which statement about de-arrest is correct?",
+      "options": [
+        { "id": "A", "text": "Once arrested, a person must always be taken to a station" },
+        { "id": "B", "text": "A person can be de-arrested if the grounds for arrest no longer apply" },
+        { "id": "C", "text": "De-arrest is never lawful" },
+        { "id": "D", "text": "Only a court can de-arrest someone" }
+      ],
+      "correct": "B",
+      "explanation": "If the grounds for arrest cease to apply (e.g., identity established, necessity no longer exists), de-arrest is appropriate. This should be recorded.",
+      "references": [
+        { "instrument": "Code G", "cite": "Code G para 2.10 (de-arrest)" }
+      ],
+      "tags": ["arrest", "de-arrest"]
+    },
+    {
+      "id": "pace-023",
+      "topicId": "pace-custody-record",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "The custody record shows a 4-hour gap with no entries. What should you consider?",
+      "options": [
+        { "id": "A", "text": "Gaps are normal and irrelevant" },
+        { "id": "B", "text": "Whether required checks, reviews, or safeguards were provided during that period; query the gap" },
+        { "id": "C", "text": "The client must have been asleep" },
+        { "id": "D", "text": "The record is always complete by definition" }
+      ],
+      "correct": "B",
+      "explanation": "The custody record should be a continuous contemporaneous record. Gaps may indicate missed checks, reviews, or welfare concerns. Query and note the issue.",
+      "references": [
+        { "instrument": "Code C", "cite": "Code C para 2.1 (custody record requirements)" }
+      ],
+      "tags": ["custody-record", "documentation", "safeguards"]
+    },
+    {
+      "id": "pace-024",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the first detention review timing after authorisation?",
+      "options": [
+        { "id": "A", "text": "3 hours" },
+        { "id": "B", "text": "6 hours" },
+        { "id": "C", "text": "9 hours" },
+        { "id": "D", "text": "12 hours" }
+      ],
+      "correct": "B",
+      "explanation": "The first review must take place within 6 hours of detention being authorised. This is a key checkpoint where you can make representations.",
+      "references": [
+        { "instrument": "PACE", "cite": "PACE 1984 s.40(3)(a) (first review within 6 hours)" },
+        { "instrument": "Code C", "cite": "Code C para 15.1 (review timing)" }
+      ],
+      "tags": ["detention", "reviews"]
+    },
+    {
+      "id": "pace-025",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "If arrest necessity is not recorded at all in the custody record, what is the likely implication?",
+      "options": [
+        { "id": "A", "text": "It doesn't matter — necessity is assumed" },
+        { "id": "B", "text": "It may indicate a procedural failing and could support challenges to detention lawfulness" },
+        { "id": "C", "text": "The arrest is automatically unlawful" },
+        { "id": "D", "text": "The custody officer becomes liable" }
+      ],
+      "correct": "B",
+      "explanation": "While absence of recording doesn't automatically make arrest unlawful, it's a significant procedural concern. It can support challenges and should be noted.",
+      "references": [
+        { "instrument": "Code G", "cite": "Code G para 2.2 (recording necessity)" }
+      ],
+      "tags": ["arrest", "necessity", "documentation"]
+    }
+  ]
+}

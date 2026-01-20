@@ -14,12 +14,14 @@ import {
   Library,
   X,
   GraduationCap,
+  Grid3X3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { name: "Syllabus Map", href: "/syllabus", icon: BookOpen },
+  { name: "Coverage Matrix", href: "/coverage", icon: Grid3X3 },
   { name: "Practice", href: "/practice", icon: Play },
   { name: "Mock Exam", href: "/mock-exam", icon: Clock },
   { name: "Critical Incidents", href: "/incidents", icon: AlertTriangle },
