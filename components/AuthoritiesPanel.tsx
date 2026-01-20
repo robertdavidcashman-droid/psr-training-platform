@@ -57,7 +57,7 @@ function AuthorityItem({ authority }: { authority: AuthorityEntry }) {
               Verify
             </Badge>
           )}
-          <span className="text-[15px] font-medium break-words min-w-0">
+          <span className="text-base font-medium break-words min-w-0">
             {authority.cite}
           </span>
         </div>
@@ -76,7 +76,7 @@ function AuthorityItem({ authority }: { authority: AuthorityEntry }) {
         )}
       </div>
       {authority.note && (
-        <p className="mt-2 text-sm text-muted-foreground flex items-start gap-2">
+        <p className="mt-2 text-base text-muted-foreground flex items-start gap-2">
           <Info className="h-4 w-4 shrink-0 mt-0.5" />
           <span>{authority.note}</span>
         </p>
@@ -133,14 +133,14 @@ export function AuthoritiesPanel({
             <span className="font-semibold">Authorities</span>
             <Badge variant="outline">{count}</Badge>
           </div>
-          <span className="text-[14px] text-muted-foreground">
+          <span className="text-base text-muted-foreground">
             {count > 0 ? "Click to collapse" : "Click to expand"}
           </span>
         </summary>
 
         <div className="px-4 pb-4 space-y-4" data-testid="references-panel">
           {count === 0 ? (
-            <div className="text-[14px] text-muted-foreground py-2">
+            <div className="text-base text-muted-foreground py-2">
               No authorities available for this question.
             </div>
           ) : (
@@ -148,7 +148,7 @@ export function AuthoritiesPanel({
               {hasCheckRefs && (
                 <div className="flex items-start gap-2 p-3 rounded-lg bg-warning/10 border border-warning/20">
                   <AlertTriangle className="h-4 w-4 text-warning shrink-0 mt-0.5" />
-                  <p className="text-sm text-warning-foreground">
+                  <p className="text-base text-warning-foreground">
                     Some citations are marked for verification. Always check the current
                     Act/Code for the exact paragraph or section number.
                   </p>
@@ -168,17 +168,17 @@ export function AuthoritiesPanel({
 
           {whyItMatters && (
             <div className="pt-2 border-t">
-              <h4 className="text-sm font-semibold mb-1">Why this matters</h4>
-              <p className="text-sm text-muted-foreground">{whyItMatters}</p>
+              <h4 className="text-base font-semibold mb-1">Why this matters</h4>
+              <p className="text-base text-muted-foreground">{whyItMatters}</p>
             </div>
           )}
 
           {commonPitfalls && commonPitfalls.length > 0 && (
             <div className="pt-2 border-t">
-              <h4 className="text-sm font-semibold mb-2">Common pitfalls</h4>
+              <h4 className="text-base font-semibold mb-2">Common pitfalls</h4>
               <ul className="space-y-1">
                 {commonPitfalls.map((pitfall, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <li key={idx} className="flex items-start gap-2 text-base text-muted-foreground">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-destructive/70 shrink-0" />
                     <span>{pitfall}</span>
                   </li>

@@ -57,7 +57,7 @@ export default function DashboardPage() {
       />
 
       {/* Quick Stats */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-10">
         <StatCard
           title="Overall Mastery"
           value={`${mastery}%`}
@@ -85,20 +85,20 @@ export default function DashboardPage() {
       </div>
 
       {/* Main Actions */}
-      <div className="grid gap-6 lg:grid-cols-3 mb-8">
+      <div className="grid gap-8 lg:grid-cols-3 mb-10">
         {/* Daily Practice CTA */}
         <Card className="lg:col-span-2 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
-          <CardContent className="p-6">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <CardContent className="p-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
-                <h2 className="text-xl font-semibold mb-1">Daily Practice</h2>
-                <p className="text-muted-foreground">
+                <h2 className="text-2xl font-semibold mb-2">Daily Practice</h2>
+                <p className="text-lg text-muted-foreground">
                   Complete a quick practice session to maintain your streak and build mastery.
                 </p>
               </div>
               <Link href="/practice">
-                <Button size="lg" className="gap-2" data-testid="start-practice-btn">
-                  <Play className="h-4 w-4" />
+                <Button size="lg" className="gap-2 text-lg px-6 py-3 h-auto" data-testid="start-practice-btn">
+                  <Play className="h-5 w-5" />
                   Start Practice
                 </Button>
               </Link>
@@ -108,28 +108,28 @@ export default function DashboardPage() {
 
         {/* Progress Overview */}
         <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base flex items-center gap-2">
-              <TrendingUp className="h-4 w-4" />
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <TrendingUp className="h-5 w-5" />
               Progress
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div>
-                <div className="flex justify-between text-[15px] mb-1">
+                <div className="flex justify-between text-base mb-2">
                   <span>Overall Mastery</span>
                   <span className="font-medium">{mastery}%</span>
                 </div>
                 <Progress value={mastery} variant="gradient" />
               </div>
-              <div className="pt-2">
+              <div className="pt-3">
                 <Link
                   href="/syllabus"
-                  className="text-[15px] text-primary hover:underline flex items-center gap-1"
+                  className="text-base text-primary hover:underline flex items-center gap-1"
                 >
                   View all topics
-                  <ChevronRight className="h-3 w-3" />
+                  <ChevronRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -138,24 +138,24 @@ export default function DashboardPage() {
       </div>
 
       {/* Two Column Grid */}
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         {/* Areas for Improvement */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Areas for Improvement</CardTitle>
+            <CardTitle className="text-xl">Areas for Improvement</CardTitle>
           </CardHeader>
           <CardContent>
             {weakestTopics.length > 0 ? (
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {weakestTopics.map((topic) => (
                   <div key={topic.topicId} className="flex items-center gap-4">
                     <div className="flex-1 min-w-0">
-                      <p className="text-[15px] font-medium truncate">
+                      <p className="text-base font-medium truncate">
                         {topicMap[topic.topicId]?.name || topic.topicId}
                       </p>
                       <Progress
                         value={topic.mastery}
-                        className="mt-1"
+                        className="mt-2"
                         variant={topic.mastery < 40 ? "warning" : "default"}
                       />
                     </div>
@@ -165,15 +165,15 @@ export default function DashboardPage() {
                   </div>
                 ))}
                 <Link href="/practice">
-                  <Button variant="outline" className="w-full mt-2" data-testid="practice-weak-topics-btn">
+                  <Button variant="outline" className="w-full mt-3 text-base" data-testid="practice-weak-topics-btn">
                     Practice These Topics
                   </Button>
                 </Link>
               </div>
             ) : (
-              <div className="text-center py-6 text-muted-foreground">
-                <BookOpen className="h-8 w-8 mx-auto mb-2 opacity-50" />
-                <p>Start practicing to see your progress!</p>
+              <div className="text-center py-8 text-muted-foreground">
+                <BookOpen className="h-10 w-10 mx-auto mb-3 opacity-50" />
+                <p className="text-base">Start practicing to see your progress!</p>
               </div>
             )}
           </CardContent>
@@ -182,39 +182,39 @@ export default function DashboardPage() {
         {/* Recent Activity */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Recent Sessions</CardTitle>
+            <CardTitle className="text-xl">Recent Sessions</CardTitle>
           </CardHeader>
           <CardContent>
             {recentSessions.length > 0 ? (
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {recentSessions.map((session) => (
                   <div
                     key={session.id}
-                    className="flex items-center justify-between p-3 rounded-lg bg-muted/50"
+                    className="flex items-center justify-between p-4 rounded-lg bg-muted/50"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Clock className="h-4 w-4 text-primary" />
+                    <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Clock className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="text-[15px] font-medium capitalize">
+                        <p className="text-base font-medium capitalize">
                           {session.mode} Practice
                         </p>
-                        <p className="text-[15px] text-muted-foreground">
+                        <p className="text-base text-muted-foreground">
                           {new Date(session.date).toLocaleDateString()}
                         </p>
                       </div>
                     </div>
-                    <Badge variant="outline">
+                    <Badge variant="outline" className="text-base">
                       {session.correctAnswers}/{session.questionsAnswered}
                     </Badge>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="text-center py-6 text-muted-foreground">
-                <Clock className="h-8 w-8 mx-auto mb-2 opacity-50" />
-                <p>No practice sessions yet.</p>
+              <div className="text-center py-8 text-muted-foreground">
+                <Clock className="h-10 w-10 mx-auto mb-3 opacity-50" />
+                <p className="text-base">No practice sessions yet.</p>
               </div>
             )}
           </CardContent>
@@ -222,16 +222,16 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Links */}
-      <div className="grid gap-4 md:grid-cols-3 mt-8">
+      <div className="grid gap-6 md:grid-cols-3 mt-10">
         <Link href="/mock-exam">
           <Card className="hover:shadow-card-hover transition-shadow cursor-pointer h-full">
-            <CardContent className="p-6 flex items-center gap-4">
-              <div className="h-12 w-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
-                <Clock className="h-6 w-6 text-orange-500" />
+            <CardContent className="p-6 flex items-center gap-5">
+              <div className="h-14 w-14 rounded-lg bg-orange-500/10 flex items-center justify-center">
+                <Clock className="h-7 w-7 text-orange-500" />
               </div>
               <div>
-                <h3 className="font-semibold">Mock Exam</h3>
-                <p className="text-[15px] text-muted-foreground">
+                <h3 className="font-semibold text-lg">Mock Exam</h3>
+                <p className="text-base text-muted-foreground">
                   Timed exam simulation
                 </p>
               </div>
@@ -241,13 +241,13 @@ export default function DashboardPage() {
 
         <Link href="/incidents">
           <Card className="hover:shadow-card-hover transition-shadow cursor-pointer h-full">
-            <CardContent className="p-6 flex items-center gap-4">
-              <div className="h-12 w-12 rounded-lg bg-red-500/10 flex items-center justify-center">
-                <Target className="h-6 w-6 text-red-500" />
+            <CardContent className="p-6 flex items-center gap-5">
+              <div className="h-14 w-14 rounded-lg bg-red-500/10 flex items-center justify-center">
+                <Target className="h-7 w-7 text-red-500" />
               </div>
               <div>
-                <h3 className="font-semibold">Critical Incidents</h3>
-                <p className="text-[15px] text-muted-foreground">
+                <h3 className="font-semibold text-lg">Critical Incidents</h3>
+                <p className="text-base text-muted-foreground">
                   Scenario-based training
                 </p>
               </div>
@@ -257,13 +257,13 @@ export default function DashboardPage() {
 
         <Link href="/portfolio">
           <Card className="hover:shadow-card-hover transition-shadow cursor-pointer h-full">
-            <CardContent className="p-6 flex items-center gap-4">
-              <div className="h-12 w-12 rounded-lg bg-green-500/10 flex items-center justify-center">
-                <BookOpen className="h-6 w-6 text-green-500" />
+            <CardContent className="p-6 flex items-center gap-5">
+              <div className="h-14 w-14 rounded-lg bg-green-500/10 flex items-center justify-center">
+                <BookOpen className="h-7 w-7 text-green-500" />
               </div>
               <div>
-                <h3 className="font-semibold">Portfolio Workbook</h3>
-                <p className="text-[15px] text-muted-foreground">
+                <h3 className="font-semibold text-lg">Portfolio Workbook</h3>
+                <p className="text-base text-muted-foreground">
                   Case reflection templates
                 </p>
               </div>

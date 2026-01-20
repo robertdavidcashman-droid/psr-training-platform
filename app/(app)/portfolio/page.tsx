@@ -365,7 +365,7 @@ export default function PortfolioPage() {
                             <FileText className="h-5 w-5 text-[hsl(var(--navy))]" />
                             <h3 className="truncate text-[16px] font-semibold">{draft.title}</h3>
                           </div>
-                          <div className="mt-2 flex flex-wrap items-center gap-2 text-[14px] text-muted-foreground">
+                          <div className="mt-2 flex flex-wrap items-center gap-2 text-[15px] text-muted-foreground">
                             <span className="inline-flex items-center gap-1">
                               <Calendar className="h-4 w-4" />
                               {new Date(draft.updatedAt).toLocaleDateString()}
@@ -424,7 +424,7 @@ export default function PortfolioPage() {
                   <div className="rounded-2xl border bg-muted/30 p-5">
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <div className="min-w-0">
-                        <div className="text-[14px] text-muted-foreground">Title</div>
+                        <div className="text-[15px] text-muted-foreground">Title</div>
                         <div className="truncate text-[18px] font-semibold">{selectedDraft.title}</div>
                       </div>
                       <Badge variant="outline">
@@ -434,7 +434,7 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between text-[14px] text-muted-foreground">
+                    <div className="flex items-center justify-between text-[15px] text-muted-foreground">
                       <span>Completion</span>
                       <span className="font-semibold text-foreground">
                         {completedCount(selectedDraft)}/{PORTFOLIO_SECTIONS.length}

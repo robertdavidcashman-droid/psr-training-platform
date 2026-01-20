@@ -98,14 +98,14 @@ export default function SyllabusPage() {
                     </div>
                     <div className="min-w-0">
                       <CardTitle className="text-lg truncate">{category.name}</CardTitle>
-                      <p className="text-[15px] text-muted-foreground mt-0.5 line-clamp-2">
+                      <p className="text-base text-muted-foreground mt-1 line-clamp-2">
                         {category.description}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 shrink-0">
                     <div className="hidden md:block w-28 lg:w-32">
-                      <div className="flex justify-between text-[14px] mb-1 text-muted-foreground">
+                      <div className="flex justify-between text-base mb-1 text-muted-foreground">
                         <span>{categoryMastery}% mastery</span>
                       </div>
                       <Progress value={categoryMastery} className="h-1.5" />
@@ -144,12 +144,12 @@ export default function SyllabusPage() {
                                     ? "secondary"
                                     : "outline"
                                 }
-                                className="text-[14px]"
+                                className="text-[15px]"
                               >
                                 {mastery}%
                               </Badge>
                             </div>
-                            <p className="text-[15px] text-muted-foreground mb-2">
+                            <p className="text-base text-muted-foreground mb-2">
                               {topic.description}
                             </p>
                             {topic.subtopics && (
@@ -158,7 +158,7 @@ export default function SyllabusPage() {
                                   <Badge
                                     key={sub}
                                     variant="outline"
-                                    className="text-[14px]"
+                                    className="text-[15px]"
                                   >
                                     {sub}
                                   </Badge>
@@ -173,7 +173,7 @@ export default function SyllabusPage() {
                                     href={resource.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[14px] text-primary hover:underline flex items-center gap-1"
+                                    className="text-base text-primary hover:underline flex items-center gap-1"
                                   >
                                     <ExternalLink className="h-3 w-3" />
                                     {resource.title}
