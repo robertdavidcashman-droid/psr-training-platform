@@ -36,12 +36,12 @@ export function StatCard({
         <div className="mt-2">
           <p className="text-2xl font-bold" data-testid="stat-value">{value}</p>
           {description && (
-            <p className="text-xs text-muted-foreground mt-1">{description}</p>
+            <p className="text-sm text-muted-foreground mt-1">{description}</p>
           )}
           {trend && (
             <p
               className={cn(
-                "text-xs mt-1",
+                "text-sm mt-1",
                 trend.value >= 0 ? "text-success" : "text-destructive"
               )}
             >

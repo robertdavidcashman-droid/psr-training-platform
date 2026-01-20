@@ -11,11 +11,34 @@ export default defineConfig({
     baseURL: "http://localhost:3000",
     trace: "on-first-retry",
     screenshot: "only-on-failure",
+    video: "retain-on-failure",
   },
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "mobile",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 390, height: 844 },
+        deviceScaleFactor: 2,
+        isMobile: true,
+        hasTouch: true,
+      },
+    },
+    {
+      name: "tablet",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 820, height: 1180 },
+        deviceScaleFactor: 2,
+        hasTouch: true,
+      },
+    },
+    {
+      name: "desktop",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1440, height: 900 },
+      },
     },
   ],
   webServer: {

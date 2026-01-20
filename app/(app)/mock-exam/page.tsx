@@ -214,18 +214,19 @@ export default function MockExamPage() {
 
         <div className="grid gap-6 lg:grid-cols-4">
           {/* Question Navigator */}
-          <div className="lg:col-span-1 order-2 lg:order-1">
+          <div className="lg:col-span-1 order-2 lg:order-1 relative z-10">
             <Card>
               <CardHeader className="py-3">
-                <CardTitle className="text-sm">Questions</CardTitle>
+                <CardTitle className="text-[16px]">Questions</CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
                 <div className="grid grid-cols-5 gap-2">
                   {questions.map((_, idx) => (
                     <button
                       key={idx}
+                      type="button"
                       onClick={() => goToQuestion(idx)}
-                      className={`h-8 w-8 rounded text-sm font-medium transition-colors ${
+                      className={`h-10 w-10 rounded-xl text-[15px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                         idx === currentIndex
                           ? "bg-primary text-primary-foreground"
                           : answers[idx]
@@ -233,6 +234,7 @@ export default function MockExamPage() {
                           : "bg-muted hover:bg-muted/80"
                       }`}
                       data-testid={`nav-q-${idx}`}
+                      aria-label={`Go to question ${idx + 1}`}
                     >
                       {idx + 1}
                     </button>

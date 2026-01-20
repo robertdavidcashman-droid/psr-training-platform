@@ -43,7 +43,9 @@ test.describe("Portfolio Workbook", () => {
     await page.goto("/portfolio");
 
     // Draft should still be there
-    await expect(page.getByText("Persistence Test")).toBeVisible();
+    await expect(
+      page.getByTestId("portfolio-drafts-list").getByText("Persistence Test")
+    ).toBeVisible();
   });
 
   test("should export portfolio draft", async ({ page }) => {

@@ -12,16 +12,19 @@ export function PageHeader({ title, description, children, className }: PageHead
     <div className={cn("mb-6 lg:mb-8", className)} data-testid="page-header">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight lg:text-3xl" data-testid="page-title">
+          <h1
+            className="text-[clamp(28px,2.4vw,34px)] font-bold tracking-tight leading-tight"
+            data-testid="page-title"
+          >
             {title}
           </h1>
           {description && (
-            <p className="mt-1 text-muted-foreground" data-testid="page-description">
+            <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground" data-testid="page-description">
               {description}
             </p>
           )}
         </div>
-        {children && <div className="flex items-center gap-2">{children}</div>}
+        {children && <div className="flex items-center gap-3">{children}</div>}
       </div>
     </div>
   );

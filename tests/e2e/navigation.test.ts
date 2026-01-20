@@ -13,37 +13,51 @@ test.describe("Navigation", () => {
     // Check dashboard loads
     await expect(page.getByTestId("page-title")).toContainText("Dashboard");
 
+    const openNavIfDrawer = async () => {
+      const menuVisible = await page.getByTestId("menu-button").isVisible().catch(() => false);
+      if (menuVisible) {
+        await page.getByTestId("menu-button").click();
+        await expect(page.getByTestId("sidebar")).toBeVisible();
+      }
+    };
+
     // Navigate to Syllabus
+    await openNavIfDrawer();
     await page.getByTestId("nav-syllabus-map").click();
     await page.waitForURL("**/syllabus");
     await expect(page).toHaveURL("/syllabus");
     await expect(page.getByTestId("syllabus-page")).toBeVisible();
 
     // Navigate to Practice
+    await openNavIfDrawer();
     await page.getByTestId("nav-practice").click();
     await page.waitForURL("**/practice");
     await expect(page).toHaveURL("/practice");
     await expect(page.getByTestId("practice-page")).toBeVisible();
 
     // Navigate to Mock Exam
+    await openNavIfDrawer();
     await page.getByTestId("nav-mock-exam").click();
     await page.waitForURL("**/mock-exam");
     await expect(page).toHaveURL("/mock-exam");
     await expect(page.getByTestId("mock-exam-page")).toBeVisible();
 
     // Navigate to Critical Incidents
+    await openNavIfDrawer();
     await page.getByTestId("nav-critical-incidents").click();
     await page.waitForURL("**/incidents");
     await expect(page).toHaveURL("/incidents");
     await expect(page.getByTestId("incidents-page")).toBeVisible();
 
     // Navigate to Portfolio
+    await openNavIfDrawer();
     await page.getByTestId("nav-portfolio").click();
     await page.waitForURL("**/portfolio");
     await expect(page).toHaveURL("/portfolio");
     await expect(page.getByTestId("portfolio-page")).toBeVisible();
 
     // Navigate to Resources
+    await openNavIfDrawer();
     await page.getByTestId("nav-resources").click();
     await page.waitForURL("**/resources");
     await expect(page).toHaveURL("/resources");

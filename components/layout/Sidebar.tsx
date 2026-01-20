@@ -48,18 +48,18 @@ export function Sidebar({ open, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 flex w-72 flex-col bg-card border-r transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto lg:visible lg:pointer-events-auto",
-          open
-            ? "translate-x-0 visible pointer-events-auto"
-            : "-translate-x-full invisible pointer-events-none"
+          "inset-y-0 left-0 z-50 w-64 flex-col border-r transition-transform duration-200",
+          "bg-[hsl(var(--navy))] text-white border-white/10",
+          open ? "fixed flex translate-x-0" : "hidden",
+          "lg:static lg:z-auto lg:flex lg:translate-x-0"
         )}
         data-testid="sidebar"
       >
         {/* Logo */}
-        <div className="flex h-16 items-center justify-between px-6 border-b">
+        <div className="flex h-16 items-center justify-between px-5 border-b border-white/10">
           <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <GraduationCap className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[hsl(var(--gold))]">
+              <GraduationCap className="h-5 w-5 text-[hsl(var(--gold-foreground))]" />
             </div>
             <span className="font-semibold text-lg">PSR Academy</span>
           </Link>
@@ -84,14 +84,14 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                 href={item.href}
                 onClick={onClose}
                 className={cn(
-                  "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                  "flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15px] leading-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
                   isActive
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "bg-white/10 text-white border-l-4 border-[hsl(var(--gold))] pl-2"
+                    : "text-white/80 hover:bg-white/10 hover:text-white"
                 )}
                 data-testid={`nav-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
               >
-                <item.icon className="h-5 w-5" />
+                <item.icon className={cn("h-5 w-5", isActive ? "text-[hsl(var(--gold))]" : "text-white/70")} />
                 {item.name}
               </Link>
             );
@@ -99,10 +99,11 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         </nav>
 
         {/* Footer */}
-        <div className="border-t p-4">
-          <div className="rounded-lg bg-muted p-4">
-            <p className="text-xs text-muted-foreground">
-              <strong>Training purposes only.</strong> This platform provides educational content aligned to PSR accreditation standards. It does not provide legal advice.
+        <div className="border-t border-white/10 p-4">
+          <div className="rounded-2xl bg-white/5 p-4">
+            <p className="text-sm leading-relaxed text-white/80">
+              <strong className="text-white">Training purposes only.</strong>{" "}
+              This platform provides educational content aligned to PSR accreditation standards. It does not provide legal advice.
             </p>
           </div>
         </div>

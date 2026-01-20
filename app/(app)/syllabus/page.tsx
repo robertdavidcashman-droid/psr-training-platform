@@ -105,7 +105,7 @@ export default function SyllabusPage() {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="hidden sm:block w-32">
-                      <div className="flex justify-between text-xs mb-1">
+                      <div className="flex justify-between text-[14px] mb-1 text-muted-foreground">
                         <span>{categoryMastery}% mastery</span>
                       </div>
                       <Progress value={categoryMastery} className="h-1.5" />
@@ -144,7 +144,7 @@ export default function SyllabusPage() {
                                     ? "secondary"
                                     : "outline"
                                 }
-                                className="text-xs"
+                                className="text-[14px]"
                               >
                                 {mastery}%
                               </Badge>
@@ -158,7 +158,7 @@ export default function SyllabusPage() {
                                   <Badge
                                     key={sub}
                                     variant="outline"
-                                    className="text-xs"
+                                    className="text-[14px]"
                                   >
                                     {sub}
                                   </Badge>
@@ -173,7 +173,7 @@ export default function SyllabusPage() {
                                     href={resource.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-xs text-primary hover:underline flex items-center gap-1"
+                                    className="text-[14px] text-primary hover:underline flex items-center gap-1"
                                   >
                                     <ExternalLink className="h-3 w-3" />
                                     {resource.title}

@@ -200,7 +200,7 @@ export default function DashboardPage() {
                         <p className="text-sm font-medium capitalize">
                           {session.mode} Practice
                         </p>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           {new Date(session.date).toLocaleDateString()}
                         </p>
                       </div>
