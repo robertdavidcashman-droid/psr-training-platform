@@ -290,11 +290,16 @@ export default function MockExamPage() {
                     variant="outline"
                     disabled={currentIndex === 0}
                     onClick={() => setCurrentIndex((prev) => prev - 1)}
+                    data-testid="exam-prev-btn"
                   >
                     Previous
                   </Button>
                   {currentIndex < questions.length - 1 ? (
-                    <Button onClick={() => setCurrentIndex((prev) => prev + 1)} className="gap-1">
+                    <Button
+                      onClick={() => setCurrentIndex((prev) => prev + 1)}
+                      className="gap-1"
+                      data-testid="exam-next-btn"
+                    >
                       Next
                       <ChevronRight className="h-4 w-4" />
                     </Button>

@@ -13,76 +13,40 @@
             {
               "id": "a",
               "text": "Remain silent and let the interview continue",
-              "feedback": "Remaining silent when questioning becomes oppressive fails to protect your client. Oppressive interviews may render evidence inadmissible under s.76 PACE, but only if properly challenged.",
+              "feedback": "Remaining silent when questioning becomes oppressive misses an opportunity to protect your client. If questioning becomes oppressive, it should be challenged promptly and recorded in your notes for any later admissibility arguments.",
               "isOptimal": false,
-              "nextStepId": "step-2a"
+              "nextStepId": "step-2"
             },
             {
               "id": "b",
               "text": "Calmly intervene: 'I must object. The manner of questioning is oppressive. Please ask questions without raised voices or accusations.'",
               "feedback": "Excellent. A calm, professional intervention addresses the conduct while maintaining a respectful tone. This creates a record and may cause the officer to moderate their approach.",
               "isOptimal": true,
-              "nextStepId": "step-2b"
+              "nextStepId": "step-2"
             },
             {
               "id": "c",
               "text": "Demand the interview stops immediately and threaten to report the officer",
-              "feedback": "While intervention is appropriate, an aggressive or threatening response may escalate the situation and damage your working relationship. Measured, professional objections are more effective.",
+              "feedback": "While intervention can be appropriate, escalating or threatening language may worsen the dynamic. Measured, professional objections are usually more effective and keep focus on your client's interests.",
               "isOptimal": false,
-              "nextStepId": "step-2c"
+              "nextStepId": "step-2"
             }
           ]
         },
         {
-          "id": "step-2a",
-          "content": "The questioning continues in the same aggressive manner. Your client, overwhelmed, says 'Fine, I did it, just stop shouting.' The officer notes this as an admission.",
+          "id": "step-2",
+          "content": "The officer continues: 'We have witnesses. Tell us what happened.' Your client looks at you, anxious, and asks quietly if they can take a break. What do you do next?",
           "choices": [
             {
               "id": "a",
-              "text": "Accept the admission was made and continue",
-              "feedback": "An admission obtained through oppressive questioning may be challengeable. You should still note the circumstances for any future challenge, even if you didn't intervene earlier.",
-              "isOptimal": false
-            },
-            {
-              "id": "b",
-              "text": "Request a break to consult with your client and document the circumstances of the admission for potential challenge",
-              "feedback": "Good recovery. While earlier intervention would have been better, documenting the circumstances now and consulting your client allows you to advise on potential challenges to the admission's admissibility.",
-              "isOptimal": true
-            }
-          ]
-        },
-        {
-          "id": "step-2b",
-          "content": "The officer pauses, then continues in a calmer tone: 'Fine. Alex, we have witness statements saying someone matching your description was seen taking the items. What do you say to that?'",
-          "choices": [
-            {
-              "id": "a",
-              "text": "Allow your client to respond based on the agreed strategy",
-              "feedback": "Correct. The officer has moderated their approach. Your client can now respond according to the strategy you agreed in the private consultation.",
+              "text": "Request a short break for private consultation and note your concern about the questioning style for the record",
+              "feedback": "Good. A brief pause can help your client regain composure and lets you check understanding, confirm strategy, and document concerns. Keep your intervention calm and professional.",
               "isOptimal": true
             },
             {
               "id": "b",
-              "text": "Object again because the question refers to undisclosed witness statements",
-              "feedback": "While you might want more disclosure details, this question itself is properly phrased. Save interventions for genuinely improper questions to maintain credibility.",
-              "isOptimal": false
-            }
-          ]
-        },
-        {
-          "id": "step-2c",
-          "content": "The officer responds angrily: 'Are you threatening me? I'm conducting a lawful interview.' The situation is now tense and hostile.",
-          "choices": [
-            {
-              "id": "a",
-              "text": "Apologize and de-escalate while restating your concern about the questioning style",
-              "feedback": "Good recovery. Acknowledging the tension while professionally restating your concern about questioning manner can reset the dynamic. Maintaining professionalism protects your client and your standing.",
-              "isOptimal": true
-            },
-            {
-              "id": "b",
-              "text": "Continue arguing with the officer",
-              "feedback": "Escalating the confrontation doesn't help your client. The focus should be on protecting their interests through professional conduct, not winning arguments with officers.",
+              "text": "Tell your client to continue immediately to avoid appearing uncooperative",
+              "feedback": "Not ideal. If your client is distressed or needs clarification, pushing on can increase risk of unreliable answers and missed safeguards. A short, properly requested break is often appropriate.",
               "isOptimal": false
             }
           ]

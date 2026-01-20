@@ -23,8 +23,7 @@ test.describe("Mock Exam", () => {
 
       // Navigate to next or submit
       if (i < 4) {
-        const nextButton = page.getByRole("button", { name: "Next" });
-        await nextButton.click();
+        await page.getByTestId("exam-next-btn").click();
       }
     }
 

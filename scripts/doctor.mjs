@@ -137,6 +137,16 @@ async function runUnitTests() {
   return { pass: result.code === 0, message: result.code === 0 ? "All tests passed" : "Tests failed" };
 }
 
+async function runE2E() {
+  log("\n🎭 Running end-to-end tests...", colors.blue);
+  const result = await runCommand("npm", ["run", "e2e"], {
+    // Don't rebuild inside the Playwright webServer, since we already built above.
+    env: { ...process.env, E2E_SKIP_BUILD: "1" },
+    silent: false,
+  });
+  return { pass: result.code === 0, message: result.code === 0 ? "All tests passed" : "E2E tests failed" };
+}
+
 async function main() {
   console.log("\n");
   log("╔═══════════════════════════════════════════════════════════╗", colors.blue);
@@ -198,6 +208,11 @@ async function main() {
   results.push({ name: "Unit tests", ...testResult });
   if (!testResult.pass) hasFailure = true;
 
+  const e2eResult = await runE2E();
+  logStep("E2E tests", e2eResult.pass ? "pass" : "fail", e2eResult.message);
+  results.push({ name: "E2E tests", ...e2eResult });
+  if (!e2eResult.pass) hasFailure = true;
+
   // Summary
   console.log("\n");
   log("═══════════════════════════════════════════════════════════", colors.dim);
@@ -212,11 +227,12 @@ async function main() {
     log("    npm run typecheck - Check for type errors", colors.dim);
     log("    npm run build    - Check build output", colors.dim);
     log("    npm run test     - Run unit tests\n", colors.dim);
+    log("    npm run e2e      - Run end-to-end tests\n", colors.dim);
     process.exit(1);
   } else {
     log(`\n  ✅ PASS - All ${passCount} checks passed!\n`, colors.green);
     log("  The app is ready for deployment.", colors.dim);
-    log("  Run 'npm run e2e' for end-to-end tests.\n", colors.dim);
+    log("  (Includes E2E suite.)\n", colors.dim);
     process.exit(0);
   }
 }
