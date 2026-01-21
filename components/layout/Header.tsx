@@ -1,10 +1,10 @@
 "use client";
 
-import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight } from "lucide-react";
+import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
-import { getProgress, type UserProgress } from "@/lib/storage";
+import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } from "@/lib/storage";
 import { usePathname } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -23,13 +23,39 @@ const ROUTE_TITLES: Record<string, string> = {
   "/resources": "Resources",
 };
 
+const NEXT_SCALE: Record<UiScale, UiScale> = {
+  sm: "md",
+  md: "lg",
+  lg: "sm",
+};
+
+const SCALE_LABEL: Record<UiScale, string> = {
+  sm: "A-",
+  md: "A",
+  lg: "A+",
+};
+
 export function Header({ onMenuClick }: HeaderProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
+  const [uiScale, setUiScaleState] = useState<UiScale>("md");
   const pathname = usePathname();
 
   useEffect(() => {
     setProgress(getProgress());
   }, []);
+
+  useEffect(() => {
+    const scale = getUiScale();
+    setUiScaleState(scale);
+    document.documentElement.dataset.uiScale = scale;
+  }, []);
+
+  const cycleScale = () => {
+    const next = NEXT_SCALE[uiScale];
+    setUiScaleState(next);
+    setUiScale(next);
+    document.documentElement.dataset.uiScale = next;
+  };
 
   const title = ROUTE_TITLES[pathname] ?? "PSR Training Academy";
 
@@ -60,7 +86,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           <ChevronRight className="hidden sm:inline h-4 w-4" />
           <span className="truncate">{title}</span>
         </div>
-        <div className="truncate text-[18px] font-semibold leading-tight sm:text-[20px]" data-testid="topbar-title">
+        <div className="truncate text-lg font-semibold leading-tight sm:text-xl" data-testid="topbar-title">
           {title}
         </div>
       </div>
@@ -80,10 +106,24 @@ export function Header({ onMenuClick }: HeaderProps) {
 
       {/* Stats */}
       <div className="flex items-center gap-3 md:gap-4">
+        {/* UI scale */}
+        <Button
+          variant="ghost"
+          size="sm"
+          className="hidden md:inline-flex text-white hover:bg-white/10 hover:text-white gap-2"
+          onClick={cycleScale}
+          aria-label={`Text size: ${uiScale === "sm" ? "Small" : uiScale === "md" ? "Default" : "Large"}. Click to change.`}
+          data-testid="ui-scale-button"
+          type="button"
+        >
+          <Type className="h-4 w-4" />
+          <span className="font-semibold">{SCALE_LABEL[uiScale]}</span>
+        </Button>
+
         {/* Streak */}
         <div className="flex items-center gap-1.5" data-testid="streak-display">
           <Flame className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-[15px]">
+          <span className="font-semibold text-sm">
             {progress?.currentStreak || 0}
           </span>
         </div>
@@ -91,7 +131,7 @@ export function Header({ onMenuClick }: HeaderProps) {
         {/* XP */}
         <div className="flex items-center gap-1.5" data-testid="xp-display">
           <Star className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-[15px]">
+          <span className="font-semibold text-sm">
             {progress?.totalXp || 0} XP
           </span>
         </div>
@@ -113,6 +153,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           className="text-white hover:bg-white/10 hover:text-white"
           aria-label="Help"
           data-testid="help-button"
+          type="button"
         >
           <HelpCircle className="h-5 w-5" />
         </Button>

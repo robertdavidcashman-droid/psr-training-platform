@@ -30,12 +30,12 @@ export function ReferencesPanel({
           <span className="font-semibold">References</span>
           <Badge variant="outline">{count}</Badge>
         </div>
-        <span className="text-[14px] text-muted-foreground">Click to expand</span>
+        <span className="text-sm text-muted-foreground">Click to expand</span>
       </summary>
 
       <div className="px-4 pb-4" data-testid="references-panel">
         {count === 0 ? (
-          <div className="text-[14px] text-muted-foreground">
+          <div className="text-sm text-muted-foreground">
             No references available for this question.
           </div>
         ) : (
@@ -47,10 +47,10 @@ export function ReferencesPanel({
                   {isCheckRef(r.cite) ? (
                     <Badge variant="warning">Check</Badge>
                   ) : null}
-                  <span className="text-[15px] font-medium">{r.cite}</span>
+                  <span className="text-sm font-medium">{r.cite}</span>
                 </div>
                 {r.note ? (
-                  <div className="mt-1 text-[14px] text-muted-foreground">{r.note}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{r.note}</div>
                 ) : null}
               </li>
             ))}

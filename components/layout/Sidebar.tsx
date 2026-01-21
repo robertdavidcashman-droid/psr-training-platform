@@ -108,7 +108,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                 href={item.href}
                 onClick={onClose}
                 className={cn(
-                  "flex items-center gap-3 rounded-xl px-4 py-3 text-[17px] leading-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
+                  "flex items-center gap-3 rounded-xl px-4 py-3 text-base leading-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
                   isActive
                     ? "bg-white/10 text-white border-l-4 border-[hsl(var(--gold))] pl-2"
                     : "text-white/80 hover:bg-white/10 hover:text-white"
@@ -125,7 +125,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         {/* Footer */}
         <div className="border-t border-white/10 p-4">
           <div className="rounded-2xl bg-white/5 p-4">
-            <p className="text-[15px] leading-relaxed text-white/80">
+            <p className="text-sm leading-relaxed text-white/80">
               <strong className="text-white">Training purposes only.</strong>{" "}
               This platform provides educational content aligned to PSR accreditation standards. It does not provide legal advice.
             </p>

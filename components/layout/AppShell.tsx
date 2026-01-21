@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
+import { getUiScale } from "@/lib/storage";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -10,6 +11,10 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.dataset.uiScale = getUiScale();
+  }, []);
 
   return (
     <div className="min-h-screen bg-background" data-testid="app-shell">

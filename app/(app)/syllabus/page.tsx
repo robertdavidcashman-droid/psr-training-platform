@@ -144,7 +144,6 @@ export default function SyllabusPage() {
                                     ? "secondary"
                                     : "outline"
                                 }
-                                className="text-[15px]"
                               >
                                 {mastery}%
                               </Badge>
@@ -158,7 +157,6 @@ export default function SyllabusPage() {
                                   <Badge
                                     key={sub}
                                     variant="outline"
-                                    className="text-[15px]"
                                   >
                                     {sub}
                                   </Badge>

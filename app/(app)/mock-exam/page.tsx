@@ -217,7 +217,7 @@ export default function MockExamPage() {
           <div className="lg:col-span-1 order-2 lg:order-1 relative z-10">
             <Card>
               <CardHeader className="py-3">
-                <CardTitle className="text-[16px]">Questions</CardTitle>
+                <CardTitle className="text-base">Questions</CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
                 <div className="grid grid-cols-5 gap-2">
@@ -226,7 +226,7 @@ export default function MockExamPage() {
                       key={idx}
                       type="button"
                       onClick={() => goToQuestion(idx)}
-                      className={`h-10 w-10 rounded-xl text-[15px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                      className={`h-10 w-10 rounded-xl text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                         idx === currentIndex
                           ? "bg-primary text-primary-foreground"
                           : answers[idx]

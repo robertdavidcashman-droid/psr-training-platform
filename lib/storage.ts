@@ -8,7 +8,10 @@ const STORAGE_KEYS = {
   LAST_ACTIVITY: "psr_last_activity",
   PORTFOLIO_DRAFTS: "psr_portfolio_drafts",
   PRACTICE_HISTORY: "psr_practice_history",
+  UI_SCALE: "psr_ui_scale",
 } as const;
+
+export type UiScale = "sm" | "md" | "lg";
 
 export interface TopicProgress {
   topicId: string;
@@ -62,6 +65,16 @@ function setStorage<T>(key: string, value: T): void {
   } catch {
     console.warn("Failed to save to localStorage");
   }
+}
+
+// UI scale
+export function getUiScale(): UiScale {
+  const scale = getStorage<UiScale>(STORAGE_KEYS.UI_SCALE, "md");
+  return scale === "sm" || scale === "md" || scale === "lg" ? scale : "md";
+}
+
+export function setUiScale(scale: UiScale): void {
+  setStorage<UiScale>(STORAGE_KEYS.UI_SCALE, scale);
 }
 
 // Progress functions

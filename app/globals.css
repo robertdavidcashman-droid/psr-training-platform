@@ -76,6 +76,15 @@
     scroll-behavior: smooth;
     @apply overflow-x-hidden;
   }
+  html[data-ui-scale="sm"] {
+    font-size: 16px;
+  }
+  html[data-ui-scale="md"] {
+    font-size: 18px;
+  }
+  html[data-ui-scale="lg"] {
+    font-size: 20px;
+  }
   body {
     @apply bg-background text-foreground;
     @apply text-lg;
