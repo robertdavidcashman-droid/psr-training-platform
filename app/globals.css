@@ -72,25 +72,25 @@
     @apply border-border;
   }
   html {
-    font-size: 20px;
+    font-size: 22px;
     scroll-behavior: smooth;
     @apply overflow-x-hidden;
   }
   html[data-ui-scale="sm"] {
-    font-size: 18px;
-  }
-  html[data-ui-scale="md"] {
     font-size: 20px;
   }
+  html[data-ui-scale="md"] {
+    font-size: 22px;
+  }
   html[data-ui-scale="lg"] {
-    font-size: 24px;
+    font-size: 26px;
   }
   html[data-ui-scale="xl"] {
-    font-size: 28px;
+    font-size: 30px;
   }
   body {
     @apply bg-background text-foreground;
-    @apply text-lg;
+    @apply text-xl;
     @apply leading-relaxed;
     @apply overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
