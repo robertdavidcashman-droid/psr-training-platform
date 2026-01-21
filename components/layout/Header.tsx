@@ -45,9 +45,9 @@ export function Header({ onMenuClick }: HeaderProps) {
   }, []);
 
   useEffect(() => {
-    const scale = getUiScale();
-    setUiScaleState(scale);
-    document.documentElement.dataset.uiScale = scale;
+    // Keep initial render aligned with SSR to avoid hydration mismatch.
+    // The HTML font size is set before first paint in `app/layout.tsx`.
+    setUiScaleState(getUiScale());
   }, []);
 
   const cycleScale = () => {

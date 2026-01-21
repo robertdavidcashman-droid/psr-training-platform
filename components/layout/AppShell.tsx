@@ -13,7 +13,11 @@ export function AppShell({ children }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    document.documentElement.dataset.uiScale = getUiScale();
+    // SSR can't read localStorage. `app/layout.tsx` sets this before first paint to
+    // avoid layout shift. This is a safety net for edge cases.
+    if (!document.documentElement.dataset.uiScale) {
+      document.documentElement.dataset.uiScale = getUiScale();
+    }
   }, []);
 
   return (
