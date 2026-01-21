@@ -100,12 +100,12 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
           {criterion.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {criterion.tags.slice(0, 5).map((tag) => (
-                <Badge key={tag} variant="outline" className="text-xs">
+                <Badge key={tag} variant="outline" className="text-base">
                   {tag}
                 </Badge>
               ))}
               {criterion.tags.length > 5 && (
-                <Badge variant="outline" className="text-xs">+{criterion.tags.length - 5}</Badge>
+                <Badge variant="outline" className="text-base">+{criterion.tags.length - 5}</Badge>
               )}
             </div>
           )}
@@ -121,7 +121,7 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
           <ul className="mt-2 space-y-1 text-base">
             {criterion.expectedAuthorities.map((auth, idx) => (
               <li key={idx} className="flex items-center gap-2">
-                <Badge variant="secondary" className="text-xs">{auth.instrument}</Badge>
+                <Badge variant="secondary" className="text-base">{auth.instrument}</Badge>
                 <span className="text-muted-foreground">{auth.cite}</span>
                 {auth.url && (
                   <a
@@ -178,7 +178,7 @@ function UnitCard({ unit }: { unit: UnitCoverage }) {
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold">{coveragePercent}%</div>
-            <div className="text-xs text-muted-foreground">coverage</div>
+            <div className="text-base text-muted-foreground">coverage</div>
           </div>
         </div>
         <Progress value={coveragePercent} className="mt-2" variant={coveragePercent >= 80 ? "gradient" : coveragePercent >= 50 ? "warning" : "default"} />

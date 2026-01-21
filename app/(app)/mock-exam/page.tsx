@@ -160,7 +160,7 @@ export default function MockExamPage() {
               <CardContent className="p-6 text-center">
                 <Clock className="h-8 w-8 mx-auto mb-3 text-primary" />
                 <h3 className="font-semibold capitalize text-lg mb-2">{m} Exam</h3>
-                <div className="space-y-1 text-sm text-muted-foreground mb-4">
+                <div className="space-y-1 text-base text-muted-foreground mb-4">
                   <p>{EXAM_CONFIG[m].questions} questions</p>
                   <p>{EXAM_CONFIG[m].minutes} minutes</p>
                 </div>
@@ -198,7 +198,7 @@ export default function MockExamPage() {
                 <Timer className="h-3 w-3" />
                 {formatTime(timeRemaining)}
               </Badge>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-base text-muted-foreground">
                 {answered}/{questions.length} answered
               </span>
             </div>
@@ -226,7 +226,7 @@ export default function MockExamPage() {
                       key={idx}
                       type="button"
                       onClick={() => goToQuestion(idx)}
-                      className={`h-10 w-10 rounded-xl text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                      className={`h-10 w-10 rounded-xl text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                         idx === currentIndex
                           ? "bg-primary text-primary-foreground"
                           : answers[idx]
@@ -359,15 +359,15 @@ export default function MockExamPage() {
               <div className="grid grid-cols-3 gap-4 text-center mb-6">
                 <div>
                   <div className="text-3xl font-bold text-primary">{score.percent}%</div>
-                  <div className="text-sm text-muted-foreground">Score</div>
+                  <div className="text-base text-muted-foreground">Score</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold">{score.correct}</div>
-                  <div className="text-sm text-muted-foreground">Correct</div>
+                  <div className="text-base text-muted-foreground">Correct</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold">{score.total - score.correct}</div>
-                  <div className="text-sm text-muted-foreground">Incorrect</div>
+                  <div className="text-base text-muted-foreground">Incorrect</div>
                 </div>
               </div>
               <Progress value={score.percent} variant={passed ? "success" : "warning"} />
@@ -385,7 +385,7 @@ export default function MockExamPage() {
                   const percent = Math.round((data.correct / data.total) * 100);
                   return (
                     <div key={topicId}>
-                      <div className="flex justify-between text-sm mb-1">
+                      <div className="flex justify-between text-base mb-1">
                         <span>{topicMap[topicId]?.name || topicId}</span>
                         <span>
                           {data.correct}/{data.total} ({percent}%)

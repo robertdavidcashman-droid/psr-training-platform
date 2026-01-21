@@ -26,13 +26,15 @@ const ROUTE_TITLES: Record<string, string> = {
 const NEXT_SCALE: Record<UiScale, UiScale> = {
   sm: "md",
   md: "lg",
-  lg: "sm",
+  lg: "xl",
+  xl: "sm",
 };
 
 const SCALE_LABEL: Record<UiScale, string> = {
   sm: "A-",
   md: "A",
   lg: "A+",
+  xl: "A++",
 };
 
 export function Header({ onMenuClick }: HeaderProps) {
@@ -81,7 +83,7 @@ export function Header({ onMenuClick }: HeaderProps) {
 
       {/* Title + breadcrumbs */}
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2 text-sm text-white/70" data-testid="breadcrumbs">
+        <div className="flex items-center gap-2 text-base text-white/70" data-testid="breadcrumbs">
           <span className="hidden sm:inline">Home</span>
           <ChevronRight className="hidden sm:inline h-4 w-4" />
           <span className="truncate">{title}</span>
@@ -112,7 +114,9 @@ export function Header({ onMenuClick }: HeaderProps) {
           size="sm"
           className="hidden md:inline-flex text-white hover:bg-white/10 hover:text-white gap-2"
           onClick={cycleScale}
-          aria-label={`Text size: ${uiScale === "sm" ? "Small" : uiScale === "md" ? "Default" : "Large"}. Click to change.`}
+          aria-label={`Text size: ${
+            uiScale === "sm" ? "Small" : uiScale === "md" ? "Default" : uiScale === "lg" ? "Large" : "Extra large"
+          }. Click to change.`}
           data-testid="ui-scale-button"
           type="button"
         >
@@ -123,7 +127,7 @@ export function Header({ onMenuClick }: HeaderProps) {
         {/* Streak */}
         <div className="flex items-center gap-1.5" data-testid="streak-display">
           <Flame className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-sm">
+          <span className="font-semibold text-base">
             {progress?.currentStreak || 0}
           </span>
         </div>
@@ -131,7 +135,7 @@ export function Header({ onMenuClick }: HeaderProps) {
         {/* XP */}
         <div className="flex items-center gap-1.5" data-testid="xp-display">
           <Star className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-sm">
+          <span className="font-semibold text-base">
             {progress?.totalXp || 0} XP
           </span>
         </div>

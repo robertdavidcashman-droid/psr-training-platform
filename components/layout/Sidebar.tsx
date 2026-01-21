@@ -125,7 +125,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         {/* Footer */}
         <div className="border-t border-white/10 p-4">
           <div className="rounded-2xl bg-white/5 p-4">
-            <p className="text-sm leading-relaxed text-white/80">
+            <p className="text-base leading-relaxed text-white/80">
               <strong className="text-white">Training purposes only.</strong>{" "}
               This platform provides educational content aligned to PSR accreditation standards. It does not provide legal advice.
             </p>

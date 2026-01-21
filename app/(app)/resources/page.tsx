@@ -176,7 +176,7 @@ export default function ResourcesPage() {
             <FileText className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
             <div>
               <h3 className="font-medium mb-1">Resource Disclaimer</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 These links are provided for educational reference. Always verify you are accessing
                 the most current versions of legislation and guidance. This platform does not
                 guarantee the accuracy or currency of external resources. For official guidance,

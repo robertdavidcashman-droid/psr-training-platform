@@ -72,18 +72,21 @@
     @apply border-border;
   }
   html {
-    font-size: 18px;
+    font-size: 20px;
     scroll-behavior: smooth;
     @apply overflow-x-hidden;
   }
   html[data-ui-scale="sm"] {
-    font-size: 16px;
-  }
-  html[data-ui-scale="md"] {
     font-size: 18px;
   }
-  html[data-ui-scale="lg"] {
+  html[data-ui-scale="md"] {
     font-size: 20px;
+  }
+  html[data-ui-scale="lg"] {
+    font-size: 24px;
+  }
+  html[data-ui-scale="xl"] {
+    font-size: 28px;
   }
   body {
     @apply bg-background text-foreground;

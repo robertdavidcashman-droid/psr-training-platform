@@ -11,7 +11,7 @@ const STORAGE_KEYS = {
   UI_SCALE: "psr_ui_scale",
 } as const;
 
-export type UiScale = "sm" | "md" | "lg";
+export type UiScale = "sm" | "md" | "lg" | "xl";
 
 export interface TopicProgress {
   topicId: string;
@@ -70,7 +70,7 @@ function setStorage<T>(key: string, value: T): void {
 // UI scale
 export function getUiScale(): UiScale {
   const scale = getStorage<UiScale>(STORAGE_KEYS.UI_SCALE, "md");
-  return scale === "sm" || scale === "md" || scale === "lg" ? scale : "md";
+  return scale === "sm" || scale === "md" || scale === "lg" || scale === "xl" ? scale : "md";
 }
 
 export function setUiScale(scale: UiScale): void {

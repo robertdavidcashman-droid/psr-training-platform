@@ -38,7 +38,7 @@ const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
           />
         </div>
         {showLabel && (
-          <span className="mt-1 text-sm text-muted-foreground">
+          <span className="mt-1 text-base text-muted-foreground">
             {Math.round(percentage)}%
           </span>
         )}

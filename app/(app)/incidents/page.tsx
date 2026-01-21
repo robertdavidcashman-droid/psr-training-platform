@@ -143,7 +143,7 @@ export default function IncidentsPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-base text-muted-foreground">
                     {scenario.steps.length} decision points
                   </span>
                   <Button size="sm" className="gap-1">
@@ -196,7 +196,7 @@ export default function IncidentsPage() {
                   <BookOpen className="h-4 w-4" />
                   What to Consider
                 </h4>
-                <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                <ul className="text-base text-muted-foreground space-y-1 list-disc list-inside">
                   <li>Professional conduct and ethics</li>
                   <li>Client's best interests</li>
                   <li>Proper procedures and safeguards</li>
@@ -226,7 +226,7 @@ export default function IncidentsPage() {
         <div className="max-w-3xl mx-auto">
           {/* Progress */}
           <div className="mb-6">
-            <div className="flex justify-between text-sm mb-2">
+            <div className="flex justify-between text-base mb-2">
               <span>Step {currentStepIndex + 1} of {selectedScenario.steps.length}</span>
               <span>{optimalCount} optimal decisions</span>
             </div>
@@ -389,8 +389,8 @@ export default function IncidentsPage() {
                       <XCircle className="h-5 w-5 text-warning flex-shrink-0 mt-0.5" />
                     )}
                     <div>
-                      <p className="font-medium text-sm">Step {idx + 1}</p>
-                      <p className="text-sm text-muted-foreground">{decision.choice.text}</p>
+                      <p className="font-medium text-base">Step {idx + 1}</p>
+                      <p className="text-base text-muted-foreground">{decision.choice.text}</p>
                     </div>
                   </div>
                 ))}
