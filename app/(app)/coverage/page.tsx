@@ -56,8 +56,8 @@ interface PartCoverage {
 }
 
 function getCoverageStatus(questionCount: number): "green" | "amber" | "red" {
-  if (questionCount >= 5) return "green";
-  if (questionCount >= 2) return "amber";
+  if (questionCount >= 30) return "green";
+  if (questionCount >= 1) return "amber";
   return "red";
 }
 
@@ -291,7 +291,7 @@ export default function CoverageMatrixPage() {
             unitTotalCriteria++;
             partTotalCriteria++;
 
-            if (questionCount >= 2) {
+            if (questionCount >= 30) {
               outcomeCoveredCriteria++;
               unitCoveredCriteria++;
               partCoveredCriteria++;
@@ -385,7 +385,7 @@ export default function CoverageMatrixPage() {
             </div>
             <div>
               <div className="text-3xl font-bold">{coverage.coveredCriteria}</div>
-              <div className="text-lg text-muted-foreground">Criteria Covered (2+)</div>
+              <div className="text-lg text-muted-foreground">Criteria Covered (30+)</div>
             </div>
           </CardContent>
         </Card>
@@ -424,21 +424,21 @@ export default function CoverageMatrixPage() {
             <div className="flex items-center gap-3">
               <Badge variant="success" className="gap-2">
                 <CheckCircle className="h-4 w-4" />
-                5+ questions
+                30+ questions
               </Badge>
               <span className="text-muted-foreground">Well covered</span>
             </div>
             <div className="flex items-center gap-3">
               <Badge variant="warning" className="gap-2">
                 <AlertTriangle className="h-4 w-4" />
-                2-4 questions
+                1-29 questions
               </Badge>
               <span className="text-muted-foreground">Partial coverage</span>
             </div>
             <div className="flex items-center gap-3">
               <Badge variant="destructive" className="gap-2">
                 <XCircle className="h-4 w-4" />
-                0-1 questions
+                0 questions
               </Badge>
               <span className="text-muted-foreground">Needs content</span>
             </div>

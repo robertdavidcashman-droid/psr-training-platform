@@ -6,6 +6,29 @@
  */
 
 import { spawn } from "child_process";
+import { readFileSync } from "fs";
+import { join } from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const projectRoot = join(__dirname, "..");
+
+// Load environment variables from .env.local if it exists
+try {
+  const envFile = readFileSync(join(projectRoot, ".env.local"), "utf-8");
+  envFile.split("\n").forEach((line) => {
+    const match = line.match(/^([^=]+)=(.*)$/);
+    if (match && !process.env[match[1].trim()]) {
+      const key = match[1].trim();
+      const value = match[2].trim().replace(/^["']|["']$/g, "");
+      process.env[key] = value;
+    }
+  });
+} catch {
+  // .env.local doesn't exist, that's okay
+}
 
 function run(cmd, args, opts = {}) {
   return new Promise((resolve) => {

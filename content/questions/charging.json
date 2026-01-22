@@ -1,0 +1,1217 @@
+{
+  "questions": [
+    {
+      "id": "charge-001",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Who has the authority to charge a suspect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the CPS can charge"
+        },
+        {
+          "id": "B",
+          "text": "The custody officer can charge for summary-only and either-way offences; the CPS charges for indictable-only offences"
+        },
+        {
+          "id": "C",
+          "text": "Only the police can charge"
+        },
+        {
+          "id": "D",
+          "text": "Only a magistrate can charge"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The custody officer can charge for summary-only and either-way offences. For indictable-only offences, the CPS must make the charging decision. The custody officer consults with the CPS where appropriate, but the CPS has the final authority for indictable-only offences.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "Check: relevant section for this topic"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "charge-002",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the 'threshold test' used by the CPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A test that requires full evidence before charging"
+        },
+        {
+          "id": "B",
+          "text": "A test allowing charge where there is reasonable suspicion and it is in the public interest, even if full evidence is not yet available"
+        },
+        {
+          "id": "C",
+          "text": "A test that only applies to summary offences"
+        },
+        {
+          "id": "D",
+          "text": "A test that is never used"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The threshold test allows the CPS to charge where there is reasonable suspicion that the suspect has committed an offence and it is in the public interest to charge, even if the full code test (sufficient evidence for a realistic prospect of conviction) cannot yet be met. This is used where further investigation is needed but charge is justified.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "Check: relevant section for this topic"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "charge-003",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the 'full code test' used by the CPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A test that requires only suspicion"
+        },
+        {
+          "id": "B",
+          "text": "A test requiring sufficient evidence for a realistic prospect of conviction and that prosecution is in the public interest"
+        },
+        {
+          "id": "C",
+          "text": "A test that only applies to police charging decisions"
+        },
+        {
+          "id": "D",
+          "text": "A test that is never used"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The full code test requires: (1) sufficient evidence for a realistic prospect of conviction (evidential test), and (2) that prosecution is in the public interest (public interest test). This is the standard test for charging decisions where full evidence is available.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "Check: relevant section for this topic"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "charge-004",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Can you make representations to the CPS before a charging decision is made?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No—representations can only be made after charge"
+        },
+        {
+          "id": "B",
+          "text": "Yes—you can make pre-charge representations setting out why charge is not appropriate or why a different charge is more suitable"
+        },
+        {
+          "id": "C",
+          "text": "Only if the CPS requests them"
+        },
+        {
+          "id": "D",
+          "text": "Only for summary offences"
+        }
+      ],
+      "correct": "B",
+      "explanation": "You can and should make pre-charge representations to the CPS where appropriate. This might include: why there is insufficient evidence, why charge is not in the public interest, why a different charge is more appropriate, or highlighting procedural issues. Early representations can prevent inappropriate charges.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "Check: relevant section for this topic"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "charge-005",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "After interview, the custody officer is considering whether to charge. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do nothing—the custody officer will decide"
+        },
+        {
+          "id": "B",
+          "text": "Make representations on bail, charging decisions, and any other relevant matters"
+        },
+        {
+          "id": "C",
+          "text": "Only make representations if asked"
+        },
+        {
+          "id": "D",
+          "text": "Only make representations after charge"
+        }
+      ],
+      "correct": "B",
+      "explanation": "You should proactively make representations on all relevant matters: why charge is not appropriate (if that is the case), bail conditions, and any other issues. This is part of your role in protecting the client's interests and ensuring fair outcomes. Don't wait to be asked—be proactive.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — assessment structure"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold",
+        "cit",
+        "post-interview",
+        "outcome"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-000",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding CPS charging role; custody officer charging; threshold test; full code test.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-001",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-002",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding CPS charging role; custody officer charging; threshold test; full code test.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-ba-003",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to CPS charging role; custody officer charging; threshold test; full code test., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-ba-004",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with CPS charging role; custody officer charging; threshold test; full code test., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-005",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding CPS charging role; custody officer charging; threshold test; full code test.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-006",
+      "topicId": "charging-decisions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-mcq-007",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding CPS charging role; custody officer charging; threshold test; full code test.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-ba-008",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to CPS charging role; custody officer charging; threshold test; full code test., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-ba-009",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with CPS charging role; custody officer charging; threshold test; full code test., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-010",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-011",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-012",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-013",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-014",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-015",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-016",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-017",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-018",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-scn-019",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving cps charging role; custody officer charging; threshold test; full code test.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-sa-020",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of PACE in relation to CPS charging role; custody officer charging; threshold test; full code test..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE requires that Review PACE. Identify key requirements. Apply to the specific situation. Key points include: as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-sa-021",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "What are the main safeguards provided by PACE for CPS charging role; custody officer charging; threshold test; full code test.?",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE provides several safeguards: Review PACE. Identify key requirements. Apply to the specific situation. These are important because as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-sa-022",
+      "topicId": "charging-decisions",
+      "difficulty": "advanced",
+      "type": "short_answer",
+      "stem": "Describe the procedure set out in PACE for CPS charging role; custody officer charging; threshold test; full code test..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "The procedure requires: Review PACE. Identify key requirements. Apply to the specific situation. This is set out in PACE to ensure as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-c-sa-023",
+      "topicId": "charging-decisions",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of PACE in relation to CPS charging role; custody officer charging; threshold test; full code test..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE requires that Review PACE. Identify key requirements. Apply to the specific situation. Key points include: as required by cps charging role; custody officer charging; threshold test; full code test..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37B (consultation with CPS)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37B"
+        }
+      ],
+      "tags": [
+        "charging",
+        "cps",
+        "threshold"
+      ]
+    }
+  ]
+}

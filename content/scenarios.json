@@ -143,6 +143,456 @@
         }
       ],
       "debrief": "This scenario explores the complexities of appropriate adult arrangements for young people. Key learning points:\n\n1. **Question AA suitability** - Don't simply accept the first AA offered. Ask what alternatives were considered and whether the proposed AA is truly appropriate.\n\n2. **Family preference** - Where possible, family members or familiar adults are generally preferable, but must not have conflicts of interest.\n\n3. **Know the alternatives** - Youth Offending Service, social services, and trained volunteer schemes can all provide AAs. Understand what's available locally.\n\n4. **AA role understanding** - An AA must actively support the young person, not just be physically present. If an AA isn't fulfilling their role, raise this.\n\n5. **Document everything** - Record your concerns about AA arrangements in your notes. If issues arise later, this documentation is crucial.\n\n6. **Balance urgency with protection** - While detention should be minimized, this doesn't justify inadequate safeguards. Advocate for appropriate protection while being realistic about what can be achieved."
+    },
+    {
+      "id": "scenario-003",
+      "topicId": "delay-legal-advice",
+      "title": "The Delayed Legal Advice",
+      "briefing": "You receive a DSCC call about a client arrested for an indictable offence. When you arrive at the police station, you're told that access to legal advice has been delayed under Annex B. The custody officer says a superintendent authorised the delay because they were investigating accomplices. You need to assess whether this delay is proper.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The custody officer says: 'Superintendent authorised a delay under Annex B. We're dealing with suspected accomplices. You can see your client now, but they've already been interviewed.'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Accept the explanation and proceed to see your client",
+              "feedback": "You should verify the delay was properly authorised and documented. Simply accepting the explanation without checking may mean missing improper delays that could affect evidence admissibility.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Ask to see the written authorisation and check when the delay ended",
+              "feedback": "Correct. Annex B delays must be properly authorised by a superintendent or above and documented. You need to verify the authorisation, the grounds, when it started, and when it ended to assess whether it was proper.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Immediately challenge the delay without gathering information",
+              "feedback": "While delays should be scrutinized, gather the facts first. Review the authorisation, timing, and grounds before making your challenge. You need evidence of impropriety.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "You discover the delay was authorised 4 hours ago and ended 2 hours ago. The interview took place during the delay period. The grounds cited were 'investigating accomplices'. Your client says they weren't told about the delay.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Document your concerns, record the client's instructions, and consider challenging any evidence obtained during the delay period under s.78 PACE",
+              "feedback": "Correct approach. You should: (1) document all concerns about the delay, (2) take full instructions from your client, (3) consider whether the delay was proper (authorisation, grounds, timing), and (4) plan to challenge evidence obtained during the delay if it was improper.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Do nothing as the delay has ended and the interview is complete",
+              "feedback": "Even if the delay has ended, an improper delay can render evidence obtained during that period unfair and potentially excludable. You must assess and potentially challenge it.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "You see your client. They tell you the interview happened hours ago and they made admissions. They say they asked for a solicitor multiple times but were told 'later'. You check the custody record but the delay authorisation details are unclear.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Request full details of the delay authorisation and document your concerns about potential impropriety",
+              "feedback": "Good. You need full details to assess whether the delay was proper. If the authorisation is unclear or improper, you must document this and consider challenging the evidence.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Focus only on the admissions and ignore the delay issue",
+              "feedback": "The delay may affect the admissibility of the admissions. You must assess whether the delay was proper and, if not, consider challenging the evidence obtained during it.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "You immediately challenge the delay without checking details. The custody officer becomes defensive and refuses to show you the authorisation. The situation becomes confrontational.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Calmly request to see the authorisation again, explaining you need to assess whether the delay was proper for your client's protection",
+              "feedback": "Better approach. Professional, measured requests are more likely to succeed than confrontational challenges. Explain why you need the information.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Continue to demand information aggressively",
+              "feedback": "Confrontation rarely helps. Maintain professionalism while being persistent. Your goal is to protect your client's interests, not to create conflict.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario highlights the importance of properly assessing Annex B delays. Key learning points:\n\n1. **Always verify delay authorisation** - Delays under Annex B must be authorised by a superintendent or above and properly documented. Don't accept verbal explanations alone.\n\n2. **Check timing and grounds** - Delays are only permitted for indictable offences, in specific circumstances (e.g., alerting accomplices), and should be as short as possible. Verify the grounds justify the delay.\n\n3. **Document everything** - If a delay appears improper, document all concerns in your notes. This is essential for any later challenge under s.78 PACE.\n\n4. **Challenge improperly obtained evidence** - Evidence obtained during an improper delay may be unfair and excludable. You must assess this and plan your challenge strategy.\n\n5. **Stay professional** - While delays must be scrutinized, maintain a professional approach. Gather facts before making challenges, and explain why you need information.\n\n6. **Advise your client** - Explain to your client what happened, what it means, and how it might affect their case."
+    },
+    {
+      "id": "scenario-004",
+      "topicId": "charging-decisions",
+      "title": "The Charging Decision",
+      "briefing": "You've attended an interview with your client. The interview is complete and the investigating officer says they need to consult with the CPS about charging. The officer suggests this could take hours and asks if your client wants to wait or be bailed. Your client is anxious and wants to know what happens next.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The officer says: 'We're consulting CPS on charge. Could be a few hours. Does your client want to wait or shall we bail them?' Your client asks you what they should do.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Advise your client to wait as it's better to know the outcome immediately",
+              "feedback": "Not necessarily the best advice. Waiting can be stressful and may not be necessary. Consider factors like the client's welfare, whether they need to be present for the charging decision, and whether bail is appropriate.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Ask what the consultation is about and whether pre-charge representations would be helpful before advising on wait vs bail",
+              "feedback": "Good approach. Understanding the nature of the consultation and whether you can make representations may help avoid an inappropriate charge. This informs your advice on whether to wait or seek bail.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Advise your client to seek bail without making representations",
+              "feedback": "While bail may be appropriate, you should consider whether making pre-charge representations could help avoid an inappropriate charge. Don't miss opportunities to advocate for your client.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "The officer explains CPS is considering a more serious charge than initially discussed. You see an opportunity to make representations about why the more serious charge may not be appropriate given the evidence.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Make written pre-charge representations setting out why the more serious charge may not be appropriate and why a lesser charge (or no charge) is more suitable",
+              "feedback": "Excellent. Pre-charge representations can prevent inappropriate charges. Set out evidential and public interest arguments clearly and professionally. This may save your client from an unnecessary charge.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Wait and see what CPS decides, then challenge if necessary",
+              "feedback": "While you can challenge after charge, preventing an inappropriate charge through pre-charge representations is better for your client. Don't miss this opportunity.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "Your client waits for 5 hours. The custody officer becomes impatient and your client becomes increasingly anxious. Eventually, CPS authorizes a charge. Your client is upset and exhausted.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Advise on bail conditions and next steps, acknowledging the delay was frustrating",
+              "feedback": "Appropriate. Focus on what's next: bail representations, understanding the charge, and next steps. Address your client's welfare while managing their expectations.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Complain about the delay to the custody officer",
+              "feedback": "While delays can be frustrating, focus on your client's interests. Address any genuine concerns professionally, but don't let frustration distract from advising on bail and next steps.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "Your client is bailed. The next day, you learn CPS authorized a charge that you think may be inappropriate given the evidence available. You realize you could have made pre-charge representations.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Consider making post-charge representations and challenging the charge if appropriate, while learning from the missed opportunity",
+              "feedback": "Appropriate response. While pre-charge representations are better, you can still challenge inappropriate charges. Learn from this to be more proactive in future cases.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Accept the charge as it's too late to do anything",
+              "feedback": "It's not too late. You can still challenge inappropriate charges through various means. Don't assume nothing can be done.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario covers charging decisions and pre-charge representations. Key learning points:\n\n1. **Understand CPS consultation process** - Know when CPS consultation is required (indictable-only offences) and when custody officers can charge (summary-only and either-way).\n\n2. **Pre-charge representations are valuable** - Making representations before a charge decision can prevent inappropriate charges. Don't miss opportunities to advocate for your client at this stage.\n\n3. **Assess wait vs bail** - Consider factors like client welfare, whether their presence is needed, and whether making representations requires waiting.\n\n4. **Know what to represent on** - Pre-charge representations can address: evidential issues (why evidence is insufficient), public interest (why prosecution is not in public interest), and charge appropriateness (why a different charge is more suitable).\n\n5. **Advise on outcomes** - Whether charge, NFA, or caution, ensure your client understands what it means and what happens next.\n\n6. **Post-charge options** - If an inappropriate charge is made, you can still challenge it, though prevention through pre-charge representations is better."
+    },
+    {
+      "id": "scenario-005",
+      "topicId": "voluntary-attendance",
+      "title": "The Voluntary Attendance",
+      "briefing": "Your client, Sam, attends the police station voluntarily after receiving a phone call asking them to come in for questioning about an alleged assault. Sam agreed to attend voluntarily. When you arrive, the situation seems to be escalating and you're concerned about whether voluntary attendance is still appropriate.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "You arrive and find Sam has been in an interview room for 2 hours. The officer says: 'We're about to interview Sam. They came voluntarily, but we're now considering arrest.' Sam looks worried and asks if they can leave.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Tell Sam they can leave as they're not under arrest",
+              "feedback": "While voluntary attendees can generally leave, you need to assess whether arrest is now necessary and whether leaving would be advisable. Simply telling them to leave without assessing the situation may not be in their best interests.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Assess whether arrest is now necessary, advise Sam on their rights, and determine the best course of action",
+              "feedback": "Correct approach. You need to: (1) understand why arrest is being considered, (2) assess whether it's necessary, (3) advise Sam on their rights (including right to leave unless arrested), and (4) determine the best strategy.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Insist Sam must stay and be interviewed regardless of arrest",
+              "feedback": "Incorrect. Voluntary attendees have the right to leave unless arrested. You cannot require them to stay, though you should advise on the implications of leaving.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "The officer explains they've received new information suggesting Sam may have contacted a witness. They say arrest is now necessary to prevent interference with witnesses. Sam denies this and wants to leave.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Advise Sam that if they try to leave, they may be arrested, but explain they have the right to leave if not arrested. Document your concerns about the arrest necessity grounds.",
+              "feedback": "Correct. You must: (1) explain Sam's rights (can leave unless arrested), (2) explain the risk (may be arrested if they leave), (3) assess whether the arrest necessity grounds are legitimate, and (4) document everything. The decision to leave or stay is Sam's.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Tell Sam they must stay to avoid arrest",
+              "feedback": "Incorrect. You cannot require Sam to stay. If arrest is not yet necessary, Sam can leave. If arrest becomes necessary, they can be arrested whether they leave or stay. Your role is to advise, not to control their decision.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "Sam leaves. Shortly after, you receive a call that Sam has been arrested on suspicion of the same offence. You're asked to attend again.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Attend and assess the arrest necessity grounds, ensuring Sam understands their rights and the difference between voluntary attendance and arrest",
+              "feedback": "Appropriate. Now that Sam is arrested, they're in custody and different rules apply (detention time limits, etc.). Ensure they understand the situation and their rights.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Refuse to attend as Sam should have stayed voluntarily",
+              "feedback": "Incorrect. Sam had the right to leave. Now that they're arrested, they need representation. Attend and protect their interests, regardless of whether you agreed with their earlier decision.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "Sam stays as you advised. The interview proceeds under voluntary attendance (no arrest). However, Sam is now anxious and feels they had no choice. They're concerned about whether their rights were properly protected.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Acknowledge the confusion, explain the difference between voluntary attendance and arrest, and ensure Sam understands their rights going forward",
+              "feedback": "Good response. Clarify the situation, explain rights (including that they could have left), and ensure Sam feels informed and in control. Document the voluntary attendance clearly.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Dismiss Sam's concerns as they agreed to stay",
+              "feedback": "Not appropriate. Sam's confusion suggests they didn't fully understand their rights. Address this to ensure they feel informed and protected.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario explores voluntary attendance and when it transitions to arrest. Key learning points:\n\n1. **Understand voluntary attendance** - Voluntary attendees are not under arrest and can generally leave unless arrested. Different rules apply (no detention time limits unless arrested).\n\n2. **Right to leave** - Voluntary attendees have the right to leave at any time unless they are then arrested. You cannot require them to stay, though you should advise on implications.\n\n3. **When arrest becomes necessary** - Circumstances may change such that arrest becomes necessary (e.g., new information, risk factors). Assess whether the necessity grounds are legitimate.\n\n4. **Advise, don't control** - Your role is to advise your client on their rights and options. The decision to leave or stay (unless arrested) is theirs. Don't require them to stay.\n\n5. **Document voluntary attendance** - Ensure voluntary attendance is clearly documented. This affects which legal frameworks apply.\n\n6. **Understand the transition** - If voluntary attendance becomes arrest, different rules apply (detention time limits, custody record, etc.). Ensure your client understands the change."
+    },
+    {
+      "id": "scenario-006",
+      "topicId": "identification-code-d",
+      "title": "The Identification Procedure",
+      "briefing": "Your client is suspected of robbery. The police want to conduct a video identification procedure. You're told the procedure will be conducted tomorrow. You need to ensure the procedure complies with Code D and that your client's rights are protected.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The identification officer says: 'We're doing video ID tomorrow. We'll show 8 people including your client. You can be present. Any questions?'",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Accept the arrangement without asking questions",
+              "feedback": "You should ask questions to ensure Code D compliance. For example: Will the images be similar? Will your client's image stand out? How will the procedure be conducted? Simply accepting may miss safeguards.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Ask about the procedure details: similarity of images, position of your client, and ensure you'll be able to observe and raise objections",
+              "feedback": "Good. You need to understand the procedure to ensure it's fair. Key checks: images should be similar, your client's image shouldn't stand out, you should be able to observe, and you should be able to raise objections.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Refuse to allow the procedure without explanation",
+              "feedback": "You cannot refuse the procedure. Your role is to ensure it's conducted fairly and to raise objections if it's not. Work within the process to protect your client's interests.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "During the procedure, you notice that your client's image appears in a different position and lighting than the other images. The witness identifies your client, but you have concerns about fairness.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Object immediately on record, document your concerns in writing, and plan to challenge the identification evidence at court under s.78 PACE",
+              "feedback": "Correct. If a procedure breaches Code D, you must object immediately, ensure your objection is recorded, document it in writing, and plan to challenge the identification evidence. Breaches can render identification unreliable and unfair.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Raise concerns informally after the procedure",
+              "feedback": "Not sufficient. Objections must be made during the procedure and recorded. Informal concerns raised later may not be effective. Make formal objections at the time.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "You attend the procedure without asking questions. During it, you notice several potential Code D breaches: your client's image is in a different position, and one of the other images is clearly of poor quality. The witness identifies your client.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Object to the procedure on grounds of unfairness, document your concerns, and challenge the identification evidence",
+              "feedback": "Good. You've identified breaches and must object. Document all concerns (image position, quality issues) and plan to challenge the evidence. However, asking questions beforehand might have prevented some issues.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Accept the identification as the witness has made it",
+              "feedback": "Incorrect. If Code D is breached, the identification may be unreliable and unfair. You must object and challenge it, even if an identification is made.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "You refuse the procedure. The identification officer is frustrated and says they'll proceed anyway. The situation becomes confrontational and unproductive.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Clarify that you cannot prevent the procedure, but you want to ensure it's conducted fairly and will raise objections if necessary",
+              "feedback": "Better approach. You cannot prevent the procedure, but you can ensure it's fair. Focus on safeguards and your right to object, rather than trying to block it.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Continue to refuse and threaten to withdraw",
+              "feedback": "Not helpful. Your client needs representation. Work within the process to protect their interests rather than withdrawing or blocking.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario covers identification procedures under Code D. Key learning points:\n\n1. **Ask questions before the procedure** - Understand how it will be conducted, ensure safeguards will be in place, and identify potential issues early.\n\n2. **Know Code D requirements** - Video identification must include: at least 8 similar-looking people, your client's image must not stand out, images must be in similar positions/lighting, and the procedure must be recorded.\n\n3. **Your right to be present** - As legal representative, you have the right to be present at identification procedures. Use this to observe and ensure fairness.\n\n4. **Object if breaches occur** - If Code D is breached, you must object immediately, ensure your objection is recorded, document it in writing, and plan to challenge the evidence under s.78 PACE.\n\n5. **Don't prevent procedures** - You cannot prevent identification procedures, but you can ensure they're conducted fairly and challenge breaches.\n\n6. **Document everything** - Detailed notes about procedure fairness, objections, and breaches are essential for any later challenge. Identification evidence can be crucial, so breaches matter."
+    },
+    {
+      "id": "scenario-007",
+      "topicId": "vulnerability",
+      "title": "The Vulnerable Suspect",
+      "briefing": "You're representing Jordan, who has been arrested for theft. During your initial consultation, Jordan appears confused, has difficulty understanding questions, and mentions they haven't taken their medication for a mental health condition. The custody officer wants to proceed with interview immediately. You're concerned about Jordan's fitness for interview.",
+      "steps": [
+        {
+          "id": "step-1",
+          "content": "The custody officer says: 'Jordan's fine. They understand what's going on. Let's get the interview done. They've been here for hours already.' Jordan looks unwell and tells you privately they're feeling 'all over the place'.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Agree to proceed with interview as the custody officer says Jordan is fit",
+              "feedback": "Not appropriate. You've observed signs of potential vulnerability (confusion, difficulty understanding, mental health condition, medication issues). You should assess fitness for interview and consider requesting a healthcare professional assessment.",
+              "isOptimal": false,
+              "nextStepId": "step-2a"
+            },
+            {
+              "id": "b",
+              "text": "Request a healthcare professional assessment of Jordan's fitness for interview before proceeding",
+              "feedback": "Correct. Given the signs of potential vulnerability (confusion, mental health condition, medication issues), you should request a healthcare professional assessment. This is essential to ensure Jordan is fit for interview and to protect against unreliable evidence.",
+              "isOptimal": true,
+              "nextStepId": "step-2b"
+            },
+            {
+              "id": "c",
+              "text": "Insist the interview cannot proceed without explaining why",
+              "feedback": "You should explain your concerns and request an assessment, rather than simply refusing. Work collaboratively while protecting your client's interests.",
+              "isOptimal": false,
+              "nextStepId": "step-2c"
+            }
+          ]
+        },
+        {
+          "id": "step-2b",
+          "content": "A healthcare professional assesses Jordan and concludes they may not be fit for interview due to their mental state and lack of medication. They recommend postponing the interview until Jordan's condition stabilizes.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Accept the assessment, request the interview be postponed, ensure Jordan receives appropriate care, and document your concerns",
+              "feedback": "Correct. If a healthcare professional recommends postponement, you should support this. Ensure Jordan gets appropriate care (medication if needed), request postponement, and document everything. This protects against unreliable evidence.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Question the assessment and suggest proceeding anyway",
+              "feedback": "Not appropriate. If a healthcare professional recommends postponement, you should respect this. Proceeding when someone is not fit for interview risks unreliable evidence and unfairness.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2a",
+          "content": "The interview proceeds. Jordan becomes increasingly confused during questioning, gives inconsistent answers, and appears distressed. The officer becomes frustrated. You realize Jordan may not be fit for interview.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Request a break and ask for a healthcare professional assessment, documenting your concerns about fitness for interview",
+              "feedback": "Good response, though this should have happened earlier. Request a break, get a healthcare assessment, and if Jordan is not fit, request postponement. Document all concerns.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Continue the interview and address issues later",
+              "feedback": "Not appropriate. If someone is not fit for interview, continuing risks unreliable evidence. Address this immediately rather than waiting.",
+              "isOptimal": false
+            }
+          ]
+        },
+        {
+          "id": "step-2c",
+          "content": "You refuse the interview without explanation. The custody officer is frustrated and suggests you're being obstructive. The situation becomes tense.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Explain your concerns about fitness for interview professionally, request a healthcare assessment, and work collaboratively to address the issue",
+              "feedback": "Better approach. Explain your concerns clearly and professionally, request appropriate assessments, and work collaboratively. This is more likely to succeed than refusing without explanation.",
+              "isOptimal": true
+            },
+            {
+              "id": "b",
+              "text": "Maintain your refusal without explanation",
+              "feedback": "Not helpful. You need to explain your concerns to get appropriate action. Simply refusing without explanation may be seen as obstruction rather than protection.",
+              "isOptimal": false
+            }
+          ]
+        }
+      ],
+      "debrief": "This scenario covers fitness for interview and vulnerability. Key learning points:\n\n1. **Identify vulnerability early** - Look for signs of vulnerability: confusion, difficulty understanding, mental health conditions, medication issues, learning disabilities, or other factors that may affect fitness for interview.\n\n2. **Request healthcare assessments** - If there are concerns about fitness for interview, request a healthcare professional assessment. Don't rely solely on police assessments.\n\n3. **Fitness for interview matters** - If someone is not fit for interview, proceeding risks unreliable evidence and unfairness. This can affect admissibility and case outcomes.\n\n4. **Postpone if necessary** - If a healthcare professional recommends postponement, support this. Ensure your client receives appropriate care and that the interview is postponed until they're fit.\n\n5. **Document everything** - Document all concerns about fitness, any assessments conducted, recommendations made, and decisions taken. This is crucial for any later challenges.\n\n6. **Work collaboratively** - While you must protect your client, work professionally with custody staff and healthcare professionals. Explain concerns clearly rather than simply refusing."
     }
   ]
 }

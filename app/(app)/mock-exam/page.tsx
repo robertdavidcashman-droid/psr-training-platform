@@ -22,6 +22,8 @@ import { shuffleArray } from "@/lib/utils";
 import { questions as seededQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
+import { QuestionRenderer } from "@/components/questions/QuestionRenderer";
+import { useMemo } from "react";
 
 type ExamMode = "short" | "standard" | "full";
 type ExamState = "setup" | "active" | "complete";
@@ -37,12 +39,15 @@ export default function MockExamPage() {
   const [state, setState] = useState<ExamState>("setup");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [answers, setAnswers] = useState<Record<number, string | string[]>>({});
+  const [userAnswers, setUserAnswers] = useState<Record<number, string>>({});
   const [timeRemaining, setTimeRemaining] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const topicMap = Object.fromEntries(topicsData.topics.map((t) => [t.id, t]));
+  const topicMap = useMemo(() => Object.fromEntries(topicsData.topics.map((t) => [t.id, t])), []);
   const currentQuestion = questions[currentIndex];
+  const currentAnswer = answers[currentIndex];
+  const currentUserAnswer = userAnswers[currentIndex] || "";
 
   const startExam = useCallback((selectedMode: ExamMode) => {
     const config = EXAM_CONFIG[selectedMode];
@@ -53,6 +58,7 @@ export default function MockExamPage() {
     setMode(selectedMode);
     setCurrentIndex(0);
     setAnswers({});
+    setUserAnswers({});
     setTimeRemaining(config.minutes * 60);
     setState("active");
   }, []);
@@ -63,13 +69,30 @@ export default function MockExamPage() {
     // Calculate results
     let correct = 0;
     questions.forEach((q, idx) => {
-      const selectedId = answers[idx];
-      const isCorrect = Boolean(selectedId && q.correct && selectedId === q.correct);
+      const answer = answers[idx];
+      const userAnswer = userAnswers[idx];
+      let isCorrect = false;
+
+      if (q.type === "mcq" || q.type === "best-answer") {
+        isCorrect = Boolean(answer && typeof answer === "string" && q.correct && answer === q.correct);
+      } else if (q.type === "mcq_multi") {
+        if (answer && Array.isArray(answer) && q.correctAnswers) {
+          const selectedSet = new Set(answer);
+          const correctSet = new Set(q.correctAnswers);
+          isCorrect = q.correctAnswers.length === answer.length &&
+            q.correctAnswers.every((ans) => selectedSet.has(ans)) &&
+            (answer as string[]).every((ans) => correctSet.has(ans as "A" | "B" | "C" | "D"));
+        }
+      } else if (q.type === "short_answer") {
+        // For short answer, treat as correct if answered (could be enhanced with AI evaluation)
+        isCorrect = Boolean(userAnswer && userAnswer.trim().length > 0);
+      }
+
       if (isCorrect) {
         correct++;
-        updateTopicProgress(q.topicId, true);
-      } else if (selectedId) {
-        updateTopicProgress(q.topicId, false);
+        updateTopicProgress(q.topicId, true, q.tags);
+      } else if (answer || userAnswer) {
+        updateTopicProgress(q.topicId, false, q.tags);
       }
     });
 
@@ -84,7 +107,7 @@ export default function MockExamPage() {
     });
 
     setState("complete");
-  }, [questions, answers, mode, timeRemaining]);
+  }, [questions, answers, userAnswers, mode, timeRemaining]);
 
   // Timer
   useEffect(() => {
@@ -111,35 +134,72 @@ export default function MockExamPage() {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  const handleAnswer = (optionId: string) => {
-    setAnswers((prev) => ({ ...prev, [currentIndex]: optionId }));
-  };
+  const handleAnswerChange = useCallback((answer: string | string[]) => {
+    setAnswers((prev) => ({ ...prev, [currentIndex]: answer }));
+  }, [currentIndex]);
+
+  const handleUserAnswerChange = useCallback((answer: string) => {
+    setUserAnswers((prev) => ({ ...prev, [currentIndex]: answer }));
+  }, [currentIndex]);
 
   const goToQuestion = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const getScore = () => {
+  const getScore = useMemo(() => {
     let correct = 0;
     questions.forEach((q, idx) => {
-      const selectedId = answers[idx];
-      if (selectedId && q.correct && selectedId === q.correct) correct++;
+      const answer = answers[idx];
+      const userAnswer = userAnswers[idx];
+      
+      if (q.type === "mcq" || q.type === "best-answer") {
+        if (answer && typeof answer === "string" && q.correct && answer === q.correct) correct++;
+      } else if (q.type === "mcq_multi") {
+        if (answer && Array.isArray(answer) && q.correctAnswers) {
+          const selectedSet = new Set(answer);
+          const correctSet = new Set(q.correctAnswers);
+          if (q.correctAnswers.length === answer.length &&
+              q.correctAnswers.every((ans) => selectedSet.has(ans as string)) &&
+              (answer as string[]).every((ans) => correctSet.has(ans as "A" | "B" | "C" | "D"))) {
+            correct++;
+          }
+        }
+      } else if (q.type === "short_answer") {
+        if (userAnswer && userAnswer.trim().length > 0) correct++;
+      }
     });
     return { correct, total: questions.length, percent: Math.round((correct / questions.length) * 100) };
-  };
+  }, [questions, answers, userAnswers]);
 
-  const getTopicBreakdown = () => {
+  const getTopicBreakdown = useMemo(() => {
     const breakdown: Record<string, { correct: number; total: number }> = {};
     questions.forEach((q, idx) => {
       if (!breakdown[q.topicId]) breakdown[q.topicId] = { correct: 0, total: 0 };
       breakdown[q.topicId].total++;
-      const selectedId = answers[idx];
-      if (selectedId && q.correct && selectedId === q.correct) {
+      const answer = answers[idx];
+      const userAnswer = userAnswers[idx];
+      
+      let isCorrect = false;
+      if (q.type === "mcq" || q.type === "best-answer") {
+        isCorrect = Boolean(answer && typeof answer === "string" && q.correct && answer === q.correct);
+      } else if (q.type === "mcq_multi") {
+        if (answer && Array.isArray(answer) && q.correctAnswers) {
+          const selectedSet = new Set(answer);
+          const correctSet = new Set(q.correctAnswers);
+          isCorrect = q.correctAnswers.length === answer.length &&
+            q.correctAnswers.every((ans) => selectedSet.has(ans)) &&
+            (answer as string[]).every((ans) => correctSet.has(ans as "A" | "B" | "C" | "D"));
+        }
+      } else if (q.type === "short_answer") {
+        isCorrect = Boolean(userAnswer && userAnswer.trim().length > 0);
+      }
+      
+      if (isCorrect) {
         breakdown[q.topicId].correct++;
       }
     });
     return breakdown;
-  };
+  }, [questions, answers, userAnswers]);
 
   if (state === "setup") {
     return (
@@ -186,7 +246,7 @@ export default function MockExamPage() {
   }
 
   if (state === "active" && currentQuestion) {
-    const answered = Object.keys(answers).length;
+    const answered = Object.keys(answers).length + Object.keys(userAnswers).length;
 
     return (
       <div data-testid="mock-exam-active">
@@ -199,7 +259,7 @@ export default function MockExamPage() {
                 {formatTime(timeRemaining)}
               </Badge>
               <span className="text-base text-muted-foreground">
-                {answered}/{questions.length} answered
+                {Object.keys(answers).length + Object.keys(userAnswers).length}/{questions.length} answered
               </span>
             </div>
             <Button variant="outline" size="sm" onClick={finishExam} data-testid="finish-exam-btn">
@@ -226,10 +286,10 @@ export default function MockExamPage() {
                       key={idx}
                       type="button"
                       onClick={() => goToQuestion(idx)}
-                      className={`h-10 w-10 rounded-xl text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                        className={`h-10 w-10 rounded-xl text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                         idx === currentIndex
                           ? "bg-primary text-primary-foreground"
-                          : answers[idx]
+                          : answers[idx] || userAnswers[idx]
                           ? "bg-secondary text-secondary-foreground"
                           : "bg-muted hover:bg-muted/80"
                       }`}
@@ -261,31 +321,14 @@ export default function MockExamPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  {currentQuestion.options?.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => handleAnswer(option.id)}
-                      className={`w-full p-4 rounded-lg border text-left transition-all ${
-                        answers[currentIndex] === option.id
-                          ? "border-primary bg-primary/5"
-                          : "border-border hover:border-primary/50"
-                      }`}
-                      data-testid={`exam-option-${option.id}`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`h-5 w-5 rounded-full border-2 ${
-                            answers[currentIndex] === option.id
-                              ? "border-primary bg-primary"
-                              : "border-border"
-                          }`}
-                        />
-                        <span className="min-w-0 break-words">{option.text}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+                <QuestionRenderer
+                  question={currentQuestion}
+                  selectedAnswer={currentAnswer}
+                  showFeedback={false}
+                  onAnswerChange={handleAnswerChange}
+                  userAnswer={currentUserAnswer}
+                  onUserAnswerChange={handleUserAnswerChange}
+                />
 
                 <div className="flex justify-between mt-6">
                   <Button
@@ -320,8 +363,8 @@ export default function MockExamPage() {
   }
 
   if (state === "complete") {
-    const score = getScore();
-    const breakdown = getTopicBreakdown();
+    const score = getScore;
+    const breakdown = getTopicBreakdown;
     const passed = score.percent >= 70;
 
     return (

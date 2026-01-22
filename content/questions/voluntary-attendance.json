@@ -1,0 +1,960 @@
+{
+  "questions": [
+    {
+      "id": "va-001",
+      "topicId": "voluntary-attendance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is voluntary attendance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A form of arrest"
+        },
+        {
+          "id": "B",
+          "text": "An alternative to arrest where a person attends the police station voluntarily for questioning"
+        },
+        {
+          "id": "C",
+          "text": "A type of bail"
+        },
+        {
+          "id": "D",
+          "text": "A court hearing"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Voluntary attendance is an alternative to arrest where a person attends the police station voluntarily for questioning. It is used when arrest is not necessary and the person is willing to attend. Voluntary attendees have certain rights but are not under arrest.",
+      "references": [
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.9(a) (voluntary attendance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.21-3.22 (voluntary attendance)"
+        }
+      ],
+      "tags": [
+        "voluntary-attendance",
+        "alternatives"
+      ]
+    },
+    {
+      "id": "va-002",
+      "topicId": "voluntary-attendance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What rights does a voluntary attendee have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No rights—they are not under arrest"
+        },
+        {
+          "id": "B",
+          "text": "Right to leave at any time (unless arrested), right to legal advice, and right to have someone informed"
+        },
+        {
+          "id": "C",
+          "text": "Only the right to legal advice"
+        },
+        {
+          "id": "D",
+          "text": "The same rights as someone under arrest"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Voluntary attendees have rights including: the right to leave at any time (unless they are then arrested), the right to legal advice, and the right to have someone informed. However, they are not under arrest, so detention time limits do not apply unless they are subsequently arrested.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.21-3.22 (voluntary attendance)"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.9(a) (voluntary attendance)"
+        }
+      ],
+      "tags": [
+        "voluntary-attendance",
+        "alternatives"
+      ]
+    },
+    {
+      "id": "va-003",
+      "topicId": "voluntary-attendance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "When does a voluntary attendee become subject to arrest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Never—voluntary attendance cannot become arrest"
+        },
+        {
+          "id": "B",
+          "text": "When arrest becomes necessary (e.g., they attempt to leave and there are grounds for arrest, or new information emerges requiring arrest)"
+        },
+        {
+          "id": "C",
+          "text": "Automatically after 24 hours"
+        },
+        {
+          "id": "D",
+          "text": "Only if they request it"
+        }
+      ],
+      "correct": "B",
+      "explanation": "A voluntary attendee can be arrested if arrest becomes necessary. This might occur if: they attempt to leave and there are grounds for arrest, new information emerges requiring arrest, or circumstances change such that arrest is now necessary. The necessity test under s.24 PACE still applies.",
+      "references": [
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.9(a) (voluntary attendance)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (powers of arrest)"
+        }
+      ],
+      "tags": [
+        "voluntary-attendance",
+        "alternatives"
+      ]
+    },
+    {
+      "id": "va-004",
+      "topicId": "voluntary-attendance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is a key difference between voluntary attendance and arrest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "There is no difference"
+        },
+        {
+          "id": "B",
+          "text": "Voluntary attendance does not trigger detention time limits; arrest does. Voluntary attendees can leave unless arrested; arrested persons cannot leave."
+        },
+        {
+          "id": "C",
+          "text": "Only the method of arrival differs"
+        },
+        {
+          "id": "D",
+          "text": "Voluntary attendance requires bail conditions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Key differences: (1) Detention time limits (s.41 PACE) apply to arrested persons but not to voluntary attendees (unless they are subsequently arrested). (2) Voluntary attendees can leave at any time unless arrested; arrested persons are in custody and cannot leave. (3) Voluntary attendance is an alternative to arrest when arrest is not necessary.",
+      "references": [
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.9(a) (voluntary attendance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.21-3.22 (voluntary attendance)"
+        }
+      ],
+      "tags": [
+        "voluntary-attendance",
+        "alternatives"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-000",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-001",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-002",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-ba-003",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-ba-004",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-005",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-006",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-mcq-007",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-ba-008",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-ba-009",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-010",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-011",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-012",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-013",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-014",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-015",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-016",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    },
+    {
+      "id": "gen-u6-o1-a-scn-017",
+      "topicId": "pace-s24-arrest",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by constable's power to arrest without warrant; reasonable grounds for suspecting; reasonable grounds for belief..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/24"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G para 2.1-2.4 (power of arrest)",
+          "note": "https://www.gov.uk/government/publications/pace-code-g-2012/pace-code-g-2012-accessible"
+        }
+      ],
+      "tags": [
+        "arrest",
+        "s24",
+        "powers"
+      ]
+    }
+  ]
+}

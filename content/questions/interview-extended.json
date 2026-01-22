@@ -7,18 +7,40 @@
       "type": "mcq",
       "stem": "Which is a valid reason to intervene during a police interview?",
       "options": [
-        { "id": "A", "text": "The officer is asking questions" },
-        { "id": "B", "text": "The questioning is becoming oppressive or the officer is putting undisclosed material as fact" },
-        { "id": "C", "text": "The client is answering honestly" },
-        { "id": "D", "text": "The interview has lasted more than 5 minutes" }
+        {
+          "id": "A",
+          "text": "The officer is asking questions"
+        },
+        {
+          "id": "B",
+          "text": "The questioning is becoming oppressive or the officer is putting undisclosed material as fact"
+        },
+        {
+          "id": "C",
+          "text": "The client is answering honestly"
+        },
+        {
+          "id": "D",
+          "text": "The interview has lasted more than 5 minutes"
+        }
       ],
       "correct": "B",
       "explanation": "Valid intervention grounds include oppressive questioning, assumptions of undisclosed facts, misleading questions, or breaches of safeguards. Routine questioning is not a ground.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.9 (grounds for intervention)" },
-        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (grounds for intervention)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (fairness)"
+        }
       ],
-      "tags": ["interview", "intervention", "fairness"]
+      "tags": [
+        "interview",
+        "intervention",
+        "fairness"
+      ]
     },
     {
       "id": "int-009",
@@ -27,18 +49,40 @@
       "type": "mcq",
       "stem": "What should you explain to a client about the police caution before interview?",
       "options": [
-        { "id": "A", "text": "It's just a formality — ignore it" },
-        { "id": "B", "text": "What it means for their rights, including the potential for adverse inference from silence and the right to remain silent" },
-        { "id": "C", "text": "It means they will definitely be convicted" },
-        { "id": "D", "text": "It only applies if they are guilty" }
+        {
+          "id": "A",
+          "text": "It's just a formality — ignore it"
+        },
+        {
+          "id": "B",
+          "text": "What it means for their rights, including the potential for adverse inference from silence and the right to remain silent"
+        },
+        {
+          "id": "C",
+          "text": "It means they will definitely be convicted"
+        },
+        {
+          "id": "D",
+          "text": "It only applies if they are guilty"
+        }
       ],
       "correct": "B",
       "explanation": "Clients need to understand the caution: their right to silence and the risk that silence may allow adverse inferences. This informs strategy decisions.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 10.5 (the caution)" },
-        { "instrument": "PACE", "cite": "CJPOA 1994 s.34 (adverse inference)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 10.5 (the caution)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "CJPOA 1994 s.34 (adverse inference)"
+        }
       ],
-      "tags": ["caution", "interview", "adverse-inference"]
+      "tags": [
+        "caution",
+        "interview",
+        "adverse-inference"
+      ]
     },
     {
       "id": "int-010",
@@ -47,18 +91,40 @@
       "type": "mcq",
       "stem": "The interviewing officer becomes confrontational and raises their voice. What is the appropriate response?",
       "options": [
-        { "id": "A", "text": "Match their tone to show strength" },
-        { "id": "B", "text": "Calmly intervene, note the conduct on record, and request professional treatment; consider a break if needed" },
-        { "id": "C", "text": "Leave the interview without explanation" },
-        { "id": "D", "text": "Tell the client to become confrontational too" }
+        {
+          "id": "A",
+          "text": "Match their tone to show strength"
+        },
+        {
+          "id": "B",
+          "text": "Calmly intervene, note the conduct on record, and request professional treatment; consider a break if needed"
+        },
+        {
+          "id": "C",
+          "text": "Leave the interview without explanation"
+        },
+        {
+          "id": "D",
+          "text": "Tell the client to become confrontational too"
+        }
       ],
       "correct": "B",
       "explanation": "Oppressive or unprofessional conduct should be addressed calmly but firmly. Intervene, ensure it's recorded, and request proper treatment. This protects the client and creates a record.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 11.5 (interview conduct)" },
-        { "instrument": "PACE", "cite": "PACE 1984 s.76 (oppression)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.5 (interview conduct)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.76 (oppression)"
+        }
       ],
-      "tags": ["interview", "oppression", "intervention"]
+      "tags": [
+        "interview",
+        "oppression",
+        "intervention"
+      ]
     },
     {
       "id": "int-011",
@@ -67,17 +133,40 @@
       "type": "mcq",
       "stem": "What is the purpose of reviewing disclosure before the private consultation?",
       "options": [
-        { "id": "A", "text": "To impress the police" },
-        { "id": "B", "text": "To understand the allegation and evidence before advising the client on strategy" },
-        { "id": "C", "text": "To find weaknesses to exploit unfairly" },
-        { "id": "D", "text": "It's not necessary — just ask the client" }
+        {
+          "id": "A",
+          "text": "To impress the police"
+        },
+        {
+          "id": "B",
+          "text": "To understand the allegation and evidence before advising the client on strategy"
+        },
+        {
+          "id": "C",
+          "text": "To find weaknesses to exploit unfairly"
+        },
+        {
+          "id": "D",
+          "text": "It's not necessary — just ask the client"
+        }
       ],
       "correct": "B",
       "explanation": "Disclosure review is essential to understand what is alleged and what evidence exists. Without this, you cannot advise properly on interview strategy.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 11.1A (pre-interview disclosure)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        },
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework)"
+        }
       ],
-      "tags": ["disclosure", "preparation", "consultation"]
+      "tags": [
+        "disclosure",
+        "preparation",
+        "consultation"
+      ]
     },
     {
       "id": "int-012",
@@ -86,17 +175,40 @@
       "type": "mcq",
       "stem": "An officer asks your client a compound question with multiple assumptions. What should you do?",
       "options": [
-        { "id": "A", "text": "Let the client try to answer all parts at once" },
-        { "id": "B", "text": "Ask for the question to be broken down into separate, clear questions" },
-        { "id": "C", "text": "Answer for the client" },
-        { "id": "D", "text": "Ignore it — compound questions are normal" }
+        {
+          "id": "A",
+          "text": "Let the client try to answer all parts at once"
+        },
+        {
+          "id": "B",
+          "text": "Ask for the question to be broken down into separate, clear questions"
+        },
+        {
+          "id": "C",
+          "text": "Answer for the client"
+        },
+        {
+          "id": "D",
+          "text": "Ignore it — compound questions are normal"
+        }
       ],
       "correct": "B",
       "explanation": "Complex compound questions can confuse and mislead. Request clear, single questions so the client can understand and respond accurately.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.9 (solicitor may intervene)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor may intervene)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "intervention", "questions"]
+      "tags": [
+        "interview",
+        "intervention",
+        "questions"
+      ]
     },
     {
       "id": "int-013",
@@ -105,17 +217,40 @@
       "type": "mcq",
       "stem": "Why is contemporaneous note-taking important during the interview?",
       "options": [
-        { "id": "A", "text": "To distract the client" },
-        { "id": "B", "text": "To create an accurate record of what was said, any concerns, and to support later review" },
-        { "id": "C", "text": "To impress the interviewing officer" },
-        { "id": "D", "text": "It's not important — rely on memory" }
+        {
+          "id": "A",
+          "text": "To distract the client"
+        },
+        {
+          "id": "B",
+          "text": "To create an accurate record of what was said, any concerns, and to support later review"
+        },
+        {
+          "id": "C",
+          "text": "To impress the interviewing officer"
+        },
+        {
+          "id": "D",
+          "text": "It's not important — rely on memory"
+        }
       ],
       "correct": "B",
       "explanation": "Good notes capture key exchanges, any issues, and your observations. They support professional practice and may be vital for later proceedings.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Record keeping: interview notes (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Record keeping: interview notes (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "notes", "record-keeping"]
+      "tags": [
+        "interview",
+        "notes",
+        "record-keeping"
+      ]
     },
     {
       "id": "int-014",
@@ -124,17 +259,40 @@
       "type": "mcq",
       "stem": "Your client wants to answer questions but you believe there are significant risks. What is the professional approach?",
       "options": [
-        { "id": "A", "text": "Refuse to attend the interview" },
-        { "id": "B", "text": "Explain the risks clearly, document your advice, and respect the client's informed decision" },
-        { "id": "C", "text": "Tell the police what the client will say before the interview" },
-        { "id": "D", "text": "Make the decision for the client" }
+        {
+          "id": "A",
+          "text": "Refuse to attend the interview"
+        },
+        {
+          "id": "B",
+          "text": "Explain the risks clearly, document your advice, and respect the client's informed decision"
+        },
+        {
+          "id": "C",
+          "text": "Tell the police what the client will say before the interview"
+        },
+        {
+          "id": "D",
+          "text": "Make the decision for the client"
+        }
       ],
       "correct": "B",
       "explanation": "The client decides, but only after full advice on risks. Document your advice and their informed decision. You can't override their choice unless asked to act improperly.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Client autonomy and documenting advice (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Client autonomy and documenting advice (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["strategy", "client-autonomy", "advice"]
+      "tags": [
+        "strategy",
+        "client-autonomy",
+        "advice"
+      ]
     },
     {
       "id": "int-015",
@@ -143,18 +301,40 @@
       "type": "mcq",
       "stem": "The officer says 'We know your client did it — just admit it.' What should you do?",
       "options": [
-        { "id": "A", "text": "Encourage the client to confess to end the interview" },
-        { "id": "B", "text": "Intervene, note that this is an assertion not a question, and ask for proper questioning" },
-        { "id": "C", "text": "Stay silent — the client can handle it" },
-        { "id": "D", "text": "Argue with the officer" }
+        {
+          "id": "A",
+          "text": "Encourage the client to confess to end the interview"
+        },
+        {
+          "id": "B",
+          "text": "Intervene, note that this is an assertion not a question, and ask for proper questioning"
+        },
+        {
+          "id": "C",
+          "text": "Stay silent — the client can handle it"
+        },
+        {
+          "id": "D",
+          "text": "Argue with the officer"
+        }
       ],
       "correct": "B",
       "explanation": "Assertions of guilt without evidence disclosure or proper questioning can be oppressive. Intervene professionally and ensure the record reflects the approach.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 11.5 (interview conduct)" },
-        { "instrument": "PACE", "cite": "PACE 1984 s.76 (oppression)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.5 (interview conduct)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.76 (oppression)"
+        }
       ],
-      "tags": ["interview", "intervention", "oppression"]
+      "tags": [
+        "interview",
+        "intervention",
+        "oppression"
+      ]
     },
     {
       "id": "int-016",
@@ -163,17 +343,40 @@
       "type": "mcq",
       "stem": "What should you do if your client gives an answer in interview that contradicts what they told you in consultation?",
       "options": [
-        { "id": "A", "text": "Correct them immediately in front of police" },
-        { "id": "B", "text": "Request a break to take further instructions and clarify privately" },
-        { "id": "C", "text": "Ignore it — it's not your problem" },
-        { "id": "D", "text": "Signal to the client what to say" }
+        {
+          "id": "A",
+          "text": "Correct them immediately in front of police"
+        },
+        {
+          "id": "B",
+          "text": "Request a break to take further instructions and clarify privately"
+        },
+        {
+          "id": "C",
+          "text": "Ignore it — it's not your problem"
+        },
+        {
+          "id": "D",
+          "text": "Signal to the client what to say"
+        }
       ],
       "correct": "B",
       "explanation": "A break allows you to clarify instructions privately. Never correct or signal to the client during the interview itself.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.8 (consultation breaks)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8 (consultation breaks)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (private consultation)"
+        }
       ],
-      "tags": ["interview", "breaks", "instructions"]
+      "tags": [
+        "interview",
+        "breaks",
+        "instructions"
+      ]
     },
     {
       "id": "int-017",
@@ -182,18 +385,40 @@
       "type": "mcq",
       "stem": "How should you explain the concept of 'no comment' to a client?",
       "options": [
-        { "id": "A", "text": "Tell them it guarantees acquittal" },
-        { "id": "B", "text": "Explain it means choosing not to answer, that it's their right, but that inferences may be drawn in certain circumstances" },
-        { "id": "C", "text": "Tell them it's illegal" },
-        { "id": "D", "text": "Don't explain — just tell them to say it" }
+        {
+          "id": "A",
+          "text": "Tell them it guarantees acquittal"
+        },
+        {
+          "id": "B",
+          "text": "Explain it means choosing not to answer, that it's their right, but that inferences may be drawn in certain circumstances"
+        },
+        {
+          "id": "C",
+          "text": "Tell them it's illegal"
+        },
+        {
+          "id": "D",
+          "text": "Don't explain — just tell them to say it"
+        }
       ],
       "correct": "B",
       "explanation": "Clients need to understand the right to silence and the risk of adverse inference. Informed consent to a no-comment approach is essential.",
       "references": [
-        { "instrument": "PACE", "cite": "CJPOA 1994 s.34 (inference from silence)" },
-        { "instrument": "Code C", "cite": "Code C para 10.11 (special caution)" }
+        {
+          "instrument": "PACE",
+          "cite": "CJPOA 1994 s.34 (inference from silence)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 10.11 (special caution)"
+        }
       ],
-      "tags": ["no-comment", "strategy", "adverse-inference"]
+      "tags": [
+        "no-comment",
+        "strategy",
+        "adverse-inference"
+      ]
     },
     {
       "id": "int-018",
@@ -202,17 +427,40 @@
       "type": "mcq",
       "stem": "Can you request a break during an interview for your client to receive further advice?",
       "options": [
-        { "id": "A", "text": "No — interviews cannot be stopped" },
-        { "id": "B", "text": "Yes — you can request breaks for consultation" },
-        { "id": "C", "text": "Only at the end of the interview" },
-        { "id": "D", "text": "Only if police agree in advance" }
+        {
+          "id": "A",
+          "text": "No — interviews cannot be stopped"
+        },
+        {
+          "id": "B",
+          "text": "Yes — you can request breaks for consultation"
+        },
+        {
+          "id": "C",
+          "text": "Only at the end of the interview"
+        },
+        {
+          "id": "D",
+          "text": "Only if police agree in advance"
+        }
       ],
       "correct": "B",
       "explanation": "Breaks for legal consultation can be requested during interview. This is a safeguard that allows ongoing advice as issues emerge.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.8 (consultation during interview)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8 (consultation during interview)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (private consultation)"
+        }
       ],
-      "tags": ["interview", "breaks", "consultation"]
+      "tags": [
+        "interview",
+        "breaks",
+        "consultation"
+      ]
     },
     {
       "id": "int-019",
@@ -221,17 +469,40 @@
       "type": "mcq",
       "stem": "If the recording equipment fails during interview, what should happen?",
       "options": [
-        { "id": "A", "text": "Continue without recording" },
-        { "id": "B", "text": "The interview should stop until recording is restored or a proper record-keeping alternative is in place" },
-        { "id": "C", "text": "Your notes become the only record automatically" },
-        { "id": "D", "text": "The interview becomes off-the-record" }
+        {
+          "id": "A",
+          "text": "Continue without recording"
+        },
+        {
+          "id": "B",
+          "text": "The interview should stop until recording is restored or a proper record-keeping alternative is in place"
+        },
+        {
+          "id": "C",
+          "text": "Your notes become the only record automatically"
+        },
+        {
+          "id": "D",
+          "text": "The interview becomes off-the-record"
+        }
       ],
       "correct": "B",
       "explanation": "Interview recording is a safeguard. If equipment fails, the interview should stop until properly recorded or alternative procedures are followed per Code E.",
       "references": [
-        { "instrument": "Code E", "cite": "Code E para 4.3 (recording equipment failure)" }
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 4.3 (recording equipment failure)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "recording", "code-e"]
+      "tags": [
+        "interview",
+        "recording",
+        "code-e"
+      ]
     },
     {
       "id": "int-020",
@@ -240,17 +511,39 @@
       "type": "mcq",
       "stem": "What is a prepared statement?",
       "options": [
-        { "id": "A", "text": "A police document outlining the charges" },
-        { "id": "B", "text": "A written statement prepared by or with the legal adviser, setting out the client's account or position, usually read at the start of interview" },
-        { "id": "C", "text": "A confession" },
-        { "id": "D", "text": "A court document" }
+        {
+          "id": "A",
+          "text": "A police document outlining the charges"
+        },
+        {
+          "id": "B",
+          "text": "A written statement prepared by or with the legal adviser, setting out the client's account or position, usually read at the start of interview"
+        },
+        {
+          "id": "C",
+          "text": "A confession"
+        },
+        {
+          "id": "D",
+          "text": "A court document"
+        }
       ],
       "correct": "B",
       "explanation": "A prepared statement allows the client to put their account on record in a controlled way, often followed by no-comment to questions. It's a strategic tool.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Prepared statements in police interview (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Prepared statements in police interview (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["prepared-statement", "strategy"]
+      "tags": [
+        "prepared-statement",
+        "strategy"
+      ]
     },
     {
       "id": "int-021",
@@ -259,17 +552,40 @@
       "type": "mcq",
       "stem": "The officer asks your client to speculate about why a witness might have identified them. What is the best response?",
       "options": [
-        { "id": "A", "text": "Let the client speculate" },
-        { "id": "B", "text": "Intervene — speculation is risky and the client should not be asked to guess at others' motivations" },
-        { "id": "C", "text": "Speculate on behalf of the client" },
-        { "id": "D", "text": "Ignore the question" }
+        {
+          "id": "A",
+          "text": "Let the client speculate"
+        },
+        {
+          "id": "B",
+          "text": "Intervene — speculation is risky and the client should not be asked to guess at others' motivations"
+        },
+        {
+          "id": "C",
+          "text": "Speculate on behalf of the client"
+        },
+        {
+          "id": "D",
+          "text": "Ignore the question"
+        }
       ],
       "correct": "B",
       "explanation": "Speculation about others' actions is dangerous and unfair. Intervene and advise the client is not required to speculate.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.9 (solicitor intervention)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor intervention)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "speculation", "intervention"]
+      "tags": [
+        "interview",
+        "speculation",
+        "intervention"
+      ]
     },
     {
       "id": "int-022",
@@ -278,17 +594,40 @@
       "type": "mcq",
       "stem": "Where should you sit during a police interview?",
       "options": [
-        { "id": "A", "text": "Behind the client where they cannot see you" },
-        { "id": "B", "text": "In a position where you can observe, take notes, and communicate with the client during breaks" },
-        { "id": "C", "text": "Outside the room" },
-        { "id": "D", "text": "Next to the interviewing officer" }
+        {
+          "id": "A",
+          "text": "Behind the client where they cannot see you"
+        },
+        {
+          "id": "B",
+          "text": "In a position where you can observe, take notes, and communicate with the client during breaks"
+        },
+        {
+          "id": "C",
+          "text": "Outside the room"
+        },
+        {
+          "id": "D",
+          "text": "Next to the interviewing officer"
+        }
       ],
       "correct": "B",
       "explanation": "You should be positioned to observe the interview, take notes, and be accessible to your client for breaks. Typically beside or near the client.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.8 (presence during interview)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8 (presence during interview)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "attendance", "positioning"]
+      "tags": [
+        "interview",
+        "attendance",
+        "positioning"
+      ]
     },
     {
       "id": "int-023",
@@ -297,17 +636,40 @@
       "type": "mcq",
       "stem": "Your client admits guilt to you but wants to deny it in interview. What should you do?",
       "options": [
-        { "id": "A", "text": "Help them craft a false denial" },
-        { "id": "B", "text": "Advise that you cannot help them put forward an account you know to be false; discuss alternative approaches" },
-        { "id": "C", "text": "Tell the police what the client told you" },
-        { "id": "D", "text": "Withdraw immediately without discussion" }
+        {
+          "id": "A",
+          "text": "Help them craft a false denial"
+        },
+        {
+          "id": "B",
+          "text": "Advise that you cannot help them put forward an account you know to be false; discuss alternative approaches"
+        },
+        {
+          "id": "C",
+          "text": "Tell the police what the client told you"
+        },
+        {
+          "id": "D",
+          "text": "Withdraw immediately without discussion"
+        }
       ],
       "correct": "B",
       "explanation": "You cannot assist in advancing a known false case. Discuss alternatives: perhaps no comment, or addressing specific elements. If they insist on falsehood, consider withdrawal.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Professional conduct: not advancing known false cases (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Professional conduct: not advancing known false cases (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Principles and Codes of Conduct"
+        }
       ],
-      "tags": ["ethics", "false-account", "strategy"]
+      "tags": [
+        "ethics",
+        "false-account",
+        "strategy"
+      ]
     },
     {
       "id": "int-024",
@@ -316,18 +678,40 @@
       "type": "mcq",
       "stem": "An officer threatens that things will 'go badly' for your client if they don't cooperate. What should you do?",
       "options": [
-        { "id": "A", "text": "Encourage the client to cooperate to avoid trouble" },
-        { "id": "B", "text": "Intervene immediately, note the threat, and consider whether the interview should continue" },
-        { "id": "C", "text": "Ignore it — threats are normal" },
-        { "id": "D", "text": "Make a counter-threat" }
+        {
+          "id": "A",
+          "text": "Encourage the client to cooperate to avoid trouble"
+        },
+        {
+          "id": "B",
+          "text": "Intervene immediately, note the threat, and consider whether the interview should continue"
+        },
+        {
+          "id": "C",
+          "text": "Ignore it — threats are normal"
+        },
+        {
+          "id": "D",
+          "text": "Make a counter-threat"
+        }
       ],
       "correct": "B",
       "explanation": "Threats or inducements can amount to oppression. Intervene, ensure it's recorded, and consider whether the interview can fairly continue.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 s.76(2)(a) (oppression)" },
-        { "instrument": "Code C", "cite": "Code C para 11.5 (interview conduct)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.76(2)(a) (oppression)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.5 (interview conduct)"
+        }
       ],
-      "tags": ["interview", "oppression", "threats"]
+      "tags": [
+        "interview",
+        "oppression",
+        "threats"
+      ]
     },
     {
       "id": "int-025",
@@ -336,17 +720,788 @@
       "type": "mcq",
       "stem": "Can you consult with your client during a break in the interview about what has been asked?",
       "options": [
-        { "id": "A", "text": "No — once the interview starts, no further consultation is allowed" },
-        { "id": "B", "text": "Yes — breaks can be used for further consultation and advice" },
-        { "id": "C", "text": "Only if police are present" },
-        { "id": "D", "text": "Only at the end of all questioning" }
+        {
+          "id": "A",
+          "text": "No — once the interview starts, no further consultation is allowed"
+        },
+        {
+          "id": "B",
+          "text": "Yes — breaks can be used for further consultation and advice"
+        },
+        {
+          "id": "C",
+          "text": "Only if police are present"
+        },
+        {
+          "id": "D",
+          "text": "Only at the end of all questioning"
+        }
       ],
       "correct": "B",
       "explanation": "Breaks are an opportunity to review progress, take further instructions, and advise. The right to ongoing legal advice during interview is preserved.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C para 6.8 (consultation during interview)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8 (consultation during interview)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (private consultation)"
+        }
       ],
-      "tags": ["interview", "breaks", "consultation"]
+      "tags": [
+        "interview",
+        "breaks",
+        "consultation"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-000",
+      "topicId": "topic-intervention",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Grounds for intervention; improper questions; oppressive questioning; record on tape.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-001",
+      "topicId": "topic-intervention",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-002",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Grounds for intervention; improper questions; oppressive questioning; record on tape.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-ba-003",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Grounds for intervention; improper questions; oppressive questioning; record on tape., what is the best approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code C because Code C provides that as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-ba-004",
+      "topicId": "topic-intervention",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Grounds for intervention; improper questions; oppressive questioning; record on tape., which action is most appropriate given Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code C as Code C requires as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-005",
+      "topicId": "topic-intervention",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Grounds for intervention; improper questions; oppressive questioning; record on tape.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-006",
+      "topicId": "topic-intervention",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-mcq-007",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Grounds for intervention; improper questions; oppressive questioning; record on tape.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-ba-008",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Grounds for intervention; improper questions; oppressive questioning; record on tape., what is the best approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code C because Code C provides that as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-ba-009",
+      "topicId": "topic-intervention",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Grounds for intervention; improper questions; oppressive questioning; record on tape., which action is most appropriate given Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code C as Code C requires as set out in grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-010",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. According to Code C, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code C requires that Follow the procedure set out in Code C. This is because as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-011",
+      "topicId": "topic-intervention",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. What is the correct approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code C because Code C provides that as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-012",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. According to Code C, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code C requires that Follow the procedure set out in Code C. This is because as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-013",
+      "topicId": "topic-intervention",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. What is the correct approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code C because Code C provides that as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-014",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. According to Code C, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code C requires that Follow the procedure set out in Code C. This is because as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-015",
+      "topicId": "topic-intervention",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. What is the correct approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code C because Code C provides that as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-d-scn-016",
+      "topicId": "topic-intervention",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving grounds for intervention; improper questions; oppressive questioning; record on tape.. The police are asking questions.. According to Code C, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code C requires that Follow the procedure set out in Code C. This is because as required by grounds for intervention; improper questions; oppressive questioning; record on tape..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.9 (solicitor interventions)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/78"
+        }
+      ],
+      "tags": [
+        "intervention",
+        "objections",
+        "fairness"
+      ]
     }
   ]
 }

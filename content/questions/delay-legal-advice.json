@@ -1,0 +1,1100 @@
+{
+  "questions": [
+    {
+      "id": "delay-001",
+      "topicId": "delay-legal-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When can access to legal advice be delayed under Annex B of Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "For any offence"
+        },
+        {
+          "id": "B",
+          "text": "Only for indictable offences, in specific circumstances, and with proper authorisation"
+        },
+        {
+          "id": "C",
+          "text": "For summary-only offences"
+        },
+        {
+          "id": "D",
+          "text": "Always, if the police request it"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Delay of legal advice under Annex B is only permitted for indictable offences, in specific circumstances (e.g., risk of alerting accomplices, interference with evidence), and requires proper authorisation from a superintendent or above. Delay is not permitted for summary-only offences.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (delay conditions)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C Annex B (delay of legal advice)"
+        }
+      ],
+      "tags": [
+        "delay",
+        "annex-b",
+        "indictable"
+      ]
+    },
+    {
+      "id": "delay-002",
+      "topicId": "delay-legal-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What rank of officer can authorise delay of legal advice under Annex B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any police officer"
+        },
+        {
+          "id": "B",
+          "text": "A superintendent or above"
+        },
+        {
+          "id": "C",
+          "text": "A sergeant"
+        },
+        {
+          "id": "D",
+          "text": "The custody officer"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Delay of legal advice under Annex B requires authorisation from a superintendent or above. This is a high-level decision that cannot be made by lower-ranking officers. The authorisation must be properly recorded and the reasons documented.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C Annex B (delay of legal advice)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (delay conditions)"
+        }
+      ],
+      "tags": [
+        "delay",
+        "annex-b",
+        "indictable"
+      ]
+    },
+    {
+      "id": "delay-003",
+      "topicId": "delay-legal-advice",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A client's access to legal advice has been delayed. You discover the delay was not properly authorised or the circumstances did not justify it. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do nothing—the delay has already happened"
+        },
+        {
+          "id": "B",
+          "text": "Challenge the delay immediately, record your objections, and consider challenging any evidence obtained during the delay period under s.78 PACE"
+        },
+        {
+          "id": "C",
+          "text": "Only challenge if the client is charged"
+        },
+        {
+          "id": "D",
+          "text": "Accept the delay as valid"
+        }
+      ],
+      "correct": "B",
+      "explanation": "If a delay of legal advice is improper (not properly authorised or not justified by the circumstances), you must challenge it immediately, record your objections, and consider challenging any evidence obtained during the delay period under s.78 PACE. Improper delay can render evidence unfair and lead to exclusion.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C Annex B (delay of legal advice)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)"
+        }
+      ],
+      "tags": [
+        "delay",
+        "annex-b",
+        "indictable"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-000",
+      "topicId": "pace-s58-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-001",
+      "topicId": "pace-s58-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-002",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-ba-003",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to The right to consult a solicitor privately at any time; notification requirements; DSCC scheme., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-ba-004",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with The right to consult a solicitor privately at any time; notification requirements; DSCC scheme., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-005",
+      "topicId": "pace-s58-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-006",
+      "topicId": "pace-s58-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-mcq-007",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-ba-008",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to The right to consult a solicitor privately at any time; notification requirements; DSCC scheme., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-ba-009",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with The right to consult a solicitor privately at any time; notification requirements; DSCC scheme., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-010",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-011",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-012",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-013",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-014",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-015",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-016",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-017",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-018",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-scn-019",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving the right to consult a solicitor privately at any time; notification requirements; dscc scheme.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-sa-020",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of PACE in relation to The right to consult a solicitor privately at any time; notification requirements; DSCC scheme..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE requires that Review PACE. Identify key requirements. Apply to the specific situation. Key points include: as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-sa-021",
+      "topicId": "pace-s58-advice",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "What are the main safeguards provided by PACE for The right to consult a solicitor privately at any time; notification requirements; DSCC scheme.?",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE provides several safeguards: Review PACE. Identify key requirements. Apply to the specific situation. These are important because as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-a-sa-022",
+      "topicId": "pace-s58-advice",
+      "difficulty": "advanced",
+      "type": "short_answer",
+      "stem": "Describe the procedure set out in PACE for The right to consult a solicitor privately at any time; notification requirements; DSCC scheme..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "The procedure requires: Review PACE. Identify key requirements. Apply to the specific situation. This is set out in PACE to ensure as required by the right to consult a solicitor privately at any time; notification requirements; dscc scheme..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/58"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.1 (right to legal advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "legal-advice",
+        "s58",
+        "code-c"
+      ]
+    }
+  ]
+}

@@ -25,6 +25,8 @@ export const QuestionDifficultySchema = z.enum([
 export const QuestionTypeSchema = z.enum([
   "mcq",
   "best-answer",
+  "mcq_multi",
+  "short_answer",
   "scenario",
   "short-structured",
 ]);
@@ -67,6 +69,7 @@ export const QuestionSchema = z
     stem: z.string().min(1),
     options: z.array(QuestionOptionSchema).optional(),
     correct: QuestionOptionIdSchema.optional(),
+    correctAnswers: z.array(QuestionOptionIdSchema).optional(),
     expectedAnswerOutline: z.array(z.string().min(1)).optional(),
     explanation: z.string().min(1),
     references: z.array(QuestionReferenceSchema).default([]),
@@ -87,6 +90,31 @@ export const QuestionSchema = z
           code: z.ZodIssueCode.custom,
           message: "MCQ questions must specify a correct option id",
           path: ["correct"],
+        });
+      }
+    }
+    if (q.type === "mcq_multi") {
+      if (!q.options || q.options.length < 2) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Multi-select questions must have at least 2 options",
+          path: ["options"],
+        });
+      }
+      if (!q.correctAnswers || q.correctAnswers.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Multi-select questions must specify correctAnswers array",
+          path: ["correctAnswers"],
+        });
+      }
+    }
+    if (q.type === "short_answer") {
+      if (!q.expectedAnswerOutline || q.expectedAnswerOutline.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Short answer questions must specify expectedAnswerOutline",
+          path: ["expectedAnswerOutline"],
         });
       }
     }
@@ -123,7 +151,7 @@ export const GenerateQuestionRequestSchema = z.object({
   topicId: z.string(),
   difficulty: QuestionDifficultySchema.optional(),
   type: z
-    .enum(["mcq", "best-answer", "scenario", "short-structured", "short-response"])
+    .enum(["mcq", "best-answer", "mcq_multi", "short_answer", "scenario", "short-structured", "short-response"])
     .optional()
     .transform((t) => (t === "short-response" ? "short-structured" : t)),
 });

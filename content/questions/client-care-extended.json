@@ -7,17 +7,39 @@
       "type": "mcq",
       "stem": "Your client gives you contradictory instructions at different points in the consultation. What should you do?",
       "options": [
-        { "id": "A", "text": "Pick whichever version seems most helpful" },
-        { "id": "B", "text": "Clarify the inconsistency with the client and ensure you have a clear, final instruction before proceeding" },
-        { "id": "C", "text": "Ignore the inconsistency" },
-        { "id": "D", "text": "Report the inconsistency to police" }
+        {
+          "id": "A",
+          "text": "Pick whichever version seems most helpful"
+        },
+        {
+          "id": "B",
+          "text": "Clarify the inconsistency with the client and ensure you have a clear, final instruction before proceeding"
+        },
+        {
+          "id": "C",
+          "text": "Ignore the inconsistency"
+        },
+        {
+          "id": "D",
+          "text": "Report the inconsistency to police"
+        }
       ],
       "correct": "B",
       "explanation": "Clear instructions are essential. If there's ambiguity, clarify before advising. Document the final position.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Client instructions: clarity and documentation (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Client instructions: clarity and documentation (Check: guidance)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (private consultation)"
+        }
       ],
-      "tags": ["client-care", "instructions"]
+      "tags": [
+        "client-care",
+        "instructions"
+      ]
     },
     {
       "id": "care-009",
@@ -26,17 +48,39 @@
       "type": "mcq",
       "stem": "What is the primary duty of a legal adviser in the police station?",
       "options": [
-        { "id": "A", "text": "To help police obtain evidence" },
-        { "id": "B", "text": "To protect and advance the client's lawful interests" },
-        { "id": "C", "text": "To speed up the process for everyone" },
-        { "id": "D", "text": "To ensure convictions" }
+        {
+          "id": "A",
+          "text": "To help police obtain evidence"
+        },
+        {
+          "id": "B",
+          "text": "To protect and advance the client's lawful interests"
+        },
+        {
+          "id": "C",
+          "text": "To speed up the process for everyone"
+        },
+        {
+          "id": "D",
+          "text": "To ensure convictions"
+        }
       ],
       "correct": "B",
       "explanation": "Your primary duty is to your client. You must act in their best interests within professional and legal boundaries.",
       "references": [
-        { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — client interests" }
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — client interests"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Principles and Codes of Conduct"
+        }
       ],
-      "tags": ["ethics", "professional-conduct"]
+      "tags": [
+        "ethics",
+        "professional-conduct"
+      ]
     },
     {
       "id": "care-010",
@@ -45,17 +89,39 @@
       "type": "mcq",
       "stem": "In what circumstances might legal professional privilege not apply?",
       "options": [
-        { "id": "A", "text": "Privilege always applies regardless of circumstances" },
-        { "id": "B", "text": "Where the communication is made for the purpose of furthering a crime or fraud" },
-        { "id": "C", "text": "Whenever police request information" },
-        { "id": "D", "text": "Only in terrorism cases" }
+        {
+          "id": "A",
+          "text": "Privilege always applies regardless of circumstances"
+        },
+        {
+          "id": "B",
+          "text": "Where the communication is made for the purpose of furthering a crime or fraud"
+        },
+        {
+          "id": "C",
+          "text": "Whenever police request information"
+        },
+        {
+          "id": "D",
+          "text": "Only in terrorism cases"
+        }
       ],
       "correct": "B",
       "explanation": "The crime/fraud exception means privilege does not attach to communications made to further criminal or fraudulent purposes.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Legal professional privilege exceptions (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Legal professional privilege exceptions (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — confidentiality"
+        }
       ],
-      "tags": ["confidentiality", "privilege"]
+      "tags": [
+        "confidentiality",
+        "privilege"
+      ]
     },
     {
       "id": "care-011",
@@ -64,17 +130,39 @@
       "type": "mcq",
       "stem": "A client is upset and agitated. How should you manage the consultation?",
       "options": [
-        { "id": "A", "text": "Match their emotional tone" },
-        { "id": "B", "text": "Remain calm, give them time, and ensure they can participate meaningfully in giving instructions" },
-        { "id": "C", "text": "Refuse to see them until they calm down" },
-        { "id": "D", "text": "Take instructions from their family instead" }
+        {
+          "id": "A",
+          "text": "Match their emotional tone"
+        },
+        {
+          "id": "B",
+          "text": "Remain calm, give them time, and ensure they can participate meaningfully in giving instructions"
+        },
+        {
+          "id": "C",
+          "text": "Refuse to see them until they calm down"
+        },
+        {
+          "id": "D",
+          "text": "Take instructions from their family instead"
+        }
       ],
       "correct": "B",
       "explanation": "Clients in custody are often stressed. A calm, patient approach helps ensure meaningful participation and accurate instructions.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Managing distressed clients (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Managing distressed clients (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — client care"
+        }
       ],
-      "tags": ["client-care", "communication"]
+      "tags": [
+        "client-care",
+        "communication"
+      ]
     },
     {
       "id": "care-012",
@@ -83,17 +171,39 @@
       "type": "mcq",
       "stem": "You discover during consultation that the client is wanted for another offence. What should you do?",
       "options": [
-        { "id": "A", "text": "Immediately inform police" },
-        { "id": "B", "text": "Maintain confidentiality unless there is a lawful exception; focus on the current matter" },
-        { "id": "C", "text": "Refuse to act for them" },
-        { "id": "D", "text": "Help them escape" }
+        {
+          "id": "A",
+          "text": "Immediately inform police"
+        },
+        {
+          "id": "B",
+          "text": "Maintain confidentiality unless there is a lawful exception; focus on the current matter"
+        },
+        {
+          "id": "C",
+          "text": "Refuse to act for them"
+        },
+        {
+          "id": "D",
+          "text": "Help them escape"
+        }
       ],
       "correct": "B",
       "explanation": "Historical matters are generally covered by confidentiality. Focus on the current matter unless there is a lawful basis to disclose.",
       "references": [
-        { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — confidentiality" }
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — confidentiality"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Principles and Codes of Conduct"
+        }
       ],
-      "tags": ["confidentiality", "ethics"]
+      "tags": [
+        "confidentiality",
+        "ethics"
+      ]
     },
     {
       "id": "care-013",
@@ -102,17 +212,39 @@
       "type": "mcq",
       "stem": "What is the difference between legal professional privilege and confidentiality duty?",
       "options": [
-        { "id": "A", "text": "They are exactly the same" },
-        { "id": "B", "text": "Privilege is a legal right that protects communications from disclosure even in court; confidentiality is a broader professional duty" },
-        { "id": "C", "text": "Confidentiality is stronger than privilege" },
-        { "id": "D", "text": "Neither applies in police stations" }
+        {
+          "id": "A",
+          "text": "They are exactly the same"
+        },
+        {
+          "id": "B",
+          "text": "Privilege is a legal right that protects communications from disclosure even in court; confidentiality is a broader professional duty"
+        },
+        {
+          "id": "C",
+          "text": "Confidentiality is stronger than privilege"
+        },
+        {
+          "id": "D",
+          "text": "Neither applies in police stations"
+        }
       ],
       "correct": "B",
       "explanation": "Legal professional privilege is a fundamental right preventing disclosure even under compulsion. Confidentiality is a broader professional obligation.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Privilege vs confidentiality (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Privilege vs confidentiality (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — confidentiality"
+        }
       ],
-      "tags": ["confidentiality", "privilege"]
+      "tags": [
+        "confidentiality",
+        "privilege"
+      ]
     },
     {
       "id": "care-014",
@@ -121,17 +253,39 @@
       "type": "mcq",
       "stem": "You realise you have a conflict of interest (e.g., you previously advised the complainant). What should you do?",
       "options": [
-        { "id": "A", "text": "Continue anyway — conflicts are normal" },
-        { "id": "B", "text": "Decline to act and arrange for alternative representation" },
-        { "id": "C", "text": "Disclose the conflict to police" },
-        { "id": "D", "text": "Pretend you don't know the complainant" }
+        {
+          "id": "A",
+          "text": "Continue anyway — conflicts are normal"
+        },
+        {
+          "id": "B",
+          "text": "Decline to act and arrange for alternative representation"
+        },
+        {
+          "id": "C",
+          "text": "Disclose the conflict to police"
+        },
+        {
+          "id": "D",
+          "text": "Pretend you don't know the complainant"
+        }
       ],
       "correct": "B",
       "explanation": "Conflicts of interest require you to decline the work. Arrange alternative representation to protect both clients' interests.",
       "references": [
-        { "instrument": "SRA Standard", "cite": "SRA Code of Conduct — conflicts of interest" }
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — conflicts of interest"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Principles and Codes of Conduct"
+        }
       ],
-      "tags": ["conflict", "ethics"]
+      "tags": [
+        "conflict",
+        "ethics"
+      ]
     },
     {
       "id": "care-015",
@@ -140,17 +294,39 @@
       "type": "mcq",
       "stem": "Why is it important to explain the custody process to your client?",
       "options": [
-        { "id": "A", "text": "It's not important — they don't need to understand" },
-        { "id": "B", "text": "So they can make informed decisions and cooperate appropriately with safeguards" },
-        { "id": "C", "text": "To make the process longer" },
-        { "id": "D", "text": "To impress police" }
+        {
+          "id": "A",
+          "text": "It's not important — they don't need to understand"
+        },
+        {
+          "id": "B",
+          "text": "So they can make informed decisions and cooperate appropriately with safeguards"
+        },
+        {
+          "id": "C",
+          "text": "To make the process longer"
+        },
+        {
+          "id": "D",
+          "text": "To impress police"
+        }
       ],
       "correct": "B",
       "explanation": "Understanding the process helps clients make informed decisions, reduces anxiety, and ensures they can participate meaningfully.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Client communication: explaining process (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Client communication: explaining process (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — client care"
+        }
       ],
-      "tags": ["client-care", "communication"]
+      "tags": [
+        "client-care",
+        "communication"
+      ]
     }
   ]
 }

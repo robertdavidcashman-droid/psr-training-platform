@@ -15,6 +15,18 @@ import bail from "./bail.json";
 import bailExtended from "./bail-extended.json";
 import portfolio from "./portfolio.json";
 import portfolioExtended from "./portfolio-extended.json";
+import authorityToAct from "./authority-to-act.json";
+import telephoneAdvice from "./telephone-advice.json";
+import identification from "./identification.json";
+import interviewRecording from "./interview-recording.json";
+import charging from "./charging.json";
+import citScenarios from "./cit-scenarios.json";
+import registerEntry from "./register-entry.json";
+import probationaryExtended from "./probationary-extended.json";
+import delayLegalAdvice from "./delay-legal-advice.json";
+import voluntaryAttendance from "./voluntary-attendance.json";
+import nfaCautions from "./nfa-cautions.json";
+import varietySamples from "./variety-samples.json";
 
 export const questions = [
   ...(core.questions ?? []),
@@ -34,6 +46,18 @@ export const questions = [
   ...(bailExtended.questions ?? []),
   ...(portfolio.questions ?? []),
   ...(portfolioExtended.questions ?? []),
+  ...(authorityToAct.questions ?? []),
+  ...(telephoneAdvice.questions ?? []),
+  ...(identification.questions ?? []),
+  ...(interviewRecording.questions ?? []),
+  ...(charging.questions ?? []),
+  ...(citScenarios.questions ?? []),
+  ...(registerEntry.questions ?? []),
+  ...(probationaryExtended.questions ?? []),
+  ...(delayLegalAdvice.questions ?? []),
+  ...(voluntaryAttendance.questions ?? []),
+  ...(nfaCautions.questions ?? []),
+  ...(varietySamples.questions ?? []),
 ];
 
 const questionsModule = { questions };

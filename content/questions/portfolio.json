@@ -7,17 +7,39 @@
       "type": "mcq",
       "stem": "Which detail is most important to include in attendance notes in custody?",
       "options": [
-        { "id": "A", "text": "Your personal opinion of the investigating officer" },
-        { "id": "B", "text": "Key times, decisions, advice given, and the client’s instructions" },
-        { "id": "C", "text": "Only the final outcome" },
-        { "id": "D", "text": "Only what the client says, with no context" }
+        {
+          "id": "A",
+          "text": "Your personal opinion of the investigating officer"
+        },
+        {
+          "id": "B",
+          "text": "Key times, decisions, advice given, and the client’s instructions"
+        },
+        {
+          "id": "C",
+          "text": "Only the final outcome"
+        },
+        {
+          "id": "D",
+          "text": "Only what the client says, with no context"
+        }
       ],
       "correct": "B",
       "explanation": "Good notes are structured and factual. Times and reasons matter (e.g., legal advice request, disclosure, interview start/finish, breaks, key representations).",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Attendance notes standards (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Attendance notes standards (Check: guidance)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        }
       ],
-      "tags": ["portfolio", "notes"]
+      "tags": [
+        "portfolio",
+        "notes"
+      ]
     },
     {
       "id": "port-002",
@@ -26,17 +48,38 @@
       "type": "mcq",
       "stem": "Which note style is most defensible professionally?",
       "options": [
-        { "id": "A", "text": "Speculative: 'Police definitely lying'" },
-        { "id": "B", "text": "Factual: 'Client states X; disclosure states Y; advice given; instruction taken'" },
-        { "id": "C", "text": "Minimal: 'Seen at station'" },
-        { "id": "D", "text": "Humorous: 'All a mess lol'" }
+        {
+          "id": "A",
+          "text": "Speculative: 'Police definitely lying'"
+        },
+        {
+          "id": "B",
+          "text": "Factual: 'Client states X; disclosure states Y; advice given; instruction taken'"
+        },
+        {
+          "id": "C",
+          "text": "Minimal: 'Seen at station'"
+        },
+        {
+          "id": "D",
+          "text": "Humorous: 'All a mess lol'"
+        }
       ],
       "correct": "B",
       "explanation": "Factual, contemporaneous notes that clearly separate what was said by whom, what was disclosed, what advice you gave, and what instructions you received are most defensible.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Professional record keeping: objective note taking (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Professional record keeping: objective note taking (Check: guidance)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        }
       ],
-      "tags": ["record-keeping"]
+      "tags": [
+        "record-keeping"
+      ]
     },
     {
       "id": "port-003",
@@ -45,17 +88,39 @@
       "type": "mcq",
       "stem": "Which is the best example of a reflective learning point?",
       "options": [
-        { "id": "A", "text": "“Police were unfair.”" },
-        { "id": "B", "text": "“Next time, I will request targeted disclosure earlier and record limits in the custody record/notes.”" },
-        { "id": "C", "text": "“Client was difficult.”" },
-        { "id": "D", "text": "“I did everything perfectly.”" }
+        {
+          "id": "A",
+          "text": "“Police were unfair.”"
+        },
+        {
+          "id": "B",
+          "text": "“Next time, I will request targeted disclosure earlier and record limits in the custody record/notes.”"
+        },
+        {
+          "id": "C",
+          "text": "“Client was difficult.”"
+        },
+        {
+          "id": "D",
+          "text": "“I did everything perfectly.”"
+        }
       ],
       "correct": "B",
       "explanation": "Reflection should be specific, actionable, and linked to practice improvement—not blame or vague judgments.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Reflective practice / portfolio evidence (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Reflective practice / portfolio evidence (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — reflective practice"
+        }
       ],
-      "tags": ["reflection", "learning"]
+      "tags": [
+        "reflection",
+        "learning"
+      ]
     },
     {
       "id": "port-004",
@@ -64,17 +129,39 @@
       "type": "mcq",
       "stem": "Why is it important to record 'what you would do differently' in a reflection?",
       "options": [
-        { "id": "A", "text": "It proves you are not confident" },
-        { "id": "B", "text": "It shows insight and continuous improvement, supporting competence evidence" },
-        { "id": "C", "text": "It allows you to change the client’s instructions later" },
-        { "id": "D", "text": "It guarantees better grades" }
+        {
+          "id": "A",
+          "text": "It proves you are not confident"
+        },
+        {
+          "id": "B",
+          "text": "It shows insight and continuous improvement, supporting competence evidence"
+        },
+        {
+          "id": "C",
+          "text": "It allows you to change the client’s instructions later"
+        },
+        {
+          "id": "D",
+          "text": "It guarantees better grades"
+        }
       ],
       "correct": "B",
       "explanation": "Reflective evidence is strongest when it shows analysis and improvement plans. It demonstrates learning rather than just recounting events.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Portfolio evidence: reflective learning (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Portfolio evidence: reflective learning (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
       ],
-      "tags": ["portfolio", "development"]
+      "tags": [
+        "portfolio",
+        "development"
+      ]
     },
     {
       "id": "port-005",
@@ -83,17 +170,39 @@
       "type": "mcq",
       "stem": "A good attendance note should make it easy for a third party to understand which of these?",
       "options": [
-        { "id": "A", "text": "Your favourite legal book" },
-        { "id": "B", "text": "The timeline, disclosure received, advice given, and key decisions/reasons" },
-        { "id": "C", "text": "The client’s private thoughts unrelated to the case" },
-        { "id": "D", "text": "How you felt about the officer’s tone" }
+        {
+          "id": "A",
+          "text": "Your favourite legal book"
+        },
+        {
+          "id": "B",
+          "text": "The timeline, disclosure received, advice given, and key decisions/reasons"
+        },
+        {
+          "id": "C",
+          "text": "The client’s private thoughts unrelated to the case"
+        },
+        {
+          "id": "D",
+          "text": "How you felt about the officer’s tone"
+        }
       ],
       "correct": "B",
       "explanation": "Third-party readability is a good quality test: clear timeline, objective facts, advice and instructions, and key representations.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Attendance note quality and audit expectations (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Attendance note quality and audit expectations (Check: guidance)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        }
       ],
-      "tags": ["notes", "quality"]
+      "tags": [
+        "notes",
+        "quality"
+      ]
     },
     {
       "id": "port-006",
@@ -102,17 +211,39 @@
       "type": "mcq",
       "stem": "Which reflection is most likely to be useful for skill development?",
       "options": [
-        { "id": "A", "text": "“Nothing to learn — it was routine.”" },
-        { "id": "B", "text": "“I identified a vulnerability late; next time I will screen earlier and request safeguards before interview.”" },
-        { "id": "C", "text": "“Police always do this.”" },
-        { "id": "D", "text": "“Client should have listened.”" }
+        {
+          "id": "A",
+          "text": "“Nothing to learn — it was routine.”"
+        },
+        {
+          "id": "B",
+          "text": "“I identified a vulnerability late; next time I will screen earlier and request safeguards before interview.”"
+        },
+        {
+          "id": "C",
+          "text": "“Police always do this.”"
+        },
+        {
+          "id": "D",
+          "text": "“Client should have listened.”"
+        }
       ],
       "correct": "B",
       "explanation": "High-quality reflection identifies a specific gap, why it mattered, and an actionable improvement plan.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Reflective practice: identify improvement actions (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Reflective practice: identify improvement actions (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)"
+        }
       ],
-      "tags": ["reflection", "vulnerability"]
+      "tags": [
+        "reflection",
+        "vulnerability"
+      ]
     },
     {
       "id": "port-007",
@@ -121,17 +252,39 @@
       "type": "mcq",
       "stem": "Which is a common pitfall in attendance note writing?",
       "options": [
-        { "id": "A", "text": "Writing down key times" },
-        { "id": "B", "text": "Mixing speculation/opinion with facts without clear separation" },
-        { "id": "C", "text": "Recording advice and instructions" },
-        { "id": "D", "text": "Using headings for structure" }
+        {
+          "id": "A",
+          "text": "Writing down key times"
+        },
+        {
+          "id": "B",
+          "text": "Mixing speculation/opinion with facts without clear separation"
+        },
+        {
+          "id": "C",
+          "text": "Recording advice and instructions"
+        },
+        {
+          "id": "D",
+          "text": "Using headings for structure"
+        }
       ],
       "correct": "B",
       "explanation": "Notes should distinguish facts, client instructions, disclosure, and professional opinion. If you include an opinion, label it clearly and keep it professional.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Objective note taking: separate fact from opinion (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Objective note taking: separate fact from opinion (Check: guidance)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        }
       ],
-      "tags": ["notes", "pitfalls"]
+      "tags": [
+        "notes",
+        "pitfalls"
+      ]
     },
     {
       "id": "port-008",
@@ -140,18 +293,215 @@
       "type": "mcq",
       "stem": "Which is most appropriate to include in a training portfolio reflection?",
       "options": [
-        { "id": "A", "text": "Client-identifying names and addresses to prove authenticity" },
-        { "id": "B", "text": "Generic, anonymised descriptions focused on learning and process" },
-        { "id": "C", "text": "Screenshots of private messages" },
-        { "id": "D", "text": "Personal gossip about custody staff" }
+        {
+          "id": "A",
+          "text": "Client-identifying names and addresses to prove authenticity"
+        },
+        {
+          "id": "B",
+          "text": "Generic, anonymised descriptions focused on learning and process"
+        },
+        {
+          "id": "C",
+          "text": "Screenshots of private messages"
+        },
+        {
+          "id": "D",
+          "text": "Personal gossip about custody staff"
+        }
       ],
       "correct": "B",
       "explanation": "Portfolio evidence should protect confidentiality and focus on professional learning. Do not include identifying information.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Confidentiality and anonymisation in portfolio evidence (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Confidentiality and anonymisation in portfolio evidence (Check: guidance)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA Code of Conduct — confidentiality"
+        }
       ],
-      "tags": ["portfolio", "confidentiality"]
+      "tags": [
+        "portfolio",
+        "confidentiality"
+      ]
+    },
+    {
+      "id": "gen-u12-o1-b-mcq-000",
+      "topicId": "topic-portfolio",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to SRA Standard, what is required regarding Portfolio structure; case summaries; reflective accounts; supervisor sign-off.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in SRA Standard"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "SRA Standard provides that The correct approach is set out in SRA Standard. This is important because as set out in portfolio structure; case summaries; reflective accounts; supervisor sign-off..",
+      "references": [
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        }
+      ],
+      "tags": [
+        "portfolio",
+        "accreditation",
+        "evidence"
+      ]
+    },
+    {
+      "id": "gen-u12-o1-b-mcq-001",
+      "topicId": "topic-portfolio",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under SRA Standard, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in SRA Standard"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "SRA Standard sets out that The correct approach is set out in SRA Standard. The other options are incorrect because as set out in portfolio structure; case summaries; reflective accounts; supervisor sign-off..",
+      "references": [
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        }
+      ],
+      "tags": [
+        "portfolio",
+        "accreditation",
+        "evidence"
+      ]
+    },
+    {
+      "id": "gen-u12-o1-b-mcq-002",
+      "topicId": "topic-portfolio",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does SRA Standard require regarding Portfolio structure; case summaries; reflective accounts; supervisor sign-off.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in SRA Standard"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "SRA Standard requires that The correct approach is set out in SRA Standard. This ensures as set out in portfolio structure; case summaries; reflective accounts; supervisor sign-off..",
+      "references": [
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        }
+      ],
+      "tags": [
+        "portfolio",
+        "accreditation",
+        "evidence"
+      ]
+    },
+    {
+      "id": "gen-u12-o1-b-ba-003",
+      "topicId": "topic-portfolio",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Portfolio structure; case summaries; reflective accounts; supervisor sign-off., what is the best approach under SRA Standard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in SRA Standard"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in SRA Standard because SRA Standard provides that as set out in portfolio structure; case summaries; reflective accounts; supervisor sign-off..",
+      "references": [
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio",
+          "note": "https://guidance.sra.org.uk/solicitors/resources/specific-areas-of-practice/assessment-guidelines/"
+        }
+      ],
+      "tags": [
+        "portfolio",
+        "accreditation",
+        "evidence"
+      ]
     }
   ]
 }
-

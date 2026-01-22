@@ -1,10 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Navigation", () => {
-  test("should load homepage and redirect to dashboard", async ({ page }) => {
+  test("should load homepage with Start Training CTA", async ({ page }) => {
     await page.goto("/");
-    await expect(page).toHaveURL("/dashboard");
-    await expect(page.getByTestId("dashboard-page")).toBeVisible();
+    await expect(page.getByTestId("start-training-cta")).toBeVisible();
   });
 
   test("should navigate to all main pages", async ({ page }) => {

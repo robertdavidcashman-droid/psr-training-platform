@@ -1,0 +1,1202 @@
+{
+  "questions": [
+    {
+      "id": "nfa-001",
+      "topicId": "nfa-cautions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What does 'No Further Action' (NFA) mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The case is automatically closed forever"
+        },
+        {
+          "id": "B",
+          "text": "A decision not to charge at this time, but the case may be reopened if new evidence emerges"
+        },
+        {
+          "id": "C",
+          "text": "The suspect is found not guilty"
+        },
+        {
+          "id": "D",
+          "text": "The suspect must attend court"
+        }
+      ],
+      "correct": "B",
+      "explanation": "NFA (No Further Action) means a decision has been made not to charge at this time. However, the case may be reopened if new evidence emerges or circumstances change. It is not a permanent closure or a finding of not guilty. The client should be advised that the case could be reopened.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.28 (information to be given on arrest)"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "nfa-002",
+      "topicId": "nfa-cautions",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When can a simple caution be given?",
+      "options": [
+        {
+          "id": "A",
+          "text": "For any offence"
+        },
+        {
+          "id": "B",
+          "text": "When the suspect admits the offence, there is sufficient evidence to prosecute, and a caution is considered appropriate in the circumstances"
+        },
+        {
+          "id": "C",
+          "text": "Only for serious offences"
+        },
+        {
+          "id": "D",
+          "text": "Only if the suspect denies the offence"
+        }
+      ],
+      "correct": "B",
+      "explanation": "A simple caution can be given when: (1) the suspect admits the offence, (2) there is sufficient evidence to prosecute, and (3) a caution is considered appropriate in the circumstances. The suspect must understand the implications of accepting a caution. Cautions are not appropriate for all offences or all circumstances.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.28 (information to be given on arrest)"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "nfa-003",
+      "topicId": "nfa-cautions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is a conditional caution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A caution with no conditions"
+        },
+        {
+          "id": "B",
+          "text": "A caution with conditions attached (e.g., rehabilitation, reparation) that must be complied with"
+        },
+        {
+          "id": "C",
+          "text": "A type of bail"
+        },
+        {
+          "id": "D",
+          "text": "A court sentence"
+        }
+      ],
+      "correct": "B",
+      "explanation": "A conditional caution is a caution with conditions attached that the suspect must comply with. Conditions might include: rehabilitation requirements, reparation to victims, or other specified actions. If conditions are not met, the suspect may be prosecuted for the original offence.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.28 (information to be given on arrest)"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "nfa-004",
+      "topicId": "nfa-cautions",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A client is offered a caution. What should you advise them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always accept cautions—they have no consequences"
+        },
+        {
+          "id": "B",
+          "text": "Explain that a caution is an admission of guilt, may be disclosed in future, and consider whether it is appropriate given the circumstances and alternatives (e.g., NFA, charge)"
+        },
+        {
+          "id": "C",
+          "text": "Only explain the benefits"
+        },
+        {
+          "id": "D",
+          "text": "Tell them to refuse all cautions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "You must advise the client fully about cautions: (1) accepting a caution is an admission of guilt, (2) cautions may be disclosed in future (e.g., DBS checks, court proceedings), (3) consider whether a caution is appropriate given the circumstances, and (4) consider alternatives (NFA, charge, or contesting the case). The client must make an informed decision.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.28 (information to be given on arrest)"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-000",
+      "topicId": "topic-nfa",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-001",
+      "topicId": "topic-nfa",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-002",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-ba-003",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to NFA decisions; simple cautions; conditional cautions; youth cautions., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-ba-004",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with NFA decisions; simple cautions; conditional cautions; youth cautions., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-005",
+      "topicId": "topic-nfa",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-006",
+      "topicId": "topic-nfa",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-mcq-007",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-ba-008",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to NFA decisions; simple cautions; conditional cautions; youth cautions., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-ba-009",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with NFA decisions; simple cautions; conditional cautions; youth cautions., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-010",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-011",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-012",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-013",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-014",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-015",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-016",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-017",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-018",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-scn-019",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving nfa decisions; simple cautions; conditional cautions; youth cautions.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-sa-020",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of PACE in relation to NFA decisions; simple cautions; conditional cautions; youth cautions..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE requires that Review PACE. Identify key requirements. Apply to the specific situation. Key points include: as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-sa-021",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "What are the main safeguards provided by PACE for NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE provides several safeguards: Review PACE. Identify key requirements. Apply to the specific situation. These are important because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-sa-022",
+      "topicId": "topic-nfa",
+      "difficulty": "advanced",
+      "type": "short_answer",
+      "stem": "Describe the procedure set out in PACE for NFA decisions; simple cautions; conditional cautions; youth cautions..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "The procedure requires: Review PACE. Identify key requirements. Apply to the specific situation. This is set out in PACE to ensure as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-sa-023",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of PACE in relation to NFA decisions; simple cautions; conditional cautions; youth cautions..",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE requires that Review PACE. Identify key requirements. Apply to the specific situation. Key points include: as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    },
+    {
+      "id": "gen-u9-o1-d-sa-024",
+      "topicId": "topic-nfa",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "What are the main safeguards provided by PACE for NFA decisions; simple cautions; conditional cautions; youth cautions.?",
+      "expectedAnswerOutline": [
+        "Review PACE",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "PACE provides several safeguards: Review PACE. Identify key requirements. Apply to the specific situation. These are important because as required by nfa decisions; simple cautions; conditional cautions; youth cautions..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7)(a) (release without charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        }
+      ],
+      "tags": [
+        "nfa",
+        "caution",
+        "disposal"
+      ]
+    }
+  ]
+}

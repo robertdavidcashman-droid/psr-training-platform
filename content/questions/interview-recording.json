@@ -1,0 +1,1214 @@
+{
+  "questions": [
+    {
+      "id": "rec-e-001",
+      "topicId": "interview-recording-code-e",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When is audio recording of interviews required under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only for serious offences"
+        },
+        {
+          "id": "B",
+          "text": "For all interviews of suspects in respect of indictable offences (with limited exceptions)"
+        },
+        {
+          "id": "C",
+          "text": "Only if the suspect requests it"
+        },
+        {
+          "id": "D",
+          "text": "Never—audio recording is optional"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Code E requires audio recording for all interviews of suspects in respect of indictable offences, with limited exceptions (e.g., where recording is not practicable due to equipment failure, or where the suspect objects and it would not be in the interests of justice to insist). Summary-only offences generally do not require audio recording.",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)"
+        },
+        {
+          "instrument": "Code F",
+          "cite": "Code F para 3 (visual recording)"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "rec-e-002",
+      "topicId": "interview-recording-code-e",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What must happen to the audio recording at the end of the interview under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The recording is kept by the police and no copies are made"
+        },
+        {
+          "id": "B",
+          "text": "The master recording is sealed in the presence of the suspect and legal representative, and a working copy is provided"
+        },
+        {
+          "id": "C",
+          "text": "The recording is deleted if the suspect is not charged"
+        },
+        {
+          "id": "D",
+          "text": "Only the police receive a copy"
+        }
+      ],
+      "correct": "B",
+      "explanation": "At the end of the interview, the master recording must be sealed in the presence of the suspect and legal representative (if present). A working copy is made and provided to the suspect/legal representative. The master remains sealed to prevent tampering. This is a key safeguard to ensure the integrity of the recording.",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)"
+        },
+        {
+          "instrument": "Code F",
+          "cite": "Code F para 3 (visual recording)"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "rec-f-001",
+      "topicId": "interview-recording-code-f",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When is visual recording of interviews used under Code F?",
+      "options": [
+        {
+          "id": "A",
+          "text": "For all interviews"
+        },
+        {
+          "id": "B",
+          "text": "For vulnerable suspects or where visual recording is considered appropriate"
+        },
+        {
+          "id": "C",
+          "text": "Never—visual recording is not used"
+        },
+        {
+          "id": "D",
+          "text": "Only for serious offences"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Code F covers visual (video) recording of interviews. It is used for vulnerable suspects (e.g., juveniles, those with mental health issues) or where visual recording is considered appropriate. Visual recording provides additional safeguards by capturing non-verbal communication and ensuring the interview process is fully documented.",
+      "references": [
+        {
+          "instrument": "Code F",
+          "cite": "Code F para 3 (visual recording)"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-f",
+        "video"
+      ]
+    },
+    {
+      "id": "rec-f-002",
+      "topicId": "interview-recording-code-f",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is a key advantage of visual recording (Code F) over audio-only recording (Code E)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "There is no advantage"
+        },
+        {
+          "id": "B",
+          "text": "Visual recording captures non-verbal communication, body language, and the physical environment, providing a more complete record"
+        },
+        {
+          "id": "C",
+          "text": "Visual recording is always required"
+        },
+        {
+          "id": "D",
+          "text": "Visual recording is cheaper"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Visual recording captures not just what is said, but also non-verbal communication, body language, the physical environment, and how questions are asked. This provides a more complete record and is particularly valuable for vulnerable suspects where the manner of questioning and the suspect's responses (including non-verbal) are crucial.",
+      "references": [
+        {
+          "instrument": "Code F",
+          "cite": "Code F para 3 (visual recording)"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-f",
+        "video"
+      ]
+    },
+    {
+      "id": "rec-e-003",
+      "topicId": "interview-recording-code-e",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "During an interview, the recording equipment fails. What should happen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The interview must stop and cannot continue"
+        },
+        {
+          "id": "B",
+          "text": "The interview can continue if recording is not practicable, but this must be recorded in writing and the reason documented"
+        },
+        {
+          "id": "C",
+          "text": "The interview continues without any record"
+        },
+        {
+          "id": "D",
+          "text": "A new interview must be scheduled"
+        }
+      ],
+      "correct": "B",
+      "explanation": "If recording equipment fails and it is not practicable to continue recording, the interview can continue but must be recorded in writing. The reason for not recording must be documented. However, this is an exception and should not be used to avoid recording requirements. The legal representative should ensure the written record is accurate.",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)"
+        },
+        {
+          "instrument": "Code F",
+          "cite": "Code F para 3 (visual recording)"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-000",
+      "topicId": "topic-recording",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code E, what is required regarding When audio recording required; equipment; sealing and signatures; copies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E provides that The correct approach is set out in Code E. This is important because as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-001",
+      "topicId": "topic-recording",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code E, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E sets out that The correct approach is set out in Code E. The other options are incorrect because as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-002",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code E require regarding When audio recording required; equipment; sealing and signatures; copies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E requires that The correct approach is set out in Code E. This ensures as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-ba-003",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to When audio recording required; equipment; sealing and signatures; copies., what is the best approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code E because Code E provides that as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-ba-004",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with When audio recording required; equipment; sealing and signatures; copies., which action is most appropriate given Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code E as Code E requires as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-005",
+      "topicId": "topic-recording",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code E, what is required regarding When audio recording required; equipment; sealing and signatures; copies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E provides that The correct approach is set out in Code E. This is important because as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-006",
+      "topicId": "topic-recording",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code E, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E sets out that The correct approach is set out in Code E. The other options are incorrect because as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-mcq-007",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code E require regarding When audio recording required; equipment; sealing and signatures; copies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code E requires that The correct approach is set out in Code E. This ensures as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-ba-008",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to When audio recording required; equipment; sealing and signatures; copies., what is the best approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code E because Code E provides that as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-ba-009",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with When audio recording required; equipment; sealing and signatures; copies., which action is most appropriate given Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code E as Code E requires as set out in when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-010",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. According to Code E, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code E requires that Follow the procedure set out in Code E. This is because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-011",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. What is the correct approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code E because Code E provides that as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-012",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. According to Code E, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code E requires that Follow the procedure set out in Code E. This is because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-013",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. What is the correct approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code E because Code E provides that as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-014",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. According to Code E, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code E requires that Follow the procedure set out in Code E. This is because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-015",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. What is the correct approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code E because Code E provides that as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-016",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. According to Code E, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code E requires that Follow the procedure set out in Code E. This is because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-017",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. What is the correct approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code E because Code E provides that as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-018",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. According to Code E, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code E requires that Follow the procedure set out in Code E. This is because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-scn-019",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving when audio recording required; equipment; sealing and signatures; copies.. The police are asking questions.. What is the correct approach under Code E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code E"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code E because Code E provides that as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-sa-020",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of Code E in relation to When audio recording required; equipment; sealing and signatures; copies..",
+      "expectedAnswerOutline": [
+        "Review Code E",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "Code E requires that Review Code E. Identify key requirements. Apply to the specific situation. Key points include: as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-sa-021",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "What are the main safeguards provided by Code E for When audio recording required; equipment; sealing and signatures; copies.?",
+      "expectedAnswerOutline": [
+        "Review Code E",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "Code E provides several safeguards: Review Code E. Identify key requirements. Apply to the specific situation. These are important because as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-sa-022",
+      "topicId": "topic-recording",
+      "difficulty": "advanced",
+      "type": "short_answer",
+      "stem": "Describe the procedure set out in Code E for When audio recording required; equipment; sealing and signatures; copies..",
+      "expectedAnswerOutline": [
+        "Review Code E",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "The procedure requires: Review Code E. Identify key requirements. Apply to the specific situation. This is set out in Code E to ensure as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    },
+    {
+      "id": "gen-u8-o1-a-sa-023",
+      "topicId": "topic-recording",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of Code E in relation to When audio recording required; equipment; sealing and signatures; copies..",
+      "expectedAnswerOutline": [
+        "Review Code E",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "Code E requires that Review Code E. Identify key requirements. Apply to the specific situation. Key points include: as required by when audio recording required; equipment; sealing and signatures; copies..",
+      "references": [
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        },
+        {
+          "instrument": "Code E",
+          "cite": "Code E para 3 (recording of interviews)",
+          "note": "https://www.gov.uk/government/publications/pace-codes-e-and-f-2018/pace-code-e-2018-accessible"
+        }
+      ],
+      "tags": [
+        "recording",
+        "code-e",
+        "audio"
+      ]
+    }
+  ]
+}

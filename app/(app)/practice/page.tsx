@@ -29,6 +29,8 @@ import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
 import { getPracticeTips, getReferenceSuggestions, isPaceCustodyTopic } from "@/lib/references";
 import { AuthoritiesPanel } from "@/components/AuthoritiesPanel";
+import { QuestionRenderer } from "@/components/questions/QuestionRenderer";
+import { useMemo } from "react";
 
 type PracticeMode = "quick" | "standard" | "long";
 type SessionState = "setup" | "active" | "review" | "complete";
@@ -69,12 +71,13 @@ function PracticeContent() {
   const [state, setState] = useState<SessionState>("setup");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | null>(null);
+  const [userAnswer, setUserAnswer] = useState<string>("");
   const [showFeedback, setShowFeedback] = useState(false);
-  const [answers, setAnswers] = useState<Record<number, { selected: string; correct: boolean }>>({});
+  const [answers, setAnswers] = useState<Record<number, { selected: string | string[]; correct: boolean; partial?: boolean }>>({});
   const [startTime, setStartTime] = useState<number>(0);
 
-  const topicMap = Object.fromEntries(topicsData.topics.map((t) => [t.id, t]));
+  const topicMap = useMemo(() => Object.fromEntries(topicsData.topics.map((t) => [t.id, t])), []);
   const currentQuestion = questions[currentIndex];
 
   const startSession = useCallback((selectedMode: PracticeMode) => {
@@ -91,43 +94,65 @@ function PracticeContent() {
     setMode(selectedMode);
     setCurrentIndex(0);
     setSelectedAnswer(null);
+    setUserAnswer("");
     setShowFeedback(false);
     setAnswers({});
     setStartTime(Date.now());
     setState("active");
   }, [topicFilter]);
 
-  const handleAnswer = (optionId: string) => {
+  const handleAnswerChange = useCallback((answer: string | string[]) => {
     if (showFeedback) return;
-    setSelectedAnswer(optionId);
-  };
+    setSelectedAnswer(answer);
+  }, [showFeedback]);
 
-  const submitAnswer = () => {
-    if (!selectedAnswer || !currentQuestion) return;
+  const submitAnswer = useCallback(() => {
+    if (!currentQuestion) return;
     
-    const isCorrect = currentQuestion.correct === selectedAnswer;
+    let isCorrect = false;
+    let partial = false;
 
+    if (currentQuestion.type === "mcq" || currentQuestion.type === "best-answer") {
+      // Single select
+      if (!selectedAnswer || typeof selectedAnswer !== "string") return;
+      isCorrect = currentQuestion.correct === selectedAnswer;
+    } else if (currentQuestion.type === "mcq_multi") {
+      // Multi-select
+      if (!selectedAnswer || !Array.isArray(selectedAnswer) || selectedAnswer.length === 0) return;
+      const correctAnswers = currentQuestion.correctAnswers || [];
+      const selectedSet = new Set(selectedAnswer);
+      const correctSet = new Set(correctAnswers);
+      
+      // Check if all correct are selected and no incorrect ones
+      const allCorrect = correctAnswers.every((ans) => selectedSet.has(ans as string));
+      const noIncorrect = selectedAnswer.every((ans) => correctSet.has(ans as "A" | "B" | "C" | "D"));
+      isCorrect = allCorrect && noIncorrect && selectedAnswer.length === correctAnswers.length;
+      
+      // Partial credit if some correct answers selected
+      partial = !isCorrect && correctAnswers.some((ans) => selectedSet.has(ans));
+    } else if (currentQuestion.type === "short_answer") {
+      // Short answer - always mark as correct for now (could add AI/ML evaluation later)
+      // For now, treat as correct if answer is provided
+      isCorrect = userAnswer.trim().length > 0;
+    } else {
+      // Fallback for other types
+      if (!selectedAnswer || typeof selectedAnswer !== "string") return;
+      isCorrect = currentQuestion.correct === selectedAnswer;
+    }
+
+    const answerValue = currentQuestion.type === "short_answer" ? userAnswer : (selectedAnswer ?? null);
     setAnswers((prev) => ({
       ...prev,
-      [currentIndex]: { selected: selectedAnswer, correct: isCorrect },
+      [currentIndex]: { selected: answerValue ?? "", correct: isCorrect, partial },
     }));
 
-    updateTopicProgress(currentQuestion.topicId, isCorrect);
+    // Update progress (treat partial as incorrect for now)
+    updateTopicProgress(currentQuestion.topicId, isCorrect, currentQuestion.tags);
     setShowFeedback(true);
-  };
+  }, [currentQuestion, selectedAnswer, userAnswer, currentIndex]);
 
-  const nextQuestion = () => {
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-      setSelectedAnswer(null);
-      setShowFeedback(false);
-    } else {
-      finishSession();
-    }
-  };
-
-  const finishSession = () => {
-    const correctCount = Object.values(answers).filter((a) => a.correct).length;
+  const finishSession = useCallback(() => {
+    const fullCorrect = Object.values(answers).filter((a) => a.correct).length;
     const duration = Math.round((Date.now() - startTime) / 1000);
     const topicsUsed = [...new Set(questions.map((q) => q.topicId))];
 
@@ -136,16 +161,46 @@ function PracticeContent() {
       date: new Date().toISOString(),
       mode,
       questionsAnswered: questions.length,
-      correctAnswers: correctCount,
+      correctAnswers: fullCorrect,
       topics: topicsUsed,
       duration,
     });
 
     setState("complete");
-  };
+  }, [answers, startTime, questions, mode]);
 
-  const correctCount = Object.values(answers).filter((a) => a.correct).length;
-  const score = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
+  const nextQuestion = useCallback(() => {
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+      setSelectedAnswer(null);
+      setUserAnswer("");
+      setShowFeedback(false);
+    } else {
+      finishSession();
+    }
+  }, [currentIndex, questions.length, finishSession]);
+
+  const correctCount = useMemo(() => {
+    return Object.values(answers).filter((a) => a.correct).length;
+  }, [answers]);
+  
+  const score = useMemo(() => {
+    if (questions.length === 0) return 0;
+    // Count partial as half correct
+    const partialCount = Object.values(answers).filter((a) => a.partial).length;
+    const fullCorrect = correctCount;
+    return Math.round(((fullCorrect + partialCount * 0.5) / questions.length) * 100);
+  }, [answers, questions.length, correctCount]);
+
+  // Memoize correctOption before conditional returns
+  const correctOption = useMemo(() => {
+    if (state === "active" && currentQuestion) {
+      if (currentQuestion.type === "mcq" || currentQuestion.type === "best-answer") {
+        return currentQuestion.options?.find((o) => o.id === currentQuestion.correct);
+      }
+    }
+    return null;
+  }, [state, currentQuestion]);
 
   // Auto-scroll to feedback when shown
   useEffect(() => {
@@ -217,10 +272,6 @@ function PracticeContent() {
       (!currentQuestion.references || currentQuestion.references.length === 0) &&
       effectiveReferences.length > 0;
 
-    const correctOption = currentQuestion.options?.find(
-      (o) => o.id === currentQuestion.correct
-    );
-
     return (
       <div data-testid="practice-active">
         {/* Progress */}
@@ -246,64 +297,15 @@ function PracticeContent() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-3">
-              {currentQuestion.options?.map((option) => {
-                const isSelected = selectedAnswer === option.id;
-                const showResult = showFeedback;
-                const isCorrect = currentQuestion.correct === option.id;
-
-                return (
-                  <button
-                    key={option.id}
-                    onClick={() => handleAnswer(option.id)}
-                    disabled={showFeedback}
-                    className={`w-full p-4 rounded-lg border text-left transition-all ${
-                      showResult
-                        ? isCorrect
-                          ? "border-success bg-success/10"
-                          : isSelected
-                          ? "border-destructive bg-destructive/10"
-                          : "border-border"
-                        : isSelected
-                        ? "border-primary bg-primary/5"
-                        : "border-border hover:border-primary/50"
-                    }`}
-                    data-testid={`option-${option.id}`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={`h-6 w-6 rounded-full border-2 flex items-center justify-center ${
-                          showResult
-                            ? isCorrect
-                              ? "border-success bg-success text-success-foreground"
-                              : isSelected
-                              ? "border-destructive bg-destructive text-destructive-foreground"
-                              : "border-border"
-                            : isSelected
-                            ? "border-primary bg-primary text-primary-foreground"
-                            : "border-border"
-                        }`}
-                      >
-                        {showResult && isCorrect && <CheckCircle className="h-4 w-4" />}
-                        {showResult && isSelected && !isCorrect && <XCircle className="h-4 w-4" />}
-                      </div>
-                      <span className="min-w-0 flex-1 break-words">{option.text}</span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-
-            {!showFeedback && (
-              <Button
-                className="w-full mt-6"
-                disabled={!selectedAnswer}
-                onClick={submitAnswer}
-                data-testid="submit-answer-btn"
-              >
-                Submit Answer
-              </Button>
-            )}
+            <QuestionRenderer
+              question={currentQuestion}
+              selectedAnswer={selectedAnswer}
+              showFeedback={showFeedback}
+              onAnswerChange={handleAnswerChange}
+              onSubmit={submitAnswer}
+              userAnswer={userAnswer}
+              onUserAnswerChange={setUserAnswer}
+            />
           </CardContent>
         </Card>
 
@@ -319,15 +321,33 @@ function PracticeContent() {
                 )}
                 <div>
                   <h3 className="font-semibold mb-1">
-                    {answers[currentIndex]?.correct ? "Correct!" : "Incorrect"}
+                    {answers[currentIndex]?.correct 
+                      ? "Correct!" 
+                      : answers[currentIndex]?.partial 
+                      ? "Partially Correct" 
+                      : "Incorrect"}
                   </h3>
-                  {!answers[currentIndex]?.correct && currentQuestion.correct ? (
+                  {!answers[currentIndex]?.correct && !answers[currentIndex]?.partial && (
                     <div className="mb-2 text-base" data-testid="correct-answer">
-                      <span className="font-semibold">Correct answer:</span>{" "}
-                      <span className="font-semibold">{currentQuestion.correct}</span>
-                      {correctOption ? <span className="text-muted-foreground"> — {correctOption.text}</span> : null}
+                      {currentQuestion.type === "mcq" || currentQuestion.type === "best-answer" ? (
+                        <>
+                          <span className="font-semibold">Correct answer:</span>{" "}
+                          <span className="font-semibold">{currentQuestion.correct}</span>
+                          {correctOption ? <span className="text-muted-foreground"> — {correctOption.text}</span> : null}
+                        </>
+                      ) : currentQuestion.type === "mcq_multi" ? (
+                        <>
+                          <span className="font-semibold">Correct answers:</span>{" "}
+                          <span className="font-semibold">{(currentQuestion.correctAnswers || []).join(", ")}</span>
+                        </>
+                      ) : null}
                     </div>
-                  ) : null}
+                  )}
+                  {answers[currentIndex]?.partial && (
+                    <div className="mb-2 text-base text-warning">
+                      You selected some correct answers, but not all. Review the expected answers below.
+                    </div>
+                  )}
                   <p className="text-muted-foreground">{currentQuestion.explanation}</p>
                 </div>
               </div>

@@ -1,0 +1,396 @@
+{
+  "questions": [
+    {
+      "id": "prob-ext-001",
+      "topicId": "probationary-requirements",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is required for portfolio building during the probationary period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No portfolio is required during probation"
+        },
+        {
+          "id": "B",
+          "text": "Building a portfolio of case summaries, reflective accounts, and evidence of competence, with supervisor sign-off"
+        },
+        {
+          "id": "C",
+          "text": "Only collecting case numbers"
+        },
+        {
+          "id": "D",
+          "text": "Only supervisor sign-off without evidence"
+        }
+      ],
+      "correct": "B",
+      "explanation": "During the probationary period, PSRs must build a portfolio demonstrating competence. This includes case summaries, reflective accounts of learning and development, evidence of work completed, and supervisor sign-off. The portfolio is submitted as part of the assessment process.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "prob-ext-002",
+      "topicId": "probationary-structure",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "How long is the probationary period for PSRs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 months"
+        },
+        {
+          "id": "B",
+          "text": "12 months"
+        },
+        {
+          "id": "C",
+          "text": "18 months"
+        },
+        {
+          "id": "D",
+          "text": "24 months"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The probationary period for PSRs is 12 months. During this period, PSRs must work under supervision, are restricted from own-client work, and must build a portfolio. After successful completion of all requirements, they can transition to full registration.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "laa",
+        "requirements"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-mcq-000",
+      "topicId": "topic-probationary",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-mcq-001",
+      "topicId": "topic-probationary",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-mcq-002",
+      "topicId": "topic-probationary",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does LAA Arrangements require regarding Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements requires that The correct approach is set out in LAA Arrangements. This ensures as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-ba-003",
+      "topicId": "topic-probationary",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building., what is the best approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in LAA Arrangements because LAA Arrangements provides that as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-ba-004",
+      "topicId": "topic-probationary",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building., which action is most appropriate given LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in LAA Arrangements as LAA Arrangements requires as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-mcq-005",
+      "topicId": "topic-probationary",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-c-mcq-006",
+      "topicId": "topic-probationary",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in understand probationary status: 12-month period, supervision requirements, own-client work restrictions, portfolio building..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    }
+  ]
+}

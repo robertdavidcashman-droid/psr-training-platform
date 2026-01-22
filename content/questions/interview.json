@@ -7,18 +7,39 @@
       "type": "mcq",
       "stem": "Which is the best goal for a pre‑interview consultation?",
       "options": [
-        { "id": "A", "text": "Rehearse a story that cannot be challenged" },
-        { "id": "B", "text": "Take instructions, assess risks, review disclosure, and agree a strategy" },
-        { "id": "C", "text": "Tell the police what your client will say" },
-        { "id": "D", "text": "Avoid discussing the allegation to reduce stress" }
+        {
+          "id": "A",
+          "text": "Rehearse a story that cannot be challenged"
+        },
+        {
+          "id": "B",
+          "text": "Take instructions, assess risks, review disclosure, and agree a strategy"
+        },
+        {
+          "id": "C",
+          "text": "Tell the police what your client will say"
+        },
+        {
+          "id": "D",
+          "text": "Avoid discussing the allegation to reduce stress"
+        }
       ],
       "correct": "B",
       "explanation": "A professional consultation is about understanding the account, clarifying disclosure, and agreeing a lawful, defensible strategy. You should not coach or fabricate.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 s.58 (right to legal advice)" },
-        { "instrument": "Code C", "cite": "Code C — consultation and interview safeguards (Check: paragraph)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (right to legal advice)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C — consultation and interview safeguards (Check: paragraph)"
+        }
       ],
-      "tags": ["interview", "consultation"]
+      "tags": [
+        "interview",
+        "consultation"
+      ]
     },
     {
       "id": "int-002",
@@ -27,17 +48,39 @@
       "type": "mcq",
       "stem": "During interview, what is generally your role as a legal representative?",
       "options": [
-        { "id": "A", "text": "Answer questions on the client’s behalf as a default" },
-        { "id": "B", "text": "Observe, take notes, advise in breaks, and intervene when questioning is improper or safeguards are breached" },
-        { "id": "C", "text": "Tell the client what to say during every question" },
-        { "id": "D", "text": "Act as an additional investigator for the police" }
+        {
+          "id": "A",
+          "text": "Answer questions on the client’s behalf as a default"
+        },
+        {
+          "id": "B",
+          "text": "Observe, take notes, advise in breaks, and intervene when questioning is improper or safeguards are breached"
+        },
+        {
+          "id": "C",
+          "text": "Tell the client what to say during every question"
+        },
+        {
+          "id": "D",
+          "text": "Act as an additional investigator for the police"
+        }
       ],
       "correct": "B",
       "explanation": "You support fairness and client understanding. You do not provide evidence; you advise and intervene appropriately to protect rights and maintain integrity.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — conduct of interviews / legal advice (Check: paragraph)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — conduct of interviews / legal advice (Check: paragraph)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "professionalism"]
+      "tags": [
+        "interview",
+        "professionalism"
+      ]
     },
     {
       "id": "int-003",
@@ -46,18 +89,39 @@
       "type": "mcq",
       "stem": "Which situation most strongly justifies an intervention during interview?",
       "options": [
-        { "id": "A", "text": "The officer asks short questions" },
-        { "id": "B", "text": "The officer asks leading questions that assume undisclosed facts or becomes oppressive" },
-        { "id": "C", "text": "The officer offers the client water" },
-        { "id": "D", "text": "The interview is being recorded" }
+        {
+          "id": "A",
+          "text": "The officer asks short questions"
+        },
+        {
+          "id": "B",
+          "text": "The officer asks leading questions that assume undisclosed facts or becomes oppressive"
+        },
+        {
+          "id": "C",
+          "text": "The officer offers the client water"
+        },
+        {
+          "id": "D",
+          "text": "The interview is being recorded"
+        }
       ],
       "correct": "B",
       "explanation": "Interventions should focus on fairness and safeguards: misleading assumptions, oppressive tone, failure to disclose what is being put, or breaches of required protections.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — interview standards and fairness (Check: paragraph)" },
-        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — interview standards and fairness (Check: paragraph)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (fairness)"
+        }
       ],
-      "tags": ["interview", "fairness"]
+      "tags": [
+        "interview",
+        "fairness"
+      ]
     },
     {
       "id": "int-004",
@@ -66,18 +130,39 @@
       "type": "mcq",
       "stem": "A client is exhausted and struggling to concentrate. What is the best intervention?",
       "options": [
-        { "id": "A", "text": "Proceed quickly to finish the interview" },
-        { "id": "B", "text": "Request a break and, if needed, raise fitness/fairness concerns with custody" },
-        { "id": "C", "text": "Tell the client to keep going no matter what" },
-        { "id": "D", "text": "Answer for the client to speed it up" }
+        {
+          "id": "A",
+          "text": "Proceed quickly to finish the interview"
+        },
+        {
+          "id": "B",
+          "text": "Request a break and, if needed, raise fitness/fairness concerns with custody"
+        },
+        {
+          "id": "C",
+          "text": "Tell the client to keep going no matter what"
+        },
+        {
+          "id": "D",
+          "text": "Answer for the client to speed it up"
+        }
       ],
       "correct": "B",
       "explanation": "Breaks are legitimate safeguards. If the client cannot participate meaningfully, continuing may be unfair and later challengeable; raise and record concerns.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — breaks, rest, and interview safeguards (Check: paragraph)" },
-        { "instrument": "PACE", "cite": "PACE 1984 s.78 (fairness) (if admissibility later arises)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — breaks, rest, and interview safeguards (Check: paragraph)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (fairness) (if admissibility later arises)"
+        }
       ],
-      "tags": ["interview", "vulnerability"]
+      "tags": [
+        "interview",
+        "vulnerability"
+      ]
     },
     {
       "id": "int-005",
@@ -86,17 +171,39 @@
       "type": "mcq",
       "stem": "Your client asks mid‑interview, “Should I answer this?” What is usually the best response?",
       "options": [
-        { "id": "A", "text": "Answer the question for them" },
-        { "id": "B", "text": "Request a break to advise privately if needed" },
-        { "id": "C", "text": "Signal with your hands what they should say" },
-        { "id": "D", "text": "Tell them to always say 'no comment'" }
+        {
+          "id": "A",
+          "text": "Answer the question for them"
+        },
+        {
+          "id": "B",
+          "text": "Request a break to advise privately if needed"
+        },
+        {
+          "id": "C",
+          "text": "Signal with your hands what they should say"
+        },
+        {
+          "id": "D",
+          "text": "Tell them to always say 'no comment'"
+        }
       ],
       "correct": "B",
       "explanation": "If advice is needed during interview, a break is the appropriate mechanism. Coaching through signals or speaking for the client is improper.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — legal advice during interview / breaks (Check: paragraph)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — legal advice during interview / breaks (Check: paragraph)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58"
+        }
       ],
-      "tags": ["interview", "legal-advice"]
+      "tags": [
+        "interview",
+        "legal-advice"
+      ]
     },
     {
       "id": "int-006",
@@ -105,17 +212,39 @@
       "type": "mcq",
       "stem": "Which is the most useful way to prepare a client for interview without coaching?",
       "options": [
-        { "id": "A", "text": "Write a script for them to memorize" },
-        { "id": "B", "text": "Explain the process, likely question areas, and how to listen carefully and avoid guessing" },
-        { "id": "C", "text": "Tell them to deny everything regardless of truth" },
-        { "id": "D", "text": "Tell them to match the police’s theory even if wrong" }
+        {
+          "id": "A",
+          "text": "Write a script for them to memorize"
+        },
+        {
+          "id": "B",
+          "text": "Explain the process, likely question areas, and how to listen carefully and avoid guessing"
+        },
+        {
+          "id": "C",
+          "text": "Tell them to deny everything regardless of truth"
+        },
+        {
+          "id": "D",
+          "text": "Tell them to match the police’s theory even if wrong"
+        }
       ],
       "correct": "B",
       "explanation": "You can prepare by explaining process and risks, encouraging careful listening and avoiding speculation, and agreeing a lawful strategy. You should not supply answers.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Interview preparation without coaching (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Interview preparation without coaching (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "prep"]
+      "tags": [
+        "interview",
+        "prep"
+      ]
     },
     {
       "id": "int-007",
@@ -124,18 +253,39 @@
       "type": "mcq",
       "stem": "Which pitfall most commonly harms clients in interview?",
       "options": [
-        { "id": "A", "text": "Asking for a short break to think" },
-        { "id": "B", "text": "Guessing details or filling gaps when they are unsure" },
-        { "id": "C", "text": "Asking for clarification" },
-        { "id": "D", "text": "Saying they need to check a timeline" }
+        {
+          "id": "A",
+          "text": "Asking for a short break to think"
+        },
+        {
+          "id": "B",
+          "text": "Guessing details or filling gaps when they are unsure"
+        },
+        {
+          "id": "C",
+          "text": "Asking for clarification"
+        },
+        {
+          "id": "D",
+          "text": "Saying they need to check a timeline"
+        }
       ],
       "correct": "B",
       "explanation": "Speculation creates inconsistencies that can be used against the client later. Encourage clarity: if they don’t know or can’t remember, avoid guessing.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Interview best practice: avoid speculation (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Interview best practice: avoid speculation (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["interview", "pitfalls"]
+      "tags": [
+        "interview",
+        "pitfalls"
+      ]
     }
   ]
 }
-

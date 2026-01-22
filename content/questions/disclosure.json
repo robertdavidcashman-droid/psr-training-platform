@@ -7,17 +7,39 @@
       "type": "mcq",
       "stem": "Before interview, what is a practical way to improve disclosure quality without being confrontational?",
       "options": [
-        { "id": "A", "text": "Demand 'everything you have' without specifics" },
-        { "id": "B", "text": "Ask focused questions: what offence is alleged, key evidence relied upon, and what the interview will cover" },
-        { "id": "C", "text": "Refuse to speak to the officer at all" },
-        { "id": "D", "text": "Tell the client to guess what the allegation is" }
+        {
+          "id": "A",
+          "text": "Demand 'everything you have' without specifics"
+        },
+        {
+          "id": "B",
+          "text": "Ask focused questions: what offence is alleged, key evidence relied upon, and what the interview will cover"
+        },
+        {
+          "id": "C",
+          "text": "Refuse to speak to the officer at all"
+        },
+        {
+          "id": "D",
+          "text": "Tell the client to guess what the allegation is"
+        }
       ],
       "correct": "B",
       "explanation": "Targeted disclosure requests are more effective. They help you advise and narrow the issues while creating a clear record of what was (and wasn’t) disclosed.",
       "references": [
-        { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)" }
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["disclosure", "pre-interview"]
+      "tags": [
+        "disclosure",
+        "pre-interview"
+      ]
     },
     {
       "id": "disc-002",
@@ -26,17 +48,39 @@
       "type": "mcq",
       "stem": "If disclosure remains minimal, what is the best way to protect the client from later unfair criticism of their interview stance?",
       "options": [
-        { "id": "A", "text": "Say nothing about disclosure limits" },
-        { "id": "B", "text": "Record the disclosure limitations and your requests in writing/notes (and where appropriate, ensure the custody record reflects it)" },
-        { "id": "C", "text": "Insult the officer to pressure them" },
-        { "id": "D", "text": "Always advise a full account no matter what" }
+        {
+          "id": "A",
+          "text": "Say nothing about disclosure limits"
+        },
+        {
+          "id": "B",
+          "text": "Record the disclosure limitations and your requests in writing/notes (and where appropriate, ensure the custody record reflects it)"
+        },
+        {
+          "id": "C",
+          "text": "Insult the officer to pressure them"
+        },
+        {
+          "id": "D",
+          "text": "Always advise a full account no matter what"
+        }
       ],
       "correct": "B",
       "explanation": "A clear record of what was disclosed and what was requested helps show the basis on which advice was given, and can support later fairness arguments if needed.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Record keeping: advice basis and disclosure limitations (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Record keeping: advice basis and disclosure limitations (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["record-keeping", "strategy"]
+      "tags": [
+        "record-keeping",
+        "strategy"
+      ]
     },
     {
       "id": "disc-003",
@@ -45,17 +89,39 @@
       "type": "mcq",
       "stem": "Which interview strategy is most defensible as a default when disclosure is limited?",
       "options": [
-        { "id": "A", "text": "A blanket 'no comment' in every case" },
-        { "id": "B", "text": "A blanket full account in every case" },
-        { "id": "C", "text": "A tailored strategy based on allegations, disclosure, and the client’s account (including considering a prepared statement)" },
-        { "id": "D", "text": "Let the police decide what the client should say" }
+        {
+          "id": "A",
+          "text": "A blanket 'no comment' in every case"
+        },
+        {
+          "id": "B",
+          "text": "A blanket full account in every case"
+        },
+        {
+          "id": "C",
+          "text": "A tailored strategy based on allegations, disclosure, and the client’s account (including considering a prepared statement)"
+        },
+        {
+          "id": "D",
+          "text": "Let the police decide what the client should say"
+        }
       ],
       "correct": "C",
       "explanation": "There is no one-size-fits-all. A tailored approach is professional and easier to justify later because it is grounded in the case facts and risks.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Interview strategy and advising under limited disclosure (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Interview strategy and advising under limited disclosure (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["strategy", "prepared-statement"]
+      "tags": [
+        "strategy",
+        "prepared-statement"
+      ]
     },
     {
       "id": "disc-004",
@@ -64,17 +130,39 @@
       "type": "mcq",
       "stem": "What is a key benefit of a prepared statement (when appropriate) under limited disclosure?",
       "options": [
-        { "id": "A", "text": "It guarantees no charge" },
-        { "id": "B", "text": "It allows the client to put a consistent account forward while controlling risk and avoiding improvised answers" },
-        { "id": "C", "text": "It replaces the need for interview attendance" },
-        { "id": "D", "text": "It forces police to disclose everything" }
+        {
+          "id": "A",
+          "text": "It guarantees no charge"
+        },
+        {
+          "id": "B",
+          "text": "It allows the client to put a consistent account forward while controlling risk and avoiding improvised answers"
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for interview attendance"
+        },
+        {
+          "id": "D",
+          "text": "It forces police to disclose everything"
+        }
       ],
       "correct": "B",
       "explanation": "A prepared statement can put forward key points (e.g., denial, limited admissions, alternative explanation) without the client being drawn into speculative detail. Whether it’s appropriate depends on the case.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Prepared statements and interview strategy (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Prepared statements and interview strategy (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.8-6.10 (role of legal adviser in interview)"
+        }
       ],
-      "tags": ["prepared-statement", "interview"]
+      "tags": [
+        "prepared-statement",
+        "interview"
+      ]
     },
     {
       "id": "disc-005",
@@ -83,17 +171,39 @@
       "type": "mcq",
       "stem": "Which disclosure request is most likely to be considered 'targeted' rather than a blanket demand?",
       "options": [
-        { "id": "A", "text": "“Give me your whole file.”" },
-        { "id": "B", "text": "“Tell me exactly what my client is alleged to have done and what evidence you rely on for that allegation.”" },
-        { "id": "C", "text": "“We are refusing interview until you disclose everything.”" },
-        { "id": "D", "text": "“We need disclosure because it’s unfair otherwise.”" }
+        {
+          "id": "A",
+          "text": "“Give me your whole file.”"
+        },
+        {
+          "id": "B",
+          "text": "“Tell me exactly what my client is alleged to have done and what evidence you rely on for that allegation.”"
+        },
+        {
+          "id": "C",
+          "text": "“We are refusing interview until you disclose everything.”"
+        },
+        {
+          "id": "D",
+          "text": "“We need disclosure because it’s unfair otherwise.”"
+        }
       ],
       "correct": "B",
       "explanation": "Targeted requests focus on what you need to understand the allegation and advise. They are more likely to produce usable disclosure quickly than blanket demands.",
       "references": [
-        { "instrument": "CPIA", "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)" }
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework — high level) (Check: applicability)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["disclosure", "requests"]
+      "tags": [
+        "disclosure",
+        "requests"
+      ]
     },
     {
       "id": "disc-006",
@@ -102,17 +212,39 @@
       "type": "mcq",
       "stem": "A client wants to answer some questions but avoid others due to limited disclosure. What is the most professional way to structure that approach?",
       "options": [
-        { "id": "A", "text": "Answer randomly and refuse others without explanation" },
-        { "id": "B", "text": "Agree a clear strategy: answer what can safely be answered, and for the rest use a consistent rationale linked to lack of disclosure" },
-        { "id": "C", "text": "Refuse to attend interview because disclosure is limited" },
-        { "id": "D", "text": "Let the police decide which questions are safe" }
+        {
+          "id": "A",
+          "text": "Answer randomly and refuse others without explanation"
+        },
+        {
+          "id": "B",
+          "text": "Agree a clear strategy: answer what can safely be answered, and for the rest use a consistent rationale linked to lack of disclosure"
+        },
+        {
+          "id": "C",
+          "text": "Refuse to attend interview because disclosure is limited"
+        },
+        {
+          "id": "D",
+          "text": "Let the police decide which questions are safe"
+        }
       ],
       "correct": "B",
       "explanation": "A structured approach is easier to justify and reduces the risk of inconsistent or speculative answers. It also creates a clear record of how disclosure limitations affected the strategy.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Interview strategy under limited disclosure (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Interview strategy under limited disclosure (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["strategy", "interview"]
+      "tags": [
+        "strategy",
+        "interview"
+      ]
     },
     {
       "id": "disc-007",
@@ -121,17 +253,39 @@
       "type": "mcq",
       "stem": "If police say “We can’t disclose anything before interview,” what is a reasonable response?",
       "options": [
-        { "id": "A", "text": "Accept it without further questions" },
-        { "id": "B", "text": "Ask at least for the allegation outline and what evidence category they rely on (e.g., witness, CCTV), and record their response" },
-        { "id": "C", "text": "Threaten to sue the officer personally" },
-        { "id": "D", "text": "Tell the client to confess to end the matter" }
+        {
+          "id": "A",
+          "text": "Accept it without further questions"
+        },
+        {
+          "id": "B",
+          "text": "Ask at least for the allegation outline and what evidence category they rely on (e.g., witness, CCTV), and record their response"
+        },
+        {
+          "id": "C",
+          "text": "Threaten to sue the officer personally"
+        },
+        {
+          "id": "D",
+          "text": "Tell the client to confess to end the matter"
+        }
       ],
       "correct": "B",
       "explanation": "Even where full detail is not provided, you can seek a basic outline and evidence type to advise responsibly. Recording what was said helps later.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Documenting disclosure requests and limitations (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Documenting disclosure requests and limitations (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["disclosure", "record-keeping"]
+      "tags": [
+        "disclosure",
+        "record-keeping"
+      ]
     },
     {
       "id": "disc-008",
@@ -140,18 +294,171 @@
       "type": "mcq",
       "stem": "Which pitfall most often makes a disclosure-based strategy fail in practice?",
       "options": [
-        { "id": "A", "text": "Not writing anything down" },
-        { "id": "B", "text": "Making strategy decisions without properly understanding the allegation and available disclosure" },
-        { "id": "C", "text": "Asking police for clarification" },
-        { "id": "D", "text": "Taking a break to advise the client" }
+        {
+          "id": "A",
+          "text": "Not writing anything down"
+        },
+        {
+          "id": "B",
+          "text": "Making strategy decisions without properly understanding the allegation and available disclosure"
+        },
+        {
+          "id": "C",
+          "text": "Asking police for clarification"
+        },
+        {
+          "id": "D",
+          "text": "Taking a break to advise the client"
+        }
       ],
       "correct": "B",
       "explanation": "Poor strategy usually comes from poor information: not clarifying the allegation/disclosure and then advising in a vacuum. Focus on understanding first, then advising.",
       "references": [
-        { "instrument": "LAA Guidance", "cite": "Advising: base decisions on allegation/disclosure (Check: guidance)" }
+        {
+          "instrument": "LAA Guidance",
+          "cite": "Advising: base decisions on allegation/disclosure (Check: guidance)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)"
+        }
       ],
-      "tags": ["strategy", "pitfalls"]
+      "tags": [
+        "strategy",
+        "pitfalls"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-a-mcq-000",
+      "topicId": "disclosure-advance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Nature and extent of advance disclosure; strategic use; limitations and requests.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in nature and extent of advance disclosure; strategic use; limitations and requests..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework)",
+          "note": "https://www.legislation.gov.uk/ukpga/1996/25/contents"
+        }
+      ],
+      "tags": [
+        "disclosure",
+        "preparation",
+        "strategy"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-a-mcq-001",
+      "topicId": "disclosure-advance",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in nature and extent of advance disclosure; strategic use; limitations and requests..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework)",
+          "note": "https://www.legislation.gov.uk/ukpga/1996/25/contents"
+        }
+      ],
+      "tags": [
+        "disclosure",
+        "preparation",
+        "strategy"
+      ]
+    },
+    {
+      "id": "gen-u5-o1-a-mcq-002",
+      "topicId": "disclosure-advance",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Nature and extent of advance disclosure; strategic use; limitations and requests.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in nature and extent of advance disclosure; strategic use; limitations and requests..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 11.1A (pre-interview disclosure)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "CPIA",
+          "cite": "CPIA 1996 (disclosure framework)",
+          "note": "https://www.legislation.gov.uk/ukpga/1996/25/contents"
+        }
+      ],
+      "tags": [
+        "disclosure",
+        "preparation",
+        "strategy"
+      ]
     }
   ]
 }
-

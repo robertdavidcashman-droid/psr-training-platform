@@ -1,0 +1,750 @@
+{
+  "questions": [
+    {
+      "id": "cit-001",
+      "topicId": "cit-scenarios",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "During the initial DSCC call, what information should you gather to triage the case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the client's name"
+        },
+        {
+          "id": "B",
+          "text": "Client name, alleged offence, custody location, time limits, vulnerability issues, and interview timing"
+        },
+        {
+          "id": "C",
+          "text": "Only the offence type"
+        },
+        {
+          "id": "D",
+          "text": "You don't need to gather information—just attend"
+        }
+      ],
+      "correct": "B",
+      "explanation": "During the initial DSCC call, you should gather key information to triage: client name, alleged offence, custody location, time limits (relevant time, detention limits), any vulnerability issues, and whether an interview is planned. This helps you prioritise, prepare, and identify urgent issues requiring immediate attention.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "cit",
+        "triage",
+        "dscc"
+      ]
+    },
+    {
+      "id": "cit-002",
+      "topicId": "cit-scenarios",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "You arrive at custody after the initial DSCC call. What should be your first steps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Go straight to interview"
+        },
+        {
+          "id": "B",
+          "text": "Inspect the custody record, identify vulnerabilities, request disclosure, and assess the situation before taking instructions"
+        },
+        {
+          "id": "C",
+          "text": "Only speak to the police"
+        },
+        {
+          "id": "D",
+          "text": "Wait for the police to tell you what to do"
+        }
+      ],
+      "correct": "B",
+      "explanation": "On arrival, your first steps should be: inspect the custody record (authorisation, reviews, time limits, rights given), identify any vulnerabilities, request disclosure, and assess the situation. Only then should you take instructions from the client. This ensures you have the full picture before advising.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — assessment structure"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "cit-003",
+      "topicId": "cit-scenarios",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "After interview, your client is bailed with conditions. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nothing—bail is granted"
+        },
+        {
+          "id": "B",
+          "text": "Make representations on conditions if inappropriate, advise the client on bail conditions and consequences of breach, and complete your records"
+        },
+        {
+          "id": "C",
+          "text": "Only complete records"
+        },
+        {
+          "id": "D",
+          "text": "Only advise on conditions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "After interview and bail decision, you should: make representations on conditions if they are inappropriate or disproportionate, advise the client clearly on what the conditions mean and the consequences of breach, ensure the client understands their obligations, and complete your attendance notes and records. This is part of post-interview outcome management.",
+      "references": [
+        {
+          "instrument": "Bail Act",
+          "cite": "Bail Act 1976 (bail representations)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.47 (bail after arrest)"
+        }
+      ],
+      "tags": [
+        "cit",
+        "post-interview",
+        "outcome",
+        "bail",
+        "conditions"
+      ]
+    },
+    {
+      "id": "cit-004",
+      "topicId": "cit-scenarios",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "Your client is released under investigation (RUI) after interview. What advice should you give?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RUI means the case is closed—no further action"
+        },
+        {
+          "id": "B",
+          "text": "Explain that investigation continues, they can be re-arrested, they should not discuss the case with others, and they should contact you if re-arrested"
+        },
+        {
+          "id": "C",
+          "text": "Only explain they are free to go"
+        },
+        {
+          "id": "D",
+          "text": "No advice is needed for RUI"
+        }
+      ],
+      "correct": "B",
+      "explanation": "RUI means the investigation continues without bail conditions. You must advise: the case is not closed, they can be re-arrested if further evidence emerges, they should not discuss the case with others (especially co-suspects), they should contact you immediately if re-arrested, and they should keep you informed of any developments. This is crucial client care.",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37(7) (release without bail)"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — assessment structure"
+        }
+      ],
+      "tags": [
+        "cit",
+        "post-interview",
+        "outcome",
+        "rui",
+        "release",
+        "investigation"
+      ]
+    },
+    {
+      "id": "cit-005",
+      "topicId": "cit-scenarios",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What should be included in your attendance notes after a CIT scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the client's name and offence"
+        },
+        {
+          "id": "B",
+          "text": "Client details, time of arrival, custody record inspection, disclosure received, instructions taken, advice given, interview attendance, interventions made, outcome, and any issues identified"
+        },
+        {
+          "id": "C",
+          "text": "Only the outcome"
+        },
+        {
+          "id": "D",
+          "text": "Only if something went wrong"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Attendance notes should be comprehensive and contemporaneous, including: client details, time of arrival, what you inspected (custody record), disclosure received, instructions taken, advice given, interview attendance and any interventions, outcome (bail/RUI/charge), and any issues or concerns. This is essential for portfolio building and professional record-keeping.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2 (custody records)"
+        }
+      ],
+      "tags": [
+        "cit",
+        "post-interview",
+        "outcome",
+        "notes",
+        "record-keeping",
+        "documentation"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-000",
+      "topicId": "topic-cit",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-001",
+      "topicId": "topic-cit",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-002",
+      "topicId": "topic-cit",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-ba-003",
+      "topicId": "topic-cit",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request., what is the best approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code C because Code C provides that as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-ba-004",
+      "topicId": "topic-cit",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request., which action is most appropriate given Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code C as Code C requires as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-005",
+      "topicId": "topic-cit",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-006",
+      "topicId": "topic-cit",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-mcq-007",
+      "topicId": "topic-cit",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-ba-008",
+      "topicId": "topic-cit",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request., what is the best approach under Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code C because Code C provides that as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-ba-009",
+      "topicId": "topic-cit",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request., which action is most appropriate given Code C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code C as Code C requires as set out in custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-b-scn-010",
+      "topicId": "topic-cit",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request.. The police are asking questions.. According to Code C, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code C requires that Follow the procedure set out in Code C. This is because as required by custody record inspection; identifying vulnerabilities; requesting safeguards; disclosure request..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2-3 (custody procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "cit",
+        "custody",
+        "initial-steps"
+      ]
+    },
+    {
+      "id": "gen-u14-o1-e-mcq-000",
+      "topicId": "topic-cit",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Bail Act, what is required regarding Bail representations; advising on outcomes; follow-up steps; record completion.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Bail Act"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Bail Act provides that The correct approach is set out in Bail Act. This is important because as set out in bail representations; advising on outcomes; follow-up steps; record completion..",
+      "references": [
+        {
+          "instrument": "Bail Act",
+          "cite": "Bail Act 1976 (bail representations)",
+          "note": "https://www.legislation.gov.uk/ukpga/1976/63"
+        },
+        {
+          "instrument": "Bail Act",
+          "cite": "Bail Act 1976 (bail representations)",
+          "note": "https://www.legislation.gov.uk/ukpga/1976/63"
+        }
+      ],
+      "tags": [
+        "cit",
+        "post-interview",
+        "outcome"
+      ]
+    }
+  ]
+}

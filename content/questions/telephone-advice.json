@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "id": "tel-001",
+      "topicId": "telephone-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When can telephone advice be provided instead of attendance at the police station?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always, if the client prefers it"
+        },
+        {
+          "id": "B",
+          "text": "Only for summary-only offences where the client is not vulnerable and does not request attendance"
+        },
+        {
+          "id": "C",
+          "text": "Never—attendance is always required"
+        },
+        {
+          "id": "D",
+          "text": "Only if the police agree"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Telephone advice can be provided for summary-only offences where the client is not vulnerable and does not request attendance. For indictable offences, vulnerable clients, or where the client requests attendance, you should attend. The decision should be based on the client's needs and the nature of the case.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "tel-002",
+      "topicId": "telephone-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A client is arrested for a summary-only offence. They are not vulnerable. The DSCC contacts you for telephone advice. What should you consider?",
+      "options": [
+        {
+          "id": "A",
+          "text": "You must always attend for any arrest"
+        },
+        {
+          "id": "B",
+          "text": "You can provide telephone advice if appropriate, but must assess whether attendance is needed based on the circumstances"
+        },
+        {
+          "id": "C",
+          "text": "Telephone advice is never appropriate"
+        },
+        {
+          "id": "D",
+          "text": "Only provide telephone advice if the police insist"
+        }
+      ],
+      "correct": "B",
+      "explanation": "For summary-only offences with non-vulnerable clients, telephone advice may be appropriate. However, you must assess the circumstances: complexity, client's understanding, whether they request attendance, and whether there are any issues requiring your presence. The decision should prioritise the client's best interests.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "tel-003",
+      "topicId": "telephone-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the role of the DSCC in the telephone advice process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The DSCC provides the legal advice directly to the client"
+        },
+        {
+          "id": "B",
+          "text": "The DSCC contacts a duty solicitor who then provides advice (by phone or attendance)"
+        },
+        {
+          "id": "C",
+          "text": "The DSCC only handles own-client arrangements"
+        },
+        {
+          "id": "D",
+          "text": "The DSCC is not involved in telephone advice"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The DSCC (Defence Solicitor Call Centre) operates the duty solicitor scheme. When a client requests legal advice, the DSCC contacts a duty solicitor from the rota. That solicitor then provides advice, either by telephone (if appropriate) or by attending the police station. The DSCC facilitates the connection but does not provide advice itself.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "tel-004",
+      "topicId": "telephone-advice",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A client requests telephone advice for an indictable offence. They are not vulnerable. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provide telephone advice as requested"
+        },
+        {
+          "id": "B",
+          "text": "Explain that for indictable offences, attendance is generally required, and arrange to attend"
+        },
+        {
+          "id": "C",
+          "text": "Provide telephone advice but ensure a colleague attends"
+        },
+        {
+          "id": "D",
+          "text": "Only provide telephone advice if the police agree"
+        }
+      ],
+      "correct": "B",
+      "explanation": "For indictable offences, attendance is generally required even if the client initially requests telephone advice. Indictable offences are more serious and typically require your presence to properly advise, take instructions, and protect the client's interests. You should explain this to the client and arrange attendance.",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "tel-005",
+      "topicId": "telephone-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What must be recorded when telephone advice is provided?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nothing needs to be recorded"
+        },
+        {
+          "id": "B",
+          "text": "The advice given, time, and client details should be recorded in your notes"
+        },
+        {
+          "id": "C",
+          "text": "Only the client's name"
+        },
+        {
+          "id": "D",
+          "text": "Only if the client requests it"
+        }
+      ],
+      "correct": "B",
+      "explanation": "When providing telephone advice, you must maintain proper records: client details, time of call, advice given, and any instructions received. This is essential for professional record-keeping, portfolio building, and demonstrating competence. Records should be contemporaneous and accurate.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — record keeping"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc",
+        "notes",
+        "record-keeping"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-c-mcq-000",
+      "topicId": "topic-telephone-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code C, what is required regarding Telephone advice provision; when attendance is required; DSCC operation.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C provides that The correct approach is set out in Code C. This is important because as set out in telephone advice provision; when attendance is required; dscc operation..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-c-mcq-001",
+      "topicId": "topic-telephone-advice",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code C, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C sets out that The correct approach is set out in Code C. The other options are incorrect because as set out in telephone advice provision; when attendance is required; dscc operation..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    },
+    {
+      "id": "gen-u2-o1-c-mcq-002",
+      "topicId": "topic-telephone-advice",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code C require regarding Telephone advice provision; when attendance is required; DSCC operation.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code C"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code C requires that The correct approach is set out in Code C. This ensures as set out in telephone advice provision; when attendance is required; dscc operation..",
+      "references": [
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 6.5-6.8 (telephone advice)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "telephone-advice",
+        "dscc"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+{
+  "questions": [
+    {
+      "id": "id-001",
+      "topicId": "identification-code-d",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What are the main types of identification procedure under Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only video identification and identification parade"
+        },
+        {
+          "id": "B",
+          "text": "Video identification, identification parade, group identification, and confrontation"
+        },
+        {
+          "id": "C",
+          "text": "Only confrontation"
+        },
+        {
+          "id": "D",
+          "text": "Only video identification"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Code D sets out several identification procedures: video identification, identification parade, group identification, and confrontation. Each has specific requirements and when it should be used. Video identification is generally preferred where facilities are available.",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "id-002",
+      "topicId": "identification-code-d",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "When is an identification procedure required under Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only if the suspect disputes they were present"
+        },
+        {
+          "id": "B",
+          "text": "When the identity of the suspect is disputed, or when a witness has given a first description and there is a known suspect"
+        },
+        {
+          "id": "C",
+          "text": "Always, for every case"
+        },
+        {
+          "id": "D",
+          "text": "Only for serious offences"
+        }
+      ],
+      "correct": "B",
+      "explanation": "An identification procedure is required when: (1) the identity of the suspect is disputed, or (2) a witness has given a first description and there is a known suspect. It is not required if identity is not in issue, or if the suspect was known to the witness before the incident.",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.12 (when identification procedure required)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)"
+        }
+      ],
+      "tags": [
+        "identification",
+        "disputed",
+        "witness"
+      ]
+    },
+    {
+      "id": "id-003",
+      "topicId": "identification-code-d",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is your role as legal representative at an identification procedure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "You have no right to attend"
+        },
+        {
+          "id": "B",
+          "text": "You have the right to be present, observe, raise objections, and ensure procedures are followed correctly"
+        },
+        {
+          "id": "C",
+          "text": "You can only attend if the police invite you"
+        },
+        {
+          "id": "D",
+          "text": "You can attend but cannot intervene"
+        }
+      ],
+      "correct": "B",
+      "explanation": "As legal representative, you have the right to be present at identification procedures. Your role includes: observing to ensure procedures are fair, raising objections if procedures are not followed correctly, ensuring the suspect's rights are protected, and challenging any unfairness. Your presence is a key safeguard.",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.17-3.20 (legal representative at identification)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)"
+        }
+      ],
+      "tags": [
+        "identification",
+        "safeguards",
+        "legal-rep"
+      ]
+    },
+    {
+      "id": "id-004",
+      "topicId": "identification-code-d",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A witness identifies your client from a video identification procedure. You notice the procedure was not conducted in accordance with Code D. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do nothing—the identification has already happened"
+        },
+        {
+          "id": "B",
+          "text": "Object immediately, record your objections, and challenge the evidence at court under s.78 PACE"
+        },
+        {
+          "id": "C",
+          "text": "Only object if your client is convicted"
+        },
+        {
+          "id": "D",
+          "text": "Accept the identification as valid"
+        }
+      ],
+      "correct": "B",
+      "explanation": "If an identification procedure breaches Code D, you must object immediately, record your objections (in writing if possible), and challenge the admissibility of the identification evidence at court under s.78 PACE. Breaches can render identification evidence unreliable and unfair, potentially leading to exclusion.",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.17-3.20 (legal representative at identification)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.78 (exclusion of unfair evidence)"
+        }
+      ],
+      "tags": [
+        "identification",
+        "safeguards",
+        "legal-rep",
+        "code-d"
+      ]
+    },
+    {
+      "id": "id-005",
+      "topicId": "identification-code-d",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "What safeguards must be in place for a video identification procedure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No specific safeguards are required"
+        },
+        {
+          "id": "B",
+          "text": "The video must show at least 8 similar-looking people, the suspect's image must not stand out, and the procedure must be recorded"
+        },
+        {
+          "id": "C",
+          "text": "Only the suspect needs to be shown"
+        },
+        {
+          "id": "D",
+          "text": "Safeguards are optional"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Video identification must include safeguards: at least 8 similar-looking people (foils), the suspect's image must not stand out (same position, similar appearance), the procedure must be recorded, and the legal representative has the right to be present and object. These safeguards ensure fairness and reliability.",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 1.4 and Annex E (definition of vulnerable person)"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure",
+        "safeguards"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-000",
+      "topicId": "topic-identification",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code D, what is required regarding Video identification; identification parade; group identification; confrontation; when each applies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D provides that The correct approach is set out in Code D. This is important because as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-001",
+      "topicId": "topic-identification",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code D, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D sets out that The correct approach is set out in Code D. The other options are incorrect because as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-002",
+      "topicId": "topic-identification",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code D require regarding Video identification; identification parade; group identification; confrontation; when each applies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D requires that The correct approach is set out in Code D. This ensures as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-ba-003",
+      "topicId": "topic-identification",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Video identification; identification parade; group identification; confrontation; when each applies., what is the best approach under Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code D because Code D provides that as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-ba-004",
+      "topicId": "topic-identification",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Video identification; identification parade; group identification; confrontation; when each applies., which action is most appropriate given Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code D as Code D requires as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-005",
+      "topicId": "topic-identification",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to Code D, what is required regarding Video identification; identification parade; group identification; confrontation; when each applies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D provides that The correct approach is set out in Code D. This is important because as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-006",
+      "topicId": "topic-identification",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under Code D, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D sets out that The correct approach is set out in Code D. The other options are incorrect because as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-mcq-007",
+      "topicId": "topic-identification",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does Code D require regarding Video identification; identification parade; group identification; confrontation; when each applies.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Code D requires that The correct approach is set out in Code D. This ensures as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-ba-008",
+      "topicId": "topic-identification",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Video identification; identification parade; group identification; confrontation; when each applies., what is the best approach under Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in Code D because Code D provides that as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-ba-009",
+      "topicId": "topic-identification",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Video identification; identification parade; group identification; confrontation; when each applies., which action is most appropriate given Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in Code D as Code D requires as set out in video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-scn-010",
+      "topicId": "topic-identification",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving video identification; identification parade; group identification; confrontation; when each applies.. The police are asking questions.. According to Code D, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, Code D requires that Follow the procedure set out in Code D. This is because as required by video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    },
+    {
+      "id": "gen-u7-o1-a-scn-011",
+      "topicId": "topic-identification",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving video identification; identification parade; group identification; confrontation; when each applies.. The police are asking questions.. What is the correct approach under Code D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in Code D"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in Code D because Code D provides that as required by video identification; identification parade; group identification; confrontation; when each applies..",
+      "references": [
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        },
+        {
+          "instrument": "Code D",
+          "cite": "Code D para 3.1-3.21 (identification procedures)",
+          "note": "https://www.gov.uk/government/publications/pace-code-d-2017/pace-code-d-2017-accessible"
+        }
+      ],
+      "tags": [
+        "identification",
+        "code-d",
+        "procedure"
+      ]
+    }
+  ]
+}

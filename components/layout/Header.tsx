@@ -1,13 +1,14 @@
 "use client";
 
-import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type } from "lucide-react";
+import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
 import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } from "@/lib/storage";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { createClient } from "@/lib/supabase/client";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -43,6 +44,15 @@ export function Header({ onMenuClick }: HeaderProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [uiScale, setUiScaleState] = useState<UiScale>("md");
   const pathname = usePathname();
+  const router = useRouter();
+  
+  const getSupabaseClient = () => {
+    try {
+      return createClient();
+    } catch {
+      return null;
+    }
+  };
 
   useEffect(() => {
     setProgress(getProgress());
@@ -59,6 +69,30 @@ export function Header({ onMenuClick }: HeaderProps) {
     setUiScaleState(next);
     setUiScale(next);
     document.documentElement.dataset.uiScale = next;
+  };
+
+  const handleLogout = async () => {
+    try {
+      // Call logout API to end session
+      await fetch("/api/auth/logout", {
+        method: "POST",
+        credentials: "include",
+      });
+
+      // Sign out from Supabase client
+      const supabase = getSupabaseClient();
+      if (supabase) {
+        await supabase.auth.signOut();
+      }
+
+      // Redirect to home
+      router.push("/");
+      router.refresh();
+    } catch (error) {
+      console.error("Logout error:", error);
+      // Still try to redirect even if logout fails
+      router.push("/");
+    }
   };
 
   const title = ROUTE_TITLES[pathname] ?? "PSR Training Academy";
@@ -162,6 +196,19 @@ export function Header({ onMenuClick }: HeaderProps) {
           type="button"
         >
           <HelpCircle className="h-6 w-6" />
+        </Button>
+
+        {/* Logout */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-white hover:bg-white/10 hover:text-white"
+          aria-label="Logout"
+          data-testid="logout-button"
+          type="button"
+          onClick={handleLogout}
+        >
+          <LogOut className="h-6 w-6" />
         </Button>
       </div>
       </div>

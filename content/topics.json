@@ -43,6 +43,23 @@
   ],
   "topics": [
     {
+      "id": "authority-to-act",
+      "name": "Authority to Act and DSCC",
+      "description": "Understanding authority to act via DSCC call-back, own-client arrangements, and probationary restrictions",
+      "category": "client-care",
+      "subtopics": ["DSCC notification", "Own-client work", "Probationary period"],
+      "officialResources": [
+        {"title": "LAA Arrangements", "url": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"}
+      ]
+    },
+    {
+      "id": "topic-authority-to-act",
+      "name": "Authority to Act and DSCC",
+      "description": "Understanding authority to act via DSCC call-back, own-client arrangements, and probationary restrictions",
+      "category": "client-care",
+      "subtopics": ["DSCC notification", "Own-client work", "Probationary period"]
+    },
+    {
       "id": "pace-s24-arrest",
       "name": "Powers of Arrest (s.24 PACE)",
       "description": "Understanding lawful arrest under PACE section 24, necessity criteria, and challenging unlawful arrests",

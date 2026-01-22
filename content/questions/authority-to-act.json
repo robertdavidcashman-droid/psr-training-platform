@@ -1,0 +1,966 @@
+{
+  "questions": [
+    {
+      "id": "auth-001",
+      "topicId": "authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "How is authority to act obtained for a duty solicitor scheme call?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The DSCC automatically assigns you and you must attend"
+        },
+        {
+          "id": "B",
+          "text": "The DSCC contacts you, you confirm availability, and authority is granted via call-back"
+        },
+        {
+          "id": "C",
+          "text": "You contact the police station directly and they grant authority"
+        },
+        {
+          "id": "D",
+          "text": "Authority is granted automatically when you are on the duty solicitor rota"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Authority to act under the duty solicitor scheme is obtained through the DSCC (Defence Solicitor Call Centre). The DSCC contacts you, you confirm availability, and authority is granted via the call-back process. You cannot simply attend without DSCC authorisation.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "auth-002",
+      "topicId": "authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is the main difference between duty solicitor scheme work and own-client work in terms of authority to act?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Duty solicitor work requires DSCC call-back; own-client work requires direct client instruction"
+        },
+        {
+          "id": "B",
+          "text": "Both require DSCC authorisation"
+        },
+        {
+          "id": "C",
+          "text": "Own-client work requires police station approval"
+        },
+        {
+          "id": "D",
+          "text": "There is no difference in how authority is obtained"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Duty solicitor scheme work requires DSCC call-back and authorisation. Own-client work occurs when a client directly instructs you (or your firm), and you attend without needing DSCC authorisation. However, probationary representatives have restrictions on own-client work.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "auth-003",
+      "topicId": "authority-to-act",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "A probationary PSR receives a DSCC call. They confirm availability and attend. What must they ensure about their work?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They can work independently without supervision"
+        },
+        {
+          "id": "B",
+          "text": "They must be supervised and cannot do own-client work during probationary period"
+        },
+        {
+          "id": "C",
+          "text": "They can do own-client work if the client requests it"
+        },
+        {
+          "id": "D",
+          "text": "They only need supervision for complex cases"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Probationary PSRs must work under supervision and are restricted from own-client work during the 12-month probationary period. They can work on duty solicitor scheme cases with proper supervision, but cannot take on own-client instructions until they complete probationary requirements.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "auth-004",
+      "topicId": "authority-to-act",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What information should you obtain from the DSCC during the initial call-back to establish authority to act?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the police station name and address"
+        },
+        {
+          "id": "B",
+          "text": "Client name, offence, custody location, and any urgent issues"
+        },
+        {
+          "id": "C",
+          "text": "The full case file and evidence"
+        },
+        {
+          "id": "D",
+          "text": "Only confirmation that you are assigned"
+        }
+      ],
+      "correct": "B",
+      "explanation": "During the DSCC call-back, you should gather key information: client name, alleged offence, custody location, and any urgent issues (e.g., vulnerability, time limits, interview timing). This helps you prepare and identify immediate concerns. You won't receive the full case file at this stage.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — DSCC"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "cit",
+        "triage"
+      ]
+    },
+    {
+      "id": "auth-005",
+      "topicId": "authority-to-act",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A client calls your firm directly and asks you to attend the police station. You are a probationary PSR. What should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attend immediately as the client has instructed you directly"
+        },
+        {
+          "id": "B",
+          "text": "Explain you cannot take own-client work during probationary period and refer to DSCC or a qualified supervisor"
+        },
+        {
+          "id": "C",
+          "text": "Attend but ensure a supervisor reviews your work afterwards"
+        },
+        {
+          "id": "D",
+          "text": "Only attend if the offence is minor"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Probationary PSRs are restricted from own-client work. If a client calls directly, you must explain the restriction and either refer them to the DSCC (for duty solicitor scheme) or to a qualified supervisor who can take the instruction. You cannot simply attend and have work reviewed later—the restriction is on taking the instruction itself.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — probationary period"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "probationary",
+        "supervision",
+        "laa"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-000",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-001",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-002",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does LAA Arrangements require regarding Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements requires that The correct approach is set out in LAA Arrangements. This ensures as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-ba-003",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions., what is the best approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in LAA Arrangements because LAA Arrangements provides that as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-ba-004",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions., which action is most appropriate given LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in LAA Arrangements as LAA Arrangements requires as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-005",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-006",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-mcq-007",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does LAA Arrangements require regarding Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements requires that The correct approach is set out in LAA Arrangements. This ensures as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-ba-008",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions., what is the best approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in LAA Arrangements because LAA Arrangements provides that as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-ba-009",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Understand how authority to act is obtained via DSCC call-back and own-client arrangements; probationary restrictions., which action is most appropriate given LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in LAA Arrangements as LAA Arrangements requires as set out in understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-010",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-011",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-012",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-013",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-014",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-015",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    },
+    {
+      "id": "gen-u1-o1-a-scn-016",
+      "topicId": "topic-authority-to-act",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by understand how authority to act is obtained via dscc call-back and own-client arrangements; probationary restrictions..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — authority to act",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "authority-to-act",
+        "dscc",
+        "probationary"
+      ]
+    }
+  ]
+}

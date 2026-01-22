@@ -7,18 +7,39 @@
       "type": "mcq",
       "stem": "Which PACE s.24 'necessity' ground most directly covers arresting someone because you cannot readily ascertain their name and address?",
       "options": [
-        { "id": "A", "text": "To allow the prompt and effective investigation of the offence" },
-        { "id": "B", "text": "To prevent the person causing physical injury to themselves or others" },
-        { "id": "C", "text": "To ascertain the person's name and/or address (where it cannot be readily ascertained)" },
-        { "id": "D", "text": "Because arrest is always required for indictable offences" }
+        {
+          "id": "A",
+          "text": "To allow the prompt and effective investigation of the offence"
+        },
+        {
+          "id": "B",
+          "text": "To prevent the person causing physical injury to themselves or others"
+        },
+        {
+          "id": "C",
+          "text": "To ascertain the person's name and/or address (where it cannot be readily ascertained)"
+        },
+        {
+          "id": "D",
+          "text": "Because arrest is always required for indictable offences"
+        }
       ],
       "correct": "C",
       "explanation": "PACE s.24 requires that arrest is necessary. One necessity ground is where the person's name or address cannot be readily ascertained (or is doubted). Arrest is not automatic for offence type; necessity must be justified.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 s.24 (powers of arrest and necessity)" },
-        { "instrument": "Code G", "cite": "Code G — necessity and alternatives to arrest (Check: paragraph)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (powers of arrest and necessity)"
+        },
+        {
+          "instrument": "Code G",
+          "cite": "Code G — necessity and alternatives to arrest (Check: paragraph)"
+        }
       ],
-      "tags": ["arrest", "necessity"]
+      "tags": [
+        "arrest",
+        "necessity"
+      ]
     },
     {
       "id": "pace-002",
@@ -27,17 +48,39 @@
       "type": "mcq",
       "stem": "A client was arrested but says they were never told why. Which PACE provision is most directly relevant to the duty to inform a person they are under arrest and the grounds?",
       "options": [
-        { "id": "A", "text": "PACE 1984 s.24" },
-        { "id": "B", "text": "PACE 1984 s.28" },
-        { "id": "C", "text": "PACE 1984 s.76" },
-        { "id": "D", "text": "PACE 1984 s.58" }
+        {
+          "id": "A",
+          "text": "PACE 1984 s.24"
+        },
+        {
+          "id": "B",
+          "text": "PACE 1984 s.28"
+        },
+        {
+          "id": "C",
+          "text": "PACE 1984 s.76"
+        },
+        {
+          "id": "D",
+          "text": "PACE 1984 s.58"
+        }
       ],
       "correct": "B",
       "explanation": "PACE includes a duty to inform the person they are under arrest and the grounds for arrest. This is central to the lawfulness of arrest and subsequent detention. (In practice you would check the custody record and officer notes for what was said and when.)",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 s.28 (information to be given on arrest) (Check: exact wording)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.28 (information to be given on arrest) (Check: exact wording)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.24 (arrest without warrant)"
+        }
       ],
-      "tags": ["arrest", "grounds"]
+      "tags": [
+        "arrest",
+        "grounds"
+      ]
     },
     {
       "id": "pace-003",
@@ -46,18 +89,39 @@
       "type": "mcq",
       "stem": "Why is identifying the 'relevant time' important when advising in custody?",
       "options": [
-        { "id": "A", "text": "It determines which officer is responsible for the investigation" },
-        { "id": "B", "text": "It determines when detention time limits and review obligations start running" },
-        { "id": "C", "text": "It determines whether the offence is indictable" },
-        { "id": "D", "text": "It determines the client's eligibility for legal aid" }
+        {
+          "id": "A",
+          "text": "It determines which officer is responsible for the investigation"
+        },
+        {
+          "id": "B",
+          "text": "It determines when detention time limits and review obligations start running"
+        },
+        {
+          "id": "C",
+          "text": "It determines whether the offence is indictable"
+        },
+        {
+          "id": "D",
+          "text": "It determines the client's eligibility for legal aid"
+        }
       ],
       "correct": "B",
       "explanation": "Time limits and review points are calculated from the relevant time (as defined in PACE). Getting this wrong can lead to unlawful over‑detention going unnoticed. As a PSR, you should confirm the relevant time from the custody record and cross-check any delays.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 (detention time limits from relevant time) (Check: provision)" },
-        { "instrument": "Code C", "cite": "Code C — recording relevant time and detention reviews (Check: paragraph)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 (detention time limits from relevant time) (Check: provision)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C — recording relevant time and detention reviews (Check: paragraph)"
+        }
       ],
-      "tags": ["detention", "time-limits"]
+      "tags": [
+        "detention",
+        "time-limits"
+      ]
     },
     {
       "id": "pace-004",
@@ -66,18 +130,40 @@
       "type": "mcq",
       "stem": "A superintendent extension to detention beyond the initial limit is being considered. What should you do first as a PSR?",
       "options": [
-        { "id": "A", "text": "Do nothing until the extension is granted, then advise" },
-        { "id": "B", "text": "Immediately demand release without checking the record" },
-        { "id": "C", "text": "Check the custody record for authorisations, reviews, disclosure of reasons, and make representations if appropriate" },
-        { "id": "D", "text": "Tell your client to refuse all further questions from police" }
+        {
+          "id": "A",
+          "text": "Do nothing until the extension is granted, then advise"
+        },
+        {
+          "id": "B",
+          "text": "Immediately demand release without checking the record"
+        },
+        {
+          "id": "C",
+          "text": "Check the custody record for authorisations, reviews, disclosure of reasons, and make representations if appropriate"
+        },
+        {
+          "id": "D",
+          "text": "Tell your client to refuse all further questions from police"
+        }
       ],
       "correct": "C",
       "explanation": "Extensions require lawful criteria and proper recording/authorisation. Your first step is to inspect the custody record, understand the reason for continued detention and any investigative steps outstanding, then make focused representations and document issues.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 (extensions / warrants of detention) (Check: sections)" },
-        { "instrument": "Code C", "cite": "Code C — detention reviews and extensions (Check: paragraph)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 (extensions / warrants of detention) (Check: sections)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C — detention reviews and extensions (Check: paragraph)"
+        }
       ],
-      "tags": ["detention", "extensions", "custody-record"]
+      "tags": [
+        "detention",
+        "extensions",
+        "custody-record"
+      ]
     },
     {
       "id": "pace-005",
@@ -86,17 +172,39 @@
       "type": "mcq",
       "stem": "Which is the best reason to routinely inspect the custody record during detention?",
       "options": [
-        { "id": "A", "text": "To find out what the police think of your client" },
-        { "id": "B", "text": "To identify rights issues, review timings, and whether decisions/authorisations are properly recorded" },
-        { "id": "C", "text": "To ensure the officer in the case is replaced" },
-        { "id": "D", "text": "To obtain full evidence and witness statements as a right" }
+        {
+          "id": "A",
+          "text": "To find out what the police think of your client"
+        },
+        {
+          "id": "B",
+          "text": "To identify rights issues, review timings, and whether decisions/authorisations are properly recorded"
+        },
+        {
+          "id": "C",
+          "text": "To ensure the officer in the case is replaced"
+        },
+        {
+          "id": "D",
+          "text": "To obtain full evidence and witness statements as a right"
+        }
       ],
       "correct": "B",
       "explanation": "The custody record is the procedural backbone of detention: rights and entitlements, reviews, meals/rest, requests (legal advice, AA, interpreter), and reasons for key decisions. Regular inspection helps spot breaches early.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — custody record requirements and access (Check: paragraph)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — custody record requirements and access (Check: paragraph)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 2 (custody records)"
+        }
       ],
-      "tags": ["custody-record", "rights"]
+      "tags": [
+        "custody-record",
+        "rights"
+      ]
     },
     {
       "id": "pace-006",
@@ -105,18 +213,40 @@
       "type": "mcq",
       "stem": "A client says they asked for legal advice hours ago, but no solicitor has attended and the custody record is unclear. What is the best immediate action?",
       "options": [
-        { "id": "A", "text": "Proceed with interview anyway to avoid delays" },
-        { "id": "B", "text": "Ask the custody officer to document the request time, steps taken, and any reasons for delay; request interview is not started until advice is provided (unless a lawful exception applies)" },
-        { "id": "C", "text": "Assume the client is exaggerating and take no steps" },
-        { "id": "D", "text": "Tell the client to complain after release; it cannot affect the interview" }
+        {
+          "id": "A",
+          "text": "Proceed with interview anyway to avoid delays"
+        },
+        {
+          "id": "B",
+          "text": "Ask the custody officer to document the request time, steps taken, and any reasons for delay; request interview is not started until advice is provided (unless a lawful exception applies)"
+        },
+        {
+          "id": "C",
+          "text": "Assume the client is exaggerating and take no steps"
+        },
+        {
+          "id": "D",
+          "text": "Tell the client to complain after release; it cannot affect the interview"
+        }
       ],
       "correct": "B",
       "explanation": "Access to legal advice is a core safeguard. You should ensure the custody record accurately reflects the request and what happened next, clarify any claimed exceptions, and prevent interview from proceeding without advice where appropriate.",
       "references": [
-        { "instrument": "PACE", "cite": "PACE 1984 s.58 (right to legal advice)" },
-        { "instrument": "Code C", "cite": "Code C — legal advice requests, delays, and exceptions (Check: paragraph)" }
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.58 (right to legal advice)"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C — legal advice requests, delays, and exceptions (Check: paragraph)"
+        }
       ],
-      "tags": ["legal-advice", "custody-record", "code-c"]
+      "tags": [
+        "legal-advice",
+        "custody-record",
+        "code-c"
+      ]
     },
     {
       "id": "pace-007",
@@ -125,18 +255,831 @@
       "type": "mcq",
       "stem": "When advising about the lawfulness of continued detention, which evidence source is usually the best starting point for verifying key timings and decisions?",
       "options": [
-        { "id": "A", "text": "The investigating officer’s recollection" },
-        { "id": "B", "text": "The custody record (including review entries and authorisations)" },
-        { "id": "C", "text": "A social media post about the arrest" },
-        { "id": "D", "text": "The charging standard for the offence" }
+        {
+          "id": "A",
+          "text": "The investigating officer’s recollection"
+        },
+        {
+          "id": "B",
+          "text": "The custody record (including review entries and authorisations)"
+        },
+        {
+          "id": "C",
+          "text": "A social media post about the arrest"
+        },
+        {
+          "id": "D",
+          "text": "The charging standard for the offence"
+        }
       ],
       "correct": "B",
       "explanation": "For detention legality, the custody record is the authoritative procedural record. It should show rights, reviews, timing, and authorisations. If it’s incomplete or inconsistent, that itself may be significant and should be documented.",
       "references": [
-        { "instrument": "Code C", "cite": "Code C — custody record and detention management (Check: paragraph)" }
+        {
+          "instrument": "Code C",
+          "cite": "Code C — custody record and detention management (Check: paragraph)"
+        },
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)"
+        }
       ],
-      "tags": ["detention", "custody-record"]
+      "tags": [
+        "detention",
+        "custody-record"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-000",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-001",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-002",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-ba-003",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-ba-004",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-005",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to PACE, what is required regarding Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE provides that The correct approach is set out in PACE. This is important because as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-006",
+      "topicId": "pace-detention-time",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under PACE, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE sets out that The correct approach is set out in PACE. The other options are incorrect because as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-mcq-007",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does PACE require regarding Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "PACE requires that The correct approach is set out in PACE. This ensures as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-ba-008",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence., what is the best approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in PACE because PACE provides that as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-ba-009",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence., which action is most appropriate given PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in PACE as PACE requires as set out in custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-010",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-011",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-012",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-013",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-014",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-015",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-016",
+      "topicId": "pace-detention-time",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. According to PACE, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, PACE requires that Follow the procedure set out in PACE. This is because as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
+    },
+    {
+      "id": "gen-u3-o1-a-scn-017",
+      "topicId": "pace-detention-time",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence.. The police are asking questions.. What is the correct approach under PACE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in PACE"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in PACE because PACE provides that as required by custody officer's duty to authorise or refuse detention; grounds; reasonable suspicion; sufficient evidence..",
+      "references": [
+        {
+          "instrument": "PACE",
+          "cite": "PACE 1984 s.37 (duties before charge)",
+          "note": "https://www.legislation.gov.uk/ukpga/1984/60/section/37"
+        },
+        {
+          "instrument": "Code C",
+          "cite": "Code C para 3.4-3.5 (authorisation of detention)",
+          "note": "https://www.gov.uk/government/publications/pace-code-c-2023/pace-code-c-2023-accessible"
+        }
+      ],
+      "tags": [
+        "detention",
+        "s37",
+        "authorisation"
+      ]
     }
   ]
 }
-

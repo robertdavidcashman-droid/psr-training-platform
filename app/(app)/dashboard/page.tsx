@@ -25,7 +25,10 @@ import {
   type UserProgress,
   type PracticeSession,
 } from "@/lib/storage";
+import { getWeakCriteria, getExamReadiness } from "@/lib/analytics";
 import topicsData from "@/content/topics.json";
+import { useMemo } from "react";
+import { BarChart3 } from "lucide-react";
 
 export default function DashboardPage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
@@ -38,15 +41,21 @@ export default function DashboardPage() {
     setRecentSessions(getPracticeHistory().slice(0, 3));
   }, []);
 
-  const weakestTopics = progress
-    ? Object.values(progress.topics)
-        .filter((t) => t.mastery < 70)
-        .sort((a, b) => a.mastery - b.mastery)
-        .slice(0, 3)
-    : [];
+  const weakestTopics = useMemo(() => {
+    return progress
+      ? Object.values(progress.topics)
+          .filter((t) => t.mastery < 70)
+          .sort((a, b) => a.mastery - b.mastery)
+          .slice(0, 3)
+      : [];
+  }, [progress]);
 
-  const topicMap = Object.fromEntries(
-    topicsData.topics.map((t) => [t.id, t])
+  const weakCriteria = useMemo(() => getWeakCriteria(3), []);
+  const examReadiness = useMemo(() => getExamReadiness(), []);
+
+  const topicMap = useMemo(
+    () => Object.fromEntries(topicsData.topics.map((t) => [t.id, t])),
+    []
   );
 
   return (
@@ -65,6 +74,12 @@ export default function DashboardPage() {
           description="Across all topics"
         />
         <StatCard
+          title="Exam Readiness"
+          value={`${examReadiness.score}%`}
+          icon={TrendingUp}
+          description={`${examReadiness.readyCriteria}/${examReadiness.totalCriteria} criteria ready`}
+        />
+        <StatCard
           title="Current Streak"
           value={progress?.currentStreak || 0}
           icon={Flame}
@@ -75,12 +90,6 @@ export default function DashboardPage() {
           value={progress?.totalXp || 0}
           icon={Zap}
           description={`Level ${progress?.level || 1}`}
-        />
-        <StatCard
-          title="Topics Practiced"
-          value={Object.keys(progress?.topics || {}).length}
-          icon={BookOpen}
-          description={`of ${topicsData.topics.length} total`}
         />
       </div>
 
@@ -142,10 +151,44 @@ export default function DashboardPage() {
         {/* Areas for Improvement */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Areas for Improvement</CardTitle>
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-xl">Areas for Improvement</CardTitle>
+              <Link href="/analytics">
+                <Button variant="ghost" size="sm" className="gap-1">
+                  <BarChart3 className="h-4 w-4" />
+                  View Analytics
+                </Button>
+              </Link>
+            </div>
           </CardHeader>
           <CardContent>
-            {weakestTopics.length > 0 ? (
+            {weakCriteria.length > 0 ? (
+              <div className="space-y-4">
+                <p className="text-sm text-muted-foreground mb-3">
+                  Top criteria needing focus:
+                </p>
+                {weakCriteria.map((criterion) => (
+                  <div key={criterion.criterionId} className="border-l-2 border-warning pl-3 py-2">
+                    <p className="text-base font-medium">{criterion.label}</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Progress
+                        value={criterion.mastery}
+                        className="flex-1"
+                        variant="warning"
+                      />
+                      <Badge variant="warning" className="text-xs">
+                        {criterion.mastery}%
+                      </Badge>
+                    </div>
+                  </div>
+                ))}
+                <Link href="/practice">
+                  <Button variant="outline" className="w-full mt-3 text-base" data-testid="practice-weak-topics-btn">
+                    Practice These Areas
+                  </Button>
+                </Link>
+              </div>
+            ) : weakestTopics.length > 0 ? (
               <div className="space-y-5">
                 {weakestTopics.map((topic) => (
                   <div key={topic.topicId} className="flex items-center gap-4">
@@ -222,7 +265,22 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Links */}
-      <div className="grid gap-6 md:grid-cols-3 mt-10">
+      <div className="grid gap-6 md:grid-cols-4 mt-10">
+        <Link href="/analytics">
+          <Card className="hover:shadow-card-hover transition-shadow cursor-pointer h-full">
+            <CardContent className="p-6 flex items-center gap-5">
+              <div className="h-14 w-14 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                <BarChart3 className="h-7 w-7 text-blue-500" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Analytics</h3>
+                <p className="text-base text-muted-foreground">
+                  Detailed insights
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
         <Link href="/mock-exam">
           <Card className="hover:shadow-card-hover transition-shadow cursor-pointer h-full">
             <CardContent className="p-6 flex items-center gap-5">

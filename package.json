@@ -15,11 +15,25 @@
     "check": "npm run lint && npm run typecheck && npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:all": "npm run test:lint && npm run test:unit && npm run test:integration && npm run test:e2e && npm run audit:coverage",
+    "test:unit": "vitest run",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "test:e2e": "playwright test",
+    "test:lint": "next lint",
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
-    "doctor": "npm run check && npm run test && npm run e2e && node scripts/coverage-report.mjs"
+    "e2e:auth": "playwright test tests/e2e/auth",
+    "test:links": "node scripts/link-integrity.mjs",
+    "audit:coverage": "tsx scripts/auditCoverage.ts",
+    "seed:coverage": "tsx scripts/seedCoverage.ts",
+    "fix:citations": "tsx scripts/fixCitations.ts",
+    "doctor": "npm run check && npm run test && npm run e2e && node scripts/coverage-report.mjs",
+    "setup:auth": "node scripts/setup-auth.mjs",
+    "setup:vercel-env": "node scripts/setup-vercel-env.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.91.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "date-fns": "^3.0.0",
@@ -43,6 +57,7 @@
     "eslint-config-next": "^15.0.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.5.0",
     "vitest": "^2.0.0"
   }

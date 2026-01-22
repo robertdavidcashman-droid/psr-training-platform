@@ -26,7 +26,37 @@ jobs:
       - name: Unit tests
         run: npm run test
 
-      # Optional: E2E (requires Docker + Supabase CLI; can be enabled later)
-      # - name: E2E tests
-      #   run: npm run e2e
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Build application
+        run: npm run build
+
+      - name: Start server
+        run: npm start &
+        env:
+          PORT: 3000
+
+      - name: Wait for server
+        run: |
+          timeout=30
+          while ! curl -f http://localhost:3000 > /dev/null 2>&1; do
+            sleep 1
+            timeout=$((timeout - 1))
+            if [ $timeout -eq 0 ]; then
+              echo "Server failed to start"
+              exit 1
+            fi
+          done
+          echo "Server is ready"
+
+      - name: Link integrity test
+        run: npm run test:links
+        env:
+          NODE_OPTIONS: --no-warnings
+
+      - name: E2E tests
+        run: npm run e2e
+        env:
+          BASE_URL: http://localhost:3000
 

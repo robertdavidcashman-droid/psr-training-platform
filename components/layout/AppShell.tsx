@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 import { getUiScale } from "@/lib/storage";
+import { SessionPing } from "@/components/SessionPing";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -21,11 +23,12 @@ export function AppShell({ children }: AppShellProps) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background" data-testid="app-shell">
-      <div className="flex min-h-screen">
+    <div className="min-h-screen bg-background flex flex-col" data-testid="app-shell">
+      <SessionPing />
+      <div className="flex flex-1 min-h-0">
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         
-        <div className="flex min-w-0 flex-1 flex-col min-h-screen lg:min-h-0">
+        <div className="flex min-w-0 flex-1 flex-col">
           <Header onMenuClick={() => setSidebarOpen(true)} />
           
           <main className="flex-1" data-testid="main-content">
@@ -33,6 +36,8 @@ export function AppShell({ children }: AppShellProps) {
               {children}
             </div>
           </main>
+          
+          <Footer />
         </div>
       </div>
     </div>

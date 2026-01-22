@@ -1,0 +1,1124 @@
+{
+  "questions": [
+    {
+      "id": "reg-001",
+      "topicId": "register-entry",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What are the requirements for full entry onto the Police Station Register?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Completion of probationary period only"
+        },
+        {
+          "id": "B",
+          "text": "Successful completion of written exam, portfolio submission, critical incident test (CIT), and probationary period requirements"
+        },
+        {
+          "id": "C",
+          "text": "Only passing the written exam"
+        },
+        {
+          "id": "D",
+          "text": "Only portfolio submission"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Full entry onto the Police Station Register requires successful completion of all assessment components: written exam, portfolio submission, critical incident test (CIT), and completion of the 12-month probationary period with proper supervision. All components must be passed to achieve full accreditation.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "reg-002",
+      "topicId": "register-entry",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "What is required to be eligible for the duty solicitor scheme?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only being a qualified solicitor"
+        },
+        {
+          "id": "B",
+          "text": "Full entry onto the Police Station Register and meeting ongoing registration requirements"
+        },
+        {
+          "id": "C",
+          "text": "Only completing probationary period"
+        },
+        {
+          "id": "D",
+          "text": "Only passing the written exam"
+        }
+      ],
+      "correct": "B",
+      "explanation": "To be eligible for the duty solicitor scheme, you must have full entry onto the Police Station Register. This requires completing all assessment components and the probationary period. You must also maintain ongoing registration requirements to remain eligible.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "reg-003",
+      "topicId": "register-entry",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What happens if a PSR fails to maintain registration requirements after full entry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nothing—registration is permanent once granted"
+        },
+        {
+          "id": "B",
+          "text": "Registration may be suspended or removed, affecting eligibility for duty solicitor scheme work"
+        },
+        {
+          "id": "C",
+          "text": "Only a warning is given"
+        },
+        {
+          "id": "D",
+          "text": "They can continue working without restrictions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Registration on the Police Station Register is not permanent. If a PSR fails to maintain registration requirements (e.g., professional standards, continuing competence, or other requirements), their registration may be suspended or removed. This affects their eligibility for duty solicitor scheme work.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "reg-004",
+      "topicId": "register-entry",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What is the key difference between probationary and full registration status?",
+      "options": [
+        {
+          "id": "A",
+          "text": "There is no difference"
+        },
+        {
+          "id": "B",
+          "text": "Probationary PSRs are restricted from own-client work and must work under supervision; full registration allows own-client work and duty scheme eligibility"
+        },
+        {
+          "id": "C",
+          "text": "Only the length of time differs"
+        },
+        {
+          "id": "D",
+          "text": "Full registration has no restrictions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Probationary PSRs are restricted from own-client work and must work under supervision during the 12-month probationary period. Full registration removes these restrictions and allows both own-client work and eligibility for the duty solicitor scheme. Full registration also requires successful completion of all assessment components.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "reg-005",
+      "topicId": "register-entry",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "stem": "A PSR has completed their probationary period but failed the CIT. What is their registration status?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They have full registration automatically"
+        },
+        {
+          "id": "B",
+          "text": "They remain on probationary status until all assessment components (including CIT) are successfully completed"
+        },
+        {
+          "id": "C",
+          "text": "They can work independently despite failing CIT"
+        },
+        {
+          "id": "D",
+          "text": "They are removed from the register"
+        }
+      ],
+      "correct": "B",
+      "explanation": "All assessment components must be successfully completed for full registration. If a PSR completes the probationary period but fails any component (written exam, portfolio, or CIT), they remain on probationary status until all components are passed. Full registration requires successful completion of all requirements.",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry"
+        },
+        {
+          "instrument": "SRA Standard",
+          "cite": "SRA PSRAS Assessment Guidelines — portfolio"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-000",
+      "topicId": "topic-register",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Full accreditation requirements; duty scheme eligibility; maintaining registration.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-001",
+      "topicId": "topic-register",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-002",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does LAA Arrangements require regarding Full accreditation requirements; duty scheme eligibility; maintaining registration.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements requires that The correct approach is set out in LAA Arrangements. This ensures as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-ba-003",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Full accreditation requirements; duty scheme eligibility; maintaining registration., what is the best approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in LAA Arrangements because LAA Arrangements provides that as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-ba-004",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Full accreditation requirements; duty scheme eligibility; maintaining registration., which action is most appropriate given LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in LAA Arrangements as LAA Arrangements requires as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-005",
+      "topicId": "topic-register",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "According to LAA Arrangements, what is required regarding Full accreditation requirements; duty scheme eligibility; maintaining registration.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements provides that The correct approach is set out in LAA Arrangements. This is important because as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-006",
+      "topicId": "topic-register",
+      "difficulty": "foundation",
+      "type": "mcq",
+      "stem": "Under LAA Arrangements, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements sets out that The correct approach is set out in LAA Arrangements. The other options are incorrect because as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-mcq-007",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "stem": "What does LAA Arrangements require regarding Full accreditation requirements; duty scheme eligibility; maintaining registration.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "LAA Arrangements requires that The correct approach is set out in LAA Arrangements. This ensures as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-ba-008",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "In relation to Full accreditation requirements; duty scheme eligibility; maintaining registration., what is the best approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The best approach is The correct approach is set out in LAA Arrangements because LAA Arrangements provides that as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-ba-009",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "When dealing with Full accreditation requirements; duty scheme eligibility; maintaining registration., which action is most appropriate given LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The correct approach is set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The most appropriate action is The correct approach is set out in LAA Arrangements as LAA Arrangements requires as set out in full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-010",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-011",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-012",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-013",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-014",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-015",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-016",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-017",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-018",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "best-answer",
+      "stem": "Scenario: A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. According to LAA Arrangements, what should you do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In this scenario, LAA Arrangements requires that Follow the procedure set out in LAA Arrangements. This is because as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-scn-019",
+      "topicId": "topic-register",
+      "difficulty": "advanced",
+      "type": "best-answer",
+      "stem": "You are at a police station. A situation involving full accreditation requirements; duty scheme eligibility; maintaining registration.. The police are asking questions.. What is the correct approach under LAA Arrangements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Follow the procedure set out in LAA Arrangements"
+        },
+        {
+          "id": "B",
+          "text": "This is not required by the relevant legislation"
+        },
+        {
+          "id": "C",
+          "text": "This would be incorrect under the applicable rules"
+        },
+        {
+          "id": "D",
+          "text": "This does not reflect the proper procedure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "The correct approach is Follow the procedure set out in LAA Arrangements because LAA Arrangements provides that as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "gen-u13-o1-c-sa-020",
+      "topicId": "topic-register",
+      "difficulty": "intermediate",
+      "type": "short_answer",
+      "stem": "Explain the key requirements of LAA Arrangements in relation to Full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "expectedAnswerOutline": [
+        "Review LAA Arrangements",
+        "Identify key requirements",
+        "Apply to the specific situation"
+      ],
+      "explanation": "LAA Arrangements requires that Review LAA Arrangements. Identify key requirements. Apply to the specific situation. Key points include: as required by full accreditation requirements; duty scheme eligibility; maintaining registration..",
+      "references": [
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        },
+        {
+          "instrument": "LAA Arrangements",
+          "cite": "Police Station Register Arrangements 2025 — register entry",
+          "note": "https://assets.publishing.service.gov.uk/media/68dcf841ef1c2f72bc1e4c9f/Police_Station_Register_Arrangements_2025.pdf"
+        }
+      ],
+      "tags": [
+        "register",
+        "accreditation",
+        "eligibility"
+      ]
+    }
+  ]
+}
