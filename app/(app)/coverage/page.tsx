@@ -66,8 +66,8 @@ function CoverageStatusBadge({ count }: { count: number }) {
   
   if (status === "green") {
     return (
-      <Badge variant="success" className="gap-1">
-        <CheckCircle className="h-3 w-3" />
+      <Badge variant="success" className="gap-2">
+        <CheckCircle className="h-4 w-4" />
         {count} questions
       </Badge>
     );
@@ -75,16 +75,16 @@ function CoverageStatusBadge({ count }: { count: number }) {
   
   if (status === "amber") {
     return (
-      <Badge variant="warning" className="gap-1">
-        <AlertTriangle className="h-3 w-3" />
+      <Badge variant="warning" className="gap-2">
+        <AlertTriangle className="h-4 w-4" />
         {count} questions
       </Badge>
     );
   }
   
   return (
-    <Badge variant="destructive" className="gap-1">
-      <XCircle className="h-3 w-3" />
+    <Badge variant="destructive" className="gap-2">
+      <XCircle className="h-4 w-4" />
       {count === 0 ? "No questions" : `${count} question`}
     </Badge>
   );
@@ -92,13 +92,13 @@ function CoverageStatusBadge({ count }: { count: number }) {
 
 function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
   return (
-    <div className="border-l-2 border-muted pl-4 py-3">
-      <div className="flex flex-wrap items-start justify-between gap-2">
+    <div className="border-l-2 border-muted pl-4 py-4">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
-          <p className="font-medium text-base">{criterion.label}</p>
-          <p className="text-base text-muted-foreground mt-1">{criterion.summary}</p>
+          <p className="font-medium text-lg">{criterion.label}</p>
+          <p className="text-lg text-muted-foreground mt-1">{criterion.summary}</p>
           {criterion.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
+            <div className="flex flex-wrap gap-2 mt-3">
               {criterion.tags.slice(0, 5).map((tag) => (
                 <Badge key={tag} variant="outline" className="text-base">
                   {tag}
@@ -114,14 +114,14 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
       </div>
       
       {criterion.expectedAuthorities.length > 0 && (
-        <details className="mt-3">
-          <summary className="text-base text-muted-foreground cursor-pointer hover:text-foreground">
+        <details className="mt-4">
+          <summary className="text-lg text-muted-foreground cursor-pointer hover:text-foreground">
             Expected authorities ({criterion.expectedAuthorities.length})
           </summary>
-          <ul className="mt-2 space-y-1 text-base">
+          <ul className="mt-3 space-y-2 text-lg">
             {criterion.expectedAuthorities.map((auth, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <Badge variant="secondary" className="text-base">{auth.instrument}</Badge>
+              <li key={idx} className="flex items-center gap-3">
+                <Badge variant="secondary">{auth.instrument}</Badge>
                 <span className="text-muted-foreground">{auth.cite}</span>
                 {auth.url && (
                   <a
@@ -130,7 +130,7 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    <ExternalLink className="h-3 w-3" />
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 )}
               </li>
@@ -145,14 +145,14 @@ function CriterionRow({ criterion }: { criterion: CriterionCoverage }) {
 function OutcomeSection({ outcome }: { outcome: OutcomeCoverage }) {
   return (
     <details className="group" open>
-      <summary className="flex items-center gap-2 cursor-pointer py-2 hover:bg-muted/30 rounded-lg px-2 -mx-2">
-        <ChevronRight className="h-4 w-4 transition-transform group-open:rotate-90" />
-        <span className="font-medium">{outcome.title}</span>
-        <Badge variant="outline" className="ml-auto">
+      <summary className="flex items-center gap-3 cursor-pointer py-3 hover:bg-muted/30 rounded-lg px-3 -mx-3">
+        <ChevronRight className="h-5 w-5 transition-transform group-open:rotate-90" />
+        <span className="font-medium text-lg">{outcome.title}</span>
+        <Badge variant="outline" className="ml-auto text-base">
           {outcome.coveredCriteria}/{outcome.criteria.length} criteria
         </Badge>
       </summary>
-      <div className="mt-2 space-y-2 ml-6">
+      <div className="mt-3 space-y-3 ml-8">
         {outcome.criteria.map((criterion) => (
           <CriterionRow key={criterion.criterionId} criterion={criterion} />
         ))}
@@ -168,22 +168,22 @@ function UnitCard({ unit }: { unit: UnitCoverage }) {
 
   return (
     <Card>
-      <CardHeader className="pb-3">
+      <CardHeader className="pb-4">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <CardTitle className="text-lg">{unit.title}</CardTitle>
-            <p className="text-base text-muted-foreground mt-1">
+            <CardTitle className="text-xl">{unit.title}</CardTitle>
+            <p className="text-lg text-muted-foreground mt-2">
               {unit.totalQuestions} seeded questions · {unit.outcomes.length} outcomes · {unit.totalCriteria} criteria
             </p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-bold">{coveragePercent}%</div>
-            <div className="text-base text-muted-foreground">coverage</div>
+            <div className="text-3xl font-bold">{coveragePercent}%</div>
+            <div className="text-lg text-muted-foreground">coverage</div>
           </div>
         </div>
-        <Progress value={coveragePercent} className="mt-2" variant={coveragePercent >= 80 ? "gradient" : coveragePercent >= 50 ? "warning" : "default"} />
+        <Progress value={coveragePercent} className="mt-3" variant={coveragePercent >= 80 ? "gradient" : coveragePercent >= 50 ? "warning" : "default"} />
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-5">
         {unit.outcomes.map((outcome) => (
           <OutcomeSection key={outcome.outcomeId} outcome={outcome} />
         ))}
@@ -198,18 +198,18 @@ function PartSection({ part }: { part: PartCoverage }) {
     : 0;
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between border-b pb-4">
+    <div className="space-y-6">
+      <div className="flex items-center justify-between border-b pb-5">
         <div>
-          <h2 className="text-xl font-semibold">{part.title}</h2>
-          <p className="text-base text-muted-foreground">
+          <h2 className="text-2xl font-semibold">{part.title}</h2>
+          <p className="text-lg text-muted-foreground mt-1">
             {part.units.length} units · {part.totalCriteria} criteria · {part.totalQuestions} questions
           </p>
         </div>
         <div className="flex items-center gap-4">
           <div className="text-right">
-            <div className="text-3xl font-bold">{coveragePercent}%</div>
-            <div className="text-base text-muted-foreground">overall</div>
+            <div className="text-4xl font-bold">{coveragePercent}%</div>
+            <div className="text-lg text-muted-foreground">overall</div>
           </div>
         </div>
       </div>
@@ -224,6 +224,7 @@ function PartSection({ part }: { part: PartCoverage }) {
 
 export default function CoverageMatrixPage() {
   const coverage = useMemo(() => {
+    // Memoize the entire coverage calculation
     const questions = seededQuestions as Question[];
     
     // Build tag-to-questions map
@@ -338,9 +339,11 @@ export default function CoverageMatrixPage() {
     };
   }, []);
 
-  const overallPercent = coverage.totalCriteria > 0
-    ? Math.round((coverage.coveredCriteria / coverage.totalCriteria) * 100)
-    : 0;
+  const overallPercent = useMemo(() => {
+    return coverage.totalCriteria > 0
+      ? Math.round((coverage.coveredCriteria / coverage.totalCriteria) * 100)
+      : 0;
+  }, [coverage.totalCriteria, coverage.coveredCriteria]);
 
   return (
     <div data-testid="coverage-page">
@@ -350,57 +353,57 @@ export default function CoverageMatrixPage() {
       />
 
       {/* Summary Stats */}
-      <div className="grid gap-4 md:grid-cols-4 mb-8">
+      <div className="grid gap-5 md:grid-cols-4 mb-10">
         <Card>
-          <CardContent className="p-4 flex items-center gap-4">
-            <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <BookOpen className="h-6 w-6 text-primary" />
+          <CardContent className="p-5 flex items-center gap-4">
+            <div className="h-14 w-14 rounded-lg bg-primary/10 flex items-center justify-center">
+              <BookOpen className="h-7 w-7 text-primary" />
             </div>
             <div>
-              <div className="text-2xl font-bold">{coverage.totalQuestions}</div>
-              <div className="text-base text-muted-foreground">Seeded Questions</div>
+              <div className="text-3xl font-bold">{coverage.totalQuestions}</div>
+              <div className="text-lg text-muted-foreground">Seeded Questions</div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-4 flex items-center gap-4">
-            <div className="h-12 w-12 rounded-lg bg-success/10 flex items-center justify-center">
-              <Target className="h-6 w-6 text-success" />
+          <CardContent className="p-5 flex items-center gap-4">
+            <div className="h-14 w-14 rounded-lg bg-success/10 flex items-center justify-center">
+              <Target className="h-7 w-7 text-success" />
             </div>
             <div>
-              <div className="text-2xl font-bold">{coverage.totalCriteria}</div>
-              <div className="text-base text-muted-foreground">Assessment Criteria</div>
+              <div className="text-3xl font-bold">{coverage.totalCriteria}</div>
+              <div className="text-lg text-muted-foreground">Assessment Criteria</div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-4 flex items-center gap-4">
-            <div className="h-12 w-12 rounded-lg bg-warning/10 flex items-center justify-center">
-              <FileText className="h-6 w-6 text-warning" />
+          <CardContent className="p-5 flex items-center gap-4">
+            <div className="h-14 w-14 rounded-lg bg-warning/10 flex items-center justify-center">
+              <FileText className="h-7 w-7 text-warning" />
             </div>
             <div>
-              <div className="text-2xl font-bold">{coverage.coveredCriteria}</div>
-              <div className="text-base text-muted-foreground">Criteria Covered (2+)</div>
+              <div className="text-3xl font-bold">{coverage.coveredCriteria}</div>
+              <div className="text-lg text-muted-foreground">Criteria Covered (2+)</div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-4 flex items-center gap-4">
-            <div className={`h-12 w-12 rounded-lg flex items-center justify-center ${
+          <CardContent className="p-5 flex items-center gap-4">
+            <div className={`h-14 w-14 rounded-lg flex items-center justify-center ${
               overallPercent >= 80 ? "bg-success/10" : overallPercent >= 50 ? "bg-warning/10" : "bg-destructive/10"
             }`}>
-              <span className={`text-xl font-bold ${
+              <span className={`text-2xl font-bold ${
                 overallPercent >= 80 ? "text-success" : overallPercent >= 50 ? "text-warning" : "text-destructive"
               }`}>
                 {overallPercent}%
               </span>
             </div>
             <div>
-              <div className="text-2xl font-bold">Overall</div>
-              <div className="text-base text-muted-foreground">Coverage Rate</div>
+              <div className="text-3xl font-bold">Overall</div>
+              <div className="text-lg text-muted-foreground">Coverage Rate</div>
             </div>
           </CardContent>
         </Card>
@@ -414,27 +417,27 @@ export default function CoverageMatrixPage() {
       </div>
 
       {/* Legend */}
-      <Card className="mt-8">
-        <CardContent className="p-4">
-          <h3 className="font-semibold mb-3">Coverage Status Legend</h3>
-          <div className="flex flex-wrap gap-4 text-base">
-            <div className="flex items-center gap-2">
-              <Badge variant="success" className="gap-1">
-                <CheckCircle className="h-3 w-3" />
+      <Card className="mt-10">
+        <CardContent className="p-5">
+          <h3 className="font-semibold text-xl mb-4">Coverage Status Legend</h3>
+          <div className="flex flex-wrap gap-6 text-lg">
+            <div className="flex items-center gap-3">
+              <Badge variant="success" className="gap-2">
+                <CheckCircle className="h-4 w-4" />
                 5+ questions
               </Badge>
               <span className="text-muted-foreground">Well covered</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant="warning" className="gap-1">
-                <AlertTriangle className="h-3 w-3" />
+            <div className="flex items-center gap-3">
+              <Badge variant="warning" className="gap-2">
+                <AlertTriangle className="h-4 w-4" />
                 2-4 questions
               </Badge>
               <span className="text-muted-foreground">Partial coverage</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant="destructive" className="gap-1">
-                <XCircle className="h-3 w-3" />
+            <div className="flex items-center gap-3">
+              <Badge variant="destructive" className="gap-2">
+                <XCircle className="h-4 w-4" />
                 0-1 questions
               </Badge>
               <span className="text-muted-foreground">Needs content</span>

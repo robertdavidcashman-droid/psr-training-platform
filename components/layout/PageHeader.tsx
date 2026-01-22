@@ -9,17 +9,17 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, children, className }: PageHeaderProps) {
   return (
-    <div className={cn("mb-8 lg:mb-10", className)} data-testid="page-header">
+    <div className={cn("mb-10 lg:mb-12", className)} data-testid="page-header">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1
-            className="text-[clamp(32px,2.6vw,40px)] font-bold tracking-tight leading-tight"
+            className="text-3xl md:text-4xl font-bold tracking-tight leading-tight"
             data-testid="page-title"
           >
             {title}
           </h1>
           {description && (
-            <p className="mt-3 text-lg leading-relaxed text-muted-foreground" data-testid="page-description">
+            <p className="mt-3 text-xl leading-relaxed text-muted-foreground" data-testid="page-description">
               {description}
             </p>
           )}

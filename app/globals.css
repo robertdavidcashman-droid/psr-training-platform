@@ -72,31 +72,45 @@
     @apply border-border;
   }
   html {
-    font-size: 22px;
+    font-size: 18px;
     scroll-behavior: smooth;
     @apply overflow-x-hidden;
   }
+  /* Accessible text scaling - generous sizes for readability */
   html[data-ui-scale="sm"] {
-    font-size: 20px;
+    font-size: 18px;
   }
   html[data-ui-scale="md"] {
-    font-size: 22px;
+    font-size: 20px;
   }
   html[data-ui-scale="lg"] {
-    font-size: 26px;
+    font-size: 24px;
   }
   html[data-ui-scale="xl"] {
-    font-size: 30px;
+    font-size: 28px;
+  }
+  html[data-ui-scale="xxl"] {
+    font-size: 34px;
   }
   body {
     @apply bg-background text-foreground;
-    @apply text-xl;
+    @apply text-lg;
     @apply leading-relaxed;
     @apply overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  h1, h2, h3 {
-    @apply text-foreground;
+  h1 {
+    @apply text-foreground text-3xl font-bold;
+  }
+  h2 {
+    @apply text-foreground text-2xl font-semibold;
+  }
+  h3 {
+    @apply text-foreground text-xl font-semibold;
+  }
+  /* Ensure paragraphs and text elements are readable */
+  p, li, td, th, label, span {
+    @apply text-lg;
   }
 }
 

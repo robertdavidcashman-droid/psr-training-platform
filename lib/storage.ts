@@ -11,7 +11,7 @@ const STORAGE_KEYS = {
   UI_SCALE: "psr_ui_scale",
 } as const;
 
-export type UiScale = "sm" | "md" | "lg" | "xl";
+export type UiScale = "sm" | "md" | "lg" | "xl" | "xxl";
 
 export interface TopicProgress {
   topicId: string;
@@ -21,8 +21,17 @@ export interface TopicProgress {
   mastery: number;
 }
 
+export interface CriterionProgress {
+  criterionId: string;
+  questionsAnswered: number;
+  correctAnswers: number;
+  lastPracticed: string;
+  mastery: number;
+}
+
 export interface UserProgress {
   topics: Record<string, TopicProgress>;
+  criterionProgress: Record<string, CriterionProgress>;
   totalXp: number;
   currentStreak: number;
   lastActivityDate: string;
@@ -70,7 +79,7 @@ function setStorage<T>(key: string, value: T): void {
 // UI scale
 export function getUiScale(): UiScale {
   const scale = getStorage<UiScale>(STORAGE_KEYS.UI_SCALE, "md");
-  return scale === "sm" || scale === "md" || scale === "lg" || scale === "xl" ? scale : "md";
+  return scale === "sm" || scale === "md" || scale === "lg" || scale === "xl" || scale === "xxl" ? scale : "md";
 }
 
 export function setUiScale(scale: UiScale): void {
@@ -81,6 +90,7 @@ export function setUiScale(scale: UiScale): void {
 export function getProgress(): UserProgress {
   return getStorage<UserProgress>(STORAGE_KEYS.PROGRESS, {
     topics: {},
+    criterionProgress: {},
     totalXp: 0,
     currentStreak: 0,
     lastActivityDate: "",
@@ -92,9 +102,67 @@ export function saveProgress(progress: UserProgress): void {
   setStorage(STORAGE_KEYS.PROGRESS, progress);
 }
 
+// Helper to find matching criteria for question tags
+// Uses dynamic import to avoid SSR issues
+type StandardsData = {
+  parts: Array<{
+    units: Array<{
+      outcomes: Array<{
+        criteria: Array<{
+          id: string;
+          tags?: string[];
+        }>;
+      }>;
+    }>;
+  }>;
+};
+let standardsDataCache: StandardsData | null = null;
+
+async function loadStandardsData() {
+  if (standardsDataCache) return standardsDataCache;
+  if (typeof window === "undefined") return null;
+  
+  try {
+    const data = await import("@/content/psras/standards.json");
+    standardsDataCache = data.default;
+    return standardsDataCache;
+  } catch {
+    return null;
+  }
+}
+
+
+export function updateCriterionProgress(
+  criterionId: string,
+  correct: boolean
+): UserProgress {
+  const progress = getProgress();
+  const today = new Date().toISOString().split("T")[0];
+
+  if (!progress.criterionProgress[criterionId]) {
+    progress.criterionProgress[criterionId] = {
+      criterionId,
+      questionsAnswered: 0,
+      correctAnswers: 0,
+      lastPracticed: today,
+      mastery: 0,
+    };
+  }
+
+  const criterion = progress.criterionProgress[criterionId];
+  criterion.questionsAnswered++;
+  if (correct) criterion.correctAnswers++;
+  criterion.lastPracticed = today;
+  criterion.mastery = Math.round((criterion.correctAnswers / criterion.questionsAnswered) * 100);
+
+  saveProgress(progress);
+  return progress;
+}
+
 export function updateTopicProgress(
   topicId: string,
-  correct: boolean
+  correct: boolean,
+  questionTags?: string[]
 ): UserProgress {
   const progress = getProgress();
   const today = new Date().toISOString().split("T")[0];
@@ -114,6 +182,36 @@ export function updateTopicProgress(
   if (correct) topic.correctAnswers++;
   topic.lastPracticed = today;
   topic.mastery = Math.round((topic.correctAnswers / topic.questionsAnswered) * 100);
+
+  // Update criterion progress if tags are provided
+  // This runs asynchronously to avoid blocking
+  if (questionTags && questionTags.length > 0 && typeof window !== "undefined") {
+    // Load standards and update criteria asynchronously
+    loadStandardsData().then((standards) => {
+      if (!standards) return;
+      const matchingCriterionIds: string[] = [];
+      
+      for (const part of standards.parts) {
+        for (const unit of part.units) {
+          for (const outcome of unit.outcomes) {
+            for (const criterion of outcome.criteria) {
+              const criterionTags = criterion.tags || [];
+              if (questionTags.some((tag) => criterionTags.includes(tag))) {
+                matchingCriterionIds.push(criterion.id);
+              }
+            }
+          }
+        }
+      }
+      
+      // Update progress for all matching criteria
+      matchingCriterionIds.forEach((criterionId) => {
+        updateCriterionProgress(criterionId, correct);
+      });
+    }).catch(() => {
+      // Silently fail if standards can't be accessed
+    });
+  }
 
   // Update XP
   progress.totalXp += correct ? 10 : 2;

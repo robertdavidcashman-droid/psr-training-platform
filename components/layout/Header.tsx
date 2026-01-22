@@ -27,14 +27,16 @@ const NEXT_SCALE: Record<UiScale, UiScale> = {
   sm: "md",
   md: "lg",
   lg: "xl",
-  xl: "sm",
+  xl: "xxl",
+  xxl: "sm",
 };
 
 const SCALE_LABEL: Record<UiScale, string> = {
-  sm: "A-",
-  md: "A",
-  lg: "A+",
-  xl: "A++",
+  sm: "A",
+  md: "A+",
+  lg: "A++",
+  xl: "A+++",
+  xxl: "MAX",
 };
 
 export function Header({ onMenuClick }: HeaderProps) {
@@ -83,12 +85,12 @@ export function Header({ onMenuClick }: HeaderProps) {
 
       {/* Title + breadcrumbs */}
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2 text-base text-white/70" data-testid="breadcrumbs">
+        <div className="flex items-center gap-2 text-lg text-white/70" data-testid="breadcrumbs">
           <span className="hidden sm:inline">Home</span>
-          <ChevronRight className="hidden sm:inline h-4 w-4" />
+          <ChevronRight className="hidden sm:inline h-5 w-5" />
           <span className="truncate">{title}</span>
         </div>
-        <div className="truncate text-lg font-semibold leading-tight sm:text-xl" data-testid="topbar-title">
+        <div className="truncate text-xl font-semibold leading-tight sm:text-2xl" data-testid="topbar-title">
           {title}
         </div>
       </div>
@@ -107,35 +109,35 @@ export function Header({ onMenuClick }: HeaderProps) {
       </div>
 
       {/* Stats */}
-      <div className="flex items-center gap-3 md:gap-4">
+      <div className="flex items-center gap-4 md:gap-5">
         {/* UI scale */}
         <Button
           variant="ghost"
           size="sm"
-          className="hidden md:inline-flex text-white hover:bg-white/10 hover:text-white gap-2"
+          className="hidden md:inline-flex text-white hover:bg-white/10 hover:text-white gap-2 text-lg"
           onClick={cycleScale}
           aria-label={`Text size: ${
-            uiScale === "sm" ? "Small" : uiScale === "md" ? "Default" : uiScale === "lg" ? "Large" : "Extra large"
+            uiScale === "sm" ? "Standard" : uiScale === "md" ? "Large" : uiScale === "lg" ? "Extra large" : uiScale === "xl" ? "Extra extra large" : "Maximum"
           }. Click to change.`}
           data-testid="ui-scale-button"
           type="button"
         >
-          <Type className="h-4 w-4" />
+          <Type className="h-5 w-5" />
           <span className="font-semibold">{SCALE_LABEL[uiScale]}</span>
         </Button>
 
         {/* Streak */}
-        <div className="flex items-center gap-1.5" data-testid="streak-display">
-          <Flame className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-base">
+        <div className="flex items-center gap-2" data-testid="streak-display">
+          <Flame className="h-6 w-6 text-[hsl(var(--gold))]" />
+          <span className="font-semibold text-lg">
             {progress?.currentStreak || 0}
           </span>
         </div>
 
         {/* XP */}
-        <div className="flex items-center gap-1.5" data-testid="xp-display">
-          <Star className="h-5 w-5 text-[hsl(var(--gold))]" />
-          <span className="font-semibold text-base">
+        <div className="flex items-center gap-2" data-testid="xp-display">
+          <Star className="h-6 w-6 text-[hsl(var(--gold))]" />
+          <span className="font-semibold text-lg">
             {progress?.totalXp || 0} XP
           </span>
         </div>
@@ -143,10 +145,10 @@ export function Header({ onMenuClick }: HeaderProps) {
         {/* Level */}
         <Badge
           variant="secondary"
-          className="gap-1 bg-white/10 text-white border-white/10"
+          className="gap-2 bg-white/10 text-white border-white/10 text-lg"
           data-testid="level-display"
         >
-          <TrendingUp className="h-4 w-4" />
+          <TrendingUp className="h-5 w-5" />
           Level {progress?.level || 1}
         </Badge>
 
@@ -159,7 +161,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           data-testid="help-button"
           type="button"
         >
-          <HelpCircle className="h-5 w-5" />
+          <HelpCircle className="h-6 w-6" />
         </Button>
       </div>
       </div>

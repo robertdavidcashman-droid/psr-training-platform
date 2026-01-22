@@ -15,6 +15,7 @@ import {
   X,
   GraduationCap,
   Grid3X3,
+  BarChart3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -22,6 +23,7 @@ const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { name: "Syllabus Map", href: "/syllabus", icon: BookOpen },
   { name: "Coverage Matrix", href: "/coverage", icon: Grid3X3 },
+  { name: "Analytics", href: "/analytics", icon: BarChart3 },
   { name: "Practice", href: "/practice", icon: Play },
   { name: "Mock Exam", href: "/mock-exam", icon: Clock },
   { name: "Critical Incidents", href: "/incidents", icon: AlertTriangle },
@@ -79,12 +81,12 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         data-testid="sidebar"
       >
         {/* Logo */}
-        <div className="flex h-16 items-center justify-between px-5 border-b border-white/10">
-          <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[hsl(var(--gold))]">
-              <GraduationCap className="h-5 w-5 text-[hsl(var(--gold-foreground))]" />
+        <div className="flex h-18 items-center justify-between px-5 border-b border-white/10">
+          <Link href="/dashboard" className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(var(--gold))]">
+              <GraduationCap className="h-6 w-6 text-[hsl(var(--gold-foreground))]" />
             </div>
-            <span className="font-semibold text-xl">PSR Academy</span>
+            <span className="font-semibold text-2xl">PSR Academy</span>
           </Link>
           <Button
             variant="ghost"
@@ -94,12 +96,12 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             data-testid="sidebar-close"
             ref={closeBtnRef}
           >
-            <X className="h-5 w-5" />
+            <X className="h-6 w-6" />
           </Button>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-1 p-4" data-testid="sidebar-nav">
+        <nav className="flex-1 space-y-2 p-4" data-testid="sidebar-nav">
           {navigation.map((item) => {
             const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
             return (
@@ -108,14 +110,14 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                 href={item.href}
                 onClick={onClose}
                 className={cn(
-                  "flex items-center gap-3 rounded-xl px-4 py-3 text-base leading-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
+                  "flex items-center gap-4 rounded-xl px-4 py-4 text-lg leading-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
                   isActive
                     ? "bg-white/10 text-white border-l-4 border-[hsl(var(--gold))] pl-2"
                     : "text-white/80 hover:bg-white/10 hover:text-white"
                 )}
                 data-testid={`nav-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
               >
-                <item.icon className={cn("h-6 w-6", isActive ? "text-[hsl(var(--gold))]" : "text-white/70")} />
+                <item.icon className={cn("h-7 w-7", isActive ? "text-[hsl(var(--gold))]" : "text-white/70")} />
                 {item.name}
               </Link>
             );
@@ -124,8 +126,8 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
         {/* Footer */}
         <div className="border-t border-white/10 p-4">
-          <div className="rounded-2xl bg-white/5 p-4">
-            <p className="text-base leading-relaxed text-white/80">
+          <div className="rounded-2xl bg-white/5 p-5">
+            <p className="text-lg leading-relaxed text-white/80">
               <strong className="text-white">Training purposes only.</strong>{" "}
               This platform provides educational content aligned to PSR accreditation standards. It does not provide legal advice.
             </p>
