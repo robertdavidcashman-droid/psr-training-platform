@@ -7,8 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-
-export const dynamic = "force-dynamic";
+import Link from "next/link";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -17,8 +16,6 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  
-  const getSupabaseClient = () => createClient();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -26,7 +23,8 @@ function LoginForm() {
     setLoading(true);
 
     try {
-      const supabase = getSupabaseClient();
+      const supabase = createClient();
+
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -39,32 +37,21 @@ function LoginForm() {
       }
 
       if (data.user) {
-        // Log session start (non-blocking)
-        fetch("/api/auth/session-start", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-        }).catch(() => {
-          console.error("Error logging session");
-        });
-
-        // Redirect to dashboard or the redirect parameter
+        // Redirect to dashboard or the originally requested page
         const redirectTo = searchParams.get("redirect") || "/dashboard";
         router.push(redirectTo);
         router.refresh();
-      } else {
-        // No user data returned despite no error - shouldn't happen but handle it
-        setError("Login failed. Please try again.");
-        setLoading(false);
       }
-    } catch {
-      setError("An unexpected error occurred. Please try again.");
+    } catch (err) {
+      console.error("Login error:", err);
+      setError(err instanceof Error ? err.message : "An error occurred during login");
       setLoading(false);
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl">Sign In</CardTitle>
           <CardDescription>
@@ -83,6 +70,7 @@ function LoginForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={loading}
+                autoComplete="email"
               />
             </div>
             <div className="space-y-2">
@@ -94,6 +82,7 @@ function LoginForm() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 disabled={loading}
+                autoComplete="current-password"
               />
             </div>
             {error && (
@@ -105,6 +94,25 @@ function LoginForm() {
               {loading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
+          <div className="mt-4 space-y-2 text-center text-sm">
+            <div>
+              <Link
+                href="/reset-password"
+                className="text-primary hover:underline"
+              >
+                Forgot your password?
+              </Link>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Don't have an account? </span>
+              <Link
+                href="/signup"
+                className="text-primary hover:underline font-medium"
+              >
+                Sign up
+              </Link>
+            </div>
+          </div>
         </CardContent>
       </Card>
     </div>
@@ -113,25 +121,27 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
-        <Card className="w-full max-w-md">
-          <CardHeader>
-            <CardTitle className="text-2xl">Sign In</CardTitle>
-            <CardDescription>
-              Enter your credentials to access your account
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="h-10 bg-muted animate-pulse rounded" />
-              <div className="h-10 bg-muted animate-pulse rounded" />
-              <div className="h-10 bg-muted animate-pulse rounded" />
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-background p-4">
+          <Card className="w-full max-w-md shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl">Sign In</CardTitle>
+              <CardDescription>
+                Enter your credentials to access your account
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="h-10 bg-muted animate-pulse rounded" />
+                <div className="h-10 bg-muted animate-pulse rounded" />
+                <div className="h-10 bg-muted animate-pulse rounded" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      }
+    >
       <LoginForm />
     </Suspense>
   );

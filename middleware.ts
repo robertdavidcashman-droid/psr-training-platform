@@ -1,17 +1,28 @@
-import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { createClient } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
-    request: {
-      headers: request.headers,
-    },
-  });
+  const client = createClient(request);
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  // If Supabase is not configured, allow all requests
+  if (!client) {
+    return NextResponse.next();
+  }
 
-  // Protected routes that require authentication (all app routes)
+  const { supabase, response } = client;
+
+  // Refresh session if expired - this is critical for session persistence
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const pathname = request.nextUrl.pathname;
+
+  // Public routes that don't require authentication
+  const publicRoutes = ["/", "/login", "/signup", "/reset-password"];
+  const isPublicRoute = publicRoutes.includes(pathname) || pathname.startsWith("/api/auth/callback");
+
+  // Protected routes
   const protectedRoutes = [
     "/dashboard",
     "/practice",
@@ -23,96 +34,34 @@ export async function middleware(request: NextRequest) {
     "/portfolio",
     "/resources",
   ];
-
-  // If Supabase is not configured, still enforce route protection but skip Supabase checks
-  if (!supabaseUrl || !supabaseKey) {
-    // Still redirect protected routes to login (for testing without Supabase)
-    const pathname = request.nextUrl.pathname;
-    const isProtectedRoute = protectedRoutes.some((route) =>
-      pathname.startsWith(route)
-    );
-    const isAdminRoute = pathname.startsWith("/admin");
-
-    if (isProtectedRoute || isAdminRoute) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/login";
-      redirectUrl.searchParams.set("redirect", pathname);
-      return NextResponse.redirect(redirectUrl);
-    }
-
-    return response;
-  }
-
-  const supabase = createServerClient(
-    supabaseUrl,
-    supabaseKey,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
-          response = NextResponse.next({
-            request,
-          });
-          cookiesToSet.forEach(({ name, value, options }) =>
-            response.cookies.set(name, value, options)
-          );
-        },
-      },
-    }
-  );
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  const pathname = request.nextUrl.pathname;
-
-  // Check if route is protected
   const isProtectedRoute = protectedRoutes.some((route) =>
     pathname.startsWith(route)
   );
-
-  // Admin routes
   const isAdminRoute = pathname.startsWith("/admin");
 
-  // If accessing a protected route without auth, redirect to login
-  if (isProtectedRoute && !user) {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = "/login";
+  // Redirect logged-in users away from auth pages
+  if (user && (pathname === "/login" || pathname === "/signup")) {
+    return NextResponse.redirect(new URL("/dashboard", request.url));
+  }
+
+  // Protect routes that require authentication
+  if ((isProtectedRoute || isAdminRoute) && !user) {
+    const redirectUrl = new URL("/login", request.url);
     redirectUrl.searchParams.set("redirect", pathname);
     return NextResponse.redirect(redirectUrl);
   }
 
-  // If accessing admin route, check if user is admin
-  if (isAdminRoute) {
-    if (!user) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/login";
-      redirectUrl.searchParams.set("redirect", pathname);
-      return NextResponse.redirect(redirectUrl);
-    }
-
-    // Check if user is admin
-    const { data: adminData, error: adminError } = await supabase
+  // Admin route protection
+  if (isAdminRoute && user) {
+    const { data: adminData } = await supabase
       .from("admin_users")
       .select("user_id")
       .eq("user_id", user.id)
       .single();
 
-    if (!adminData || adminError) {
-      // Not an admin, redirect to dashboard
+    if (!adminData) {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
-  }
-
-  // Refresh session if user exists and not on login page
-  if (user && pathname !== "/login") {
-    await supabase.auth.getSession();
   }
 
   return response;
@@ -126,8 +75,7 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - public folder
-     * - api routes that don't need auth (health, etc.)
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$|api/health).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

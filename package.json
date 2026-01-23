@@ -29,7 +29,13 @@
     "fix:citations": "tsx scripts/fixCitations.ts",
     "doctor": "npm run check && npm run test && npm run e2e && node scripts/coverage-report.mjs",
     "setup:auth": "node scripts/setup-auth.mjs",
-    "setup:vercel-env": "node scripts/setup-vercel-env.mjs"
+    "setup:vercel-env": "node scripts/setup-vercel-env.mjs",
+    "test:auth": "node scripts/test-auth-comprehensive.mjs",
+    "diagnose:auth": "node scripts/diagnose-auth-issue.mjs",
+    "auto-diagnose:auth": "node scripts/auto-diagnose-auth.mjs",
+    "fix:cors": "node scripts/fix-cors-automated.mjs",
+    "verify:cors": "node scripts/verify-cors-fix.mjs",
+    "auth:verify": "node scripts/auth-verify.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",

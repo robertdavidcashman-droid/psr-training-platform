@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-01-23T17:40:57.705Z",
+  "environment": "unknown",
+  "checks": {
+    "environment": "unknown",
+    "envVars": {
+      "url": {
+        "exists": true,
+        "valid": true
+      },
+      "key": {
+        "exists": true,
+        "valid": true
+      }
+    },
+    "network": {
+      "connected": true,
+      "status": 200
+    },
+    "cors": {
+      "configured": true
+    },
+    "authEndpoint": {
+      "healthy": true
+    },
+    "signup": {
+      "accessible": true,
+      "rateLimited": true
+    }
+  },
+  "issues": [],
+  "fixes": [],
+  "healthy": true
+}
