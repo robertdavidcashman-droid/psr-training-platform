@@ -118,16 +118,18 @@ function generateQuestionId(criterionId: string, index: number, type: string): s
 }
 
 function getTopicIdFromTags(tags: string[]): string {
-  // Map common tags to topic IDs
+  // Map common tags to topic IDs.
+  // NOTE: Keep these aligned with `content/topics.json` so automated audits pass.
   const tagToTopic: Record<string, string> = {
     "arrest": "pace-s24-arrest",
     "detention": "pace-detention-time",
     "legal-advice": "pace-s58-advice",
-    "code-c": "pace-code-c",
+    "telephone-advice": "telephone-advice",
+    "delay": "delay-legal-advice",
     "vulnerability": "vuln-appropriate-adult",
     "disclosure": "disclosure-advance",
-    "interview": "interview-conduct",
-    "bail": "bail-conditions",
+    "interview": "interview-attendance",
+    "bail": "bail-applications",
     "charging": "charging-decisions",
     "ethics": "client-confidentiality",
   };
@@ -136,10 +138,25 @@ function getTopicIdFromTags(tags: string[]): string {
     if (tagToTopic[tag]) {
       return tagToTopic[tag];
     }
+    // If the tag itself is a topic id, prefer it.
+    // (Examples: authority-to-act, register, probationary, disclosure, etc.)
+    if (
+      tag === "authority-to-act" ||
+      tag === "telephone-advice" ||
+      tag === "delay-legal-advice" ||
+      tag === "voluntary-attendance" ||
+      tag === "register" ||
+      tag === "cit" ||
+      tag === "probationary" ||
+      tag === "identification" ||
+      tag === "recording"
+    ) {
+      return tag;
+    }
   }
 
-  // Default fallback
-  return tags[0] ? `topic-${tags[0]}` : "general";
+  // Default fallback: keep topicId stable (do NOT mint new ids).
+  return "general";
 }
 
 function generateCitations(

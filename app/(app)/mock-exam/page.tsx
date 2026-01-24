@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { updateTopicProgress, savePracticeSession, generateId } from "@/lib/storage";
 import { shuffleArray } from "@/lib/utils";
-import { questions as seededQuestions } from "@/content/questions";
+import { trainingQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
 import { QuestionRenderer } from "@/components/questions/QuestionRenderer";
@@ -51,7 +51,7 @@ export default function MockExamPage() {
 
   const startExam = useCallback((selectedMode: ExamMode) => {
     const config = EXAM_CONFIG[selectedMode];
-    const shuffled = shuffleArray(seededQuestions as Question[]);
+    const shuffled = shuffleArray(trainingQuestions as Question[]);
     const selected = shuffled.slice(0, config.questions);
 
     setQuestions(selected);

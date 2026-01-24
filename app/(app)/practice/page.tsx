@@ -24,7 +24,7 @@ import {
   generateId,
 } from "@/lib/storage";
 import { shuffleArray } from "@/lib/utils";
-import { questions as seededQuestions } from "@/content/questions";
+import { trainingQuestions } from "@/content/questions";
 import topicsData from "@/content/topics.json";
 import type { Question } from "@/lib/schemas";
 import { getPracticeTips, getReferenceSuggestions, isPaceCustodyTopic } from "@/lib/references";
@@ -81,7 +81,7 @@ function PracticeContent() {
   const currentQuestion = questions[currentIndex];
 
   const startSession = useCallback((selectedMode: PracticeMode) => {
-    let availableQuestions = seededQuestions as Question[];
+    let availableQuestions = trainingQuestions as Question[];
     
     if (topicFilter) {
       availableQuestions = availableQuestions.filter((q) => q.topicId === topicFilter);

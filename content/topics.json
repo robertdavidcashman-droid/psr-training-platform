@@ -204,6 +204,279 @@
       "description": "Learning from cases, identifying development needs, and portfolio evidence",
       "category": "portfolio",
       "subtopics": ["Case reflection", "Learning points", "Development planning"]
+    },
+    {
+      "id": "voluntary-attendance",
+      "name": "Voluntary Attendance",
+      "description": "Rights and risks in voluntary interviews, and when arrest/necessity may arise",
+      "category": "pace-custody",
+      "subtopics": ["Right to leave", "Arrest necessity", "Transition to arrest"]
+    },
+    {
+      "id": "delay-legal-advice",
+      "name": "Delay of Legal Advice (Annex B)",
+      "description": "When and how access to legal advice can be delayed, authorisation, grounds, and recording",
+      "category": "pace-custody",
+      "subtopics": ["Annex B grounds", "Superintendent authorisation", "Timing and documentation"]
+    },
+    {
+      "id": "telephone-advice",
+      "name": "Telephone Advice",
+      "description": "When telephone advice may be appropriate, and when attendance is required",
+      "category": "pace-custody",
+      "subtopics": ["Telephone advice criteria", "Attendance triggers", "Recording advice"]
+    },
+    {
+      "id": "identification-code-d",
+      "name": "Identification Procedures (Code D)",
+      "description": "Video ID, parades and other procedures, and the legal representative’s role in ensuring fairness",
+      "category": "evidence",
+      "subtopics": ["Procedure types", "Safeguards", "Objections and recording"]
+    },
+    {
+      "id": "interview-recording-code-e",
+      "name": "Interview Recording (Code E - Audio)",
+      "description": "Audio recording requirements for interviews under PACE Code E",
+      "category": "interview",
+      "subtopics": ["When recording is required", "Sealing and continuity", "Copies and disclosure"]
+    },
+    {
+      "id": "interview-recording-code-f",
+      "name": "Interview Recording (Code F - Visual)",
+      "description": "Visual recording requirements and safeguards for interviews under PACE Code F",
+      "category": "interview",
+      "subtopics": ["When visual recording is used", "Vulnerable suspects", "Access to recordings"]
+    },
+    {
+      "id": "charging-decisions",
+      "name": "Charging Decisions",
+      "description": "CPS consultation and charging decisions, and advising clients on next steps",
+      "category": "bail",
+      "subtopics": ["CPS consultation", "Threshold vs full code test (high level)", "Pre-charge representations (where appropriate)"]
+    },
+    {
+      "id": "nfa-cautions",
+      "name": "NFA & Cautions",
+      "description": "No Further Action outcomes and cautions, including advising on consequences",
+      "category": "bail",
+      "subtopics": ["NFA decisions", "Simple/conditional cautions", "Client advice"]
+    },
+    {
+      "id": "probationary-structure",
+      "name": "Probationary Period (Structure)",
+      "description": "Probationary registration period length and supervision framework",
+      "category": "portfolio",
+      "subtopics": ["12-month period", "Supervision requirements", "Restrictions"]
+    },
+    {
+      "id": "probationary-requirements",
+      "name": "Probationary Period (Requirements)",
+      "description": "Key requirements during probation: portfolio building, supervision evidence, and progression",
+      "category": "portfolio",
+      "subtopics": ["Portfolio evidence", "Supervisor sign-off", "Competence development"]
+    },
+    {
+      "id": "register-entry",
+      "name": "Police Station Register Entry",
+      "description": "Full accreditation requirements and maintaining registration for scheme eligibility",
+      "category": "portfolio",
+      "subtopics": ["Exam/portfolio/CIT", "Eligibility and maintenance", "Ongoing requirements"]
+    },
+    {
+      "id": "cit-scenarios",
+      "name": "Critical Incident Test (CIT)",
+      "description": "Scenario-based application of police station representation skills in realistic situations",
+      "category": "portfolio",
+      "subtopics": ["Triage and authority to act", "Custody arrival steps", "Post-interview outcomes"]
+    },
+    {
+      "id": "general",
+      "name": "General (Syllabus)",
+      "description": "General PSRAS/Police Station syllabus-aligned questions not tied to a single topic",
+      "category": "pace-custody",
+      "subtopics": ["Overview", "General safeguards", "Good practice"]
+    },
+    {
+      "id": "pace-s58-advice",
+      "name": "Right to Legal Advice (s.58 PACE)",
+      "description": "Right to consult a solicitor privately at any time and associated custody safeguards",
+      "category": "pace-custody",
+      "subtopics": ["s.58 right", "Private consultation", "Notification and access"]
+    },
+    {
+      "id": "bail-conditions",
+      "name": "Bail Conditions (Police Bail)",
+      "description": "Bail conditions, proportionality, and representations on conditions",
+      "category": "bail",
+      "subtopics": ["Conditions", "Representations", "Proportionality"]
+    },
+    {
+      "id": "topic-custody-record",
+      "name": "Custody Record (Code C)",
+      "description": "Custody record contents, access, and recording key decisions/reasons",
+      "category": "pace-custody",
+      "subtopics": ["What to check", "Rights and reviews", "Documentation"]
+    },
+    {
+      "id": "topic-rights",
+      "name": "Rights & Entitlements in Custody",
+      "description": "Core custody rights and entitlements (e.g. s.56/s.58 and Code C notifications)",
+      "category": "pace-custody",
+      "subtopics": ["Rights notification", "s.56", "s.58"]
+    },
+    {
+      "id": "topic-voluntary-attendance",
+      "name": "Voluntary Attendance (General)",
+      "description": "Voluntary attendance principles and when arrest/necessity may arise",
+      "category": "pace-custody",
+      "subtopics": ["Right to leave", "Risk assessment", "Transition to arrest"]
+    },
+    {
+      "id": "topic-delay",
+      "name": "Delay of Legal Advice (General)",
+      "description": "High-level topic placeholder for delay of legal advice content",
+      "category": "pace-custody",
+      "subtopics": ["Annex B", "Authorisation", "Recording"]
+    },
+    {
+      "id": "topic-telephone-advice",
+      "name": "Telephone Advice (General)",
+      "description": "High-level topic placeholder for telephone advice content",
+      "category": "pace-custody",
+      "subtopics": ["When appropriate", "When to attend", "Record keeping"]
+    },
+    {
+      "id": "topic-recording",
+      "name": "Interview Recording (General)",
+      "description": "High-level topic placeholder for interview recording content (Codes E/F)",
+      "category": "interview",
+      "subtopics": ["Audio recording", "Visual recording", "Continuity"]
+    },
+    {
+      "id": "topic-identification",
+      "name": "Identification Procedures (General)",
+      "description": "High-level topic placeholder for identification procedure content (Code D)",
+      "category": "evidence",
+      "subtopics": ["Procedure choice", "Safeguards", "Objections"]
+    },
+    {
+      "id": "topic-confessions",
+      "name": "Confessions (s.76 PACE)",
+      "description": "Confession evidence, oppression/unreliability challenges, and recording concerns",
+      "category": "evidence",
+      "subtopics": ["s.76", "Oppression", "Unreliability"]
+    },
+    {
+      "id": "topic-s78",
+      "name": "Fairness Exclusion (s.78 PACE)",
+      "description": "Excluding evidence where admission would adversely affect fairness",
+      "category": "evidence",
+      "subtopics": ["s.78 discretion", "Procedural breaches", "Documentation"]
+    },
+    {
+      "id": "topic-rui",
+      "name": "Released Under Investigation (General)",
+      "description": "High-level topic placeholder for RUI client advice and follow-up",
+      "category": "bail",
+      "subtopics": ["No bail conditions", "Client advice", "Follow-up"]
+    },
+    {
+      "id": "topic-nfa",
+      "name": "No Further Action (General)",
+      "description": "High-level topic placeholder for NFA outcomes and advice",
+      "category": "bail",
+      "subtopics": ["NFA decision", "Consequences", "Next steps"]
+    },
+    {
+      "id": "topic-adverse-inference",
+      "name": "Adverse Inference (Silence)",
+      "description": "Adverse inference provisions (CJPOA) and interview strategy considerations",
+      "category": "interview",
+      "subtopics": ["Silence risks", "Prepared statements", "Strategy"]
+    },
+    {
+      "id": "topic-consultation",
+      "name": "Private Consultation (General)",
+      "description": "High-level topic placeholder for private consultation content and taking instructions",
+      "category": "interview",
+      "subtopics": ["Taking instructions", "Advice", "Recording advice"]
+    },
+    {
+      "id": "topic-instructions",
+      "name": "Client Instructions (General)",
+      "description": "High-level topic placeholder for client autonomy, instructions, and documenting advice",
+      "category": "client-care",
+      "subtopics": ["Client autonomy", "Informed decisions", "Record keeping"]
+    },
+    {
+      "id": "topic-intervention",
+      "name": "Interview Interventions (General)",
+      "description": "High-level topic placeholder for interventions/objections during interview",
+      "category": "interview",
+      "subtopics": ["When to intervene", "How to object", "Keeping a record"]
+    },
+    {
+      "id": "topic-cit",
+      "name": "Critical Incident Test (General)",
+      "description": "High-level topic placeholder for CIT-focused questions and scenario application",
+      "category": "portfolio",
+      "subtopics": ["Triage", "Custody steps", "Outcomes and recording"]
+    },
+    {
+      "id": "topic-fitness-for-interview",
+      "name": "Fitness for Interview (General)",
+      "description": "High-level topic placeholder for fitness for interview and healthcare involvement",
+      "category": "vulnerability",
+      "subtopics": ["Healthcare assessment", "Postponement", "Safeguards"]
+    },
+    {
+      "id": "topic-appropriate-adult",
+      "name": "Appropriate Adult (General)",
+      "description": "High-level topic placeholder for appropriate adult safeguards and role",
+      "category": "vulnerability",
+      "subtopics": ["When required", "Role", "Suitability/conflicts"]
+    },
+    {
+      "id": "topic-juveniles",
+      "name": "Juveniles (General)",
+      "description": "High-level topic placeholder for youth/juvenile safeguards in custody",
+      "category": "vulnerability",
+      "subtopics": ["Under 18 safeguards", "AA requirement", "Parent/guardian notification"]
+    },
+    {
+      "id": "topic-probationary",
+      "name": "Probationary Status (General)",
+      "description": "High-level topic placeholder for probationary period rules and supervision requirements",
+      "category": "portfolio",
+      "subtopics": ["Supervision", "Restrictions", "Progression"]
+    },
+    {
+      "id": "topic-register",
+      "name": "Register Entry (General)",
+      "description": "High-level topic placeholder for register entry requirements and maintenance",
+      "category": "portfolio",
+      "subtopics": ["Requirements", "Eligibility", "Maintenance"]
+    },
+    {
+      "id": "topic-assessment",
+      "name": "Assessment Structure (General)",
+      "description": "High-level topic placeholder for PSRAS assessment components and structure",
+      "category": "portfolio",
+      "subtopics": ["Exam", "Portfolio", "CIT"]
+    },
+    {
+      "id": "topic-portfolio",
+      "name": "Portfolio (General)",
+      "description": "High-level topic placeholder for portfolio building and evidence requirements",
+      "category": "portfolio",
+      "subtopics": ["Case summaries", "Reflective accounts", "Supervisor sign-off"]
+    },
+    {
+      "id": "topic-reflection",
+      "name": "Reflective Practice (General)",
+      "description": "High-level topic placeholder for reflective practice and learning evidence",
+      "category": "portfolio",
+      "subtopics": ["Learning points", "Improvements", "Development needs"]
     }
   ]
 }

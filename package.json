@@ -25,6 +25,7 @@
     "e2e:auth": "playwright test tests/e2e/auth.spec.ts",
     "test:links": "node scripts/link-integrity.mjs",
     "audit:coverage": "tsx scripts/auditCoverage.ts",
+    "audit:questions": "tsx scripts/auditQuestions.ts",
     "seed:coverage": "tsx scripts/seedCoverage.ts",
     "fix:citations": "tsx scripts/fixCitations.ts",
     "doctor": "npm run check && npm run test && npm run e2e && node scripts/coverage-report.mjs",
