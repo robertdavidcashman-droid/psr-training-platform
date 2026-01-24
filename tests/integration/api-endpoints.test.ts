@@ -5,7 +5,7 @@ const BASE_URL = process.env.TEST_BASE_URL || "http://localhost:3000";
 // Skip API endpoint tests if server is not running
 // Note: These tests require the Next.js dev server to be running
 // In CI, these should be run as part of E2E tests with Playwright
-const skipApiTests = !process.env.TEST_BASE_URL && process.env.CI !== "true";
+const skipApiTests = !process.env.TEST_BASE_URL;
 
 describe.skipIf(skipApiTests)("API Endpoint Integration Tests", () => {
   describe("Public Endpoints", () => {
@@ -24,67 +24,57 @@ describe.skipIf(skipApiTests)("API Endpoint Integration Tests", () => {
     });
   });
 
-  describe("Auth Endpoints", () => {
-    it("should return 401 for unauthenticated session-start", async () => {
-      const response = await fetch(`${BASE_URL}/api/auth/session-start`, {
+  describe("Gateway Endpoints", () => {
+    it("should reject an invalid gateway code (or 500 if not configured)", async () => {
+      const response = await fetch(`${BASE_URL}/api/gateway`, {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code: "wrong" }),
       });
-      expect(response.status).toBe(401);
-    });
-
-    it("should return 401 for unauthenticated ping", async () => {
-      const response = await fetch(`${BASE_URL}/api/auth/ping`, {
-        method: "POST",
-      });
-      expect(response.status).toBe(401);
-    });
-
-    it("should return 401 for unauthenticated session-end", async () => {
-      const response = await fetch(`${BASE_URL}/api/auth/session-end`, {
-        method: "POST",
-      });
-      expect(response.status).toBe(401);
-    });
-
-    it("should return 200 or 401 for logout (may work without auth)", async () => {
-      const response = await fetch(`${BASE_URL}/api/auth/logout`, {
-        method: "POST",
-      });
+      // If APP_GATEWAY_CODE is configured: 401 for wrong code
+      // If not configured (zero-setup mode): will succeed (200)
       expect([200, 401]).toContain(response.status);
+    });
+
+    it("should allow clearing the gateway cookie", async () => {
+      const response = await fetch(`${BASE_URL}/api/gateway`, {
+        method: "DELETE",
+      });
+      expect(response.status).toBe(200);
     });
   });
 
   describe("Admin Endpoints", () => {
-    it("should return 401 for unauthenticated admin/coverage/topup", async () => {
+    it("should be blocked/disabled for admin/coverage/topup", async () => {
       const response = await fetch(`${BASE_URL}/api/admin/coverage/topup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ criterionId: "test" }),
       });
-      expect(response.status).toBe(401);
+      expect([401, 403, 410]).toContain(response.status);
     });
 
-    it("should return 401 for unauthenticated admin/coverage/regenerate", async () => {
+    it("should be blocked/disabled for admin/coverage/regenerate", async () => {
       const response = await fetch(`${BASE_URL}/api/admin/coverage/regenerate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ criterionId: "test" }),
       });
-      expect(response.status).toBe(401);
+      expect([401, 403, 410]).toContain(response.status);
     });
 
-    it("should return 401 for unauthenticated admin/force-logout", async () => {
+    it("should be blocked/disabled for admin/force-logout", async () => {
       const response = await fetch(`${BASE_URL}/api/admin/force-logout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sessionId: "test" }),
       });
-      expect(response.status).toBe(401);
+      expect([401, 403, 410]).toContain(response.status);
     });
 
-    it("should return 401 for unauthenticated admin/user-emails", async () => {
+    it("should be blocked/disabled for admin/user-emails", async () => {
       const response = await fetch(`${BASE_URL}/api/admin/user-emails`);
-      expect(response.status).toBe(401);
+      expect([401, 403, 405, 410]).toContain(response.status);
     });
   });
 

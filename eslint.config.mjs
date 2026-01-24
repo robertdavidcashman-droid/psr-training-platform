@@ -30,6 +30,22 @@ const eslintConfig = [
       ],
     },
   },
+  // Scripts are developer tooling; keep them linted but less strict.
+  {
+    files: ["scripts/**/*.{ts,js,mjs}"],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  },
+  // Integration tests often intentionally declare vars while probing performance.
+  {
+    files: ["tests/integration/**/*.{ts,js}"],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
 ];
 
 export default eslintConfig;

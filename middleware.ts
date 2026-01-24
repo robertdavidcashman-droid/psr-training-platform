@@ -1,26 +1,16 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { createClient } from "@/lib/supabase/middleware";
 
+/**
+ * Middleware for route protection
+ *
+ * This app uses a lightweight "gateway" cookie (no user accounts).
+ * Note: This is NOT strong security; it’s a simple access gate.
+ */
 export async function middleware(request: NextRequest) {
-  const client = createClient(request);
-
-  // If Supabase is not configured, allow all requests
-  if (!client) {
-    return NextResponse.next();
-  }
-
-  const { supabase, response } = client;
-
-  // Refresh session if expired - this is critical for session persistence
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
   const pathname = request.nextUrl.pathname;
 
-  // Public routes that don't require authentication
-  const publicRoutes = ["/", "/login", "/signup", "/reset-password"];
-  const isPublicRoute = publicRoutes.includes(pathname) || pathname.startsWith("/api/auth/callback");
+  const cookieName = process.env.GATEWAY_COOKIE_NAME || "app_gateway";
+  const hasGateway = !!request.cookies.get(cookieName)?.value;
 
   // Protected routes
   const protectedRoutes = [
@@ -39,32 +29,28 @@ export async function middleware(request: NextRequest) {
   );
   const isAdminRoute = pathname.startsWith("/admin");
 
-  // Redirect logged-in users away from auth pages
-  if (user && (pathname === "/login" || pathname === "/signup")) {
-    return NextResponse.redirect(new URL("/dashboard", request.url));
-  }
-
-  // Protect routes that require authentication
-  if ((isProtectedRoute || isAdminRoute) && !user) {
-    const redirectUrl = new URL("/login", request.url);
-    redirectUrl.searchParams.set("redirect", pathname);
+  // Redirect old auth pages to the gateway
+  if (pathname === "/login" || pathname === "/signup" || pathname === "/reset-password") {
+    const redirectUrl = new URL("/gateway", request.url);
+    const next = request.nextUrl.searchParams.get("next");
+    if (next) redirectUrl.searchParams.set("next", next);
     return NextResponse.redirect(redirectUrl);
   }
 
-  // Admin route protection
-  if (isAdminRoute && user) {
-    const { data: adminData } = await supabase
-      .from("admin_users")
-      .select("user_id")
-      .eq("user_id", user.id)
-      .single();
-
-    if (!adminData) {
-      return NextResponse.redirect(new URL("/dashboard", request.url));
-    }
+  // Redirect gated users away from gateway page
+  if (hasGateway && pathname === "/gateway") {
+    const next = request.nextUrl.searchParams.get("next") || "/dashboard";
+    return NextResponse.redirect(new URL(next, request.url));
   }
 
-  return response;
+  // Protect routes that require the gateway cookie
+  if ((isProtectedRoute || isAdminRoute) && !hasGateway) {
+    const redirectUrl = new URL("/gateway", request.url);
+    redirectUrl.searchParams.set("next", pathname);
+    return NextResponse.redirect(redirectUrl);
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {

@@ -1,14 +1,20 @@
 import { defineConfig, devices } from "@playwright/test";
+import path from "node:path";
+
+const port = process.env.E2E_PORT || "3100";
+const baseURL = process.env.PLAYWRIGHT_BASE_URL || `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  globalSetup: "./tests/e2e/global-setup.ts",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL,
+    storageState: path.join("test-results", "gateway-storage.json"),
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
@@ -50,8 +56,10 @@ export default defineConfig({
   ],
   webServer: {
     command: "node scripts/e2e-server.mjs",
-    url: "http://localhost:3000",
-    reuseExistingServer: true,
+    url: baseURL,
+    reuseExistingServer: !process.env.CI, // Reuse in local dev, but not in CI
     timeout: 120000,
+    stdout: "ignore",
+    stderr: "pipe",
   },
 });

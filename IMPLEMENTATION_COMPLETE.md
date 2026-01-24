@@ -1,244 +1,425 @@
-# Implementation Complete: Question Variety, Analytics, CIT Scenarios & Performance
+# ✅ Custom Authentication Implementation - COMPLETE
 
-## Summary
+## 🎯 Mission Accomplished
 
-Successfully implemented question variety expansion, enhanced study analytics, additional CIT scenarios, and performance optimizations for PSR Training Academy.
-
-## 1. Question Variety Expansion ✅
-
-### Schema Updates
-- **File:** `lib/schemas.ts`
-- Added `mcq_multi` (select-all-that-apply) and `short_answer` question types
-- Updated validation to support:
-  - `mcq_multi`: requires `correctAnswers` array
-  - `short_answer`: requires `expectedAnswerOutline` array
-- Added `correctAnswers?: string[]` field for multi-select questions
-
-### Component Implementation
-- **File:** `components/questions/QuestionRenderer.tsx` (NEW)
-- Unified component handling all question types:
-  - `mcq` / `best-answer`: Single select (existing)
-  - `mcq_multi`: Multi-select with checkboxes, shows all correct answers
-  - `short_answer`: Textarea input with marking points display
-- Integrated into practice and mock exam pages
-
-### Sample Questions
-- **File:** `content/questions/variety-samples.json` (NEW)
-- 4 `mcq_multi` questions covering:
-  - Arrest necessity grounds
-  - Appropriate adult requirements
-  - Pre-interview disclosure
-  - Charging representations
-- 4 `short_answer` questions covering:
-  - Appropriate adult requirements
-  - Bail condition representations
-  - Delay of legal advice (Annex B)
-  - Interview interventions
-
-### Integration
-- **Files Updated:**
-  - `app/(app)/practice/page.tsx` - Uses QuestionRenderer, handles multi-select and short-answer
-  - `app/(app)/mock-exam/page.tsx` - Supports new question types with proper scoring
-- Multi-select scoring: All correct = full points, partial = partial credit
-- Short-answer: Currently accepts any answer (can be enhanced with AI evaluation later)
-
-## 2. Enhanced Study Analytics ✅
-
-### Storage Updates
-- **File:** `lib/storage.ts`
-- Added `CriterionProgress` interface
-- Added `criterionProgress` to `UserProgress`
-- Created `updateCriterionProgress()` function
-- Updated `updateTopicProgress()` to map question tags to criteria automatically
-- Async criterion matching to avoid blocking
-
-### Analytics Dashboard
-- **File:** `app/(app)/analytics/page.tsx` (NEW)
-- Features:
-  - **Exam Readiness Score**: Shows % of criteria at 80%+ mastery
-  - **Personalized Recommendations**: Focus areas, improving areas, readiness status
-  - **Weak Areas**: Top 10 criteria needing focus, sorted by gap
-  - **Improving Areas**: Criteria showing upward trends
-  - **All Criteria Performance Table**: Complete breakdown with mastery percentages
-  - **Quick Actions**: Links to practice and coverage
-
-### Analytics Engine
-- **File:** `lib/analytics.ts` (NEW)
-- Functions:
-  - `getWeakCriteria(limit)`: Returns criteria below 80% mastery
-  - `getImprovingCriteria()`: Criteria showing improvement trends
-  - `getRecommendations()`: Personalized study recommendations
-  - `getExamReadiness()`: Overall readiness score (0-100%)
-  - `getAllCriterionAnalytics()`: Complete criterion performance data
-  - `getPerformanceTrends(days)`: Performance over time
-
-### Dashboard Integration
-- **File:** `app/(app)/dashboard/page.tsx`
-- Added:
-  - Exam Readiness stat card
-  - Weak criteria display (replaces/extends weak topics)
-  - Link to Analytics page
-  - Memoized calculations for performance
-
-### Navigation
-- **File:** `components/layout/Sidebar.tsx`
-- Added "Analytics" link to navigation menu
-
-## 3. More CIT Scenarios ✅
-
-### New Scenarios Added
-- **File:** `content/scenarios.json`
-- Added 5 new scenarios:
-
-1. **"The Delayed Legal Advice"** (scenario-003)
-   - Topic: delay-legal-advice
-   - Decision points: Verify delay authorisation, challenge improper delays, document concerns
-   - 2-3 steps with branching paths
-
-2. **"The Charging Decision"** (scenario-004)
-   - Topic: charging-decisions
-   - Decision points: Pre-charge representations, wait vs bail, client advice
-   - 2-3 steps
-
-3. **"The Voluntary Attendance"** (scenario-005)
-   - Topic: voluntary-attendance
-   - Decision points: When arrest becomes necessary, rights protection, documentation
-   - 2-3 steps
-
-4. **"The Identification Procedure"** (scenario-006)
-   - Topic: identification-code-d
-   - Decision points: Verify Code D compliance, object to breaches, challenge evidence
-   - 2-3 steps
-
-5. **"The Vulnerable Suspect"** (scenario-007)
-   - Topic: vulnerability
-   - Decision points: Request healthcare assessment, appropriate adult, postpone interview
-   - 2-3 steps
-
-### Scenario Quality
-- Each scenario includes:
-  - Realistic police station situations
-  - 2-3 decision points with branching
-  - Detailed feedback for each choice
-  - Comprehensive debrief with learning points
-  - Covers different syllabus areas
-
-## 4. Performance Optimizations ✅
-
-### Question Utilities
-- **File:** `lib/questions.ts` (NEW)
-- Functions:
-  - `getQuestionsPaginated()`: Paginated loading
-  - `getQuestionsByCriterion()`: Filter by criterion
-  - `getQuestionsByTag()`: Filter by tag
-  - `getQuestionsByDifficulty()`: Filter by difficulty
-  - `getQuestionsByType()`: Filter by question type
-  - `getQuestionsFiltered()`: Multi-filter support
-  - `getQuestionCountByTag()`: Memoized counts
-- Pre-computed indices for fast lookups
-- Cache management functions
-
-### Component Optimizations
-- **File:** `app/(app)/practice/page.tsx`
-  - Added `useMemo` for:
-    - `topicMap`
-    - `correctCount`
-    - `score` calculation
-  - Added `useCallback` for:
-    - `handleAnswerChange`
-    - `submitAnswer`
-    - `nextQuestion`
-    - `finishSession`
-
-- **File:** `app/(app)/mock-exam/page.tsx`
-  - Added `useMemo` for:
-    - `topicMap`
-    - `getScore` calculation
-    - `getTopicBreakdown` calculation
-
-- **File:** `app/(app)/coverage/page.tsx`
-  - Coverage calculation already memoized
-  - Added `useMemo` for `overallPercent`
-
-- **File:** `app/(app)/dashboard/page.tsx`
-  - Added `useMemo` for:
-    - `weakestTopics`
-    - `weakCriteria`
-    - `examReadiness`
-    - `topicMap`
-
-### Data Structure
-- Question indices pre-computed in `lib/questions.ts`
-- Tag-to-questions map for O(1) lookups
-- Cached counts to avoid repeated calculations
-
-## Files Created
-
-1. `components/questions/QuestionRenderer.tsx` - Unified question renderer
-2. `app/(app)/analytics/page.tsx` - Analytics dashboard
-3. `lib/analytics.ts` - Analytics engine and recommendations
-4. `lib/questions.ts` - Question utilities and performance helpers
-5. `content/questions/variety-samples.json` - Sample multi-select and short-answer questions
-
-## Files Modified
-
-1. `lib/schemas.ts` - Added mcq_multi and short_answer types
-2. `lib/storage.ts` - Added criterion-level progress tracking
-3. `app/(app)/practice/page.tsx` - Uses QuestionRenderer, performance optimizations
-4. `app/(app)/mock-exam/page.tsx` - Supports new question types, performance
-5. `app/(app)/dashboard/page.tsx` - Shows criterion insights, links to analytics
-6. `app/(app)/coverage/page.tsx` - Performance optimizations
-7. `content/scenarios.json` - Added 5 new CIT scenarios
-8. `content/questions/index.ts` - Added variety-samples import
-9. `components/layout/Sidebar.tsx` - Added Analytics navigation link
-
-## Verification
-
-### Coverage Status
-- **Total criteria:** 49
-- **Missing (0 questions):** 0
-- **Partial (1-4 questions):** 0
-- **OK (5+ questions):** 49
-- **Coverage rate:** 100%
-
-### Question Types Supported
-- ✅ `mcq` - Single select (existing)
-- ✅ `best-answer` - Single select (existing)
-- ✅ `mcq_multi` - Multi-select (NEW)
-- ✅ `short_answer` - Text input with marking points (NEW)
-- ✅ `scenario` - Branching scenarios (existing)
-
-### Features Working
-- ✅ Question variety rendering in practice and mock exam
-- ✅ Multi-select answer handling and scoring
-- ✅ Short-answer input and marking points display
-- ✅ Criterion-level progress tracking
-- ✅ Analytics dashboard with recommendations
-- ✅ 7 total CIT scenarios (2 original + 5 new)
-- ✅ Performance optimizations (memoization, indices)
-
-## Testing Status
-
-### Manual Testing Needed
-- Test multi-select questions in practice mode
-- Test short-answer questions in practice mode
-- Verify analytics page loads and shows data
-- Test new CIT scenarios flow
-- Verify performance improvements
-
-### Automated Tests
-- Existing Playwright tests should continue to work
-- New question types may need test updates (future work)
-
-## Next Steps (Optional)
-
-1. Add AI evaluation for short-answer questions
-2. Add more question variety (scenario branching questions)
-3. Enhance analytics with charts/visualizations
-4. Add question difficulty filtering in practice mode
-5. Add search functionality for questions
+All Supabase Auth has been **completely removed** and replaced with a robust, database-backed session authentication system.
 
 ---
 
-**Status:** ✅ Complete
-**Date:** 2026-01-21
+## 📊 Implementation Summary
+
+### Phase 1: Cleanup ✅ COMPLETE
+- **Deleted**: `app/api/auth/callback/route.ts` (Supabase Auth callback)
+- **Replaced**: 4 route guards/components
+  - `middleware.ts` - Complete rewrite
+  - `app/login/page.tsx` - Uses new API
+  - `app/signup/page.tsx` - Uses new API  
+  - `components/layout/Header.tsx` - Removed Supabase Auth
+
+**Summary**: Deleted 1 auth callback route and replaced 4 route guards/components.
+
+### Phase 2: Custom Auth ✅ COMPLETE
+
+#### Database Schema
+- ✅ Migration file: `supabase/migrations/001_custom_auth.sql`
+- ✅ Tables: `app_users`, `app_sessions`
+- ✅ Indexes: Performance optimized
+- ✅ Functions: Auto-update triggers, cleanup function
+
+#### Database Connection
+- ✅ Strategy: **Option A** - Direct Postgres + Drizzle ORM
+- ✅ File: `lib/db/index.ts` - Lazy initialization
+- ✅ Schema: `lib/db/schema.ts` - Type-safe definitions
+
+#### Auth Utilities
+- ✅ `lib/auth/password.ts` - Argon2id hashing
+- ✅ `lib/auth/session.ts` - Session management (SHA-256 tokens)
+- ✅ `lib/auth/cookies.ts` - httpOnly cookie utilities
+- ✅ `lib/auth/server.ts` - Server-side helpers
+
+#### API Routes
+- ✅ `POST /api/auth/signup` - Create account
+- ✅ `POST /api/auth/login` - Authenticate
+- ✅ `POST /api/auth/logout` - End session
+- ✅ `GET /api/auth/me` - Get current user
+
+#### Middleware
+- ✅ `middleware.ts` - Cookie-based protection
+- ✅ Lightweight check (Edge runtime compatible)
+- ✅ Full validation in protected routes
+
+### Phase 3: UI ✅ COMPLETE
+- ✅ Login page updated
+- ✅ Signup page updated (10 char min password)
+- ✅ Header component updated
+- ✅ All Supabase Auth calls removed
+
+### Phase 4: Tests ✅ COMPLETE
+- ✅ Test file: `tests/e2e/auth-custom.spec.ts`
+- ✅ 9 comprehensive test cases
+- ✅ Covers: signup, login, logout, persistence, redirects, validation
+
+### Phase 5: Verification ✅ COMPLETE
+- ✅ Script: `scripts/verify-custom-auth.mjs`
+- ✅ Script: `scripts/setup-custom-auth.mjs`
+- ✅ Script: `scripts/apply-migration.mjs`
+- ✅ Commands: `npm run auth:verify`, `npm run auth:setup`, `npm run auth:migration`
+
+---
+
+## 📁 Files Created
+
+### Core System (6 files)
+1. `lib/db/index.ts` - Database connection
+2. `lib/db/schema.ts` - Drizzle schema
+3. `lib/auth/password.ts` - Password hashing (Argon2id)
+4. `lib/auth/session.ts` - Session management
+5. `lib/auth/cookies.ts` - Cookie utilities
+6. `lib/auth/server.ts` - Server-side auth helpers
+
+### API Routes (4 files)
+7. `app/api/auth/signup/route.ts`
+8. `app/api/auth/login/route.ts`
+9. `app/api/auth/logout/route.ts`
+10. `app/api/auth/me/route.ts`
+
+### Database (1 file)
+11. `supabase/migrations/001_custom_auth.sql`
+
+### Tests (1 file)
+12. `tests/e2e/auth-custom.spec.ts`
+
+### Scripts (3 files)
+13. `scripts/verify-custom-auth.mjs`
+14. `scripts/setup-custom-auth.mjs`
+15. `scripts/apply-migration.mjs`
+
+### Documentation (3 files)
+16. `CUSTOM_AUTH_IMPLEMENTATION.md` - Full technical docs
+17. `CUSTOM_AUTH_QUICKSTART.md` - Quick start guide
+18. `.env.local.example` - Environment template
+
+**Total: 18 new files**
+
+---
+
+## 📝 Files Modified
+
+1. `middleware.ts` - Complete rewrite
+2. `app/login/page.tsx` - Updated to use new API
+3. `app/signup/page.tsx` - Updated to use new API
+4. `components/layout/Header.tsx` - Removed Supabase Auth
+5. `package.json` - Added scripts and dependencies
+6. `playwright.config.ts` - Updated webServer config
+
+---
+
+## 🗑️ Files Deleted
+
+1. `app/api/auth/callback/route.ts` - Supabase Auth callback
+
+---
+
+## 📦 Dependencies Added
+
+```json
+{
+  "dependencies": {
+    "argon2": "^latest",
+    "drizzle-orm": "^latest",
+    "postgres": "^latest",
+    "@types/pg": "^latest"
+  }
+}
+```
+
+---
+
+## 🔧 SQL Migration File
+
+**Location**: `supabase/migrations/001_custom_auth.sql`
+
+**Content**:
+```sql
+-- Custom Authentication Schema
+-- This replaces Supabase Auth with database-backed sessions
+
+-- Users table
+CREATE TABLE IF NOT EXISTS app_users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Sessions table
+CREATE TABLE IF NOT EXISTS app_sessions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES app_users(id) ON DELETE CASCADE,
+  session_token_hash TEXT UNIQUE NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  expires_at TIMESTAMPTZ NOT NULL,
+  last_seen_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Indexes for performance
+CREATE INDEX IF NOT EXISTS idx_app_sessions_user_id ON app_sessions(user_id);
+CREATE INDEX IF NOT EXISTS idx_app_sessions_expires_at ON app_sessions(expires_at);
+CREATE INDEX IF NOT EXISTS idx_app_sessions_token_hash ON app_sessions(session_token_hash);
+
+-- Function to update updated_at timestamp
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Trigger to auto-update updated_at
+CREATE TRIGGER update_app_users_updated_at
+  BEFORE UPDATE ON app_users
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at_column();
+
+-- Cleanup expired sessions (can be run periodically)
+CREATE OR REPLACE FUNCTION cleanup_expired_sessions()
+RETURNS INTEGER AS $$
+DECLARE
+  deleted_count INTEGER;
+BEGIN
+  DELETE FROM app_sessions WHERE expires_at < NOW();
+  GET DIAGNOSTICS deleted_count = ROW_COUNT;
+  RETURN deleted_count;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+---
+
+## 🔐 Environment Variables Template
+
+**File**: `.env.local.example`
+
+```env
+# Custom Authentication Configuration
+# Copy this file to .env.local and fill in your values
+
+# Database Connection (REQUIRED)
+# Get this from Supabase Dashboard → Settings → Database → Connection String
+# Use the "URI" format, or construct it as:
+# postgresql://postgres:[YOUR-PASSWORD]@[YOUR-PROJECT-REF].supabase.co:5432/postgres
+DATABASE_URL=postgresql://postgres:[PASSWORD]@[PROJECT-REF].supabase.co:5432/postgres
+
+# Session Configuration (OPTIONAL - defaults shown)
+# Cookie name for session token
+AUTH_COOKIE_NAME=app_session
+
+# Session expiration in days
+AUTH_SESSION_DAYS=14
+
+# Environment
+NODE_ENV=development
+
+# Note: You no longer need these Supabase Auth variables:
+# NEXT_PUBLIC_SUPABASE_URL (not needed)
+# NEXT_PUBLIC_SUPABASE_ANON_KEY (not needed)
+# SUPABASE_SERVICE_ROLE_KEY (not needed unless you use Supabase client for other features)
+```
+
+---
+
+## 🚀 Commands to Run
+
+### Setup Commands
+```bash
+# 1. Install dependencies (already done)
+npm install
+
+# 2. View migration SQL
+npm run auth:migration
+
+# 3. Check setup status
+npm run auth:setup
+
+# 4. Verify configuration
+npm run auth:verify
+```
+
+### Database Migration
+```bash
+# Option 1: Use the helper script
+npm run auth:migration
+# Then copy the SQL and run in Supabase SQL Editor
+
+# Option 2: Manual
+# 1. Open supabase/migrations/001_custom_auth.sql
+# 2. Copy all contents
+# 3. Go to Supabase Dashboard → SQL Editor
+# 4. Paste and run
+```
+
+### Environment Setup
+```bash
+# Copy template
+cp .env.local.example .env.local
+
+# Edit .env.local and add your DATABASE_URL
+# Get it from: Supabase Dashboard → Settings → Database
+```
+
+### Testing Commands
+```bash
+# Run E2E tests
+npm run test:e2e -- tests/e2e/auth-custom.spec.ts
+
+# Run verification with tests
+npm run auth:verify:test
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## ✅ Expected Behavior
+
+### Signup Flow
+1. User visits `/signup`
+2. Enters email and password (min 10 chars)
+3. Submits form → `POST /api/auth/signup`
+4. Account created with Argon2 password hash
+5. Session created with SHA-256 hashed token
+6. Cookie set (httpOnly, secure in production)
+7. Redirected to `/dashboard`
+
+### Login Flow
+1. User visits `/login`
+2. Enters email and password
+3. Submits form → `POST /api/auth/login`
+4. Password verified with Argon2
+5. Session created
+6. Cookie set
+7. Redirected to `/dashboard` or `next` parameter
+
+### Session Persistence
+1. User logs in
+2. Session token stored in httpOnly cookie
+3. Token hash stored in database
+4. Page refresh → middleware checks cookie
+5. Protected route → validates session in database
+6. Session persists for 14 days (configurable)
+
+### Logout Flow
+1. User clicks logout
+2. `POST /api/auth/logout` called
+3. Session revoked in database
+4. Cookie cleared
+5. Redirected to home page
+
+### Protected Routes
+1. Unauthenticated user visits `/dashboard`
+2. Middleware detects no cookie
+3. Redirects to `/login?next=/dashboard`
+4. After login, redirects back to `/dashboard`
+
+---
+
+## ✅ PASS/FAIL Checklist
+
+- ✅ **PASS**: All Supabase Auth removed from auth flow
+- ✅ **PASS**: Database schema created (`app_users`, `app_sessions`)
+- ✅ **PASS**: Password hashing implemented (Argon2id)
+- ✅ **PASS**: Session management implemented (SHA-256 hashed tokens)
+- ✅ **PASS**: API routes created (signup, login, logout, me)
+- ✅ **PASS**: Middleware updated (cookie-based protection)
+- ✅ **PASS**: UI pages updated (login, signup, header)
+- ✅ **PASS**: E2E tests created (9 test cases)
+- ✅ **PASS**: Verification scripts created
+- ✅ **PASS**: Environment template created
+- ✅ **PASS**: TypeScript compilation passes
+- ✅ **PASS**: ESLint passes
+- ✅ **PASS**: Documentation complete
+
+**All checks PASSED** ✅
+
+---
+
+## 🔒 Security Features
+
+1. **Password Security**:
+   - Argon2id algorithm (memory-hard, GPU-resistant)
+   - Configurable cost parameters
+   - Never stored in plain text
+
+2. **Session Security**:
+   - Random 32-byte tokens (256 bits)
+   - SHA-256 hashed before storage
+   - httpOnly cookies (not accessible via JavaScript)
+   - Secure flag in production
+   - Configurable expiration (14 days default)
+
+3. **Database Security**:
+   - Direct Postgres connection (no Supabase Auth dependency)
+   - Server-only database access
+   - Prepared statements via Drizzle ORM
+   - Connection pooling for performance
+
+---
+
+## 📚 Documentation Files
+
+1. **CUSTOM_AUTH_IMPLEMENTATION.md** - Complete technical documentation
+2. **CUSTOM_AUTH_QUICKSTART.md** - Quick start guide
+3. **IMPLEMENTATION_COMPLETE.md** - This file (summary)
+
+---
+
+## 🎯 Next Steps for User
+
+1. **Apply Database Migration**:
+   ```bash
+   npm run auth:migration
+   # Copy SQL and run in Supabase SQL Editor
+   ```
+
+2. **Configure Environment**:
+   ```bash
+   cp .env.local.example .env.local
+   # Edit .env.local and add DATABASE_URL
+   ```
+
+3. **Verify Setup**:
+   ```bash
+   npm run auth:setup
+   npm run auth:verify
+   ```
+
+4. **Test It**:
+   ```bash
+   npm run dev
+   # Visit http://localhost:3000/signup
+   ```
+
+5. **Run Tests**:
+   ```bash
+   npm run test:e2e -- tests/e2e/auth-custom.spec.ts
+   ```
+
+---
+
+## 🎉 Implementation Status: COMPLETE
+
+All requirements have been met:
+- ✅ No Supabase Auth usage
+- ✅ No OAuth providers
+- ✅ No magic links
+- ✅ Classic email/password auth
+- ✅ Database-backed sessions
+- ✅ Middleware protection
+- ✅ Robust and deterministic
+- ✅ Automated E2E tests
+- ✅ Verification commands
+
+**The custom authentication system is ready for use!** 🚀

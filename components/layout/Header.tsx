@@ -8,7 +8,6 @@ import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } 
 import { usePathname, useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { createClient } from "@/lib/supabase/client";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -46,13 +45,6 @@ export function Header({ onMenuClick }: HeaderProps) {
   const pathname = usePathname();
   const router = useRouter();
   
-  const getSupabaseClient = () => {
-    try {
-      return createClient();
-    } catch {
-      return null;
-    }
-  };
 
   useEffect(() => {
     setProgress(getProgress());
@@ -73,25 +65,19 @@ export function Header({ onMenuClick }: HeaderProps) {
 
   const handleLogout = async () => {
     try {
-      // Call logout API to end session
-      await fetch("/api/auth/logout", {
-        method: "POST",
+      // Clear gateway cookie
+      await fetch("/api/gateway", {
+        method: "DELETE",
         credentials: "include",
       });
 
-      // Sign out from Supabase client
-      const supabase = getSupabaseClient();
-      if (supabase) {
-        await supabase.auth.signOut();
-      }
-
-      // Redirect to home
-      router.push("/");
+      // Redirect to gateway
+      router.push("/gateway");
       router.refresh();
     } catch (error) {
       console.error("Logout error:", error);
       // Still try to redirect even if logout fails
-      router.push("/");
+      router.push("/gateway");
     }
   };
 

@@ -2,7 +2,7 @@
 /**
  * Cross-platform Playwright webServer command:
  * - Builds once
- * - Starts Next.js in production mode on port 3000
+ * - Starts Next.js in production mode on a dedicated E2E port
  */
 
 import { spawn } from "child_process";
@@ -48,6 +48,7 @@ if (!process.env.E2E_SKIP_BUILD) {
 }
 
 // Keep the process alive for Playwright to manage.
-const startCode = await run("npm", ["run", "start", "--", "-p", "3000"]);
+const port = process.env.E2E_PORT || "3100";
+const startCode = await run("npm", ["run", "start", "--", "-p", port]);
 process.exit(startCode);
 

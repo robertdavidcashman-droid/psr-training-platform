@@ -5,7 +5,6 @@ import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { getUiScale } from "@/lib/storage";
-import { SessionPing } from "@/components/SessionPing";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -24,7 +23,6 @@ export function AppShell({ children }: AppShellProps) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="app-shell">
-      <SessionPing />
       <div className="flex flex-1 min-h-0">
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         

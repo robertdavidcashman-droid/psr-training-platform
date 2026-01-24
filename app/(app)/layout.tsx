@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/layout/AppShell";
 
-export default function AppLayout({
+export default async function AppLayout({
   children,
 }: {
   children: React.ReactNode;
