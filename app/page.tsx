@@ -1,21 +1,24 @@
-import { auth } from "@clerk/nextjs/server";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, BookOpen, Clock, Target, GraduationCap } from "lucide-react";
-import { SignInButton, SignUpButton, SignedOut } from "@clerk/nextjs";
+import Link from "next/link";
 
 export const metadata = {
   title: "PSR Training Academy - Police Station Representative Accreditation Training",
   description: "Master the skills and knowledge for PSR accreditation. Practice questions, mock exams, and scenario-based training aligned to SRA PSRAS standards.",
 };
 
+const COOKIE_NAME = process.env.AUTH_COOKIE_NAME || "app_session";
+
 export default async function HomePage() {
-  // Check if user is authenticated
-  const { userId } = await auth();
+  // Check if user has a session cookie
+  const cookieStore = await cookies();
+  const sessionToken = cookieStore.get(COOKIE_NAME)?.value;
   
   // If signed in, redirect to dashboard
-  if (userId) {
+  if (sessionToken) {
     redirect("/dashboard");
   }
 
@@ -37,22 +40,20 @@ export default async function HomePage() {
             <p className="text-lg text-muted-foreground mb-10">
               Practice questions, mock exams, and scenario-based training aligned to SRA PSRAS standards.
             </p>
-            <SignedOut>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <SignInButton mode="modal">
-                  <Button size="lg" className="text-lg px-8 py-6 h-auto gap-2" data-testid="sign-in-cta">
-                    <Play className="h-5 w-5" />
-                    Sign In to Start
-                  </Button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto gap-2">
-                    <BookOpen className="h-5 w-5" />
-                    Create Account
-                  </Button>
-                </SignUpButton>
-              </div>
-            </SignedOut>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/login">
+                <Button size="lg" className="text-lg px-8 py-6 h-auto gap-2" data-testid="sign-in-cta">
+                  <Play className="h-5 w-5" />
+                  Sign In to Start
+                </Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto gap-2">
+                  <BookOpen className="h-5 w-5" />
+                  Create Account
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -116,16 +117,14 @@ export default async function HomePage() {
             <p className="text-muted-foreground mb-6">
               Sign in or create an account to access all training materials.
             </p>
-            <SignedOut>
-              <div className="flex flex-wrap justify-center gap-4">
-                <SignInButton mode="modal">
-                  <Button>Sign In</Button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <Button variant="outline">Create Account</Button>
-                </SignUpButton>
-              </div>
-            </SignedOut>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/login">
+                <Button>Sign In</Button>
+              </Link>
+              <Link href="/signup">
+                <Button variant="outline">Create Account</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

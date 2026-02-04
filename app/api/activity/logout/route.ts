@@ -1,20 +1,27 @@
-import { auth } from "@clerk/nextjs/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { recordLogout } from "@/lib/activity-store";
+import { validateSession, getSessionToken } from "@/lib/auth/session";
 
-export async function POST() {
+export async function POST(request: NextRequest) {
   try {
-    const { userId } = await auth();
-    
-    if (!userId) {
+    const token = getSessionToken(request);
+    if (!token) {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
       );
     }
 
+    const session = await validateSession(token);
+    if (!session) {
+      return NextResponse.json(
+        { error: "Invalid session" },
+        { status: 401 }
+      );
+    }
+
     // Record the logout time
-    const record = recordLogout(userId);
+    const record = recordLogout(session.userId);
 
     return NextResponse.json({
       ok: true,

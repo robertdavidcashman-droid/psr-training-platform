@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useUser } from "@clerk/nextjs";
+import { useEffect, useRef, useState } from "react";
 
 const PING_INTERVAL_MS = 60 * 1000; // 60 seconds
 
@@ -10,11 +9,22 @@ const PING_INTERVAL_MS = 60 * 1000; // 60 seconds
  * Mount this in the app layout to track activity on all authenticated pages.
  */
 export function ActivityPing() {
-  const { isSignedIn, isLoaded } = useUser();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    if (!isLoaded || !isSignedIn) return;
+    // Check if user is authenticated
+    fetch("/api/auth/me", { credentials: "include" })
+      .then((res) => {
+        setIsAuthenticated(res.ok);
+      })
+      .catch(() => {
+        setIsAuthenticated(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!isAuthenticated) return;
 
     const ping = async () => {
       try {
@@ -41,7 +51,7 @@ export function ActivityPing() {
         intervalRef.current = null;
       }
     };
-  }, [isLoaded, isSignedIn]);
+  }, [isAuthenticated]);
 
   // This component doesn't render anything visible
   return null;

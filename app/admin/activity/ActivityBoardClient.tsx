@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { useUser } from "@clerk/nextjs";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -293,7 +292,6 @@ function UserRow({ record, isExpanded, onToggle }: {
 }
 
 export function ActivityBoardClient() {
-  const { isLoaded } = useUser();
   const [data, setData] = useState<ActivityResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -326,10 +324,8 @@ export function ActivityBoardClient() {
   }, []);
 
   useEffect(() => {
-    if (isLoaded) {
-      fetchActivity();
-    }
-  }, [isLoaded, fetchActivity]);
+    fetchActivity();
+  }, [fetchActivity]);
 
   // Auto-refresh every 30 seconds
   useEffect(() => {
@@ -363,7 +359,7 @@ export function ActivityBoardClient() {
     return `${diffDays}d ago`;
   };
 
-  if (!isLoaded) {
+  if (loading && !data) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <RefreshCw className="h-8 w-8 animate-spin text-muted-foreground" />

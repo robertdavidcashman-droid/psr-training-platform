@@ -1,23 +1,21 @@
-import { auth, currentUser } from "@clerk/nextjs/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getAllActivity, getActivityStats, formatDuration, getCurrentSessionDuration } from "@/lib/activity-store";
+import { validateSession, getSessionToken } from "@/lib/auth/session";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const { userId } = await auth();
-    
-    if (!userId) {
+    const token = getSessionToken(request);
+    if (!token) {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
       );
     }
 
-    // Check if user is admin
-    const user = await currentUser();
-    if (!user) {
+    const session = await validateSession(token);
+    if (!session) {
       return NextResponse.json(
-        { error: "User not found" },
+        { error: "Invalid session" },
         { status: 401 }
       );
     }
@@ -32,8 +30,8 @@ export async function GET() {
       );
     }
 
-    const userEmail = user.primaryEmailAddress?.emailAddress?.toLowerCase();
-    if (!userEmail || !adminEmails.includes(userEmail)) {
+    const userEmail = session.email.toLowerCase();
+    if (!adminEmails.includes(userEmail)) {
       return NextResponse.json(
         { error: "Access denied. Admin privileges required." },
         { status: 403 }

@@ -1,22 +1,21 @@
-import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { upsertActivity } from "@/lib/activity-store";
+import { validateSession, getSessionToken } from "@/lib/auth/session";
 
 export async function POST(request: NextRequest) {
   try {
-    const { userId } = await auth();
-    
-    if (!userId) {
+    const token = getSessionToken(request);
+    if (!token) {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
       );
     }
 
-    const user = await currentUser();
-    if (!user) {
+    const session = await validateSession(token);
+    if (!session) {
       return NextResponse.json(
-        { error: "User not found" },
+        { error: "Invalid session" },
         { status: 401 }
       );
     }
@@ -28,21 +27,19 @@ export async function POST(request: NextRequest) {
                       request.headers.get("x-real-ip") || 
                       null;
 
-    // Build user info
-    const email = user.primaryEmailAddress?.emailAddress || "";
-    const firstName = user.firstName || null;
-    const lastName = user.lastName || null;
-    const name = [firstName, lastName].filter(Boolean).join(" ") || email;
-    const avatarUrl = user.imageUrl || null;
+    // Build user info from session
+    const email = session.email;
+    const emailName = email.split("@")[0];
+    const name = emailName.charAt(0).toUpperCase() + emailName.slice(1);
 
     // Upsert activity record
     const record = upsertActivity({
-      userId,
+      userId: session.userId,
       email,
       name,
-      firstName,
-      lastName,
-      avatarUrl,
+      firstName: name,
+      lastName: null,
+      avatarUrl: null,
       userAgent,
       ipAddress,
     });

@@ -1,6 +1,6 @@
 "use client";
 
-// Dashboard client component - uses Clerk for authentication
+// Dashboard client component - uses custom authentication
 
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
@@ -31,19 +31,30 @@ import {
   type PracticeSession,
 } from "@/lib/storage";
 import { getWeakCriteria, getExamReadiness } from "@/lib/analytics";
-import { useUser } from "@clerk/nextjs";
 import topicsData from "@/content/topics.json";
 
 export function DashboardClient() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [mastery, setMastery] = useState(0);
   const [recentSessions, setRecentSessions] = useState<PracticeSession[]>([]);
-  const { user, isLoaded } = useUser();
+  const [userName, setUserName] = useState<string | null>(null);
 
   useEffect(() => {
     setProgress(getProgress());
     setMastery(calculateOverallMastery());
     setRecentSessions(getPracticeHistory().slice(0, 3));
+    
+    // Fetch user info
+    fetch("/api/auth/me", { credentials: "include" })
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (data?.user?.email) {
+          // Extract name from email (before @)
+          const emailName = data.user.email.split("@")[0];
+          setUserName(emailName.charAt(0).toUpperCase() + emailName.slice(1));
+        }
+      })
+      .catch(() => {});
   }, []);
 
   const weakestTopics = useMemo(() => {
@@ -68,7 +79,7 @@ export function DashboardClient() {
       <div className="flex items-center justify-between mb-6">
         <PageHeader
           title="Dashboard"
-          description={`Welcome back${isLoaded && user?.firstName ? `, ${user.firstName}` : ""}! Continue your PSR accreditation training.`}
+          description={`Welcome back${userName ? `, ${userName}` : ""}! Continue your PSR accreditation training.`}
         />
       </div>
 
