@@ -1,58 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-const PING_INTERVAL_MS = 60 * 1000; // 60 seconds
-
 /**
- * ActivityPing component - sends periodic pings to track user activity.
- * Mount this in the app layout to track activity on all authenticated pages.
+ * ActivityPing component
+ *
+ * Authentication has been disabled, so we don't track per-user activity.
+ * This component intentionally does nothing.
  */
+
 export function ActivityPing() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    // Check if user is authenticated
-    fetch("/api/auth/me", { credentials: "include" })
-      .then((res) => {
-        setIsAuthenticated(res.ok);
-      })
-      .catch(() => {
-        setIsAuthenticated(false);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (!isAuthenticated) return;
-
-    const ping = async () => {
-      try {
-        await fetch("/api/activity/ping", {
-          method: "POST",
-          credentials: "include",
-        });
-      } catch (error) {
-        // Silently fail - activity tracking is non-critical
-        console.debug("Activity ping failed:", error);
-      }
-    };
-
-    // Send initial ping immediately
-    ping();
-
-    // Set up interval for subsequent pings
-    intervalRef.current = setInterval(ping, PING_INTERVAL_MS);
-
-    // Cleanup on unmount
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-    };
-  }, [isAuthenticated]);
-
-  // This component doesn't render anything visible
   return null;
 }

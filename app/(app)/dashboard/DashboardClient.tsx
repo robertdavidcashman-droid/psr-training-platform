@@ -20,8 +20,6 @@ import {
   ChevronRight,
   Zap,
   BarChart3,
-  Shield,
-  Activity,
 } from "lucide-react";
 import {
   getProgress,
@@ -37,24 +35,11 @@ export function DashboardClient() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [mastery, setMastery] = useState(0);
   const [recentSessions, setRecentSessions] = useState<PracticeSession[]>([]);
-  const [userName, setUserName] = useState<string | null>(null);
 
   useEffect(() => {
     setProgress(getProgress());
     setMastery(calculateOverallMastery());
     setRecentSessions(getPracticeHistory().slice(0, 3));
-    
-    // Fetch user info
-    fetch("/api/auth/me", { credentials: "include" })
-      .then((res) => res.ok ? res.json() : null)
-      .then((data) => {
-        if (data?.user?.email) {
-          // Extract name from email (before @)
-          const emailName = data.user.email.split("@")[0];
-          setUserName(emailName.charAt(0).toUpperCase() + emailName.slice(1));
-        }
-      })
-      .catch(() => {});
   }, []);
 
   const weakestTopics = useMemo(() => {
@@ -79,7 +64,7 @@ export function DashboardClient() {
       <div className="flex items-center justify-between mb-6">
         <PageHeader
           title="Dashboard"
-          description={`Welcome back${userName ? `, ${userName}` : ""}! Continue your PSR accreditation training.`}
+          description="Continue your PSR accreditation training."
         />
       </div>
 
@@ -297,29 +282,6 @@ export function DashboardClient() {
         </Card>
       </div>
 
-      {/* Admin Section */}
-      <div className="mt-8">
-        <Card className="bg-gradient-to-br from-[hsl(var(--navy))]/5 via-transparent to-transparent border-[hsl(var(--navy))]/20">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-lg flex items-center gap-2">
-              <Shield className="h-5 w-5 text-[hsl(var(--navy))]" />
-              Admin
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-4">
-              Monitor user activity and manage the platform.
-            </p>
-            <Link href="/admin/activity">
-              <Button variant="outline" className="gap-2">
-                <Activity className="h-4 w-4" />
-                Activity Board
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </div>
     </div>
   );
 }

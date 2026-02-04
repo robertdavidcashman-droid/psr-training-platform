@@ -1,11 +1,11 @@
 "use client";
 
-import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type, LogOut, User } from "lucide-react";
+import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
 import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } from "@/lib/storage";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
@@ -43,10 +43,7 @@ const SCALE_LABEL: Record<UiScale, string> = {
 export function Header({ onMenuClick }: HeaderProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [uiScale, setUiScaleState] = useState<UiScale>("md");
-  const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [signingOut, setSigningOut] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
     setProgress(getProgress());
@@ -58,48 +55,11 @@ export function Header({ onMenuClick }: HeaderProps) {
     setUiScaleState(getUiScale());
   }, []);
 
-  // Fetch current user info
-  useEffect(() => {
-    fetch("/api/auth/me", { credentials: "include" })
-      .then((res) => res.ok ? res.json() : null)
-      .then((data) => {
-        if (data?.user?.email) {
-          setUserEmail(data.user.email);
-        }
-      })
-      .catch(() => {});
-  }, []);
-
   const cycleScale = () => {
     const next = NEXT_SCALE[uiScale];
     setUiScaleState(next);
     setUiScale(next);
     document.documentElement.dataset.uiScale = next;
-  };
-
-  // Handle sign out
-  const handleSignOut = async () => {
-    setSigningOut(true);
-    try {
-      await fetch("/api/activity/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-    } catch (error) {
-      console.debug("Activity logout ping failed:", error);
-    }
-    
-    try {
-      await fetch("/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-      router.push("/");
-      router.refresh();
-    } catch (error) {
-      console.error("Logout failed:", error);
-      setSigningOut(false);
-    }
   };
 
   const title = ROUTE_TITLES[pathname] ?? "PSR Training Academy";
@@ -193,13 +153,6 @@ export function Header({ onMenuClick }: HeaderProps) {
           Level {progress?.level || 1}
         </Badge>
 
-        {/* User info */}
-        {userEmail && (
-          <span className="hidden md:inline text-sm text-white/70 max-w-[150px] truncate" data-testid="user-email">
-            {userEmail}
-          </span>
-        )}
-
         {/* Help (UI only) */}
         <Button
           variant="ghost"
@@ -211,25 +164,6 @@ export function Header({ onMenuClick }: HeaderProps) {
         >
           <HelpCircle className="h-6 w-6" />
         </Button>
-
-        {/* User avatar and sign out */}
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
-            <User className="h-5 w-5 text-white" />
-          </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-white/10 hover:text-white"
-            aria-label="Sign out"
-            onClick={handleSignOut}
-            disabled={signingOut}
-            data-testid="sign-out-button"
-            type="button"
-          >
-            <LogOut className="h-5 w-5" />
-          </Button>
-        </div>
       </div>
       </div>
     </header>
