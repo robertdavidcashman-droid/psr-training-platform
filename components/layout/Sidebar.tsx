@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import {
   LayoutDashboard,
@@ -16,6 +16,9 @@ import {
   GraduationCap,
   Grid3X3,
   BarChart3,
+  Shield,
+  Activity,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -31,6 +34,10 @@ const navigation = [
   { name: "Resources", href: "/resources", icon: Library },
 ];
 
+const adminNavigation = [
+  { name: "Activity Board", href: "/admin/activity", icon: Activity },
+];
+
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
@@ -39,6 +46,14 @@ interface SidebarProps {
 export function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+  const [adminExpanded, setAdminExpanded] = useState(false);
+
+  // Auto-expand admin section if on admin route
+  useEffect(() => {
+    if (pathname.startsWith("/admin")) {
+      setAdminExpanded(true);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -101,7 +116,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-2 p-4" data-testid="sidebar-nav">
+        <nav className="flex-1 space-y-2 p-4 overflow-y-auto" data-testid="sidebar-nav">
           {navigation.map((item) => {
             const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
             return (
@@ -122,6 +137,50 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               </Link>
             );
           })}
+
+          {/* Admin Section - Always visible but restricted on the actual page */}
+          <div className="pt-4 mt-4 border-t border-white/10">
+            <button
+              onClick={() => setAdminExpanded(!adminExpanded)}
+              className={cn(
+                "flex items-center justify-between w-full gap-4 rounded-xl px-4 py-4 text-lg leading-6 font-semibold transition-colors",
+                "text-white/80 hover:bg-white/10 hover:text-white",
+                pathname.startsWith("/admin") && "bg-white/10 text-white"
+              )}
+              data-testid="nav-admin"
+            >
+              <div className="flex items-center gap-4">
+                <Shield className={cn("h-7 w-7", pathname.startsWith("/admin") ? "text-[hsl(var(--gold))]" : "text-white/70")} />
+                Admin
+              </div>
+              <ChevronDown className={cn("h-5 w-5 transition-transform", adminExpanded && "rotate-180")} />
+            </button>
+            
+            {adminExpanded && (
+              <div className="ml-4 mt-2 space-y-1">
+                {adminNavigation.map((item) => {
+                  const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={onClose}
+                      className={cn(
+                        "flex items-center gap-3 rounded-xl px-4 py-3 text-base leading-6 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--navy))]",
+                        isActive
+                          ? "bg-white/10 text-white border-l-4 border-[hsl(var(--gold))] pl-2"
+                          : "text-white/70 hover:bg-white/10 hover:text-white"
+                      )}
+                      data-testid={`nav-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <item.icon className={cn("h-5 w-5", isActive ? "text-[hsl(var(--gold))]" : "text-white/60")} />
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Footer */}

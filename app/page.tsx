@@ -1,14 +1,24 @@
-import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, BookOpen, Clock, Target, GraduationCap, ArrowRight } from "lucide-react";
+import { Play, BookOpen, Clock, Target, GraduationCap } from "lucide-react";
+import { SignInButton, SignUpButton, SignedOut } from "@clerk/nextjs";
 
 export const metadata = {
   title: "PSR Training Academy - Police Station Representative Accreditation Training",
   description: "Master the skills and knowledge for PSR accreditation. Practice questions, mock exams, and scenario-based training aligned to SRA PSRAS standards.",
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  // Check if user is authenticated
+  const { userId } = await auth();
+  
+  // If signed in, redirect to dashboard
+  if (userId) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -26,22 +36,23 @@ export default function HomePage() {
             </p>
             <p className="text-lg text-muted-foreground mb-10">
               Practice questions, mock exams, and scenario-based training aligned to SRA PSRAS standards.
-              Start training immediately—no sign-in required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/practice">
-                <Button size="lg" className="text-lg px-8 py-6 h-auto gap-2" data-testid="start-training-cta">
-                  <Play className="h-5 w-5" />
-                  Start Training
-                </Button>
-              </Link>
-              <Link href="/syllabus">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto gap-2">
-                  <BookOpen className="h-5 w-5" />
-                  View Syllabus
-                </Button>
-              </Link>
-            </div>
+            <SignedOut>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <SignInButton mode="modal">
+                  <Button size="lg" className="text-lg px-8 py-6 h-auto gap-2" data-testid="sign-in-cta">
+                    <Play className="h-5 w-5" />
+                    Sign In to Start
+                  </Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto gap-2">
+                    <BookOpen className="h-5 w-5" />
+                    Create Account
+                  </Button>
+                </SignUpButton>
+              </div>
+            </SignedOut>
           </div>
         </div>
       </div>
@@ -58,9 +69,6 @@ export default function HomePage() {
               <p className="text-muted-foreground">
                 Interactive practice sessions with instant feedback and detailed explanations.
               </p>
-              <Link href="/practice" className="inline-flex items-center gap-1 text-primary hover:underline mt-4">
-                Start practicing <ArrowRight className="h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -73,9 +81,6 @@ export default function HomePage() {
               <p className="text-muted-foreground">
                 Timed exam simulation to test your knowledge under exam conditions.
               </p>
-              <Link href="/mock-exam" className="inline-flex items-center gap-1 text-primary hover:underline mt-4">
-                Take mock exam <ArrowRight className="h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -88,9 +93,6 @@ export default function HomePage() {
               <p className="text-muted-foreground">
                 Scenario-based training for real-world police station situations.
               </p>
-              <Link href="/incidents" className="inline-flex items-center gap-1 text-primary hover:underline mt-4">
-                View scenarios <ArrowRight className="h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -103,35 +105,27 @@ export default function HomePage() {
               <p className="text-muted-foreground">
                 Track question coverage across all SRA PSRAS assessment criteria.
               </p>
-              <Link href="/coverage" className="inline-flex items-center gap-1 text-primary hover:underline mt-4">
-                View coverage <ArrowRight className="h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
         </div>
 
-        {/* Quick Links */}
+        {/* Sign In Prompt */}
         <div className="border-t pt-12">
-          <h2 className="text-2xl font-semibold mb-6 text-center">Quick Links</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/syllabus">
-              <Button variant="outline">Syllabus Map</Button>
-            </Link>
-            <Link href="/coverage">
-              <Button variant="outline">Coverage Matrix</Button>
-            </Link>
-            <Link href="/practice">
-              <Button variant="outline">Practice</Button>
-            </Link>
-            <Link href="/mock-exam">
-              <Button variant="outline">Mock Exam</Button>
-            </Link>
-            <Link href="/incidents">
-              <Button variant="outline">Critical Incidents</Button>
-            </Link>
-            <Link href="/resources">
-              <Button variant="outline">Resources</Button>
-            </Link>
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold mb-4">Ready to Start?</h2>
+            <p className="text-muted-foreground mb-6">
+              Sign in or create an account to access all training materials.
+            </p>
+            <SignedOut>
+              <div className="flex flex-wrap justify-center gap-4">
+                <SignInButton mode="modal">
+                  <Button>Sign In</Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <Button variant="outline">Create Account</Button>
+                </SignUpButton>
+              </div>
+            </SignedOut>
           </div>
         </div>
       </div>

@@ -14,6 +14,31 @@ let _pool: Pool | null = null;
  * Get database connection (lazy initialization)
  * Throws error only when actually used, not at module load time
  */
+async function _resolveIPv6IfNeeded(connectionString: string): Promise<string> {
+  try {
+    const match = connectionString.match(/@([^/:\s]+)(:\d+)?\//);
+    const host = match?.[1];
+    
+    // Only try IPv6 resolution for Supabase direct connections
+    if (host && host.startsWith("db.") && host.endsWith(".supabase.co") && !host.includes("[")) {
+      const { resolve6 } = await import("dns/promises");
+      try {
+        const ipv6s = await resolve6(host);
+        if (ipv6s?.length) {
+          return connectionString.replace(`@${host}`, `@[${ipv6s[0]}]`);
+        }
+      } catch {
+        // IPv6 resolution failed, use original connection string
+        // This will let node-postgres handle it or fail with a clearer error
+      }
+    }
+  } catch {
+    // Ignore errors, return original
+  }
+  
+  return connectionString;
+}
+
 function getDb() {
   if (!process.env.DATABASE_URL) {
     throw new Error("DATABASE_URL environment variable is not set");

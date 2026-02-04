@@ -23,6 +23,8 @@
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
     "e2e:auth": "playwright test tests/e2e/auth.spec.ts",
+    "e2e:auth:comprehensive": "playwright test tests/e2e/auth-comprehensive.spec.ts",
+    "e2e:all": "playwright test",
     "test:links": "node scripts/link-integrity.mjs",
     "audit:coverage": "tsx scripts/auditCoverage.ts",
     "audit:questions": "tsx scripts/auditQuestions.ts",
@@ -35,9 +37,15 @@
     "auth:setup": "node scripts/setup-custom-auth.mjs",
     "auth:migration": "node scripts/apply-migration.mjs",
     "auth:migrate": "node scripts/auth-migrate.mjs",
-    "auth:bootstrap": "node scripts/auth-bootstrap.mjs"
+    "auth:bootstrap": "node scripts/auth-bootstrap.mjs",
+    "setup:auth": "node scripts/setup-auth-auto.mjs",
+    "db:check": "node scripts/fix-database-connection.mjs",
+    "db:setup": "node scripts/setup-database-url.mjs",
+    "db:setup:auto": "node scripts/setup-database-url-auto.mjs",
+    "db:auto-setup": "node scripts/auto-db-setup.mjs"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.36.10",
     "@types/pg": "^8.16.0",
     "argon2": "^0.44.0",
     "class-variance-authority": "^0.7.0",
@@ -65,6 +73,7 @@
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.0",
     "postcss": "^8.4.0",
+    "supabase": "^2.72.8",
     "tailwindcss": "^3.4.0",
     "tsx": "^4.21.0",
     "typescript": "^5.5.0",

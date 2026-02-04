@@ -1,7 +1,6 @@
 "use client";
 
-// This is the previous dashboard implementation (client-side UX/state).
-// Auth is enforced by the server `page.tsx` wrapper.
+// Dashboard client component - uses Clerk for authentication
 
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
@@ -21,6 +20,8 @@ import {
   ChevronRight,
   Zap,
   BarChart3,
+  Shield,
+  Activity,
 } from "lucide-react";
 import {
   getProgress,
@@ -30,12 +31,14 @@ import {
   type PracticeSession,
 } from "@/lib/storage";
 import { getWeakCriteria, getExamReadiness } from "@/lib/analytics";
+import { useUser } from "@clerk/nextjs";
 import topicsData from "@/content/topics.json";
 
 export function DashboardClient() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [mastery, setMastery] = useState(0);
   const [recentSessions, setRecentSessions] = useState<PracticeSession[]>([]);
+  const { user, isLoaded } = useUser();
 
   useEffect(() => {
     setProgress(getProgress());
@@ -62,10 +65,12 @@ export function DashboardClient() {
 
   return (
     <div data-testid="dashboard-page">
-      <PageHeader
-        title="Dashboard"
-        description="Welcome back! Continue your PSR accreditation training."
-      />
+      <div className="flex items-center justify-between mb-6">
+        <PageHeader
+          title="Dashboard"
+          description={`Welcome back${isLoaded && user?.firstName ? `, ${user.firstName}` : ""}! Continue your PSR accreditation training.`}
+        />
+      </div>
 
       {/* Quick Stats */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-10">
@@ -277,6 +282,30 @@ export function DashboardClient() {
                 <p className="text-base">No practice sessions yet.</p>
               </div>
             )}
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Admin Section */}
+      <div className="mt-8">
+        <Card className="bg-gradient-to-br from-[hsl(var(--navy))]/5 via-transparent to-transparent border-[hsl(var(--navy))]/20">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Shield className="h-5 w-5 text-[hsl(var(--navy))]" />
+              Admin
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground mb-4">
+              Monitor user activity and manage the platform.
+            </p>
+            <Link href="/admin/activity">
+              <Button variant="outline" className="gap-2">
+                <Activity className="h-4 w-4" />
+                Activity Board
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </div>

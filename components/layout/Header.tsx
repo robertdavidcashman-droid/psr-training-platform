@@ -1,13 +1,14 @@
 "use client";
 
-import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type, LogOut } from "lucide-react";
+import { Menu, Flame, Star, TrendingUp, Search, HelpCircle, ChevronRight, Type } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
 import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } from "@/lib/storage";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { UserButton, SignedIn, useUser } from "@clerk/nextjs";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -21,6 +22,7 @@ const ROUTE_TITLES: Record<string, string> = {
   "/incidents": "Critical Incidents",
   "/portfolio": "Portfolio Workbook",
   "/resources": "Resources",
+  "/admin/activity": "Activity Board",
 };
 
 const NEXT_SCALE: Record<UiScale, UiScale> = {
@@ -43,8 +45,7 @@ export function Header({ onMenuClick }: HeaderProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [uiScale, setUiScaleState] = useState<UiScale>("md");
   const pathname = usePathname();
-  const router = useRouter();
-  
+  const { user, isLoaded } = useUser();
 
   useEffect(() => {
     setProgress(getProgress());
@@ -63,21 +64,15 @@ export function Header({ onMenuClick }: HeaderProps) {
     document.documentElement.dataset.uiScale = next;
   };
 
-  const handleLogout = async () => {
+  // Call activity ping on sign out (before Clerk redirects)
+  const handleBeforeSignOut = async () => {
     try {
-      // Clear gateway cookie
-      await fetch("/api/gateway", {
-        method: "DELETE",
+      await fetch("/api/activity/logout", {
+        method: "POST",
         credentials: "include",
       });
-
-      // Redirect to gateway
-      router.push("/gateway");
-      router.refresh();
     } catch (error) {
-      console.error("Logout error:", error);
-      // Still try to redirect even if logout fails
-      router.push("/gateway");
+      console.debug("Activity logout ping failed:", error);
     }
   };
 
@@ -172,6 +167,13 @@ export function Header({ onMenuClick }: HeaderProps) {
           Level {progress?.level || 1}
         </Badge>
 
+        {/* User info */}
+        {isLoaded && user && (
+          <span className="hidden md:inline text-sm text-white/70 max-w-[150px] truncate" data-testid="user-email">
+            {user.primaryEmailAddress?.emailAddress || user.firstName || "User"}
+          </span>
+        )}
+
         {/* Help (UI only) */}
         <Button
           variant="ghost"
@@ -184,18 +186,22 @@ export function Header({ onMenuClick }: HeaderProps) {
           <HelpCircle className="h-6 w-6" />
         </Button>
 
-        {/* Logout */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-white hover:bg-white/10 hover:text-white"
-          aria-label="Logout"
-          data-testid="logout-button"
-          type="button"
-          onClick={handleLogout}
-        >
-          <LogOut className="h-6 w-6" />
-        </Button>
+        {/* Clerk UserButton - includes sign out */}
+        <SignedIn>
+          <div 
+            onClick={handleBeforeSignOut} 
+            onKeyDown={(e) => e.key === "Enter" && handleBeforeSignOut()}
+          >
+            <UserButton 
+              afterSignOutUrl="/"
+              appearance={{
+                elements: {
+                  avatarBox: "h-8 w-8",
+                },
+              }}
+            />
+          </div>
+        </SignedIn>
       </div>
       </div>
     </header>
