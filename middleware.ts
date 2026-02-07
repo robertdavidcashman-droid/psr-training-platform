@@ -8,7 +8,8 @@ import { NextResponse, type NextRequest } from "next/server";
  */
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const expected = process.env.TRAINING_ACCESS_CODE || process.env.APP_GATEWAY_CODE;
+  const expectedRaw = process.env.TRAINING_ACCESS_CODE || process.env.APP_GATEWAY_CODE;
+  const expected = typeof expectedRaw === "string" ? expectedRaw.trim() : "";
   const cookieName = process.env.GATEWAY_COOKIE_NAME || "psr_gate";
   const hasGateCookie = request.cookies.get(cookieName)?.value === "1";
 

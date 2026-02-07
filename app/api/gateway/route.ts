@@ -14,7 +14,8 @@ function cookieOptions() {
 }
 
 export async function POST(request: NextRequest) {
-  const expected = process.env.TRAINING_ACCESS_CODE || process.env.APP_GATEWAY_CODE;
+  const expectedRaw = process.env.TRAINING_ACCESS_CODE || process.env.APP_GATEWAY_CODE;
+  const expected = typeof expectedRaw === "string" ? expectedRaw.trim() : "";
 
   const body = (await request.json().catch(() => null)) as null | { code?: unknown };
   const code = typeof body?.code === "string" ? body.code.trim() : "";
