@@ -14,6 +14,14 @@ export function GatewayClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const getSafeNextPath = () => {
+    const next = searchParams.get("next");
+    if (!next) return "/dashboard";
+    // Only allow internal paths (avoid open redirect)
+    if (!next.startsWith("/") || next.startsWith("//")) return "/dashboard";
+    return next;
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError(null);
@@ -34,7 +42,7 @@ export function GatewayClient() {
         return;
       }
 
-      const redirectTo = searchParams.get("next") || "/dashboard";
+      const redirectTo = getSafeNextPath();
       router.push(redirectTo);
       router.refresh();
     } catch (err) {
@@ -64,7 +72,7 @@ export function GatewayClient() {
                 onChange={(e) => setCode(e.target.value)}
                 disabled={loading}
                 autoComplete="off"
-                placeholder="Leave blank if not required"
+                placeholder="Enter the code you were given"
               />
             </div>
             {error && (

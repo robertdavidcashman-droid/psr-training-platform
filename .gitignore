@@ -48,3 +48,6 @@ Thumbs.db
 
 # Generated audit outputs
 question-audit-results.json
+
+.vercel
+.env*.local
