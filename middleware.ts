@@ -1,17 +1,30 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-/**
- * Middleware - Authentication disabled
- * All routes are publicly accessible
- */
-export async function middleware(_request: NextRequest) {
-  // No authentication required - allow all requests
-  return NextResponse.next();
-}
+// Define protected routes that require authentication
+const isProtectedRoute = createRouteMatcher([
+  "/dashboard(.*)",
+  "/practice(.*)",
+  "/mock-exam(.*)",
+  "/syllabus(.*)",
+  "/analytics(.*)",
+  "/coverage(.*)",
+  "/incidents(.*)",
+  "/portfolio(.*)",
+  "/resources(.*)",
+  "/admin(.*)",
+]);
+
+export default clerkMiddleware(async (auth, request) => {
+  if (isProtectedRoute(request)) {
+    await auth.protect();
+  }
+});
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and static files
+    // Skip Next.js internals and all static files, unless found in search params
     "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+    // Always run for API routes
+    "/(api|trpc)(.*)",
   ],
 };

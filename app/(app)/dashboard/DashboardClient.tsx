@@ -1,6 +1,6 @@
 "use client";
 
-// Dashboard client component - uses custom authentication
+// Dashboard client component - uses Clerk for authentication
 
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
@@ -29,12 +29,14 @@ import {
   type PracticeSession,
 } from "@/lib/storage";
 import { getWeakCriteria, getExamReadiness } from "@/lib/analytics";
+import { useUser } from "@clerk/nextjs";
 import topicsData from "@/content/topics.json";
 
 export function DashboardClient() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [mastery, setMastery] = useState(0);
   const [recentSessions, setRecentSessions] = useState<PracticeSession[]>([]);
+  const { user, isLoaded } = useUser();
 
   useEffect(() => {
     setProgress(getProgress());
@@ -64,7 +66,7 @@ export function DashboardClient() {
       <div className="flex items-center justify-between mb-6">
         <PageHeader
           title="Dashboard"
-          description="Continue your PSR accreditation training."
+          description={`Welcome back${isLoaded && user?.firstName ? `, ${user.firstName}` : ""}! Continue your PSR accreditation training.`}
         />
       </div>
 
