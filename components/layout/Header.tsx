@@ -8,7 +8,6 @@ import { getProgress, getUiScale, setUiScale, type UiScale, type UserProgress } 
 import { usePathname } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { UserButton, SignedIn, useUser } from "@clerk/nextjs";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -45,7 +44,6 @@ export function Header({ onMenuClick }: HeaderProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [uiScale, setUiScaleState] = useState<UiScale>("md");
   const pathname = usePathname();
-  const { user, isLoaded } = useUser();
 
   useEffect(() => {
     setProgress(getProgress());
@@ -155,13 +153,6 @@ export function Header({ onMenuClick }: HeaderProps) {
           Level {progress?.level || 1}
         </Badge>
 
-        {/* User info */}
-        {isLoaded && user && (
-          <span className="hidden md:inline text-sm text-white/70 max-w-[150px] truncate" data-testid="user-email">
-            {user.primaryEmailAddress?.emailAddress || user.firstName || "User"}
-          </span>
-        )}
-
         {/* Help (UI only) */}
         <Button
           variant="ghost"
@@ -173,18 +164,6 @@ export function Header({ onMenuClick }: HeaderProps) {
         >
           <HelpCircle className="h-6 w-6" />
         </Button>
-
-        {/* Clerk UserButton - includes sign out */}
-        <SignedIn>
-          <UserButton 
-            afterSignOutUrl="/"
-            appearance={{
-              elements: {
-                avatarBox: "h-8 w-8",
-              },
-            }}
-          />
-        </SignedIn>
       </div>
       </div>
     </header>
