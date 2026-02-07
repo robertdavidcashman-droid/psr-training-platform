@@ -42,7 +42,8 @@
     "db:check": "node scripts/fix-database-connection.mjs",
     "db:setup": "node scripts/setup-database-url.mjs",
     "db:setup:auto": "node scripts/setup-database-url-auto.mjs",
-    "db:auto-setup": "node scripts/auto-db-setup.mjs"
+    "db:auto-setup": "node scripts/auto-db-setup.mjs",
+    "clerk:setup:vercel": "node scripts/setup-clerk-vercel.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.36.10",
