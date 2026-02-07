@@ -67,7 +67,7 @@ export const questions = [
  * but exclude them from training flows (Practice / Mock Exam) to avoid low-signal items.
  */
 export const trainingQuestions = questions.filter(
-  (q: any) => typeof q?.id === "string" && !q.id.startsWith("gen-")
+  (q) => typeof q?.id === "string" && !q.id.startsWith("gen-")
 );
 
 const questionsModule = { questions, trainingQuestions };

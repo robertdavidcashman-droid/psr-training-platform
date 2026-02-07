@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: "PSR Training Academy",
   description:
     "Police Station Representative Accreditation Training Platform - Master the skills and knowledge for PSR accreditation",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      "max-image-preview": "none",
+      "max-snippet": 0,
+      "max-video-preview": 0,
+    },
+  },
   keywords: [
     "PSR",
     "Police Station Representative",

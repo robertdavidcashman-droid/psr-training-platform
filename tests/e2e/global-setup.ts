@@ -2,7 +2,7 @@ import { chromium, type FullConfig } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
 
-export default async function globalSetup(config: FullConfig) {
+export default async function globalSetup(_config: FullConfig) {
   // Create storage state directory for test results
   const storageStatePath = path.resolve(process.cwd(), "test-results", "gateway-storage.json");
   fs.mkdirSync(path.dirname(storageStatePath), { recursive: true });

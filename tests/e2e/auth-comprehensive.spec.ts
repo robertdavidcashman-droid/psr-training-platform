@@ -17,12 +17,7 @@ function uniqueEmail(): string {
   return `e2e-${Date.now()}-${Math.random().toString(36).slice(2)}@example.com`;
 }
 
-function randomString(length: number): string {
-  return Math.random().toString(36).slice(2, length + 2);
-}
-
 test.describe("Level 3: Comprehensive Authentication Tests", () => {
-  const baseEmail = uniqueEmail();
   const basePassword = "TestPassword123!";
 
   test.describe("Signup Flow", () => {
