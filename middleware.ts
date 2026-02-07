@@ -4,8 +4,20 @@ import { NextResponse, type NextRequest } from "next/server";
  * Middleware - Authentication disabled
  * All routes are publicly accessible
  */
-export async function middleware(_request: NextRequest) {
-  // No authentication required - allow all requests
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Hide/disable admin routes while login is off
+  if (pathname.startsWith("/admin")) {
+    return NextResponse.redirect(new URL("/dashboard", request.url));
+  }
+
+  // Hide/disable admin API routes as well
+  if (pathname.startsWith("/api/admin")) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  // No authentication required - allow all other requests
   return NextResponse.next();
 }
 
